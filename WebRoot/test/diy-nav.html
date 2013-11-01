@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" charset="utf-8">
+	function show(menu){
+			menu.getElementsByTagName("ul")[0].style.display="block";
+	}
+	function hide(menu){
+		menu.getElementsByTagName("ul")[0].style.display="none";
+	}
+	function showul1(){
+		document.getElementById("subnav1").style.display="block";
+	}
+	function changebg(menu){
+			menu.getElementsByTagName("a")[0].style.color="red";
+	}
+	function changebgback(menu){
+			menu.getElementsByTagName("a")[0].style.color="black";
+	}
+</script>
+<style type="text/css">
+	.subnav{
+		display:none;	
+	}
+	a:hover{
+		color:yellow;
+	}
+</style>
+
+</head>
+
+<body>
+	<div id="main-nva" style="margin:0 auto;width:310px;height:50px;border:solid 1px #CCC;">
+		<ul>
+    	<li id="li1" onmouseover="show(this);changebg(this);"  onmouseout="hide(this);changebgback(this)" style="float:left;display:block;margin-left:15px;">
+    		<a style="display:block;color:black;background-color:blue;" href="#">菜单1</a>
+     		<ul id="subnav1"  class="subnav" style="position:absolute;z-index:5;margin-left:-40px;">
+     			<a style="">子菜单1.1</a>
+       		<a style="">子菜单1.2</a>
+       		<a style="">子菜单1.3</a>
+     		</ul>
+    	</li>
+			<li style="float:left;display:block;margin-left:15px;" onmouseover="show(this);" onmouseout="hide(this);">
+    		<a href="#" style="display:block;">菜单2</a>
+        <ul id="subnav2"  class="subnav" style="position:absolute;z-index:5;margin-left:-40px;">
+     			<a style="">子菜单2.1</a>
+       		<a style="">子菜单2.2</a>
+       		<a style="">子菜单2.3</a>
+     		</ul>
+    	</li>
+    	<li style="float:left;display:block;margin-left:15px;" onmouseover="alert("hello");"> 
+    		<a id="subnav3" style="color:red;display:block;" href="#" ">菜单3</a>
+    	</li>
+  	</ul>
+    <br>
+    <br>
+    <div style="height:30px;">
+    <a href="#"><script type="text/javascript">
+                        var d = new Date();	
+						var weekday = new Array(7);
+						weekday[0] = "星期日";
+						weekday[1] = "星期一";
+						weekday[2] = "星期二";
+						weekday[3] = "星期三";
+						weekday[4] = "星期四";
+						weekday[5] = "星期五";
+						weekday[6] = "星期六";
+						var m = d.getMonth() + 1;
+						document.write("今天是"+d.getFullYear()+"年"+m+"月"+d.getDate()+"日 "+weekday[d.getDay()]);				
+                    </script></a>
+  	</div>
+    <input type="button" onclick="alert("hello");">hello</input>
+  </div>
+</body>
+</html>
