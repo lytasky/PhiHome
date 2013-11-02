@@ -159,13 +159,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		</div>
     		<div id="collapseSix" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">校友风采</a>
-      			</div>
-      			<div class="panel-body">
         			<a href="#" style="color:#000;" class="panel-item">轶闻故事</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">访客留言</a>
       			</div>
     		</div>
   		</div>
