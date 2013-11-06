@@ -53,6 +53,11 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<link href="css/diy.css" rel="stylesheet" media="screen" />
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+<script src="js/jquery.flexslider.js"></script>
 <head>
 <script language="javascript">
 function linkto(){
@@ -106,37 +111,54 @@ body {
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>
 <body topmargin="0">
+<!--
 <table>
   <tr>
     <td><img src="images/huang1.jpg"> </td>
   </tr>
 </table>
+-->
+	<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.6.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
+      <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
+      	<div style="margin-right:25px;float:right;">
+          <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
+          <div class="row" style="float:right;margin-top:15px;">
+  					<div class="col-md-12">
+    					<div class="input-group">
+      					<input type="text" class="form-control">
+      					<span class="input-group-btn">
+        					<button class="btn btn-default" type="button">搜索</button>
+      					</span>
+    					</div><!-- /input-group -->
+  					</div><!-- /.col-lg-6 -->
+					</div><!-- /.row -->
+       	</div>
+      </div>
+    </div>
 <div align="center">
   <p><br>
-    <br>
-    <br>
     <br>
     <br>
     <span class="STYLE1">如果您没有注册请注册一个新用户</span></p>
   <p>&nbsp;  </p>
 <form name="usrlog" action="uselogin.jsp">
-<table border="1" width="250" bordercolor="green" height="85">
-	<tr width="">
+<table border="1" width="250" bordercolor="#CCC" height="85" cellpadding="5">
+	<tr width="" style="margin-top:20px;">
 		<td>
-		<font color="red">用户名</font> 
+		<font>用户名:</font> 
 		 </td >
-		<td><input type="text" name="username" size="15"/> 
+		<td><input type="text" name="username" size="15" class="form-control"/> 
 		<input type="hidden" name="action2" value="ulogin" />
 		</td>
 	</tr>
 	<tr width="40%">
-		<td><font color="red">密码</font></td>
-		<td><input type="password" name="pwd" size="15"/> <input type="hidden" name="userlogin"></td>
+		<td><font>密码:</font></td>
+		<td><input type="password" name="pwd" size="15" class="form-control"/> <input type="hidden" name="userlogin"></td>
 	</tr>
 	<tr align="left" width="40%">
-		<td><input type="button" value="登陆" onclick="Check()"></td>
+		<td><button type="button" value="登陆" onClick="Check()" class="btn btn-primary">登陆</button></td>
 		<td>
-		<input type="button" name="button1" value="新用户注册" onclick="linkto()"/>
+		<button type="button" name="button1" value="新用户注册" onClick="linkto()" class="btn btn-primary">新用户注册</button>
 		</td>
 	
 	</tr>
