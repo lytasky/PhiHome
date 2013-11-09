@@ -73,9 +73,33 @@ DB.close(conn);
 <script language="JavaScript" type="text/javascript" src="images/global.js"></script>
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?forumID=20">
 <script language="JavaScript" type="text/javascript" src="images/common.js"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+		<link href="css/diy.css" rel="stylesheet" media="screen" />
+  		<script src="https://code.jquery.com/jquery.js"></script>
+  		<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+		<script src="js/jquery.flexslider.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 </head>
-<body><br>
-<div id="jive-forumpage"><br><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr valign="top"><td width="98%"><br></td>
+<body>
+<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
+      <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
+      	<div style="margin-right:25px;float:right;">
+          <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
+          <div class="row" style="float:right;margin-top:15px;">
+  					<div class="col-md-12">
+    					<div class="input-group">
+      					<input type="text" class="form-control">
+      					<span class="input-group-btn">
+        					<button class="btn btn-default" type="button">搜索</button>
+      					</span>
+    					</div><!-- /input-group -->
+  					</div><!-- /.col-lg-6 -->
+			</div><!-- /.row -->
+       	</div>
+      </div>
+    </div><!-- head -->
+<div id="jive-forumpage" style="width:1000px;margin:0 auto;"><br><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr valign="top"><td width="98%"><br></td>
       </tr>
     </tbody>
   </table>

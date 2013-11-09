@@ -133,26 +133,20 @@ User oneUser=new User();
     </div>
     <div style="width:1000px;margin:10px auto;background-color:#fff;padding-left:10px;" class="gray-border round-border">
 		<font color="red" size=4><%=(String)session.getAttribute("name")%></font> 你好<marquee style="width:800px;margin-left:15px;">欢迎光临本论坛，大家一起交流共同提高！</marquee>
-		 <div id="jive-forumpage"><div class="jive-buttons">
-				
+		 <div id="jive-forumpage">
+		 	<div class="jive-buttons">
 				<div align="center">
 					<form action="searchResult.jsp" method="post">
 					<div class="row" style="margin:10px auto;width:250px;">
   					<div class="col-md-12">
-    					<div class="input-group">
+    					<div class="input-group input-group-sm">
       					<input type="text" class="form-control" name="keyword">
       					<span class="input-group-btn">
         					<button class="btn btn-primary" type="submit">搜索</button>
       					</span>
     					</div><!-- /input-group -->
   					</div><!-- /.col-lg-6 -->
-			</div><!-- /.row -->
-					<!--<div class="clo-md-12">
-						<div class="input-group">
-						<input type="text" name="keyword" class="form-control"/>
-						<button type="submit button" class="btn btn-default">搜索</button>
-						</div>
-					</div>-->
+					</div><!-- /.row -->
 					</form>
 				</div>
 			</div>

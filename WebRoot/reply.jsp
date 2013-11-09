@@ -37,24 +37,39 @@ window.onload = function()
 <!-- end of fckeditor -->
 
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?threadID=744236">
-</head>
-<body>
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-  <tbody>
-    <tr>
-      <td width="40%"><img src="images/huang1.jpg" alt="" border="0" height="57" width="100%">
-     	</td>
 
-    </tr>
-  </tbody>
-</table>
-<br>
-<div id="jive-flatpage">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+		<link href="css/diy.css" rel="stylesheet" media="screen" />
+  		<script src="https://code.jquery.com/jquery.js"></script>
+  		<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+		<script src="js/jquery.flexslider.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+</head>
+<body style="background:url(images/back.PNG) repeat;">
+<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
+      <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
+      	<div style="margin-right:25px;float:right;">
+          <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
+          <div class="row" style="float:right;margin-top:15px;">
+  					<div class="col-md-12">
+    					<div class="input-group">
+      					<input type="text" class="form-control">
+      					<span class="input-group-btn">
+        					<button class="btn btn-default" type="button">搜索</button>
+      					</span>
+    					</div><!-- /input-group -->
+  					</div><!-- /.col-lg-6 -->
+			</div><!-- /.row -->
+       	</div>
+      </div>
+    </div><!-- head -->
+
+<div id="jive-flatpage" style="width:1000px;margin:15px auto;">
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tbody>
       <tr valign="top">
-        
-          <p class="jive-page-title"> 主题: reply </p> </td>
+  
+          <td><p class="jive-page-title"> 主题: reply </p> </td>
         <td width="1%"><div class="jive-accountbox"></div></td>
       </tr>
     </tbody>
@@ -82,10 +97,9 @@ window.onload = function()
                 		<input type="hidden" name="pid" value="<%=id %>"/>
                 		<input type="hidden" name="rootId" value="<%=rootId %>"/>
                 		<input type="hidden" name="pno" value="<%=pno %>"/>
-                		标题：<input type="text" name="title"><br>
-                		内容：<textarea name="cont" rows="15" cols="80"></textarea>
-                		<br>
-                		<input type="submit" value="submit"/>
+                		<div class="col-md-10">标题：<input type="text" name="title" class="form-control"><br></div>
+                		<div class="col-md-10">内容：<textarea class="form-control" name="cont" rows="10" cols="80"></textarea></div>
+                		<div class="col-md-10" style="margin-top:15px;"><input type="submit" value="submit" class="btn btn-primary"/></div>
                 	</form>
                 	
                 </div>

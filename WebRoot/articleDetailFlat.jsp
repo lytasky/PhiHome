@@ -67,48 +67,47 @@
 			src="images/global.js"></script>
 		<link rel="alternate" type="application/rss+xml" title="RSS"
 			href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?threadID=744236">
+			
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+		<link href="css/diy.css" rel="stylesheet" media="screen" />
+  		<script src="https://code.jquery.com/jquery.js"></script>
+  		<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+		<script src="js/jquery.flexslider.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<table border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tbody>
-				<tr>
-					<td width="40%">
-						<img src="images/huang1.jpg" alt="" border="0" height="57"
-							width="100%">
-					</td>
-					
-				</tr>
-			</tbody>
-		</table>
-		<br>
-		<div id="jive-flatpage">
+		<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
+      <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
+      	<div style="margin-right:25px;float:right;">
+          <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
+          <div class="row" style="float:right;margin-top:15px;">
+  					<div class="col-md-12">
+    					<div class="input-group">
+      					<input type="text" class="form-control">
+      					<span class="input-group-btn">
+        					<button class="btn btn-default" type="button">搜索</button>
+      					</span>
+    					</div><!-- /input-group -->
+  					</div><!-- /.col-lg-6 -->
+			</div><!-- /.row -->
+       	</div>
+      </div>
+    </div><!-- head -->
+		<div id="jive-flatpage" style="width:1000px;margin:0 auto;">
+			<br>
 			<table border="0" cellpadding="0" cellspacing="0" width="100%">
 				<tbody>
 					<tr valign="top">
-						<td width="99%">
-							<p class="jive-breadcrumbs">
-								<a href="articleFlat.jsp">首页</a>
-
-							</p>
+						<td width="100%">
+							<a href="articleFlat.jsp">论坛首页</a>
 						</td>
-						<td width="1%">
+						<!--<td width="1%">
 							<div class="jive-accountbox"></div>
-						</td>
+						</td>-->
 					</tr>
 				</tbody>
 			</table>
-			<div class="jive-buttons">
-				<table summary="Buttons" border="0" cellpadding="0" cellspacing="0">
-					<tbody>
-						<tr>
-							<td class="jive-icon">
-								<br>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<br>
+			
 			<table border="0" cellpadding="0" cellspacing="0" width="100%">
 				<tbody>
 					<tr valign="top">
@@ -143,7 +142,7 @@
 																						<td style="padding: 0px;" width="1%">
 																							<nobr>
 																								<a
-																									href="http://bbs.chinajavaworld.com/profile.jspa?userID=215489"
+																									href="#"
 																									title="诺曼底客">诺曼底客</a>
 																							</nobr>
 																						</td>
@@ -161,10 +160,7 @@
 																			<br>
 																			<br>
 																			<span class="jive-description"> 发表: 34 <br>
-																				点数: 100<br> 注册: 07-5-10 <br> <a
-																				href="http://blog.chinajava.com/u/215489"
-																				target="_blank"><font color="red">访问我的Blog</font>
-																			</a> </span>
+																				点数: 100<br> 注册: 07-5-10 <br>  </span>
 																		</td>
 																	</tr>
 																</tbody>
