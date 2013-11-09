@@ -786,7 +786,7 @@ function initial() {
                         else document.write(' color=green')
                   document.write(' TITLE=""> </font><br><font id="LD' + gNum + '" size=2 style="font-size:9pt"> </font></td>')
                }
-               document.write('</tr>')
+               //document.write('</tr>')
             }
             //--></SCRIPT>
         </TBODY></TABLE>

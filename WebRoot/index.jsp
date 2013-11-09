@@ -11,12 +11,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>无标题文档</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
 	<link href="css/diy.css" rel="stylesheet" media="screen" />
   <script src="https://code.jquery.com/jquery.js"></script>
   <link rel="stylesheet" href="css/flexslider.css" type="text/css">
 <script src="js/jquery.flexslider.js"></script>
 <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
 
 <!-- Place in the <head>, after the three links -->
 <script type="text/javascript" charset="utf-8">
@@ -404,6 +406,5 @@ swfobject.registerObject("FlashID");
   <!-- end .container --></div>
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
 </body>
 <!-- InstanceEnd --></html>

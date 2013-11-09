@@ -97,7 +97,7 @@ document.usrlog.submit();
 				document.usrlog.submit();
 			}
 		</script>
-<title>管理员登录</title>
+<title>论坛登录</title>
 <style type="text/css">
 <!--
 .STYLE1 {
@@ -110,7 +110,7 @@ body {
 -->
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>
-<body topmargin="0">
+<body topmargin="0" style="background:url(images/back.PNG) repeat;">
 <!--
 <table>
   <tr>
@@ -118,7 +118,7 @@ body {
   </tr>
 </table>
 -->
-	<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.6.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
+	<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
       <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
       	<div style="margin-right:25px;float:right;">
           <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
@@ -135,14 +135,14 @@ body {
        	</div>
       </div>
     </div>
-<div align="center">
-  <p><br>
+<div align="center" style="border:1px solid #ccc;width:500px;margin:0 auto;" class="round-border">
+  <p>
     <br>
     <br>
     <span class="STYLE1">如果您没有注册请注册一个新用户</span></p>
   <p>&nbsp;  </p>
 <form name="usrlog" action="uselogin.jsp">
-<table border="1" width="250" bordercolor="#CCC" height="85" cellpadding="5">
+<table border="0" width="250" bordercolor="#CCC" height="85" cellpadding="5">
 	<tr width="" style="margin-top:20px;">
 		<td>
 		<font>用户名:</font> 
@@ -155,12 +155,11 @@ body {
 		<td><font>密码:</font></td>
 		<td><input type="password" name="pwd" size="15" class="form-control"/> <input type="hidden" name="userlogin"></td>
 	</tr>
-	<tr align="left" width="40%">
-		<td><button type="button" value="登陆" onClick="Check()" class="btn btn-primary">登陆</button></td>
+	<tr align="center" width="40%">
 		<td>
-		<button type="button" name="button1" value="新用户注册" onClick="linkto()" class="btn btn-primary">新用户注册</button>
+		<button type="button" name="button1" value="新用户注册" onClick="linkto()" class="btn btn-primary">注册</button>
 		</td>
-	
+		<td><button type="button" value="登陆" onClick="Check()" class="btn btn-primary" style="width:170px;">登陆</button></td>
 	</tr>
 	
 </table>

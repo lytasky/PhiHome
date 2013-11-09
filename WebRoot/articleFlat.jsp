@@ -95,7 +95,7 @@ User oneUser=new User();
 <html>
 	<head>
 		<base href="<%=basePath%>">
-		<title>Java语言*初级版</title>
+		<title>论坛</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf8">
 		<link rel="stylesheet" type="text/css" href="images/style.css"
 			title="Integrated Styles">
@@ -105,30 +105,54 @@ User oneUser=new User();
 			href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?forumID=20">
 		<script language="JavaScript" type="text/javascript"
 			src="images/common.js"></script>
+			
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+		<link href="css/diy.css" rel="stylesheet" media="screen" />
+  		<script src="https://code.jquery.com/jquery.js"></script>
+  		<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+		<script src="js/jquery.flexslider.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</head>
-	<body>
-		<table border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tbody>
-				<tr>
-					<td width="40%">
-						<img src="images/huang1.jpg" alt="" border="0" height="57"
-							width="100%">
-					</td>
-					
-				</tr>
-			</tbody>
-		</table>
-		<font color="red" size=4><%=(String)session.getAttribute("name")%></font>你好
-		 <br><div id="jive-forumpage"><div class="jive-buttons"><br><div align="right">
-
-	
+	<body topmargin="0" style="background:url(images/back.PNG) repeat;">
+	<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
+      <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
+      	<div style="margin-right:25px;float:right;">
+          <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
+          <div class="row" style="float:right;margin-top:15px;">
+  					<div class="col-md-12">
+    					<div class="input-group">
+      					<input type="text" class="form-control">
+      					<span class="input-group-btn">
+        					<button class="btn btn-default" type="button">搜索</button>
+      					</span>
+    					</div><!-- /input-group -->
+  					</div><!-- /.col-lg-6 -->
+			</div><!-- /.row -->
+       	</div>
+      </div>
+    </div>
+    <div style="width:1000px;margin:10px auto;background-color:#fff;padding-left:10px;" class="gray-border round-border">
+		<font color="red" size=4><%=(String)session.getAttribute("name")%></font> 你好<marquee style="width:800px;margin-left:15px;">欢迎光临本论坛，大家一起交流共同提高！</marquee>
+		 <div id="jive-forumpage"><div class="jive-buttons">
 				
-				</div> 
-				<marquee>欢迎光临本论坛，大家一起交流共同提高！</marquee><br>
 				<div align="center">
 					<form action="searchResult.jsp" method="post">
-						<input type="text" name="keyword" />
-						<input type="submit" value="搜索" />
+					<div class="row" style="margin:10px auto;width:250px;">
+  					<div class="col-md-12">
+    					<div class="input-group">
+      					<input type="text" class="form-control" name="keyword">
+      					<span class="input-group-btn">
+        					<button class="btn btn-primary" type="submit">搜索</button>
+      					</span>
+    					</div><!-- /input-group -->
+  					</div><!-- /.col-lg-6 -->
+			</div><!-- /.row -->
+					<!--<div class="clo-md-12">
+						<div class="input-group">
+						<input type="text" name="keyword" class="form-control"/>
+						<button type="submit button" class="btn btn-default">搜索</button>
+						</div>
+					</div>-->
 					</form>
 				</div>
 			</div>
@@ -146,7 +170,7 @@ User oneUser=new User();
 				<tbody>
 					<tr valign="top">
 						<td>
-							<span class="nobreak"> 页: 第<%=pageNo%>页,共<%=totalPages %>页  <span
+							<span class="nobreak"> 第<%=pageNo%>页,共<%=totalPages %>页  <span
 								class="jive-paginator"> [</span>
 							</span>
 
@@ -287,5 +311,6 @@ User oneUser=new User();
 			<br>
 			<br>
 		</div>
+	</div>
 	</body>
 </html>
