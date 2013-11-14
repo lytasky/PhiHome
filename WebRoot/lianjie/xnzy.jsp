@@ -80,6 +80,9 @@
             <div class="panel-body">
         			<a href="../xinxi/xszx.jsp" style="color:#000;" class="panel-item">学术资讯</a>
       			</div>
+      			<div class="panel-body">
+        			<a href="xinxi/hdbd.jsp" style="color:#000;" class="panel-item">活动报道</a>
+      			</div>
     		</div>
   		</div>
   		<div class="panel panel-default">
