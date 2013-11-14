@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>无标题文档</title>
+<title>浙大哲学系</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
@@ -104,6 +104,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       			</div>
             <div class="panel-body">
         			<a href="xinxi/xszx.jsp" style="color:#000;" class="panel-item">学术资讯</a>
+      			</div>
+      			<div class="panel-body">
+        			<a href="xinxi/hdbd.jsp" style="color:#000;" class="panel-item">活动报道</a>
       			</div>
     		</div>
   		</div>

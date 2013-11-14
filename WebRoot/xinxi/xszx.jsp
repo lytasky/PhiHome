@@ -55,7 +55,7 @@
         		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list"></span> 简介</a>
       			</h4>
     		</div>
-    		<div id="collapseOne" class="panel-collapse collapse in">
+    		<div id="collapseOne" class="panel-collapse collapse">
       			<div class="panel-body" style="display:block;">
         			<a href="../jianjie/depart_info.jsp" style="color:#000;" class="panel-item">本系概况</a>
       			</div>
@@ -73,12 +73,15 @@
         		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th-list"></span> 信息</a>
       			</h4>
     		</div>
-    		<div id="collapseTwo" class="panel-collapse collapse ">
+    		<div id="collapseTwo" class="panel-collapse collapse in">
       			<div class="panel-body">
         			<a href="../xinxi/zytg.jsp" style="color:#000;" class="panel-item">重要通告</a>
       			</div>
             <div class="panel-body">
         			<a href="../xinxi/xszx.jsp" style="color:#000;" class="panel-item">学术资讯</a>
+      			</div>
+      			<div class="panel-body">
+        			<a href="../xinxi/hdbd.jsp" style="color:#000;" class="panel-item">活动报道</a>
       			</div>
     		</div>
   		</div>
@@ -210,7 +213,7 @@
 			<div class="round-border deep-blue" style="height:40px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">首页</a>
-         <span style="color:#fff;">->院系概况</span>	
+         <span style="color:#fff;">->学术资讯</span>	
 			</div>
       <div class="gray-border round-border white-back" style="width:753px;margin-top:15px;">
       	<p>1<p>
