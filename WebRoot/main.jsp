@@ -653,10 +653,10 @@ function initial() {
 
  <META content="Microsoft FrontPage 6.0" name=GENERATOR></HEAD>
 <BODY onload=initial()>
-<SCRIPT language=JavaScript><!--
+<!-- <SCRIPT language=JavaScript>
    if(navigator.appName == "Netscape" || parseInt(navigator.appVersion) < 4)
    document.write("<h1>你的浏览器无法执行此程序。</h1>此程序在 IE4 以后的版本才能执行!!")
-//--></SCRIPT>
+</SCRIPT>--> 
 
 <DIV id=detail style="POSITION: absolute"></DIV>
 <FORM name=CLD>

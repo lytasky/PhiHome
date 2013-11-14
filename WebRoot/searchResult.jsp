@@ -15,7 +15,7 @@ if(adminLogined != null && adminLogined.trim().equals("true")) {
 String keyword = new String(request.getParameter("keyword").getBytes("8859_1"), "GBK");
 if(keyword == null) keyword = "";
 
-final int PAGE_SIZE = 4;
+final int PAGE_SIZE = 5;
 int pageNo = 1;
 String strPageNo = request.getParameter("pageNo");
 if(strPageNo != null && !strPageNo.trim().equals("")) {

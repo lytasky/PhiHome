@@ -72,7 +72,7 @@ body {
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>
 <body topmargin="0" style="background:url(images/back.PNG) repeat;">
-<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
+<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.6.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
       <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
       	<div style="margin-right:25px;float:right;">
           <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
@@ -88,28 +88,28 @@ body {
 					</div><!-- /.row -->
        	</div>
       </div>
-    </div>
+    </div><!-- head -->
 <div align="center">
   <p><br>
     <br>
     <br>
-    <span class="STYLE1">论坛管理员登陆</span></p>
+    <span class="STYLE1">浙江大学哲学系网站管理员登陆</span></p>
   <p>&nbsp;  </p>
   <form action="login.jsp" method="post" name="adminlog">
-  <table class="round-border gray-border" style="background-color:#fff;">
+  <table cellpadding="5">
+  
     <input type="hidden" name="action" value="log"/>
     <tr height=30>
       <td> 用户名：</td>
-      <td><input type="text" name="username" value="" size=20 class="form-control"/></td>
+      <td><input type="text" name="username" value="" class=" form-control" size=20/></td>
     </tr>
     <tr height=30>
       <td>密码： </td>
-       <td><input type="password" name="pwd" size=20 class="form-control"/></td>
+       <td><input type="password" name="pwd" size=20 class=" form-control"/></td>
     </tr>
     <tr>
-      <td><button type="reset" value="重设" class="btn btn-primary">重设</button></td>
-      <td><button type="submit" value="登陆" class="btn btn-primary">登陆</button></td>
-      
+    <td><button type="reset" value="重设"  class="btn btn-primary">重设</button></td>
+      <td><button type="submit" value="登陆" class="btn btn-primary" style="width:175px;">登陆</button></td>
     </tr>
   </form>
 </table>

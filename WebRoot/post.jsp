@@ -91,7 +91,7 @@
        	</div>
       </div>
     </div><!-- head -->
-		<div id="jive-flatpage" style="margin:0 auto;width:1000px;">
+		<div id="jive-flatpage" style="margin:15px auto;width:1000px;">
 			<table border="0" cellpadding="0" cellspacing="0" width="100%">
 				<tbody>
 					<tr valign="top">
@@ -104,10 +104,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<div class="jive-buttons">
-				<br>
-			</div>
-			<br>
+			
 			<table border="0" cellpadding="0" cellspacing="0" width="930"
 				height="61">
 				<tbody>
@@ -135,7 +132,8 @@
 												<br>
 												</div>
 												<div class="col-md-10">
-												<input type="submit" value="submit" class="btn btn-primary"/>
+												<!-- <input type="submit" value="submit" class="btn btn-primary"/> -->
+												<button class="btn btn-primary" type="submit">·¢±í</button>
 												</div>
 											</form>
 

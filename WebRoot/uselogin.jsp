@@ -111,13 +111,7 @@ body {
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>
 <body topmargin="0" style="background:url(images/back.PNG) repeat;">
-<!--
-<table>
-  <tr>
-    <td><img src="images/huang1.jpg"> </td>
-  </tr>
-</table>
--->
+
 	<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
       <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
       	<div style="margin-right:25px;float:right;">

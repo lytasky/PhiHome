@@ -14,11 +14,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
 	<link href="css/diy.css" rel="stylesheet" media="screen" />
-  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
+  <script src="js/jquery.js"></script>
   <link rel="stylesheet" href="css/flexslider.css" type="text/css">
 <script src="js/jquery.flexslider.js"></script>
 <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js"></script>
+
 
 <!-- Place in the <head>, after the three links -->
 <script type="text/javascript" charset="utf-8">
@@ -66,7 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div><!-- /.row -->
        	</div>
       </div>
-    </div>
+    </div><!-- head -->
     
     <div style="width:100%;height:auto;margin-top:15px;overflow:hidden;" class="gray-border"><!-- main -->
 	<!-- InstanceBeginEditable name="EditRegion3" -->
@@ -80,13 +82,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="#" style="color:#000;" class="panel-item">本系概况</a>
+        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">本系概况</a>
       			</div>
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">师资力量</a>
+        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">学生名录</a>
+        			<a href="jianjie/xsml.jsp" style="color:#000;" class="panel-item">学生名录</a>
       			</div>
     		</div>
   		</div>
@@ -98,10 +100,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		</div>
     		<div id="collapseTwo" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">重要通告</a>
+        			<a href="xinxi/zytg.jsp" style="color:#000;" class="panel-item">重要通告</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">学术资讯</a>
+        			<a href="xinxi/xszx.jsp" style="color:#000;" class="panel-item">学术资讯</a>
       			</div>
     		</div>
   		</div>
@@ -113,10 +115,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		</div>
     		<div id="collapseThree" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">课表</a>
+        			<a href="kecheng/kb.jsp" style="color:#000;" class="panel-item">课表</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">课程资料</a>
+        			<a href="kecheng/kczl.jsp" style="color:#000;" class="panel-item">课程资料</a>
       			</div>
     		</div>
   		</div>
@@ -128,13 +130,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		</div>
     		<div id="collapseFour" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">培养方案</a>
+        			<a href="zhaosheng/pyfa.jsp" style="color:#000;" class="panel-item">培养方案</a>
       			</div>
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">招生信息</a>
+        			<a href="zhaosheng/zsxx.jsp" style="color:#000;" class="panel-item">招生信息</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">招生咨询</a>
+        			<a href="zhaosheng/zszx.jsp" style="color:#000;" class="panel-item">招生咨询</a>
       			</div>
     		</div>
   		</div>
@@ -146,10 +148,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		</div>
     		<div id="collapseFive" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">教学成果</a>
+        			<a href="chengguo/jxcg.jsp" style="color:#000;" class="panel-item">教学成果</a>
       			</div>
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">学生园地</a>
+        			<a href="chengguo/xsyd.jsp" style="color:#000;" class="panel-item">学生园地</a>
       			</div>
     		</div>
   		</div>
@@ -161,7 +163,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		</div>
     		<div id="collapseSix" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">轶闻故事</a>
+        			<a href="gushi/ywgs.jsp" style="color:#000;" class="panel-item">轶闻故事</a>
       			</div>
     		</div>
   		</div>
@@ -176,10 +178,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         			<a href="uselogin.jsp" style="color:#000;" class="panel-item">课程讨论</a>
       			</div>
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">读书会</a>
+        			<a href="luntan/dsh.jsp" style="color:#000;" class="panel-item">读书会</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">哲学沙龙</a>
+        			<a href="luntan/zxsl.jsp" style="color:#000;" class="panel-item">哲学沙龙</a>
       			</div>
     		</div>
   		</div>
@@ -191,13 +193,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		</div>
     		<div id="collapseEight" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">校内资源</a>
+        			<a href="lianjie/xnzy.jsp" style="color:#000;" class="panel-item">校内资源</a>
       			</div>
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">校外资源</a>
+        			<a href="lianjie/xwzy.jsp" style="color:#000;" class="panel-item">校外资源</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">国内资源</a>
+        			<a href="lianjie/gnzy.jsp" style="color:#000;" class="panel-item">国内资源</a>
       			</div>
     		</div>
   		</div>  

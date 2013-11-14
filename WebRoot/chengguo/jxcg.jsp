@@ -1,15 +1,16 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN"><!-- InstanceBegin template="/Templates/head.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>无标题文档</title>
+<title>院系简介</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen" />
 	<link href="../css/diy.css" rel="stylesheet" type="text/css" />
-  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="../js/jquery.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -22,11 +23,11 @@
 
 </head>
 
-<body style="background:url(../Images/back.png) repeat;">
+<body style="background:url(../images/back.PNG) repeat;">
 
 <div class="container" style="width:1000px;margin:0 auto;">
   <div class="content">
-    <div id="head" style="width:100%;height:150px;border:1px solid #CCC;background:url(../Images/china-style3.6.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
+    <div id="head" style="width:100%;height:150px;border:1px solid #CCC;background:url(../images/china-style3.6.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
       <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
       	<div style="margin-right:25px;float:right;">
           <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
@@ -56,13 +57,13 @@
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="#" style="color:#000;" class="panel-item">本系概况</a>
+        			<a href="../jianjie/depart_info.jsp" style="color:#000;" class="panel-item">本系概况</a>
       			</div>
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">师资力量</a>
+        			<a href="../jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">学生名录</a>
+        			<a href="../jianjie/xsml.jsp" style="color:#000;" class="panel-item">学生名录</a>
       			</div>
     		</div>
   		</div>
@@ -74,10 +75,10 @@
     		</div>
     		<div id="collapseTwo" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">重要通告</a>
+        			<a href="../xinxi/zytg.jsp" style="color:#000;" class="panel-item">重要通告</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">学术资讯</a>
+        			<a href="../xinxi/xszx.jsp" style="color:#000;" class="panel-item">学术资讯</a>
       			</div>
     		</div>
   		</div>
@@ -89,10 +90,10 @@
     		</div>
     		<div id="collapseThree" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">课表</a>
+        			<a href="../kecheng/kb.jsp" style="color:#000;" class="panel-item">课表</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">课程资料</a>
+        			<a href="../kecheng/kczl.jsp" style="color:#000;" class="panel-item">课程资料</a>
       			</div>
     		</div>
   		</div>
@@ -104,13 +105,13 @@
     		</div>
     		<div id="collapseFour" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">培养方案</a>
+        			<a href="../zhaosheng/pyfa.jsp" style="color:#000;" class="panel-item">培养方案</a>
       			</div>
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">招生信息</a>
+        			<a href="../zhaosheng/zsxx.jsp" style="color:#000;" class="panel-item">招生信息</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">招生咨询</a>
+        			<a href="../zhaosheng/zszx.jsp" style="color:#000;" class="panel-item">招生咨询</a>
       			</div>
     		</div>
   		</div>
@@ -122,10 +123,10 @@
     		</div>
     		<div id="collapseFive" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">教学成果</a>
+        			<a href="../chengguo/jxcg.jsp" style="color:#000;" class="panel-item">教学成果</a>
       			</div>
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">学生园地</a>
+        			<a href="../chengguo/xsyd.jsp" style="color:#000;" class="panel-item">学生园地</a>
       			</div>
     		</div>
   		</div>
@@ -137,13 +138,7 @@
     		</div>
     		<div id="collapseSix" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">校友风采</a>
-      			</div>
-      			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">轶闻故事</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">访客留言</a>
+        			<a href="../gushi/ywgs.jsp" style="color:#000;" class="panel-item">轶闻故事</a>
       			</div>
     		</div>
   		</div>
@@ -155,13 +150,13 @@
     		</div>
     		<div id="collapseSeven" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">课程讨论</a>
+        			<a href="../uselogin.jsp" style="color:#000;" class="panel-item">课程讨论</a>
       			</div>
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">读书会</a>
+        			<a href="../luntan/dsh.jsp" style="color:#000;" class="panel-item">读书会</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">哲学沙龙</a>
+        			<a href="../luntan/zxsl.jsp" style="color:#000;" class="panel-item">哲学沙龙</a>
       			</div>
     		</div>
   		</div>
@@ -173,20 +168,20 @@
     		</div>
     		<div id="collapseEight" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">校内资源</a>
+        			<a href="../lianjie/xnzy.jsp" style="color:#000;" class="panel-item">校内资源</a>
       			</div>
       			<div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">校外资源</a>
+        			<a href="../lianjie/xwzy.jsp" style="color:#000;" class="panel-item">校外资源</a>
       			</div>
             <div class="panel-body">
-        			<a href="#" style="color:#000;" class="panel-item">国内资源</a>
+        			<a href="../lianjie/gnzy.jsp" style="color:#000;" class="panel-item">国内资源</a>
       			</div>
     		</div>
   		</div>  
 	   </div><!-- panel-group -->
      <div class="gray-border round-border"  style="width:200px;height:105px;"><!--哲学-->
        <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="200" height="105">
-         <param name="movie" value="../house-flash3.swf" />
+         <param name="movie" value="../flash/house-flash3.swf" />
          <param name="quality" value="high" />
          <param name="wmode" value="opaque" />
          <param name="swfversion" value="8.0.35.0" />
@@ -194,7 +189,7 @@
          <param name="expressinstall" value="Scripts/expressInstall.swf" />
          <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
          <!--[if !IE]>-->
-         <object type="application/x-shockwave-flash" data="../house-flash3.swf" width="200" height="105">
+         <object type="application/x-shockwave-flash" data="../flash/house-flash3.swf" width="200" height="105">
            <!--<![endif]-->
            <param name="quality" value="high" />
            <param name="wmode" value="opaque" />
@@ -214,7 +209,7 @@
     <div class="gray-border fl" style="margin-left:15px;width:753px;"><!--分页显示内容-->
 			<div class="round-border deep-blue" style="height:40px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
-         <a style="color:#fff;" href="../index.html">首页</a>
+         <a style="color:#fff;" href="../index.jsp">首页</a>
          <span style="color:#fff;">->院系概况</span>	
 			</div>
       <div class="gray-border round-border white-back" style="width:753px;margin-top:15px;">

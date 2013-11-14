@@ -16,7 +16,7 @@ public class DBConMgr {
     public void ConnectDB(){
     	 try {
     		 Class.forName("com.mysql.jdbc.Driver");
- 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bbs", "root" , "123");
+ 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bbs", "root" , "root");
         	 sm=conn.createStatement();
         	 System.out.println("------------------数据库连接成功!");
          } catch(Exception e) {
