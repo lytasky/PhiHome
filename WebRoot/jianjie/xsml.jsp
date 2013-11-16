@@ -80,6 +80,9 @@
             <div class="panel-body">
         			<a href="../xinxi/xszx.jsp" style="color:#000;" class="panel-item">学术资讯</a>
       			</div>
+      			<div class="panel-body">
+        			<a href="../xinxi/hdbd.jsp" style="color:#000;" class="panel-item">活动报道</a>
+      			</div>
     		</div>
   		</div>
   		<div class="panel panel-default">
@@ -210,7 +213,7 @@
 			<div class="round-border deep-blue" style="height:40px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">首页</a>
-         <span style="color:#fff;">->院系概况</span>	
+         <span style="color:#fff;">->学生名录</span>	
 			</div>
       <div class="gray-border round-border white-back" style="width:753px;margin-top:15px;">
       	<p>1<p>

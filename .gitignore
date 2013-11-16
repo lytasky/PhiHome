@@ -216,3 +216,5 @@ pip-log.txt
 *.class
 *.properties
 *.dtd
+DB.java
+DBConMgr.java

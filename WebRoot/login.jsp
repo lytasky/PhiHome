@@ -96,7 +96,7 @@ body {
     <span class="STYLE1">论坛管理员登陆</span></p>
   <p>&nbsp;  </p>
   <form action="login.jsp" method="post" name="adminlog">
-  <table class="round-border gray-border" style="background-color:#fff;">
+  <table class="round-border gray-border" style="background-color:#fff;" cellpadding=5>
     <input type="hidden" name="action" value="log"/>
     <tr height=30>
       <td> 用户名：</td>
