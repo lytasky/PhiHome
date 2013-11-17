@@ -59,6 +59,14 @@
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<link href="css/diy.css" rel="stylesheet" media="screen" />
+  <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
+  <script src="js/jquery.js"></script>
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+<script src="js/jquery.flexslider.js"></script>
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
 	<head>
 		<script language="javascript">
 		    function Check()
@@ -126,77 +134,146 @@ body {
 </style>
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 	</head>
-	<body topmargin="0">
-		<table>
-			<tr>
-				<td>
-					<img src="images/huang1.jpg">
-				</td>
-			</tr>
-		</table>
-		<div align="center">
+	<body topmargin="0" style="background:url(images/back.PNG) repeat;">
+		<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
+      <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
+      	<div style="margin-right:25px;float:right;">
+          <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
+          <div class="row" style="float:right;margin-top:15px;">
+  					<div class="col-md-12">
+    					<div class="input-group">
+      					<input type="text" class="form-control">
+      					<span class="input-group-btn">
+        					<button class="btn btn-default" type="button">搜索</button>
+      					</span>
+    					</div><!-- /input-group -->
+  					</div><!-- /.col-lg-6 -->
+					</div><!-- /.row -->
+       	</div>
+      </div>
+    </div>
+		<div align="center" class="gray-border" >
 			<p>
 				<br>
-
 				<span class="STYLE1">新用户注册<br> </span>
 			</p>
 
 			<form name="register" action="register.jsp" method="post">
-				<table border="1" width="50%" bgcolor="green" height="85">
+				<table border="0" width="440px"  height="85" cellpadding=5>
 					<tr>
 						<td>
-							<font color="white">用户名</font>
+							<font >身份</font>
 						</td>
 						<td>
-							<input type="text" name="username" size="15" />
-							<font color="red">*</font>
+							<font >教师</font>
+							<input type="radio" name="identity" size="15" value="1" />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<font >学生</font>
+							<input type="radio" name="identity" size="15" value="0" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<font >用户名</font>
+						</td>
+						<td>
+							<input type="text" name="username" size="15" class="form-control" style="width:210px;"/>
+						</td>
+						<td>
+							<font color="red">*</font><font> 请务必填写实名</font>
 							<input type="hidden" name="action" value="login" />
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<font color="white">密码</font>
+							<font >密码</font>
 						</td>
 						<td>
-							<input type="password" name="pwd" size="15" />
+							<input type="password" name="pwd" size="15" class="form-control" style="width:210px;"/>
+						</td>
+						<td>
 							<font color="red">*</font>&nbsp;
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<font color="white">确认密码</font>
+							<font >确认密码</font>
 						</td>
 						<td>
-							<input type="password" name="confpwd" size="15" />
+							<input type="password" name="confpwd" size="15" class="form-control" style="width:210px;"/>
+						</td>
+						<td>
 							<font color="red">*</font>&nbsp;
 						</td>
 					</tr>
 					<tr>
-
-						<td colspan="2">
-							<font color="white">男</font>
+						<td>
+							<font >性别</font>
+						</td>
+						<td>
+							<font >男</font>
 							<input type="radio" name="sex" size="15" value="1" />
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<font color="white">女</font>
+							<font >女</font>
 							<input type="radio" name="sex" size="15" value="0" />
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<font color="white">邮箱</font>
+							<font >邮箱</font>
 						</td>
 						<td>
-							<input type="text" name="email" size="15" />
+							<input type="text" name="email" size="15" class="form-control" style="width:210px;"/>
+						</td>
+						<td>
 							<font color="red">*</font>
 						</td>
 					</tr>
-					<tr align="left">
+					<tr>
 						<td>
-							<input type="button" value="提交" onclick="Check()">
+							<font >专业</font>
 						</td>
+						<td>
+							<input type="text" name="major" size="15" class="form-control" style="width:210px;"/>
+						</td>
+						<td>
+							<font color="red">*</font>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<font >入学年份</font>
+						</td>
+						<td>
+							<input type="text" name="year" size="15" class="form-control" style="width:210px;"/>
+						</td>
+						<td>
+							<font color="red">*</font>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<font >学位</font>
+						</td>
+						<td>
+							<font >本科</font>
+							<input type="radio" name="degree" size="15" value="1" />
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<font >硕士</font>
+							<input type="radio" name="degree" size="15" value="0" />
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<font >博士</font>
+							<input type="radio" name="degree" size="15" value="0" />
+						</td>
+					</tr>
+					<tr align="left">
 						<td align="rignt">
-							<input type="button" name="button" value="重置" />
+							<input type="button" name="button" value="重置" class="btn btn-primary"/>
 						</td>
+						<td>
+							<input type="button" value="提交" onclick="Check()" class="btn btn-primary" style="width:210px;">
+						</td>
+						
 
 					</tr>
 

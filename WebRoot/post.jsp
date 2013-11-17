@@ -91,41 +91,30 @@
        	</div>
       </div>
     </div><!-- head -->
-		<div id="jive-flatpage" style="margin:15px auto;width:1000px;">
-			<table border="0" cellpadding="0" cellspacing="0" width="100%">
-				<tbody>
-					<tr valign="top">
-						<td width="99%"><p class="jive-page-title">&nbsp;发表新主题
-							</p>
-						</td>
-						<td width="1%">
-							<div class="jive-accountbox"></div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+		<div id="jive-flatpage" style="margin:15px auto;width:1000px;padding-left:0px;">
+			<div class="round-border deep-blue" style="width:650px;height:40px;padding-top:10px;padding-left:15px;"><!--当前位置-->
+         <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> <font size=3>发表新主题</font></span>	
+			</div>
 			
-			<table border="0" cellpadding="0" cellspacing="0" width="930"
+			<table border="0" cellpadding="0" cellspacing="0" width="800"
 				height="61">
 				<tbody>
 					<tr valign="top">
-						<td width="99%">
+						<td width="100%">
 							<div id="jive-message-holder">
-								<div class="jive-message-list">
-									<div class="jive-table">
-										<div class="jive-messagebox">
+								<div class="jive-message-list">									
 
 											<form action="post.jsp" method="post">
 												<input type="hidden" name="action" value="post" />
-												<div class="col-md-10">
+												<div class="col-md-10" style="margin-top:10px;">
 												标题：
 												<input type="text" name="title" class="form-control">
 												<br>
 												</div>
-												<div class="col-md-10">
+												<!--<div class="col-md-10">
 												作者：<input type="text" name="writer" class="form-control"/> 
 												<br>
-												</div>
+												</div>-->
 												<div class="col-md-10">
 												内容：
 												<textarea name="cont" rows="10" cols="80" class="form-control"></textarea>
@@ -136,17 +125,12 @@
 												<button class="btn btn-primary" type="submit">发表</button>
 												</div>
 											</form>
-
-										</div>
-									</div>
+								
 								</div>
 								<div class="jive-message-list-footer">
 									<br>
 								</div>
 							</div>
-						</td>
-						<td width="1%">
-							&nbsp;
 						</td>
 					</tr>
 				</tbody>

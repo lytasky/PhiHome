@@ -15,7 +15,7 @@ if(adminLogined != null && adminLogined.trim().equals("true")) {
 String keyword = new String(request.getParameter("keyword").getBytes("8859_1"), "GBK");
 if(keyword == null) keyword = "";
 
-final int PAGE_SIZE = 5;
+final int PAGE_SIZE = 10;
 int pageNo = 1;
 String strPageNo = request.getParameter("pageNo");
 if(strPageNo != null && !strPageNo.trim().equals("")) {
@@ -103,22 +103,12 @@ DB.close(conn);
       </tr>
     </tbody>
   </table>
-  <div class="jive-buttons">
-    <table summary="Buttons" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <td class="jive-icon"><a href="post.jsp"><img src="images/post-16x16.gif" alt="发表新主题" border="0" height="16" width="16"></a></td>
-          <td class="jive-icon-label"><a id="jive-post-thread" href="post.jsp">发表新主题</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;isBest=1"></a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br>
+  
   <table border="0" cellpadding="3" cellspacing="0" width="100%">
     <tbody>
       <tr valign="top">
-        <td><span class="nobreak"> 页: 
-          第<%=pageNo %>页,共页 <%=totalPages %> <span class="jive-paginator"> [</span></span>
+        <td><span class="nobreak">  
+          第<%=pageNo %>页,共<%=totalPages %>页 <span class="jive-paginator"> [</span></span>
           
           <span class="nobreak"><span class="jive-paginator">
           <a href="searchResult.jsp?pageNo=1&keyword=<%=keyword %>">第一页</a></span></span>
@@ -135,15 +125,17 @@ DB.close(conn);
          <a href="searchResult.jsp?pageNo=<%=pageNo + 1 %>&keyword=<%=keyword %>">下一页</a>
           |&nbsp; 
           <a href="searchResult.jsp?pageNo=<%=totalPages %>&keyword=<%=keyword %>">最末页</a> ] </span> </span> </td>
+
+          <td width="150" class="jive-icon-label"><img src="images/post-16x16.gif" alt="发表新主题" border="0" height="16" width="16"><a id="jive-post-thread" href="post.jsp">发表新主题</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;isBest=1"></a></td>
       </tr>
     </tbody>
   </table>
-  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <table border="1" cellpadding="0" cellspacing="3" width="100%" bg-color="red">
     <tbody>
       <tr valign="top">
         <td width="99%"><div class="jive-thread-list">
             <div class="jive-table">
-              <table summary="List of threads" cellpadding="0" cellspacing="0" width="100%">
+              <table summary="List of threads" border="1" cellpadding="10" cellspacing="0" width="100%" >
                 <thead>
                   <tr>
                     <th class="jive-first" colspan="3"> 主题 </th>
@@ -161,12 +153,12 @@ DB.close(conn);
                 	Article a = it.next();
   					String classStr = lineNo%2 == 0 ? "jive-even" : "jive-odd";
                 %>
-                  <tr class="<%=classStr %>">
+                  <tr class="<%=classStr %>" >
                     <td class="jive-first" nowrap="nowrap" width="1%"><div class="jive-bullet"> <img src="images/read-16x16.gif" alt="已读" border="0" height="16" width="16">
                         <!-- div-->
                       </div></td>
                       
-                    <td nowrap="nowrap" width="1%">
+                    <td nowrap="nowrap" width="1%" height="35px">
                     	<%
                     	String url = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort();
                     	url += request.getContextPath();

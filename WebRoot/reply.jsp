@@ -99,7 +99,7 @@ window.onload = function()
                 		<input type="hidden" name="pno" value="<%=pno %>"/>
                 		<div class="col-md-10">标题：<input type="text" name="title" class="form-control"><br></div>
                 		<div class="col-md-10">内容：<textarea class="form-control" name="cont" rows="10" cols="80"></textarea></div>
-                		<div class="col-md-10" style="margin-top:15px;"><input type="submit" value="submit" class="btn btn-primary"/></div>
+                		<div class="col-md-10" style="margin-top:15px;"><input type="submit" value="回复" class="btn btn-primary"/></div>
                 	</form>
                 	
                 </div>

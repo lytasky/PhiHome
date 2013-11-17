@@ -33,7 +33,7 @@ User oneUser=new User();
 %>
 
 <%
-	final int PAGE_SIZE = 4; // 分页
+	final int PAGE_SIZE = 10; // 分页
 	int pageNo = 1;
 	String strPageNo = request.getParameter("pageNo");
 	if (strPageNo != null && !strPageNo.trim().equals("")) {
@@ -132,7 +132,7 @@ User oneUser=new User();
       </div>
     </div>
     <div style="width:1000px;margin:10px auto;background-color:#fff;padding-left:10px;" class="gray-border round-border">
-		<font color="red" size=4><%=(String)session.getAttribute("name")%></font> 你好<marquee style="width:800px;margin-left:15px;">欢迎光临本论坛，大家一起交流共同提高！</marquee>
+		<font color="#3276b1" size=4><%=(String)session.getAttribute("name")%></font> 你好<marquee style="width:800px;margin-left:15px;">欢迎光临本论坛，大家一起交流共同提高！</marquee>
 		 <div id="jive-forumpage">
 		 	<div class="jive-buttons">
 				<div align="center">
@@ -150,16 +150,7 @@ User oneUser=new User();
 					</form>
 				</div>
 			</div>
-			<%if(ulogined || ulog){ %>
-			<a href="post.jsp">发表新主题<img src="images/post-16x16.gif"
-										alt="发表新主题" border="0" height="16" width="16">
-								</a><br>
-			<%} %>					
-			<%if(!ulogined&&!ulog){ %>
-			<a href="uselogin.jsp">发表新主题<img src="images/post-16x16.gif"
-										alt="发表新主题" border="0" height="16" width="16">
-								</a><br>
-			<%} %>					
+							
 			<table border="0" cellpadding="3" cellspacing="0" width="100%">
 				<tbody>
 					<tr valign="top">
@@ -189,9 +180,22 @@ User oneUser=new User();
 									|&nbsp; <a href="articleFlat.jsp?pageNo=<%=totalPages%>">最末页</a>
 									] </span> </span>
 						</td>
+						<td align="left" width="150px">
+							<%if(ulogined || ulog){ %>
+								<a href="post.jsp">发表新主题<img src="images/post-16x16.gif"
+										alt="发表新主题" border="0" height="16" width="16">
+								</a>
+							<%} %>					
+							<%if(!ulogined&&!ulog){ %>
+								<a href="uselogin.jsp">发表新主题<img src="images/post-16x16.gif"
+										alt="发表新主题" border="0" height="16" width="16">
+								</a>
+							<%} %>	
+						</td>
 					</tr>
 				</tbody>
 			</table>
+			
 			<table border="0" cellpadding="0" cellspacing="0" width="100%">
 				<tbody>
 					<tr valign="top">
@@ -201,7 +205,7 @@ User oneUser=new User();
 									<table summary="List of threads" cellpadding="0"
 										cellspacing="0" width="100%">
 										<thead>
-											<tr>
+											<tr background-color="#3276b1">
 												<th class="jive-first" colspan="3">
 													主题
 												</th>
