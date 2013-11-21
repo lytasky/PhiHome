@@ -9,6 +9,19 @@ public class News {
 	private String picurl ;
 	private String newsfrom ;
 	private String publishtime ;
+	private String extraFile;
+	/**
+	 * @return the extraFile
+	 */
+	public String getExtraFile() {
+		return extraFile;
+	}
+	/**
+	 * @param extraFile the extraFile to set
+	 */
+	public void setExtraFile(String extraFile) {
+		this.extraFile = extraFile;
+	}
 	/**
 	 * @return the id
 	 */

@@ -27,12 +27,28 @@ password varchar(14)
 insert into adminUse values(null,'admin','admin');
 
 
-create table user(
+create table student(
 id int primary key auto_increment,
 name varchar(32),
-password varchar(14),
-sex varchar(4),
-email varchar(20)
+password varchar(32),
+sex varchar(10),
+studentID varchar(16),
+email varchar(32),
+discipline varchar(80),
+entryTime date,
+degree tinyint
+);
+
+create table teacher(
+id int primary key auto_increment,
+name varchar(32),
+password varchar(32),
+sex varchar(10),
+teacherID varchar(16),
+email varchar(32),
+discipline varchar(80),
+entryTime date,
+degree tinyint
 );
 
 create table News(
@@ -43,5 +59,6 @@ keyword varchar(255),
 content text,
 picurl varchar(255),
 newsfrom varchar(255),
-publishtime datetime
+publishtime datetime,
+extraFile varchar(255)
 );

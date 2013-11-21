@@ -1,5 +1,5 @@
-
-use bbs;
+create database liuyanban;
+use liuyanban;
 
 CREATE TABLE vlyb(
   id int(11) NOT NULL auto_increment,

@@ -11,7 +11,7 @@
 	  String host = "localhost";                   //建立连接
 	  String user = "root";
 	  String pw = "root";
-	  String db = "vitallordb";
+	  String db = "liuyanban";
 	  String url = "jdbc:mysql://" + host + "/" + db;    
 	  conn = DriverManager.getConnection(url,user,pw);  
   }catch(SQLException ex){

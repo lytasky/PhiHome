@@ -32,7 +32,7 @@ public class NewsMgr {
 				news.setPicurl(rs.getString("picurl"));
 				news.setTitle(rs.getString("title"));
 				news.setPublishtime(rs.getString("publishtime"));
-				
+				news.setExtraFile(rs.getString("extraFile"));
 				listNews.add(news);
 			}
 			return listNews;
