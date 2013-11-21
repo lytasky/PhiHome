@@ -178,13 +178,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		</div>
     		<div id="collapseSeven" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="uselogin.jsp" style="color:#000;" class="panel-item">课程讨论</a>
-      			</div>
-      			<div class="panel-body">
-        			<a href="luntan/dsh.jsp" style="color:#000;" class="panel-item">读书会</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="luntan/zxsl.jsp" style="color:#000;" class="panel-item">哲学沙龙</a>
+        			<a href="uselogin.jsp" style="color:#000;" class="panel-item">论坛入口</a>
       			</div>
     		</div>
   		</div>
@@ -238,7 +232,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<div id="publish" style="width:350px;height:278px;float:left;display:block;"><!--publish-->
   	<div class="list-group">
     	<div>
-        <a href="#" class="list-group-item active" style="background-color:#3276b1;">
+        <a href="xinxi/zytg.jsp" class="list-group-item active" style="background-color:#3276b1;">
           <span class="glyphicon glyphicon-list-alt"></span> 重要通告
           <div style="width:60px;float:right;font-size:8px;margin-top:3px;"><span class="glyphicon glyphicon-hand-right"></span> MORE
           </div>
@@ -298,7 +292,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<div id="news" style="width:350px;height:278px;margin-top:12px;float:left;"><!--news-->
   	<div class="list-group">
   		<div>
-        <a href="#" class="list-group-item active">
+        <a href="xinxi/xszx.jsp" class="list-group-item active">
           <span class="glyphicon glyphicon-book"></span> 学术资讯
           <div style="width:60px;float:right;font-size:8px;margin-top:3px;"><span class="glyphicon glyphicon-hand-right"></span> MORE
           </div>

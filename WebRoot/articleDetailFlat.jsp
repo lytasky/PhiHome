@@ -135,7 +135,7 @@
 																<tbody>
 																	<tr>
 																		<td>
-																			<table border="0" cellpadding="0" cellspacing="0"
+																			<table border="0" cellpadding="5" cellspacing="0"
 																				width="100%">
 																				<tbody>
 																					<tr valign="top">
@@ -143,24 +143,20 @@
 																							<nobr>
 																								<a
 																									href="#"
-																									title="诺曼底客">诺曼底客</a>
+																									title="诺曼底客">用户名</a>
+																									
 																							</nobr>
 																						</td>
-																						<td style="padding: 0px;" width="99%">
-																							<img class="jive-status-level-image"
-																								src="images/level3.gif" title="世界新手" alt=""
-																								border="0">
-																							<br>
+
+																					</tr>
+																					<tr>
+																						<td>
+																							<img src="images/touxiang2.jpg">
 																						</td>
 																					</tr>
 																				</tbody>
 																			</table>
-																			<img class="jive-avatar"
-																				src="images/avatar-display.png" alt="" border="0">
-																			<br>
-																			<br>
-																			<span class="jive-description"> 发表: 34 <br>
-																				点数: 100<br> 注册: 07-5-10 <br>  </span>
+																			
 																		</td>
 																	</tr>
 																</tbody>
@@ -219,21 +215,8 @@
 																			<br>
 																		</td>
 																	</tr>
-																	<tr>
-																		<td colspan="4" style="font-size: 9pt;">
-																			<img src="images/sigline.gif">
-																			<br>
-																			<font color="#568ac2">学程序是枯燥的事情，愿大家在一起能从中得到快乐！</font>
-																			<br>
-																		</td>
-																	</tr>
-																	<tr>
-																		<td colspan="4"
-																			style="border-top: 1px solid rgb(204, 204, 204); font-size: 9pt; table-layout: fixed;">
-			
-																			
-																		</td>
-																	</tr>
+																	
+																	
 																</tbody>
 															</table>
 														</td>

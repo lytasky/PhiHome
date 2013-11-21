@@ -96,7 +96,7 @@ body {
     <span class="STYLE1">论坛管理员登陆</span></p>
   <p>&nbsp;  </p>
   <form action="login.jsp" method="post" name="adminlog">
-  <table class="round-border gray-border" style="background-color:#fff;" cellpadding=5>
+  <table class="round-border gray-border"  cellpadding=5>
     <input type="hidden" name="action" value="log"/>
     <tr height=30>
       <td> 用户名：</td>
@@ -108,7 +108,7 @@ body {
     </tr>
     <tr>
       <td><button type="reset" value="重设" class="btn btn-primary">重设</button></td>
-      <td><button type="submit" value="登陆" class="btn btn-primary">登陆</button></td>
+      <td><button type="submit" value="登陆" class="btn btn-primary" style="width:180px;">登陆</button></td>
       
     </tr>
   </form>

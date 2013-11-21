@@ -129,11 +129,11 @@ body {
        	</div>
       </div>
     </div>
-<div align="center" style="border:1px solid #ccc;width:500px;margin:0 auto;" class="round-border">
+<div align="center" style="border:1px solid #ccc;width:500px;margin:15px auto;" class="round-border">
   <p>
     <br>
     <br>
-    <span class="STYLE1">如果您没有注册请注册一个新用户</span></p>
+    <font>如果您没有注册请注册一个新用户</font></p>
   <p>&nbsp;  </p>
 <form name="usrlog" action="uselogin.jsp">
 <table border="0" width="250" bordercolor="#CCC" height="85" cellpadding="5">

@@ -81,7 +81,7 @@
         			<a href="../xinxi/xszx.jsp" style="color:#000;" class="panel-item">学术资讯</a>
       			</div>
       			<div class="panel-body">
-        			<a href="xinxi/hdbd.jsp" style="color:#000;" class="panel-item">活动报道</a>
+        			<a href="../xinxi/hdbd.jsp" style="color:#000;" class="panel-item">活动报道</a>
       			</div>
     		</div>
   		</div>
@@ -153,13 +153,7 @@
     		</div>
     		<div id="collapseSeven" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="../uselogin.jsp" style="color:#000;" class="panel-item">课程讨论</a>
-      			</div>
-      			<div class="panel-body">
-        			<a href="../luntan/dsh.jsp" style="color:#000;" class="panel-item">读书会</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="../luntan/zxsl.jsp" style="color:#000;" class="panel-item">哲学沙龙</a>
+        			<a href="../uselogin.jsp" style="color:#000;" class="panel-item">论坛入口</a>
       			</div>
     		</div>
   		</div>

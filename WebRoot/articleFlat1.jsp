@@ -17,11 +17,11 @@ User oneUser=new User();
 		logined = true;
 	
 	}
-	out.println(logined);
+//	out.println(logined);
 %>
 
 <%
-	final int PAGE_SIZE = 4; // ·ÖÒ³
+	final int PAGE_SIZE = 10; // ·ÖÒ³
 	int pageNo = 1;
 	String strPageNo = request.getParameter("pageNo");
 	if (strPageNo != null && !strPageNo.trim().equals("")) {
@@ -93,6 +93,14 @@ User oneUser=new User();
 			href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?forumID=20">
 		<script language="JavaScript" type="text/javascript"
 			src="images/common.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<link href="css/diy.css" rel="stylesheet" media="screen" />
+  <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
+  <script src="js/jquery.js"></script>
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+<script src="js/jquery.flexslider.js"></script>
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
 	</head>
 	<body><br><div id="jive-forumpage"><div class="jive-buttons"><br><div align="right">
 
@@ -102,8 +110,16 @@ User oneUser=new User();
 				<%if (logined) {//ÅÐ¶ÏÊÇ·ñµÇÂ½%>
 				<div align="center">
 					<form action="searchResult.jsp" method="post">
-						<input type="text" name="keyword" />
-						<input type="submit" value="ËÑË÷" />
+					<div class="row" style="margin:0 auto;width:250px;">
+  					<div class="col-md-12">
+    					<div class="input-group input-group-sm">
+      					<input type="text" class="form-control">
+      					<span class="input-group-btn">
+        					<button class="btn btn-primary" type="button">ËÑË÷</button>
+      					</span>
+    					</div><!-- /input-group -->
+  					</div><!-- /.col-lg-6 -->
+			</div><!-- /.row -->
 					</form>
 				</div>
 			</div>
@@ -116,7 +132,7 @@ User oneUser=new User();
 				<tbody>
 					<tr valign="top">
 						<td>
-							<span class="nobreak"> Ò³: µÚ<%=pageNo%>Ò³,¹²<%=totalPages %>Ò³  <span
+							<span class="nobreak"> µÚ<%=pageNo%>Ò³,¹²<%=totalPages %>Ò³  <span
 								class="jive-paginator"> [</span>
 							</span>
 

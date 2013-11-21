@@ -358,7 +358,8 @@ A:active {
     font-weight : bold;
     text-align : center;
     /*background-color : #6699cc;*/
-    background-color: 9D80F0;
+    /*background-color: 9D80F0;*/
+	background-color: #428bca;
     color : #ffffff;
     border-top : 1px #336699 solid;
     border-bottom : 1px #336699 solid;
