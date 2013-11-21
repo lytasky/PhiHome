@@ -1,0 +1,20 @@
+<%  
+  try{
+  	  Class.forName("com.mysql.jdbc.Driver");    //加载JDBC驱动
+  }catch(java.lang.ClassNotFoundException ex){
+      out.print("Connext to DataBase error : " + ex.getMessage());
+  }
+  
+  Connection conn = null;
+  Statement sta = null; 
+  try{
+	  String host = "localhost";                   //建立连接
+	  String user = "root";
+	  String pw = "root";
+	  String db = "vitallordb";
+	  String url = "jdbc:mysql://" + host + "/" + db;    
+	  conn = DriverManager.getConnection(url,user,pw);  
+  }catch(SQLException ex){
+      out.print(ex.toString());
+  }
+%>

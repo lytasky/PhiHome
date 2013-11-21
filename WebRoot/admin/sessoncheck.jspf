@@ -1,0 +1,6 @@
+<%
+	String login = (String)session.getValue("login");
+       if(!"passed".equals(login)){
+          response.sendRedirect("../error001.jsp");
+       }
+%>
