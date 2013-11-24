@@ -1,11 +1,11 @@
 <%@ page pageEncoding="gb2312"%>
 <%@ page import="java.sql.*,com.bjsxt.bbs.*,java.util.*"%>
-<%@ page import="userbean.User" %>
+<%@ page import="userbean.AdminUser" %>
 <%@ page import="dbmgr.UserMgr"  %>
 <%@ page contentType="text/html; charset=gb2312" %>
 <jsp:directive.page import="dbmgr.UserMgr;"/>
 <% request.setCharacterEncoding("gb2312");
-User oneUser=new User();
+AdminUser oneUser=new AdminUser();
 
 %>
 

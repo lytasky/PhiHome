@@ -1,6 +1,8 @@
 <%@ page pageEncoding="gb2312"%>
 <%@ page import="java.sql.*,com.bjsxt.bbs.*,java.util.*"%>
-<%@ page import="userbean.User"%>
+<%@ page import="userbean.AdminUser"%>
+<%@ page import="userbean.Student"%>
+<%@ page import="userbean.Teacher"%>
 <%@ page import="dbmgr.UserMgr"%>
 
 
@@ -134,6 +136,8 @@ body {
     <br>
     <br>
     <font>如果您没有注册请注册一个新用户</font></p>
+    <input type="radio" name="identity" value="学生" checked="checked" />学生 
+	<input type="radio" name="identity" value="教师" />教师
   <p>&nbsp;  </p>
 <form name="usrlog" action="uselogin.jsp">
 <table border="0" width="250" bordercolor="#CCC" height="85" cellpadding="5">

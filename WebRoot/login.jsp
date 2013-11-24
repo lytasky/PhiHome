@@ -1,6 +1,6 @@
 <%@ page pageEncoding="gb2312"%>
 <%@ page import="java.sql.*,com.bjsxt.bbs.*,java.util.*"%>
-<%@ page import="userbean.User"%>
+<%@ page import="userbean.AdminUser"%>
 <%@ page import="dbmgr.UserMgr"%>
 
 <%
@@ -15,9 +15,9 @@
                 //创建一个用户表数据库读写类  
     			
     			 UserMgr userdb=new UserMgr();
-	             User user1=userdb.getName(username);
+	             AdminUser adminUser1=userdb.getByName(username);
 
-    			if (user1 == null) {
+    			if (adminUser1 == null) {
     				// 如果记录集为空，表明没有找到匹配的用户名，登陆失败：
     				out.println("用户名或密码错误");
   
@@ -29,7 +29,7 @@
                         //写异常日志
     					getServletContext().log(t.getMessage());
     				}
-    			} else if (user1.getPassword().equals(pwd)){             
+    			} else if (adminUser1.getPassword().equals(pwd)){             
     				try {
     					//转发至注册成功页面 
     					session.setAttribute("admLogined", "true");
