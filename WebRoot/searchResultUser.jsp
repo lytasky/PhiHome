@@ -1,6 +1,7 @@
 <%@ page pageEncoding="GB18030"%>
 <%@ page import="java.sql.*, com.bjsxt.bbs.*, java.util.*"%>
-<%@ page import="userbean.User" %>
+<%@ page import="userbean.Teacher" %>
+<%@ page import="userbean.Student" %>
 
 
 <%

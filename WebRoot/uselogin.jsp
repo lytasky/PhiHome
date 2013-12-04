@@ -9,45 +9,76 @@
 <%
 	request.setCharacterEncoding("GBK");
 	String action = request.getParameter("action2");
-	String username;
-	
+	String ID;
 	String pwd;
+	String identity;
 	if (action != null && action.trim().equals("ulogin")) {
-		username = request.getParameter("username");
+		ID = request.getParameter("ID");
 		pwd = request.getParameter("pwd");
-		
+		identity = request.getParameter("identity");
 		try {
                 //创建一个用户表数据库读写类  
-    			
-    			 UserMgr userdb=new UserMgr();
-	             User user1=userdb.get(username);
-
-    			if (user1 == null) {
+    			UserMgr userdb=new UserMgr(); 
+    			if(identity.equals("0"))              //学生登录
+    			{
+	             	Student student=userdb.getByStudentId(ID);
+	             	if (student == null) 
+	             	{
     				// 如果记录集为空，表明没有相匹配的用户名，注册失败：
     				//out.println("用户名不存在");
-  
-    				try {
-    					//转发至注册错误页面 
-    					response.sendRedirect("log_failure.jsp");
+	    				try {
+	    					//转发至登录错误页面 
+	    					response.sendRedirect("log_failure.jsp");
+	    				}catch (Throwable t) {
+	                        //写异常日志
+	    					getServletContext().log(t.getMessage());
+	    				}
     				} 
-    				catch (Throwable t) {
-                        //写异常日志
-    					getServletContext().log(t.getMessage());
-    				}
-    			} else if (user1.getPassword().equals(pwd)){             
-    				try {
-    					//转发至注册成功页面 
-    					session.setAttribute("uLogined", "true");
-				        session.setAttribute("name", username);
-    					response.sendRedirect("articleFlat.jsp");
-    				} 
-    				catch (Throwable t) {
-    					//写异常日志
-    					getServletContext().log(t.getMessage());
-    				}
+    				else if (student.getPassword().equals(pwd))
+    				{     
+    					System.out.println("登录信息"+student.getId()+student.getPassword());        
+	    				try {
+	    					//转发至注册成功页面 
+	    					session.setAttribute("uLogined", "true");
+					        session.setAttribute("name", student.getName());
+	    					response.sendRedirect("articleFlat.jsp");
+	    				}catch (Throwable t) {
+	    					//写异常日志
+	    					getServletContext().log(t.getMessage());
+	    				}
+	            	 }
+	            }
+	             else if(identity.equals("1"))           //教师登录
+	             {
+					 Teacher teacher=userdb.getByTeacherId(ID);
+					 if (teacher == null) 
+					 {
+    					// 如果记录集为空，表明没有相匹配的用户名，注册失败：
+    			       //out.println("用户名不存在");
+	    				try {
+	    					//转发至登录错误页面 
+	    					response.sendRedirect("log_failure.jsp");
+	    				} 
+	    				catch (Throwable t) {
+	                        //写异常日志
+	    					getServletContext().log(t.getMessage());
+	    				}
+				 	}
+    				else if (teacher.getPassword().equals(pwd))
+    				{             
+	    				try {
+	    					//转发至注册成功页面 
+	    					session.setAttribute("uLogined", "true");
+					        session.setAttribute("name", teacher.getName());
+	    					response.sendRedirect("articleFlat.jsp");
+	    				} 
+	    				catch (Throwable t) {
+	    					//写异常日志
+	    					getServletContext().log(t.getMessage());
+	    				}
+    			   }
     			}
-    		} 
-    		catch (Exception e) {
+    		}catch(Exception e) {
     			e.printStackTrace();
     		}
     	}
@@ -70,18 +101,18 @@ document.usrlog.submit();
 <script language="javascript">
 		    function Check()
 		    {	
-		    	reName =/^\w{3,12}$/;
+		    	reID =/^\w{3,12}$/;
 		    	rePwd =/^\w{6,12}$/;
-				if(document.usrlog.username.value=="")
+				if(document.usrlog.ID.value=="")
 				{
-					window.alert("请填写你的登录名！");
-					window.usrlog.username.focus();
+					window.alert("请填写你的学号或者工号！");
+					window.usrlog.ID.focus();
 					return false;
 				}
-					if(!reName.test(document.usrlog.username.value))
+					if(!reID.test(document.usrlog.ID.value))
 				{
-					window.alert("用户名只能是5-12单字字符！");
-					window.usrlog.username.focus();
+					window.alert("学号或者工号只能是5-12单字字符！");
+					window.usrlog.ID.focus();
 					return false;
 				}
 				if(document.usrlog.pwd.value=="")
@@ -136,21 +167,27 @@ body {
     <br>
     <br>
     <font>如果您没有注册请注册一个新用户</font></p>
-    <input type="radio" name="identity" value="学生" checked="checked" />学生 
-	<input type="radio" name="identity" value="教师" />教师
   <p>&nbsp;  </p>
 <form name="usrlog" action="uselogin.jsp">
-<table border="0" width="250" bordercolor="#CCC" height="85" cellpadding="5">
+<table border="0" width="280" bordercolor="#CCC" height="85" cellpadding="5">
+	<tr>
+	<td>
+		<input type="radio" name="identity" value="0" checked="checked" />学生 
+	</td>
+	<td>
+		<input type="radio" name="identity" value="1" />教师
+	</td>
+	</tr>
 	<tr width="" style="margin-top:20px;">
 		<td>
-		<font>用户名:</font> 
+		<font>学号/工号:</font> 
 		 </td >
-		<td><input type="text" name="username" size="15" class="form-control"/> 
+		<td><input type="text" name="ID" size="15" class="form-control"/> 
 		<input type="hidden" name="action2" value="ulogin" />
 		</td>
 	</tr>
 	<tr width="40%">
-		<td><font>密码:</font></td>
+		<td><font> 密码:</font></td>
 		<td><input type="password" name="pwd" size="15" class="form-control"/> <input type="hidden" name="userlogin"></td>
 	</tr>
 	<tr align="center" width="40%">

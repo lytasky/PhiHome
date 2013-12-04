@@ -1,56 +1,112 @@
 <%@ page pageEncoding="gb2312"%>
 <%@ page import="java.sql.*,com.bjsxt.bbs.*,java.util.*"%>
-<%@ page import="userbean.User"%>
+<%@ page import="userbean.Teacher"%>
+<%@ page import="userbean.Student"%>
 <%@ page import="dbmgr.UserMgr"%>
 <% request.setCharacterEncoding("gb2312");
 	String action = request.getParameter("action");
 	String username;
 	if (action != null && action.trim().equals("login")){ 
 	        username = request.getParameter("username");
+	        String identity = request.getParameter("identity");  
+	        String ID = request.getParameter("ID");
     		String pwd = request.getParameter("pwd");		
     		String confpwd = request.getParameter("confpwd");
     		String email = request.getParameter("email");    		
     		String sex = request.getParameter("sex");
+    		String major =request.getParameter("major");
+    		String year = request.getParameter("year");
+    		System.out.print("year = " + year);
+    		String degree = request.getParameter("degree");
     		try {
                 //创建一个用户表数据库读写类  
     			UserMgr userdb=new UserMgr();
-    			User user=userdb.get(username);
-
-    			if (user != null) {
+    			
+    			if(identity.equals("0"))      //学生注册
+    			{
+    				Student student = userdb.getByStudentId(ID);
+    				if (student != null) {
+    				// 如果记录集为非空，表明有相匹配的用户名，注册失败：
+	    				try {
+	    					//转发至注册错误页面 
+	    					response.sendRedirect("reg_failure.jsp");
+	    				} 
+	    				catch (Throwable t) {
+	                        //写异常日志
+	    					getServletContext().log(t.getMessage());
+	    				}
+    				} 
+	    			else 
+	    			{
+	    				student=new Student();
+	    				student.setName(username);
+	    				student.setStudentID(ID);
+	    				student.setPassword(pwd);
+	    				student.setEmail(email);
+	    				student.setSex(sex);				
+	    				student.setDiscipline(major);
+	    				student.setEntryTime(year);
+	    				student.setDegree(Integer.parseInt(degree));
+	    				//写入数据库
+	    				int i=userdb.addStudent(student);  
+	    				 // 注册成功
+	    				request.setAttribute("user", student);
+	    				try {
+	    				
+	    					//转发至登录成功页面 
+	    					session.setAttribute("userLogined","true");
+	    					session.setAttribute("name",student.getName());
+	    					response.sendRedirect("articleFlat.jsp");
+	    				}catch (Throwable t) {
+	    					//写异常日志
+	    					getServletContext().log(t.getMessage());
+	    				}
+	    			}
+    			}
+    			else if(identity.equals("1"))        //教师注册
+    			{
+    				Teacher teacher = userdb.getByTeacherId(ID);
+    				if (teacher != null) {
     				// 如果记录集为非空，表明有相匹配的用户名，注册失败：
     				
-    				try {
-    					//转发至注册错误页面 
-    					response.sendRedirect("reg_failure.jsp");
-    				} 
-    				catch (Throwable t) {
-                        //写异常日志
-    					getServletContext().log(t.getMessage());
+	    				try {
+	    					//转发至注册错误页面 
+	    					response.sendRedirect("reg_failure.jsp");
+	    				} 
+	    				catch (Throwable t) {
+	                        //写异常日志
+	    					getServletContext().log(t.getMessage());
+	    				}
+	    			}
+	    			else 
+	    			{
+	    				teacher=new Teacher();
+	    				teacher.setName(username);
+		    			teacher.setTeacherID(ID);
+		    			teacher.setPassword(pwd);
+		    			teacher.setEmail(email);
+		    			teacher.setSex(sex);				
+		    			teacher.setDiscipline(major);
+		    			teacher.setEntryTime(year);
+		    			teacher.setDegree(Integer.parseInt(degree));		
+	    				              
+	    				//写入数据库
+	    				int i=userdb.addTeacher(teacher);  
+	    				  // 注册成功
+	    				request.setAttribute("user", teacher);
+	    				try {
+	    				
+	    					 //转发至登录成功页面 
+	    					session.setAttribute("userLogined","true");
+	    					session.setAttribute("name",teacher.getName());
+	    					response.sendRedirect("articleFlat.jsp");
+	    				} 
+	    				catch (Throwable t) {
+	    					//写异常日志
+	    					getServletContext().log(t.getMessage());
+	    				}
     				}
-    			} else {
-    				user=new User();
-    				user.setUsername(username);
-    				user.setPassword(pwd);
-    				user.setEmail(email);
-    				user.setsex(sex);				
-    				              
-    				//写入数据库
-    				int i=userdb.add(user);  
-    				// 注册成功
-    				request.setAttribute("user", user);
-    				try {
-    				
-    					//转发至注册成功页面 
-    					String name = user.getUsername();
-    					session.setAttribute("userLogined","true");
-    					session.setAttribute("name",username);
-    					response.sendRedirect("articleFlat.jsp");
-    				} 
-    				catch (Throwable t) {
-    					//写异常日志
-    					getServletContext().log(t.getMessage());
-    				}
-    			}
+    			}	
     		} 
     		catch (Exception e) {
     			e.printStackTrace();
@@ -182,6 +238,17 @@ body {
 						<td>
 							<font color="red">*</font><font> 请务必填写实名</font>
 							<input type="hidden" name="action" value="login" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<font >学号/工号</font>
+						</td>
+						<td>
+							<input type="text" name="ID" size="15" class="form-control" style="width:210px;"/>
+						</td>
+						<td>
+							<font color="red">*</font>&nbsp;
 						</td>
 					</tr>
 					<tr>

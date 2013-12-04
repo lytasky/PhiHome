@@ -7,7 +7,7 @@
 	if (action != null && action.trim().equals("post")) {
 		String title = request.getParameter("title");
 		System.out.println(title);
-	    String writer = request.getParameter("writer");
+	    String writer = (String)session.getAttribute("name");
 	    System.out.println(writer);
 		String cont = request.getParameter("cont");
 		System.out.println(cont);
