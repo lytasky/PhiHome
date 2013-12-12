@@ -15,7 +15,7 @@ public class Student {
 	private String email ;
 	private String discipline ;
 	private String entryTime ;
-	private int degree ;
+	private String degree ;
 	/**
 	 * @return the id
 	 */
@@ -116,13 +116,13 @@ public class Student {
 	/**
 	 * @return the degree
 	 */
-	public int getDegree() {
+	public String getDegree() {
 		return degree;
 	}
 	/**
 	 * @param degree the degree to set
 	 */
-	public void setDegree(int degree) {
+	public void setDegree(String degree) {
 		this.degree = degree;
 	}
 	
@@ -134,7 +134,16 @@ public class Student {
 			setStudentID(rs.getString("studentID"));
 			setSex(rs.getString("sex").equals("1") ? "男" : "女");
 			setDiscipline(rs.getString("discipline"));
-			setDegree(rs.getInt("degree"));
+			if(rs.getString("degree").equals("1")){
+				setDegree("本科");
+			}else if(rs.getString("degree").equals("2"))
+			{
+				setDegree("硕士");
+			}
+			else
+			{
+				setDegree("博士");
+			}
 			setEntryTime(rs.getString("entryTime"));
 			setEmail(rs.getString("email"));
 			setId(rs.getInt("id"));

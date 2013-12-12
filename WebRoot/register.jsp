@@ -1,9 +1,9 @@
-<%@ page pageEncoding="gb2312"%>
+<%@ page pageEncoding="gbk"%>
 <%@ page import="java.sql.*,com.bjsxt.bbs.*,java.util.*"%>
 <%@ page import="userbean.Teacher"%>
 <%@ page import="userbean.Student"%>
 <%@ page import="dbmgr.UserMgr"%>
-<% request.setCharacterEncoding("gb2312");
+<% request.setCharacterEncoding("GBK");
 	String action = request.getParameter("action");
 	String username;
 	if (action != null && action.trim().equals("login")){ 
@@ -15,9 +15,10 @@
     		String email = request.getParameter("email");    		
     		String sex = request.getParameter("sex");
     		String major =request.getParameter("major");
-    		String year = request.getParameter("year");
-    		System.out.print("year = " + year);
+    		String year =request.getParameter("year");
     		String degree = request.getParameter("degree");
+    		
+    		System.out.println(""+username);
     		try {
                 //创建一个用户表数据库读写类  
     			UserMgr userdb=new UserMgr();
@@ -46,7 +47,7 @@
 	    				student.setSex(sex);				
 	    				student.setDiscipline(major);
 	    				student.setEntryTime(year);
-	    				student.setDegree(Integer.parseInt(degree));
+	    				student.setDegree(degree);
 	    				//写入数据库
 	    				int i=userdb.addStudent(student);  
 	    				 // 注册成功
@@ -88,7 +89,7 @@
 		    			teacher.setSex(sex);				
 		    			teacher.setDiscipline(major);
 		    			teacher.setEntryTime(year);
-		    			teacher.setDegree(Integer.parseInt(degree));		
+		    			teacher.setDegree(degree);		
 	    				              
 	    				//写入数据库
 	    				int i=userdb.addTeacher(teacher);  
@@ -127,21 +128,14 @@
 		<script language="javascript">
 		    function Check()
 		    {	
-		    	reName =/^\w{3,12}$/;
 		    	rePwd =/^\w{6,12}$/;
-		    	reEmail=/^\w+@\w+\.\w+$/;
+		    	reEmail=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
 				if(document.register.username.value=="")
 				{
 					window.alert("请填写你的登录名！");
 					window.register.username.focus();
 					return false;
-				}
-					if(!reName.test(document.register.username.value))
-				{
-					window.alert("用户名只能是3-12单字字符！");
-					window.register.username.focus();
-					return false;
-				}
+				}	
 				if(document.register.pwd.value=="")
 				{
 					window.alert("请填写密码！");
@@ -188,7 +182,7 @@ body {
 }
 -->
 </style>
-		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
 	</head>
 	<body topmargin="0" style="background:url(images/back.PNG) repeat;">
 		<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
@@ -327,10 +321,10 @@ body {
 							<input type="radio" name="degree" size="15" value="1" />
 							&nbsp;&nbsp;&nbsp;&nbsp;
 							<font >硕士</font>
-							<input type="radio" name="degree" size="15" value="0" />
+							<input type="radio" name="degree" size="15" value="2" />
 							&nbsp;&nbsp;&nbsp;&nbsp;
 							<font >博士</font>
-							<input type="radio" name="degree" size="15" value="0" />
+							<input type="radio" name="degree" size="15" value="3" />
 						</td>
 					</tr>
 					<tr align="left">

@@ -211,7 +211,7 @@
 													<%
 														if (logined) {
 													%>
-													<a href="deleteUser.jsp?id=<%=user.getId()%>&form1=<%=url %>">É¾³ý</a>
+													<a href="deleteTeacher.jsp?id=<%=user.getId()%>&form1=<%=url %>">É¾³ý</a>
 													<%} %>	
 												</td>
 

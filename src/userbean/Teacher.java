@@ -15,7 +15,7 @@ public class Teacher {
 	private String email ;
 	private String discipline ;
 	private String entryTime ;
-	private int degree ;
+	private String degree ;
 	/**
 	 * @return the id
 	 */
@@ -112,19 +112,19 @@ public class Teacher {
 	public void setEntryTime(String entryTime) {
 		this.entryTime = entryTime;
 	}
+	
 	/**
 	 * @return the degree
 	 */
-	public int getDegree() {
+	public String getDegree() {
 		return degree;
 	}
 	/**
 	 * @param degree the degree to set
 	 */
-	public void setDegree(int degree) {
+	public void setDegree(String degree) {
 		this.degree = degree;
 	}
-	
 	public void initFromR(ResultSet rs)
 	{
 		try {
@@ -133,7 +133,16 @@ public class Teacher {
 			setTeacherID(rs.getString("teacherID"));
 			setSex(rs.getString("sex").equals("0") ? "男" : "女");
 			setDiscipline(rs.getString("discipline"));
-			setDegree(rs.getInt("degree"));
+			if(rs.getInt("degree") == 1){
+				setDegree("本科");
+			}else if(rs.getInt("degree") == 2)
+			{
+				setDegree("硕士");
+			}
+			else
+			{
+				setDegree("博士");
+			}
 			setEntryTime(rs.getString("entryTime"));
 			setEmail(rs.getString("email"));
 			setId(rs.getInt("id"));

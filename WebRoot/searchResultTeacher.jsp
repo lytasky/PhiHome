@@ -1,10 +1,10 @@
-<%@ page pageEncoding="GB18030"%>
+<%@ page pageEncoding="GBK"%>
 <%@ page import="java.sql.*, com.bjsxt.bbs.*, java.util.*"%>
 <%@ page import="userbean.Teacher" %>
 
 
 <%
-String keyword = new String(request.getParameter("keyword").getBytes("8859_1"), "GBK");
+String keyword = request.getParameter("keyword");
 if(keyword == null) keyword = "";
 
 final int PAGE_SIZE = 4;

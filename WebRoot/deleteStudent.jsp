@@ -5,7 +5,7 @@
 
 <%!
 private void delete(Connection conn, int id) {
-	DB.executeUpdate(conn, "delete from user where id = " + id);
+	DB.executeUpdate(conn, "delete from student where id = " + id);
 }
 %>
 
@@ -24,6 +24,6 @@ try {
 	DB.close(stmt);
 	DB.close(conn);
 }
-response.sendRedirect("userMrg.jsp");
+response.sendRedirect("studentMrg.jsp");
 %>
 

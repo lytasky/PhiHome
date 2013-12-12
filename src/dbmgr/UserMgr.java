@@ -30,10 +30,10 @@ public class UserMgr {
 				student.setName(rs.getString("name"));
 				student.setPassword(rs.getString("password"));
 				student.setStudentID(studentID);
-				student.setEmail("email");
+				student.setEmail(rs.getString("email"));
 				student.setSex(rs.getString("sex"));
 				student.setDiscipline(rs.getString("discipline"));
-				student.setDegree(rs.getInt("degree"));
+				student.setDegree(rs.getString("degree"));
 				student.setEntryTime(rs.getString("entryTime"));
 				return student;
 			}
@@ -60,9 +60,6 @@ public class UserMgr {
 		try {
 			String sql = "select * from teacher where teacherID ='"
 					+ teacherID + "'";
-			//中文乱码问题
-			//sql = new String(sql.getBytes("ISO8859-1"), "GB2312");
-			System.out.println(sql);
 			rs = db_conn.sm.executeQuery(sql);        // 执行sql语句
 			Teacher teacher = null;
 			if (rs.next()) {
@@ -71,10 +68,10 @@ public class UserMgr {
 				teacher.setName(rs.getString("name"));
 				teacher.setPassword(rs.getString("password"));
 				teacher.setTeacherID(teacherID);
-				teacher.setEmail("email");
+				teacher.setEmail(rs.getString("email"));
 				teacher.setSex(rs.getString("sex"));
 				teacher.setDiscipline(rs.getString("discipline"));
-				teacher.setDegree(rs.getInt("degree"));
+				teacher.setDegree(rs.getString("degree"));
 				teacher.setEntryTime(rs.getString("entryTime"));
 				return teacher;
 			}
@@ -103,9 +100,6 @@ public class UserMgr {
 					+ "','" + student.getPassword() + "','" + student.getEmail() + "','" + student.getSex()+ "','" + student.getStudentID()+ "','" 
 					+ student.getDiscipline()+ "','" + student.getEntryTime()+ "','" + student.getDegree()				
 					+ "')";
-			//中文乱码问题
-			sql = new String(sql.getBytes("ISO8859-1"), "GB2312");
-			//System.out.println(sql);
 			int i = db_conn.sm.executeUpdate(sql); // 执行sql语句
 			return i;
 		} 
@@ -126,16 +120,13 @@ public class UserMgr {
 	 //添加注册教师用户
 		public int addTeacher(Teacher teacher) {
 			db_conn.ConnectDB();	
-			System.out.println("ddsdsdds"+teacher);
+			System.out.println(teacher.getName()+"111");
 			try {
 				
 				String sql = "insert into teacher(id,name,password,email,sex,teacherID,discipline,entryTime,degree) values(null,'" + teacher.getName()
 						+ "','" + teacher.getPassword() + "','" + teacher.getEmail() + "','" + teacher.getSex()+ "','" + teacher.getTeacherID()+ "','" 
 						+ teacher.getDiscipline()+ "','" + teacher.getEntryTime()+ "','" + teacher.getDegree()				
 						+ "')";
-				//中文乱码问题
-				sql = new String(sql.getBytes("ISO8859-1"), "GB2312");
-				//System.out.println(sql);
 				int i = db_conn.sm.executeUpdate(sql); // 执行sql语句
 				return i;
 			} 
@@ -155,15 +146,11 @@ public class UserMgr {
 	
 	//获得管理员用户信息
 	public AdminUser getByName(String username) {//admin
-		System.out.println("userMgr  "+username);
 		db_conn.ConnectDB();
 		ResultSet rs = null;
 		try {
 			String sql = "select * from adminUse where name ='"
 					+ username + "'";
-			//中文乱码问题
-			//sql = new String(sql.getBytes("ISO8859-1"), "GB2312");
-			System.out.println(sql);
 			rs = db_conn.sm.executeQuery(sql);        // 执行sql语句
 			AdminUser adminUser = null;
 			if (rs.next()) {
@@ -173,7 +160,6 @@ public class UserMgr {
 				adminUser.setPassword(rs.getString("password"));
 				return adminUser;
 			}
-			System.out.println("my adm");
 			return adminUser;
 		} 
 		catch (SQLException SqlE) {
