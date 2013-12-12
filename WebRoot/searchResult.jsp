@@ -67,7 +67,7 @@ DB.close(conn);
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title>Java”Ô—‘*≥ıº∂∞Ê</title>
+<title></title>
 <meta http-equiv="content-type" content="text/html; charset=utf8">
 <link rel="stylesheet" type="text/css" href="images/style.css" title="Integrated Styles">
 <script language="JavaScript" type="text/javascript" src="images/global.js"></script>

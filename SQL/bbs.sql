@@ -35,7 +35,7 @@ sex varchar(10),
 studentID varchar(16),
 email varchar(32),
 discipline varchar(80),
-entryTime date,
+entryTime varchar(32),
 degree tinyint
 );
 
@@ -47,7 +47,7 @@ sex varchar(10),
 teacherID varchar(16),
 email varchar(32),
 discipline varchar(80),
-entryTime date,
+entryTime varchar(32),
 degree tinyint
 );
 

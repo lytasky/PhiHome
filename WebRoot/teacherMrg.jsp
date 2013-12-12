@@ -1,11 +1,11 @@
 <%@ page pageEncoding="gb2312"%>
 <%@ page import="java.sql.*,com.bjsxt.bbs.*,java.util.*"%>
-<%@ page import="userbean.AdminUser" %>
+<%@ page import="userbean.Teacher" %>
 <%@ page import="dbmgr.UserMgr"  %>
 <%@ page contentType="text/html; charset=gb2312" %>
 
 <% request.setCharacterEncoding("gb2312");
-AdminUser oneUser=new AdminUser();
+
 
 %>
 
@@ -15,13 +15,11 @@ AdminUser oneUser=new AdminUser();
 	String adminLogined = (String) session.getAttribute("admLogined");
 	if (adminLogined != null && adminLogined.trim().equals("true")) {
 		logined = true;
-	
 	}
-//	out.println(logined);
 %>
 
 <%
-	final int PAGE_SIZE = 10; // 分页
+	final int PAGE_SIZE = 4; // 分页
 	int pageNo = 1;
 	String strPageNo = request.getParameter("pageNo");
 	if (strPageNo != null && !strPageNo.trim().equals("")) {
@@ -37,12 +35,12 @@ AdminUser oneUser=new AdminUser();
 
 	int totalPages = 0;
 
-	List<Article> articles = new ArrayList<Article>();
+	List<Teacher> users = new ArrayList<Teacher>();
 	Connection conn = DB.getConn();
 
 	Statement stmtCount = DB.createStmt(conn);
 	ResultSet rsCount = DB.executeQuery(stmtCount,
-			"select count(*) from article where pid = 0"); // 显示所有pid=0的帖子
+			"select count(*) from teacher");
 	rsCount.next();
 	int totalRecords = rsCount.getInt(1);
 
@@ -53,18 +51,17 @@ AdminUser oneUser=new AdminUser();
 
 	Statement stmt = DB.createStmt(conn);
 	int startPos = (pageNo - 1) * PAGE_SIZE;
-	String sql = "select * from article where pid = 0 order by pdate desc limit "
+	String sql = "select * from teacher limit "
 			+ startPos + "," + PAGE_SIZE;
 	System.out.println(sql);
 	ResultSet rs = DB.executeQuery(stmt, sql);
 	while (rs.next()) {
-		Article a = new Article();
-		a.initFromRs(rs);
-		articles.add(a);
+		Teacher oneUser=new Teacher();
+		oneUser.initFromR(rs);
+		users.add(oneUser);
 	}
 	DB.close(rsCount);
 	DB.close(stmtCount);
-
 	DB.close(rs);
 	DB.close(stmt);
 	DB.close(conn);
@@ -102,15 +99,11 @@ AdminUser oneUser=new AdminUser();
 <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js"></script>
 	</head>
-	<body><br><div id="jive-forumpage"><div class="jive-buttons"><br><div align="right">
-
-	
-				
-				</div> 
+	<body><br><div id="jive-forumpage"><div class="jive-buttons"><br>
 				<%if (logined) {//判断是否登陆%>
 				<div align="center">
-					<form action="searchResult.jsp" method="post">
-					<div class="row" style="margin:0 auto;width:250px;">
+					<form action="searchResultUser.jsp" method="post">
+						<div class="row" style="margin:0 auto;width:250px;">
   					<div class="col-md-12">
     					<div class="input-group input-group-sm">
       					<input type="text" class="form-control">
@@ -123,11 +116,7 @@ AdminUser oneUser=new AdminUser();
 					</form>
 				</div>
 			</div>
-			
-			<a href="post.jsp">发表新主题<img src="images/post-16x16.gif"
-										alt="发表新主题" border="0" height="16" width="16">
-								</a><br>
-				<%} %>
+			<%} %>
 			<table border="0" cellpadding="3" cellspacing="0" width="100%">
 				<tbody>
 					<tr valign="top">
@@ -137,7 +126,7 @@ AdminUser oneUser=new AdminUser();
 							</span>
 
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="articleFlat1.jsp?pageNo=1">第一页</a>
+									<a href="teacherMrg.jsp?pageNo=1">第一页</a>
 							</span>
 							</span>
 
@@ -146,15 +135,15 @@ AdminUser oneUser=new AdminUser();
 							<span class="nobreak"><span class="jive-paginator">|</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="articleFlat1.jsp?pageNo=<%=pageNo - 1%>">上一页</a> </span>
+									<a href="teacherMrg.jsp?pageNo=<%=pageNo - 1%>">上一页</a> </span>
 							</span>
 
 							<span class="nobreak"><span class="jive-paginator">|
 							</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="articleFlat1.jsp?pageNo=<%=pageNo + 1%>">下一页</a>
-									|&nbsp; <a href="articleFlat1.jsp?pageNo=<%=totalPages%>">最末页</a>
+									<a href="teacherMrg.jsp?pageNo=<%=pageNo + 1%>">下一页</a>
+									|&nbsp; <a href="teacherMrg.jsp?pageNo=<%=totalPages%>">最末页</a>
 									] </span> </span>
 						</td>
 					</tr>
@@ -171,29 +160,29 @@ AdminUser oneUser=new AdminUser();
 										<thead>
 											<tr>
 												<th class="jive-first" colspan="3">
-													主题
+													用户名
 												</th>
 												<th class="jive-author">
 													<nobr>
-														作者 &nbsp;
+														密码 &nbsp;
 													</nobr>
 												</th>
 												<th class="jive-view-count">
 													<nobr>
-														浏览次数 &nbsp;
+														性别 &nbsp;
 													</nobr>
 												</th>
 												
 												<th class="jive-last" nowrap="nowrap">
-													最新帖子
+													邮箱
 												</th>
 											</tr>
 										</thead>
 										<tbody>
 											<%
 												int lineNo = 0;
-												for (Iterator<Article> it = articles.iterator(); it.hasNext();) {
-													Article a = it.next();
+												for (Iterator<Teacher> u = users.iterator(); u.hasNext();) {
+													Teacher user = u.next();
 													String classStr = lineNo % 2 == 0 ? "jive-even" : "jive-odd";
 											%>
 											<tr class="<%=classStr%>">
@@ -206,41 +195,42 @@ AdminUser oneUser=new AdminUser();
 												</td>
 
 												<td nowrap="nowrap" width="1%">
-												
 													<%
-														if (logined) {//判断是否登陆
+														String url = request.getScheme() + "://"
+																	+ request.getServerName() + ":"
+																	+ request.getServerPort();
+															url += request.getContextPath();
+															url += request.getServletPath();
+															url += request.getQueryString() == null ? "" : ("?" + request
+																	.getQueryString());
+															System.out.println(url);
+															//System.out.println(request.getRequestURI());
+															//System.out.println(request.getRequestURL());
+															
 													%>
-													<a href="modify.jsp?id=<%=a.getId()%>">修改</a>
-													<a
-														href="delete.jsp?id=<%=a.getId()%>&isLeaf=<%=a.isLeaf()%>&pid=<%=a.getPid()%>">删除</a>
 													<%
-														}
+														if (logined) {
 													%>
+													<a href="deleteUser.jsp?id=<%=user.getId()%>&form1=<%=url %>">删除</a>
+													<%} %>	
 												</td>
 
 												<td class="jive-thread-name" width="95%">
-													<a id="jive-thread-1"
-														href="articleDetailFlat.jsp?id=<%=a.getId()%>"><%=a.getTitle()%></a>
+												<%=user.getName()%>
 												</td>
 												<td class="jive-author" nowrap="nowrap" width="1%">
 
-													<span class=""> <%=a.getWriter1() %> </span>
+													<span class=""> <%=user.getPassword() %> </span>
 												</td>
-												<%Connection connw = DB.getConn();
-	                                              Statement stmt1 = connw.createStatement();
-	                                              String sq = "select pno from article where id = "+ a.getId();
-	                                              ResultSet rs1 = stmt1.executeQuery(sq);
-	                                              while(rs1.next()){
-	                                              %>
+												
 												<td class="jive-view-count" width="1%">
-													<%=rs1.getInt("pno") %>
+													<%=user.getSex()%>
 												</td>
-												<%} %>
+												
 												
 												<td class="jive-last" nowrap="nowrap" width="1%">
 													<div class="jive-last-post">
-														<%=new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-								.format(a.getPdate())%>
+														<%=user.getEmail()%>
 														<br><br> 
 													</div>
 												</td>

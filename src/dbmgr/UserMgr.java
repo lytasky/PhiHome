@@ -123,12 +123,13 @@ public class UserMgr {
 		}
 	}
 	
-	 //添加注册学生用户
+	 //添加注册教师用户
 		public int addTeacher(Teacher teacher) {
 			db_conn.ConnectDB();	
+			System.out.println("ddsdsdds"+teacher);
 			try {
 				
-				String sql = "insert into student(id,name,password,email,sex,teacherID,discipline,entryTime,degree) values(null,'" + teacher.getName()
+				String sql = "insert into teacher(id,name,password,email,sex,teacherID,discipline,entryTime,degree) values(null,'" + teacher.getName()
 						+ "','" + teacher.getPassword() + "','" + teacher.getEmail() + "','" + teacher.getSex()+ "','" + teacher.getTeacherID()+ "','" 
 						+ teacher.getDiscipline()+ "','" + teacher.getEntryTime()+ "','" + teacher.getDegree()				
 						+ "')";

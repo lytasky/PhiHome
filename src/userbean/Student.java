@@ -132,7 +132,7 @@ public class Student {
 			setName(rs.getString("name"));
 			setPassword(rs.getString("password"));
 			setStudentID(rs.getString("studentID"));
-			setSex(rs.getString("sex").equals("0") ? "ÄÐ" : "Å®");
+			setSex(rs.getString("sex").equals("1") ? "ÄÐ" : "Å®");
 			setDiscipline(rs.getString("discipline"));
 			setDegree(rs.getInt("degree"));
 			setEntryTime(rs.getString("entryTime"));
