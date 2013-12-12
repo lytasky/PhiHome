@@ -1,7 +1,6 @@
 <%@ page pageEncoding="GB18030"%>
 <%@ page import="java.sql.*, com.bjsxt.bbs.*, java.util.*"%>
 <%@ page import="userbean.Teacher" %>
-<%@ page import="userbean.Student" %>
 
 
 <%
@@ -23,11 +22,11 @@ if(strPageNo != null && !strPageNo.trim().equals("")) {
 
 int totalPages = 0;
 
-List<User> users = new ArrayList<User>();
+List<Teacher> users = new ArrayList<Teacher>();
 Connection conn = DB.getConn();
 
 Statement stmtCount = DB.createStmt(conn);
-String sqlCount = "select count(*) from user where name like '%" + keyword + "%'" ;
+String sqlCount = "select count(*) from teacher where name like '%" + keyword + "%'" ;
 System.out.println(sqlCount);
 ResultSet rsCount = DB.executeQuery(stmtCount, sqlCount);
 rsCount.next();
@@ -41,11 +40,11 @@ if(pageNo <= 0) pageNo = 1;
 
 Statement stmt = DB.createStmt(conn);
 int startPos = (pageNo-1) * PAGE_SIZE; 
-String sql = "select * from user where name like '%" + keyword + "%'  limit " + startPos + "," + PAGE_SIZE ;
+String sql = "select * from teacher where name like '%" + keyword + "%'  limit " + startPos + "," + PAGE_SIZE ;
 System.out.println(sql);
 ResultSet rs = DB.executeQuery(stmt, sql);
 while(rs.next()) {
-	User a = new User();
+	Teacher a = new Teacher();
 	a.initFromR(rs);
 	users.add(a);
 }
@@ -69,7 +68,7 @@ DB.close(conn);
 <html>
 	<head>
 		<base href="<%=basePath%>">
-		<title>Java语言*初级版</title>
+		<title></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf8">
 		<link rel="stylesheet" type="text/css" href="images/style.css"
 			title="Integrated Styles">
@@ -85,9 +84,9 @@ DB.close(conn);
 	
 				
 				</div> 
-				<marquee>欢迎光临本论坛，大家一起交流共同提高！</marquee><br>
+				<marquee>欢迎</marquee><br>
 				<div align="center">
-					<form action="searchResultUser.jsp" method="post">
+					<form action="searchResultStudent.jsp" method="post">
 						<input type="text" name="keyword" />
 						<input type="submit" value="搜索" />
 					</form>
@@ -103,7 +102,7 @@ DB.close(conn);
 							</span>
 
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="searchResultUser.jsp?pageNo=1&keyword=<%=keyword %>">第一页</a>
+									<a href="searchResultStudent.jsp?pageNo=1&keyword=<%=keyword %>">第一页</a>
 							</span>
 							</span>
 
@@ -112,15 +111,15 @@ DB.close(conn);
 							<span class="nobreak"><span class="jive-paginator">|</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="searchResultUser.jsp?pageNo=<%=pageNo - 1%>&keyword=<%=keyword %>">上一页</a> </span>
+									<a href="searchResultStudent.jsp?pageNo=<%=pageNo - 1%>&keyword=<%=keyword %>">上一页</a> </span>
 							</span>
 
 							<span class="nobreak"><span class="jive-paginator">|
 							</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="searchResultUser.jsp?pageNo=<%=pageNo + 1%>&keyword=<%=keyword %>">下一页</a>
-									|&nbsp; <a href="searchResultUser.jsp?pageNo=<%=totalPages%>&keyword=<%=keyword %>">最末页</a>
+									<a href="searchResultStudent.jsp?pageNo=<%=pageNo + 1%>&keyword=<%=keyword %>">下一页</a>
+									|&nbsp; <a href="searchResultStudent.jsp?pageNo=<%=totalPages%>&keyword=<%=keyword %>">最末页</a>
 									] </span> </span>
 						</td>
 					</tr>
@@ -158,8 +157,8 @@ DB.close(conn);
 										<tbody>
 											<%
 												int lineNo = 0;
-												for (Iterator<User> u = users.iterator(); u.hasNext();) {
-													User user = u.next();
+												for (Iterator<Teacher> u = users.iterator(); u.hasNext();) {
+													Teacher user = u.next();
 													String classStr = lineNo % 2 == 0 ? "jive-even" : "jive-odd";
 											%>
 											<tr class="<%=classStr%>">
@@ -189,7 +188,7 @@ DB.close(conn);
 												</td>
 
 												<td class="jive-thread-name" width="95%">
-												<%=user.getUsername()%>
+												<%=user.getName()%>
 												</td>
 												<td class="jive-author" nowrap="nowrap" width="1%">
 

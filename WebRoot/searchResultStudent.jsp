@@ -1,71 +1,62 @@
-<%@ page pageEncoding="gb2312"%>
-<%@ page import="java.sql.*,com.bjsxt.bbs.*,java.util.*"%>
+<%@ page pageEncoding="GB18030"%>
+<%@ page import="java.sql.*, com.bjsxt.bbs.*, java.util.*"%>
 <%@ page import="userbean.Student" %>
-<%@ page import="dbmgr.UserMgr"  %>
-<%@ page contentType="text/html; charset=gb2312" %>
-
-<% request.setCharacterEncoding("gb2312");
-
-
-%>
 
 
 <%
-	boolean logined = false; //判断管理员是否登陆
-	String adminLogined = (String) session.getAttribute("admLogined");
-	if (adminLogined != null && adminLogined.trim().equals("true")) {
-		logined = true;
-	}
-	System.out.println("Logine"+logined);
-%>
+String keyword = new String(request.getParameter("keyword").getBytes("8859_1"), "GBK");
+System.out.print(keyword);
+if(keyword == null) keyword = "";
 
-<%
-	final int PAGE_SIZE = 4; // 分页
-	int pageNo = 1;
-	String strPageNo = request.getParameter("pageNo");
-	if (strPageNo != null && !strPageNo.trim().equals("")) {
-		try {
-			pageNo = Integer.parseInt(strPageNo);
-		} catch (NumberFormatException e) {
-			pageNo = 1;
-		}
-	}
-
-	if (pageNo <= 0)
+final int PAGE_SIZE = 4;
+int pageNo = 1;
+String strPageNo = request.getParameter("pageNo");
+if(strPageNo != null && !strPageNo.trim().equals("")) {
+	try {
+		pageNo = Integer.parseInt(strPageNo);
+	} catch (NumberFormatException e) {
 		pageNo = 1;
+	} 
+}
 
-	int totalPages = 0;
 
-	List<Student> users = new ArrayList<Student>();
-	Connection conn = DB.getConn();
 
-	Statement stmtCount = DB.createStmt(conn);
-	ResultSet rsCount = DB.executeQuery(stmtCount,
-			"select count(*) from student");
-	rsCount.next();
-	int totalRecords = rsCount.getInt(1);
+int totalPages = 0;
 
-	totalPages = (totalRecords + PAGE_SIZE - 1) / PAGE_SIZE;
+List<Student> users = new ArrayList<Student>();
+Connection conn = DB.getConn();
 
-	if (pageNo > totalPages)
-		pageNo = totalPages;
+Statement stmtCount = DB.createStmt(conn);
+String sqlCount = "select count(*) from student where name like '%" + keyword + "%'" ;
+System.out.println(sqlCount);
+ResultSet rsCount = DB.executeQuery(stmtCount, sqlCount);
+rsCount.next();
+int totalRecords = rsCount.getInt(1);
 
-	Statement stmt = DB.createStmt(conn);
-	int startPos = (pageNo - 1) * PAGE_SIZE;
-	String sql = "select * from student limit "
-			+ startPos + "," + PAGE_SIZE;
-	ResultSet rs = DB.executeQuery(stmt, sql);
-	while (rs.next()) {
-		Student oneUser=new Student();
-		oneUser.initFromR(rs);
-		users.add(oneUser);
-	}
-	DB.close(rsCount);
-	DB.close(stmtCount);
-	DB.close(rs);
-	DB.close(stmt);
-	DB.close(conn);
+totalPages = (totalRecords + PAGE_SIZE - 1)/PAGE_SIZE;
+
+if(pageNo > totalPages) pageNo = totalPages;
+
+if(pageNo <= 0) pageNo = 1;
+
+Statement stmt = DB.createStmt(conn);
+int startPos = (pageNo-1) * PAGE_SIZE; 
+String sql = "select * from student where name like '%" + keyword + "%'  limit " + startPos + "," + PAGE_SIZE ;
+System.out.println(sql);
+ResultSet rs = DB.executeQuery(stmt, sql);
+while(rs.next()) {
+	Student a = new Student();
+	a.initFromR(rs);
+	users.add(a);
+}
+DB.close(rsCount);
+DB.close(stmtCount);
+
+DB.close(rs);
+DB.close(stmt);
+DB.close(conn);
 %>
+
 
 <%
 	//search
@@ -74,8 +65,6 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
-
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 	<head>
@@ -90,43 +79,31 @@
 			href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?forumID=20">
 		<script language="JavaScript" type="text/javascript"
 			src="images/common.js"></script>
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
-	<link href="css/diy.css" rel="stylesheet" media="screen" />
-  <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
-  <script src="js/jquery.js"></script>
-  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-<script src="js/jquery.flexslider.js"></script>
-<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js"></script>
 	</head>
-	<body><br><div id="jive-forumpage"><div class="jive-buttons"><br>
-				<%if (logined) {//判断是否登陆%>
+	<body><br><div id="jive-forumpage"><div class="jive-buttons"><br><div align="right">
+
+	
+				
+				</div> 
+				<marquee>欢迎</marquee><br>
 				<div align="center">
 					<form action="searchResultStudent.jsp" method="post">
-						<div class="row" style="margin:0 auto;width:250px;">
-  					<div class="col-md-12">
-    					<div class="input-group input-group-sm">
-      					<input type="text" name="keyword" class="form-control">
-      					<span class="input-group-btn">
-        					<button class="btn btn-primary" type="button">搜索</button>
-      					</span>
-    					</div><!-- /input-group -->
-  					</div><!-- /.col-lg-6 -->
-			</div><!-- /.row -->
+						<input type="text" name="keyword" />
+						<input type="submit" value="搜索" />
 					</form>
 				</div>
 			</div>
-			<%} %>
+			
 			<table border="0" cellpadding="3" cellspacing="0" width="100%">
 				<tbody>
 					<tr valign="top">
 						<td>
-							<span class="nobreak"> 第<%=pageNo%>页,共<%=totalPages %>页  <span
+							<span class="nobreak"> 页: 第<%=pageNo%>页,共<%=totalPages %>页  <span
 								class="jive-paginator"> [</span>
 							</span>
 
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="studentMrg.jsp?pageNo=1">第一页</a>
+									<a href="searchResultStudent.jsp?pageNo=1&keyword=<%=keyword %>">第一页</a>
 							</span>
 							</span>
 
@@ -135,15 +112,15 @@
 							<span class="nobreak"><span class="jive-paginator">|</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="studentMrg.jsp?pageNo=<%=pageNo - 1%>">上一页</a> </span>
+									<a href="searchResultStudent.jsp?pageNo=<%=pageNo - 1%>&keyword=<%=keyword %>">上一页</a> </span>
 							</span>
 
 							<span class="nobreak"><span class="jive-paginator">|
 							</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="studentMrg.jsp?pageNo=<%=pageNo + 1%>">下一页</a>
-									|&nbsp; <a href="studentMrg.jsp?pageNo=<%=totalPages%>">最末页</a>
+									<a href="searchResultStudent.jsp?pageNo=<%=pageNo + 1%>&keyword=<%=keyword %>">下一页</a>
+									|&nbsp; <a href="searchResultStudent.jsp?pageNo=<%=totalPages%>&keyword=<%=keyword %>">最末页</a>
 									] </span> </span>
 						</td>
 					</tr>
@@ -203,15 +180,12 @@
 															url += request.getServletPath();
 															url += request.getQueryString() == null ? "" : ("?" + request
 																	.getQueryString());
+															System.out.println(url);
 															//System.out.println(request.getRequestURI());
 															//System.out.println(request.getRequestURL());
-															
 													%>
-													<%
-														if (logined) {
-													%>
-													<a href="deleteUser.jsp?id=<%=user.getId()%>&form1=<%=url %>">删除</a>
-													<%} %>	
+													
+													<a href="deleteUser.jsp?id=<%=user.getId()%>&from=<%=url%>">删除</a>
 												</td>
 
 												<td class="jive-thread-name" width="95%">

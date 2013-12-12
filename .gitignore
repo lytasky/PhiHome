@@ -2,6 +2,7 @@
 ## Eclipse
 #################
 
+*.class
 *.pydevproject
 bin/
 tmp/
