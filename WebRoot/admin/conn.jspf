@@ -1,6 +1,8 @@
+<%@ page language="java" contentType="text/html;charset=gb2312" %>
+<%@ page import="java.sql.*" %>
 <%  
   try{
-  	  Class.forName("com.mysql.jdbc.Driver");    //¼ÓÔØJDBCÇý¶¯
+  	  Class.forName("com.mysql.jdbc.Driver");    //Â¼Ã“Ã”Ã˜JDBCÃ‡Ã½Â¶Â¯
   }catch(java.lang.ClassNotFoundException ex){
       out.print("Connext to DataBase error : " + ex.getMessage());
   }
@@ -8,7 +10,7 @@
   Connection conn = null;
   Statement sta = null; 
   try{
-	  String host = "localhost";                   //½¨Á¢Á¬½Ó
+	  String host = "localhost";                   //Â½Â¨ÃÂ¢ÃÂ¬Â½Ã“
 	  String user = "root";
 	  String pw = "root";
 	  String db = "liuyanban";

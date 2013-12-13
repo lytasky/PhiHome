@@ -60,3 +60,15 @@ a.head-text{
 a.head-text:hover{
 	color:#3276b1;	
 }
+.zx{
+	writing-mode:tb-rl;text-align:left;
+}
+.right-border{
+	border-right:1px solid #bdbdbe;	
+}
+.left-border{
+	border-left:1px solid #bdbdbe;	
+}
+.font1{
+	font-family:"微软雅黑";	
+}
