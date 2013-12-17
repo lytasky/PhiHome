@@ -1,409 +1,560 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN"><!-- InstanceBegin template="/Templates/head.dwt" codeOutsideHTMLIsLocked="false" -->
+<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>浙大哲学系</title>
+<title>header</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="js/juery.js"></script>
 
+
+<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+<link rel="stylesheet" href="css/diy.css" type="text/css">
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
-	<link href="css/diy.css" rel="stylesheet" media="screen" />
-  <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
-  <script src="js/jquery.js"></script>
-  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-<script src="js/jquery.flexslider.js"></script>
-<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="js/diy.js"></script>
 <script src="js/bootstrap.min.js"></script>
-
-
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/togglemenu.js"></script>
 <!-- Place in the <head>, after the three links -->
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() {
-    $('.flexslider').flexslider();
+    $('.flexslider').flexslider({
+          animation: "slide",
+          controlsContainer: ".flex-container"
+    });
   });
 </script>
-<style type="text/css">
-	.panel-body>a:hover{
+<style type="text/css" media="screen,print">
+	.td-width{
+		width:80px;	
+	}
+	.white-font{
 		color:#fff;
+		font-size:14px;
+	}
+	.fl{
+		float:left;	
+	}
+	ul{
+		list-style:none;	
+	}
+	.gray-border{
+		border:1px solid #ccc;	
+	}
+	#wrap {
+		width:500px;
+		margin:1em auto;
+	}
+	body {font:76%/1.4 Verdana,sans-serif;}
+/* Disable properties specified in the imported CSS file */
+	.menu a {
+		border:none;
+		font-weight:normal;
+	}
+
+/* Actual menu CSS starts here */
+	.menu,
+	.menu ul {
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.menu {width:200px;}
+	.menu li {
+		display:block;
+		margin:0;
+		padding:0;
+		margin-bottom:1px;
+	}
+	.menu a {
+		display:block;
+		padding:2px 5px;
+		color:#fff;
+		background:#727174;
 		text-decoration:none;
 	}
+	.menu a:hover,
+	.menu a:focus,
+	.menu a:active {background:#727174;}
+	.menu li ul li a:hover,
+	.menu li ul li a:focus,
+	.menu li ul li a:active {background:#070708;}
+	.menu ul li {padding-left:15px;}
+	.menu ul a {background:#727174;}
+	.hidden {display:none;}
+	.slidingList a{
+		color:#fff;	
+	}
+	.slidingList{
+		color:#fff;	
+		padding-left:5px;padding-right:5px;
+	}
+	.fontColor0 a{
+		color:#000;	
+	}
+	.fontColor1 a:hover{
+		color:#2c1c56;	
+	}
+	.fontColor2 a:hover{
+		color:#413e3d;	
+	}
+	.fontColor3 a:hover{
+		color:#235f2f;	
+	}
+	.fontColor4 a{
+		color:#fff;	
+	}
+	#head a:hover{
+		text-decoration:underline;
+	}
+	a:link {
+		text-decoration: none;
+	}
+	a:visited {
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	a:active {
+		text-decoration: none;
+	}
 </style>
-    <!-- Bootstrap -->
-    
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.6.2/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 
 </head>
-
-<body style="background:url(images/back.PNG) repeat;">
-
-<div class="container" style="width:1000px;margin:0 auto;">
-  <div class="content">
-    <div id="head" style="width:100%;height:150px;border:1px solid #CCC;background:url(images/china-style3.6.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
-      <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
-      	<div style="margin-right:25px;float:right;">
-          <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
-          <div class="row" style="float:right;margin-top:15px;">
-  					<div class="col-md-12">
-    					<div class="input-group">
-      					<input type="text" class="form-control">
+<body style="margin-top:0px;">
+<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
+  <div id="head" style="background:url(images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
+	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
+  	<font color="#fff">
+  	<a href="#">浙江大学</a>&nbsp;|
+    <a href="#">中文</a>&nbsp;|
+    <a href="#">English</a></font>
+   </div>
+	<div class="row fl" style="width:250px;margin-left:915px;">
+  		<div class="col-md-10">
+    		<div class="input-group input-group-sm">
+              	 <input type="text" class="form-control ">
       					<span class="input-group-btn">
-        					<button class="btn btn-default" type="button">搜索</button>
+        					<button class="btn btn-default " type="button">搜索</button>
       					</span>
+                
     					</div><!-- /input-group -->
-  					</div><!-- /.col-lg-6 -->
-					</div><!-- /.row -->
-       	</div>
+  		</div><!-- /.col-lg-6 -->
+		</div><!-- /.row -->
+	<div id="column" style="margin-top:100px;margin-left:58px;width:1065px;height:30px;float:left;padding-top:-10px;">
+    <div style="text-align:center;line-height:30px;height:30px;background:url(images/colomnBack2.gif);">
+      <div style="width:195px;height:30px;align:center;" class="fl">
+			<span class="menuOn" id="mod0">
+			<a href="#" class="white-font "> 主页</a></span>
       </div>
-    </div><!-- head -->
-    
-    <div style="width:100%;height:auto;margin-top:15px;overflow:hidden;" class="gray-border"><!-- main -->
-	<!-- InstanceBeginEditable name="EditRegion3" -->
-	<div id="left-nav" style="width:200px;height:565px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;">
-     <div class="panel-group" id="accordion" style="height:455px;"><!--网站地图-->
-  		<div class="panel panel-default">
-    		<div class="panel-heading">
-      			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list"></span> 简介</a>
-      			</h4>
-    		</div>
-    		<div id="collapseOne" class="panel-collapse collapse in">
-      			<div class="panel-body" style="display:block;">
-        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">本系概况</a>
-      			</div>
-      			<div class="panel-body">
-        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="jianjie/xsml.jsp" style="color:#000;" class="panel-item">学生名录</a>
-      			</div>
-    		</div>
-  		</div>
-  		<div class="panel panel-default">
-    		<div class="panel-heading">
-      			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th-list"></span> 信息</a>
-      			</h4>
-    		</div>
-    		<div id="collapseTwo" class="panel-collapse collapse ">
-      			<div class="panel-body">
-        			<a href="xinxi/zytg.jsp" style="color:#000;" class="panel-item">重要通告</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="xinxi/xszx.jsp" style="color:#000;" class="panel-item">学术资讯</a>
-      			</div>
-      			<div class="panel-body">
-        			<a href="xinxi/hdbd.jsp" style="color:#000;" class="panel-item">活动报道</a>
-      			</div>
-    		</div>
-  		</div>
-  		<div class="panel panel-default">
-    		<div class="panel-heading">
-      			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-th-list"></span> 课程</a>
-      			</h4>
-    		</div>
-    		<div id="collapseThree" class="panel-collapse collapse ">
-      			<div class="panel-body">
-        			<a href="kecheng/kb.jsp" style="color:#000;" class="panel-item">课表</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="kecheng/kczl.jsp" style="color:#000;" class="panel-item">课程资料</a>
-      			</div>
-    		</div>
-  		</div>
-      <div class="panel panel-default">
-    		<div class="panel-heading">
-      			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-th-list"></span> 招生</a>
-      			</h4>
-    		</div>
-    		<div id="collapseFour" class="panel-collapse collapse ">
-      			<div class="panel-body">
-        			<a href="zhaosheng/pyfa.jsp" style="color:#000;" class="panel-item">培养方案</a>
-      			</div>
-      			<div class="panel-body">
-        			<a href="zhaosheng/zsxx.jsp" style="color:#000;" class="panel-item">招生信息</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="zhaosheng/zszx.jsp" style="color:#000;" class="panel-item">招生咨询</a>
-      			</div>
-    		</div>
-  		</div>
-      <div class="panel panel-default">
-    		<div class="panel-heading">
-      			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-th-list"></span> 成果</a>
-      			</h4>
-    		</div>
-    		<div id="collapseFive" class="panel-collapse collapse ">
-      			<div class="panel-body">
-        			<a href="chengguo/jxcg.jsp" style="color:#000;" class="panel-item">教学成果</a>
-      			</div>
-      			<div class="panel-body">
-        			<a href="chengguo/xsyd.jsp" style="color:#000;" class="panel-item">学生园地</a>
-      			</div>
-    		</div>
-  		</div>
-      <div class="panel panel-default">
-    		<div class="panel-heading">
-      			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseSix"><span class="glyphicon glyphicon-th-list"></span> 故事</a>
-      			</h4>
-    		</div>
-    		<div id="collapseSix" class="panel-collapse collapse ">
-      			<div class="panel-body">
-        			<a href="gushi/ywgs.jsp" style="color:#000;" class="panel-item">轶闻故事</a>
-      			</div>
-    		</div>
-  		</div>
-      <div class="panel panel-default">
-    		<div class="panel-heading">
-      			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven"><span class="glyphicon glyphicon-th-list"></span> 论坛</a>
-      			</h4>
-    		</div>
-    		<div id="collapseSeven" class="panel-collapse collapse ">
-      			<div class="panel-body">
-        			<a href="uselogin.jsp" style="color:#000;" class="panel-item">论坛入口</a>
-      			</div>
-    		</div>
-  		</div>
-      <div class="panel panel-default">
-    		<div class="panel-heading">
-      			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseEight"><span class="glyphicon glyphicon-th-list"></span> 链接</a>
-      			</h4>
-    		</div>
-    		<div id="collapseEight" class="panel-collapse collapse ">
-      			<div class="panel-body">
-        			<a href="lianjie/xnzy.jsp" style="color:#000;" class="panel-item">校内资源</a>
-      			</div>
-      			<div class="panel-body">
-        			<a href="lianjie/xwzy.jsp" style="color:#000;" class="panel-item">校外资源</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="lianjie/gnzy.jsp" style="color:#000;" class="panel-item">国内资源</a>
-      			</div>
-    		</div>
-  		</div>  
-	   </div><!-- panel-group -->
-     <div class="gray-border round-border"  style="width:200px;height:105px;"><!--哲学-->
-       <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="200" height="105">
-         <param name="movie" value="flash/house-flash3.swf" />
-         <param name="quality" value="high" />
-         <param name="wmode" value="opaque" />
-         <param name="swfversion" value="8.0.35.0" />
-         <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
-         <param name="expressinstall" value="Scripts/expressInstall.swf" />
-         <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
-         <!--[if !IE]>-->
-         <object type="application/x-shockwave-flash" data="flash/house-flash3.swf" width="200" height="105">
-           <!--<![endif]-->
-           <param name="quality" value="high" />
-           <param name="wmode" value="opaque" />
-           <param name="swfversion" value="8.0.35.0" />
-           <param name="expressinstall" value="Scripts/expressInstall.swf" />
-           <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
-           <div>
-             <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
-             <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
-           </div>
-           <!--[if !IE]>-->
-         </object>
-         <!--<![endif]-->
-       </object>
-     </div>
-	</div><!-- left-nav -->
-  <div id="news_and_publish" style="width:360px;height:565px;float:left;margin-left:20px;line-height:1.4;">
-  	<div id="publish" style="width:350px;height:278px;float:left;display:block;"><!--publish-->
-  	<div class="list-group">
-    	<div>
-        <a href="xinxi/zytg.jsp" class="list-group-item active" style="background-color:#3276b1;">
-          <span class="glyphicon glyphicon-list-alt"></span> 重要通告
-          <div style="width:60px;float:right;font-size:8px;margin-top:3px;"><span class="glyphicon glyphicon-hand-right"></span> MORE
+      <div style="width:96px;height:30px;align:center;background-color:#030303;" id="mod1" class="fl">
+			<span class="menuOn" onMouseOver="switchMod(1);" >
+			<a href="#" class="white-font "> 系情介绍</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod2" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(2);">
+			<a href="#" class="white-font ">新闻通告</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod3" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(3);">
+			<a href="#" class="white-font">教学培养</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod4" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(4);">
+			<a href="#" class="white-font">招生专栏</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod5"  class="fl">
+			<span class="menuNo" onMouseOver="switchMod(5);">
+			<a href="#" class="white-font">教研成果</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod6" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(6);">
+			<a href="#" class="white-font">学生园地</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod7" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(7);">
+			<a href="uselogin.jsp" class="white-font">哲学论坛</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod8" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(8);">
+			<a href="#" target="_blank" class="white-font">闻人轶事</a></span>
+      </div>
+      <div style="width:102px;height:30;align:center;" id="mod9" class="fl">
+      <span class="menuNo" onMouseOver="switchMod(9);">
+			<a href="test-header.jsp" target="_blank" class="white-font">资源链接</a></span>
+      </div>
+      </div>
+  </div><!-- column -->
+	<div class="slidingList" id="slidingList1" style="color:#fff;text-align:center;padding-top:5px;height:30px;float:left;margin-left:253px;display:;background:#0f0f0f;"><!-- 导航栏列表区 -->
+		>>
+<a href="#"> 学院概况</a>|
+<a href="jianjie/szll.html">师资力量</a>
+
+	</div>
+  <div class="slidingList" id="slidingList2" style="height:30px;float:left;margin-left:349px;display:none;background:#0f0f0f;padding-top:5px;">
+  	>>
+<a href="#"> 通知公告</a>|
+<a href="#">新闻报道</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList3" style="height:30px;float:left;margin-left:445px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 培养方案</a>|
+			<a href="#">本科课程</a>
+      |
+			<a href="#">硕博课程</a>
+      |
+			<a href="#">学期课表</a>
+      |
+			<a href="#">课程资料</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList4" style="height:30px;float:left;margin-left:541px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 招生信息</a>
+			|
+			<a href="#">历年真题</a>
+      |
+			<a href="#">招生咨询</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList5" style="height:30px;float:left;margin-left:637px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 科研成果</a>
+			|
+			<a href="#">教学成果</a>
+      |
+			<a href="#">科研项目</a>
+      |
+			<a href="#">获奖信息</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList6" style="height:30px;float:left;margin-left:733px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 学生名录</a>
+			|
+			<a href="#">学生活动</a>
+      |
+			<a href="#">学生作品</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList7" style="height:30px;float:left;margin-left:780px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 课程讨论</a>
+			|
+			<a href="#">读书会</a>
+      |
+			<a href="#">哲学沙龙</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList8" style="height:30px;float:left;margin-left:870px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 哲学趣闻</a>
+			|
+			<a href="#">校园故事</a>
+      |
+			<a href="#">校友风采</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList9" style="height:30px;float:left;margin-left:921px;display:none;background:#0f0f0f;padding-top:5px;">
+  		>>
+			<a href="#"> 校内网站</a>
+			|
+			<a href="#">校外资源</a>
+      |
+			<a href="#">国外资源</a>
+		
+	</div><!-- 导航栏列表区 -->
+</div>
+
+	<div id="indexContent" style="width:1180px;height:1200px;margin:auto;margin-top:50px;" class=" fontColor0">
+  	<div class="flexslider fl" style="height:350px;width:800px;margin-left:58px;">
+    	<ul class="slides">
+      <li>
+        <img src="images/pic1.gif" />
+      </li>
+      <li>
+        <img src="images/pic2.gif" />
+      </li>
+      <li>
+        <img src="images/pic3.gif" />
+      </li>
+      <li>
+        <img src="images/pic3.gif" />
+      </li>
+      <li>
+        <img src="images/pic3.gif" />
+      </li>
+    </ul>
+  	</div>
+  	<div id="rightContent" style="width:280px;height:1170px;border-left:1px solid #bdbdbe;" class="left-border fr">
+      <div class=" fl fontColor3" style="width:280px;height:250px;">
+      	<div style="margin-left:0px;"><img src="images/yjshead.gif"></div>
+        <div style="margin-left:15px;line-height:1.8;text-align:center;width:180px;" class="">
+        	<div style="margin-left:-5px;"><img src="images/yjs.gif"></div>
+          <a href="#">外国哲学研究所</a><br>
+					<a href="#">中国思想文化研究所</a><br>
+					<a href="#">宗教学研究所</a><br>
+					<a href="#">科技与社会发展研究所</a><br>
+					<a href="#">逻辑与认知研究所</a><br>
+          <a href="#">亚太休闲教育研究中心</a>
+        </div>
+      </div>
+      <div class=" fl fontColor1" style="width:280px;height:200px;">
+      	<div style="margin-left:0px;"><img src="images/zszlhead.gif" border="0" usemap="#Map5">
+          <map name="Map5">
+            <area shape="rect" coords="165,10,206,29" href="#">
+          </map>
+      	</div>
+        <div style="padding-left:20px;line-height:1.8;">
+          <a href="#">>> 浙大哲学系2013硕士招生简章</a><br>
+					<a href="#">>> 浙大哲学系2012年硕士录取名单</a><br>
+					<a href="#">>> 浙大哲学系2012年招生简章</a><br>
+					<a href="#">>> 浙大哲学系2011年招生简章</a><br>
+          <div style="margin-left:-10px;margin-top:7px;"><img src="images/zszx.gif"></div>
+        </div>
+      </div>
+      <div class=" fl fontColor3" style="width:280px;height:200px;">
+      	<div style="margin-left:0px;"><img src="images/jpkchead.gif" border="0" usemap="#Map6">
+          <map name="Map6">
+            <area shape="rect" coords="164,7,207,29" href="#">
+          </map>
+      	</div>
+        <div style="padding-left:20px;line-height:1.8;">
+        	<div style="width:50px;" class="fl ">
+          	国家级：<br><br>
+            省级：
           </div>
-        </a>
-      </div>
-      <div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
+          <div style="width:130px;" class="fl ">
+          	<a href="#">当代科技哲学</a><br>
+            <a href="#">王阳明心学</a><br>
+            <a href="#">自然辩证法 </a>&nbsp;&nbsp;
+            <a href="#"> 逻辑学</a><br>
+            <a href="#">外国哲学</a>
           </div>
-        </a>
+          
+          <div style="margin-left:-10px;"><img src="images/spgkk.gif"></div>
+        </div>
       </div>
-  		<div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
+      <div class=" fl fontColor3" style="width:280px;height:380px;">
+      	<div style="margin-left:0px;"><img src="images/jdydhead.gif" border="0" usemap="#Map7">
+          <map name="Map7">
+            <area shape="rect" coords="168,12,208,32" href="#">
+          </map>
+      	</div>
+        <div style="padding-left:15px;">
+        	<img src="images/jdyd1.gif" border="0" usemap="#Map8">
+          <map name="Map8">
+            <area shape="rect" coords="2,3,111,158" href="#">
+          </map>
+<div style="width:20px;margin-right:65px;" class="fr"><a href="#">普罗提诺读书会</a></div>
+          <div style="width:18px;margin-right:10px;" class="fr"><a href="#">组织人 .. 章雪富 教授</a></div><br>
+          <img src="images/jdyd2.gif" border="0" usemap="#Map9">
+          <map name="Map9">
+            <area shape="rect" coords="2,1,111,158" href="#">
+          </map>
+<div style="width:20px;margin-right:65px;" class="fr"><a href="#">亚里士多德读书会</a></div>
+          <div style="width:18px;margin-right:10px;" class="fr"><a href="#">组织人 .. 陈玮 博士</a></div><br>
+        </div>
       </div>
-      <div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-		</div>
-  </div>
-  	<div id="news" style="width:350px;height:278px;margin-top:12px;float:left;"><!--news-->
-  	<div class="list-group">
-  		<div>
-        <a href="xinxi/xszx.jsp" class="list-group-item active">
-          <span class="glyphicon glyphicon-book"></span> 学术资讯
-          <div style="width:60px;float:right;font-size:8px;margin-top:3px;"><span class="glyphicon glyphicon-hand-right"></span> MORE
-          </div>
-        </a>
-      </div>
-  		<div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-  		<div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="#" class="list-group-item news-font-size none-bottom">
-          "西溪哲学对话"第二十二次活动通知
-          <div style="width:70px;float:right;">2013-10-18
-          </div>
-        </a>
-      </div>
-		</div>
-  </div>
-  </div>
-  <div class="flexslider gray-border" style="width:380px;height:250px;float:right;margin-right:0px;"><!-- 轮播图片 -->
-    <ul class="slides">
-    	<li>
-      	<img src="images/pic1.1.jpg" />
-    	</li>
-    	<li>
-      	<img src="images/pic2.1.jpg" />
-    	</li>
-    	<li>
-      	<img src="images/pic3.1.jpg" />
-    	</li>
-  	</ul>
-  </div>
-  <div class="fr gray-border round-border" style="width:380px;height:270px;background-color:white;line-height:1;margin-top:-20px;"><!--link-->
-    <ul class="nav nav-pills nav-stacked">
-      <li class="active"><a href="#"><span class="glyphicon glyphicon-share"></span> 友情链接</a></li>
-      </ul>
-    <div class="fl" style="margin-left:15px;margin-top:15px;width:170px;font-size:13px;">
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="http://zjuem.zju.edu.cn/">浙江大学邮件系统</a></li>
-        <li><a href="http://libweb.zju.edu.cn/libweb/">浙江大学图书馆</a></li>
-        <li><a href="http://www.ch.zju.edu.cn/">浙江大学人文学院</a></li>
-        <li><a href="http://grs.zju.edu.cn/index.jsf">浙江大学研究生院</a></li>
-        <li><a href="http://zupo.zju.edu.cn/">浙江大学办公网</a></li>
-        <li><a href="http://libweb.zju.edu.cn/libweb/">浙江大学信息中心</a></li>
-        </ul>
-      </div>
-    <div class="fr" style="margin-right:15px;margin-top:15px;width:170px;font-size:13px;">
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="http://www.phil.tsinghua.edu.cn/">清华大学哲学系</a></li>
-        <li><a href="http://ce.phil.pku.edu.cn/">北京大学哲学系</a></li>
-        <li><a href="http://philosophy.fudan.edu.cn/">复旦大学哲学学院</a></li>
-        <li><a href="http://phi.ruc.edu.cn/">中国人民大学哲学院</a></li>
-        <li><a href="http://phil.arts.cuhk.edu.hk/">香港中文大学哲学系</a></li>
-        <li><a href="http://philosophy.stanford.edu/">斯坦福大学哲学系</a></li>
-        </ul>
-      </div>
-  </div>
-	<script type="text/javascript">
-swfobject.registerObject("FlashID");
-  </script>
-	<!-- InstanceEndEditable -->
-    </div>
-    
-    <div id="bottom-info" style="width:100%;margin-top:15px;height:100px;background-color:#f5f5f5;align:center;" class="gray-border round-border">
-    	<div style="margin:20px auto;width:300px;align:center;">Copyright&copy;2013 Reserved By 浙江大学哲学系
-      </div>
-      <div style="margin:-5px auto;width:400px;align:center;">
-      	浙江省杭州市天目山路148号浙江大学西溪校区 邮编:310028
+      <div class=" fl fontColor4" style="width:280px;height:160px;">
+        <div id="wrap" style="padding-left:15px;">
+					<ul class="menu">
+						<li><a href="." style="line-height:1.8;">&nbsp;&nbsp;浙江大学网站</a>
+							<ul>
+								<li><a href="/">Sub category 1a</a></li>
+								<li><a href="/">Sub category 1b</a></li>
+								<li><a href="/">Sub category 1c</a></li>
+								<li><a href="/">Sub category 1d</a></li>
+							</ul>
+						</li><br>
+						<li><a href="." style="line-height:1.8;">&nbsp;&nbsp;国内相关网站</a>
+					<ul>
+
+					<li><a href="/">Sub category 2a</a></li>
+					<li><a href="/">Sub category 2b</a></li>
+					<li><a href="/">Sub category 2c</a></li>
+					<li><a href="/">Sub category 2d</a></li>
+				</ul>
+			</li><br>
+			<li><a href="." style="line-height:1.8;">&nbsp;&nbsp;国外相关网站</a>
+
+				<ul>
+					<li><a href="/">Sub category 3a</a></li>
+					<li><a href="/">Sub category 3b</a></li>
+					<li><a href="/">Sub category 3c</a></li>
+					<li><a href="/">Sub category 3d</a></li>
+				</ul>
+			</li>
+		</ul>
+				</div>
       </div>
     </div>
-    <!-- end .content --></div>
-  <!-- end .container --></div>
-   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <div class="right-border fl fontColor1" style="width:220px;height:750px;margin-left:58px;border-right:1px solid #bdbdbe;">
+    	<div class="fl" style="width:220px;height:250px;padding-left:15px;line-height:1.8;">
+      	<div style="margin-left:-15px;"><img src="images/zxdhhead.gif" border="0" usemap="#Map">
+          <map name="Map">
+            <area shape="rect" coords="169,9,207,25" href="#">
+          </map>
+      	</div>
+      	<img src="images/zxdh1.gif"/>
+        <a href="#">>>"西溪哲学对话"第23期对话</a><br>
+        <a href="#">>>"西溪哲学对话"第22期对话</a><br>
+        <a href="#">>>"西溪哲学对话"第21期对话</a><br>
+        <a href="#">>>"西溪哲学对话"第20期对话</a><br>
+        <a href="#">>>"西溪哲学对话"第19期对话</a><br>
+      </div>
+      <div class="g fl" style="width:220px;height:250px;line-height:1.8;padding-left:15px;">
+      	<div style="margin-left:-15px;"><img src="images/zxydxhead.gif" border="0" usemap="#Map2">
+          <map name="Map2">
+            <area shape="rect" coords="168,11,207,31" href="#">
+          </map>
+      	</div>
+      	<img src="images/zxydx.gif"/><br>
+        <a href="#">>>"哲学与大学"第23期报道</a><br>
+        <a href="#">>>"哲学与大学"第22期报道</a><br>
+        <a href="#">>>"哲学与大学"第21期报道</a><br>
+        <a href="#">>>"哲学与大学"第20期报道</a><br>
+        <a href="#">>>"哲学与大学"第19期报道</a>
+      </div>
+      <div class=" fl" style="width:220px;height:250px;line-height:1.8;padding-left:15px;">
+      	<div style="margin-left:-15px;"><img src="images/zxqwhead.gif" border="0" usemap="#Map3">
+          <map name="Map3">
+            <area shape="rect" coords="171,8,211,30" href="#">
+          </map>
+      	</div>
+        <a href="#">>>海德格尔的故事</a><br>
+        <a href="#">>>苏格拉底与柏拉图的故事</a><br>
+        <a href="#">>>有名的女哲学家</a><br>
+        <a href="#">>>阿奎那的故事</a><br>
+        <a href="#">>>阿基琉斯追不上乌龟</a><br>
+        <a href="#">>>薛定谔的猫</a><br>
+        <div style="margin-left:-15px;"><img src="images/zxmh.gif" border="0" usemap="#Map4"/>
+          <map name="Map4">
+            <area shape="rect" coords="8,6,209,61" href="#">
+          </map>
+        </div>
+      </div>
+    </div>
+    <div class=" fl" style="width:600px;height:750px;margin-left:15px;">
+    	<div class=" fl fontColor2" style="width:260px;height:350px;">
+      	<div style="margin-left:0px;"><img src="images/tzgg.gif" border="0" usemap="#Map10">
+          <map name="Map10">
+            <area shape="rect" coords="206,11,249,28" href="#">
+          </map>
+      	</div>
+        <div class="right-border fl" style="line-height:1.7;padding-left:5px;">
+        <font size="2px">
+      	<a href="#">· "西溪哲学对话"第二十三次活动通知</a><br>
+				<a href="#">· 西塞罗的政治哲学——《论共和国》中</a><br>
+				<a href="#">· 柏林自由大学博士奖学金项目--浙大校</a><br>
+				<a href="#">· 普林斯顿大学菲利普?佩蒂特教授学术</a><br>
+				<a href="#">· "西溪哲学对话"第二十二次活动通知</a><br>
+				<a href="#">· 华东地区现象学青年论坛（2013年秋季）</a><br>
+				<a href="#">· "西溪哲学对话"第二十一次活动通知</a><br>
+				<a href="#">· 关于申请牛津大学等英国高校哲学研究生</a><br>
+				<a href="#">· "西溪哲学对话"第二十次活动通知</a><br>
+				<a href="#">· 关于2012年度贝因美本科生奖学金的公</a><br>
+        <a href="#">· "西溪哲学对话"第十九次活动通知  </a><br>
+				<a href="#">· 关于申请牛津大学等英国高校哲学…   </a><br>
+        <a href="#">· "西溪哲学对话"第十八次活动通知  </a><br>
+        </font>
+        </div>
+      </div>
+      <div class=" fl fontColor2" style="width:325px;height:350px;margin-top:-2px;">
+      	<div style="margin-left:0px;"><img src="images/xwbd.gif" border="0" usemap="#Map11">
+          <map name="Map11">
+            <area shape="rect" coords="288,12,327,32" href="#">
+          </map>
+      	</div>
+        <div class=" fl" style="margin-top:-5px;line-height:1.7;padding-left:4px;">
+        <font size="2px">
+      	<a href="#">· "西溪哲学对话"第二十四次活动通知  </a><br>
+				<a href="#">· "西溪哲学对话"第二十三次活动通知  </a><br>
+				<a href="#">· 西塞罗的政治哲学——《论共和政治…  </a><br>
+				<a href="#">· 柏林自由大学博士奖学金项目--浙江…  </a><br>
+				<a href="#">· 普林斯顿大学菲利普?佩蒂特教授学…   </a><br>
+				<a href="#">· "西溪哲学对话"第二十二次活动通知  </a><br>
+				<a href="#">· 华东地区现象学青年论坛（2013年…  </a><br>
+				<a href="#">· "西溪哲学对话"第二十一次活动通知  </a><br>
+				<a href="#">· 关于申请牛津大学等英国高校哲学研… </a><br>
+				<a href="#">· "西溪哲学对话"第二十次活动通知    </a><br>
+				<a href="#">· 关于2012年度贝因美本科生奖学金…   </a><br>
+				<a href="#">· "西溪哲学对话"第二十一次活动通知  </a><br>
+				<a href="#">· 关于申请牛津大学等英国高校哲学…   </a><br>
+			</font>
+			</div>
+      <div class=" fr" style="line-height:1.7;margin-top:-5px;">
+        <font size="2px">
+      	<a>2013-11-27</a><br>
+				<a>2013-11-04</a><br>
+				<a>2013-10-29</a><br>
+				<a>2013-10-29</a><br>
+				<a>2013-10-29</a><br>
+				<a>2013-10-18</a><br>
+				<a>2013-10-16</a><br>
+				<a>2013-09-23</a><br>
+				<a>2013-09-09</a><br>
+				<a>2013-09-04</a><br>
+				<a>2013-06-19</a><br>
+				<a>2013-09-23</a><br>
+				<a>2013-09-09</a><br>
+			</font>
+			</div>
+      </div>
+      <div class=" fl fontColor1" style="width:630px;height:180px;">
+      	<div style="margin-left:0px;"><img src="images/rdgz.gif" border="0" usemap="#Map12">
+          <map name="Map12">
+            <area shape="rect" coords="538,11,580,30" href="#">
+          </map>
+      	</div>
+      	<div class="fl" style="width:160px;padding-left:15px;text-align:center;">
+        	<img src="images/rdgz1.gif"/><br>
+          <a href="#">康德哲学专题研究</a>
+        </div>
+        <div class="fl" style="width:170px;margin-left:30px;text-align:center;">
+          <img src="images/rdgz2.gif"/><br>
+          <a href="#">儒家与道家在社会思想中的差异</a>
+        </div>
+        <div class="fl" style="padding-top:5px;margin-left:30px;text-align:center;">
+          <img src="images/rdgz3.gif"/><br>
+         	<a href="#">佛教哲学专题研究</a>
+        </div>
+      </div>
+      <div class=" fl fontColor1" style="width:370px;height:180px;">
+      	<div style="margin-left:0px;"><img src="images/cgzs.gif" border="0" usemap="#Map13">
+          <map name="Map13">
+            <area shape="rect" coords="316,8,360,29" href="#">
+          </map>
+      	</div>
+        <div style="padding-left:10px;line-height:1.8;">
+        	<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
+					<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
+					<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
+					<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
+					<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
+        </div>
+      </div>
+      <div class=" fl fontColor1" style="width:220px;height:180px;">
+      	<div style="margin-left:0px;"><img src="images/xsyd.gif" border="0" usemap="#Map14">
+          <map name="Map14">
+            <area shape="rect" coords="158,10,202,31" href="#">
+          </map>
+      	</div>
+        <div style="padding-left:10px;line-height:1.8;">
+        	<a href="#">>>学生作品</a><br>
+					<a href="#">>>本科生第一期活动</a><br>
+					<a href="#">>>硕博学术月活动</a><br>
+					<a href="#">>>学生作品</a><br>
+					<a href="#">>>哲学系学生活动</a><br>
+        </div>
+      </div>
+    </div>
+	</div>
+  
+  <div id="root" style="width:1181px;height:187px;z-index:-1;background:url(images/root.gif);">
+  </div>
+</div>
 </body>
-<!-- InstanceEnd --></html>
+</html>

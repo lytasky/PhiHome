@@ -1,51 +1,149 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/head.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- InstanceBeginEditable name="doctitle" -->
+<!-- TemplateBeginEditable name="doctitle" -->
 <title>无标题文档</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
-    <script src="https://code.jquery.com/jquery.js"></script>
-<link rel="stylesheet" href="flexslider.css" type="text/css">
-<script src="jquery.flexslider.js"></script>
+<script src="../WebRoot/js/juery.js"></script>
+<style type="text/css">
+	.td-width{
+		width:80px;	
+	}
+	.white-font{
+		color:#fff;
+		font-size:14px;
+	}
+	.fl{
+		float:left;	
+	}
+	ul{
+		list-style:none;	
+	}
+	.gray-border{
+		border:1px solid #ccc;	
+	}
+	
+</style>
+<script>
+	function switchMod(modk){
+		var mod=document.getElementById("mod"+modk);
+		var col=document.getElementById("slidingList"+modk);
+		for(var i=1;i<=9;i++){
+			var itemList=document.getElementById("slidingList"+i);
+			var colList=document.getElementById("mod"+i);
+			itemList.style.display="none";
+			colList.style.backgroundColor="";
+		}
+		mod.style.backgroundColor="#030303";
+		col.style.display="inline";
+	}
+
+</script>
+<link rel="stylesheet" href="../WebRoot/css/flexslider.css" type="text/css">
+<link rel="stylesheet" href="../WebRoot/css/diy.css" type="text/css">
+<link href="../WebRoot/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<script src="../WebRoot/js/bootstrap.min.js"></script>
+<script src="../WebRoot/js/jquery-1.10.2.js"></script>
+<script src="../WebRoot/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="../WebRoot/js/togglemenu.js"></script>
 <!-- Place in the <head>, after the three links -->
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() {
-    $('.flexslider').flexslider();
+    $('.flexslider').flexslider({
+          animation: "slide",
+          controlsContainer: ".flex-container"
+    });
   });
 </script>
-    <!-- Bootstrap -->
-    <!--<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />-->
-	<link href="css/diy.css" rel="stylesheet" type="text/css" />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.6.2/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
+<style type="text/css" media="screen,print">
+	#wrap {
+		width:500px;
+		margin:1em auto;
+	}
+	body {font:76%/1.4 Verdana,sans-serif;}
+/* Disable properties specified in the imported CSS file */
+	.menu a {
+		border:none;
+		font-weight:normal;
+	}
 
-		<div class="flexslider" style="height:200px;width:700px;">
-  <ul class="slides">
-    <li>
-      <img src="slide1.1.jpg" />
-    </li>
-    <li>
-      <img src="slide2.1.jpg" />
-    </li>
-    <li>
-      <img src="slide3.1.jpg" />
-    </li>
-  </ul>
-</div>
-	<!-- InstanceEndEditable -->
+/* Actual menu CSS starts here */
+	.menu,
+	.menu ul {
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.menu {width:200px;}
+	.menu li {
+		display:block;
+		margin:0;
+		padding:0;
+		margin-bottom:1px;
+	}
+	.menu a {
+		display:block;
+		padding:2px 5px;
+		color:#fff;
+		background:#727174;
+		text-decoration:none;
+	}
+	.menu a:hover,
+	.menu a:focus,
+	.menu a:active {background:#727174;}
+	.menu li ul li a:hover,
+	.menu li ul li a:focus,
+	.menu li ul li a:active {background:#070708;}
+	.menu ul li {padding-left:15px;}
+	.menu ul a {background:#727174;}
+	.hidden {display:none;}
+	.slidingList a{
+		color:#fff;	
+	}
+	.slidingList{
+		color:#fff;	
+		padding-left:5px;padding-right:5px;
+	}
+	.fontColor0 a{
+		color:#000;	
+	}
+	.fontColor1 a:hover{
+		color:#2c1c56;	
+	}
+	.fontColor2 a:hover{
+		color:#413e3d;	
+	}
+	.fontColor3 a:hover{
+		color:#235f2f;	
+	}
+	.fontColor4 a{
+		color:#fff;	
+	}
+	#head a:hover{
+		text-decoration:underline;
+	}
+	a:link {
+		text-decoration: none;
+	}
+	a:visited {
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	a:active {
+		text-decoration: none;
+	}
+</style>
+<!-- TemplateEndEditable -->
 </head>
 
 <body  style="margin-top:0px;">
 	<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
-  <div id="head" style="background-image:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;margin-bottom:50px;" class="fontColor4">
+  <div id="head" style="background-image:url(../WebRoot/images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;margin-bottom:50px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
   	<a href="#">浙江大学</a>&nbsp;|
@@ -188,9 +286,10 @@
 		
 	</div><!-- 导航栏列表区 -->
 </div>
-	<!-- InstanceBeginEditable name="body" -->
-<!-- InstanceEndEditable -->
+	<!-- TemplateBeginEditable name="body" -->
+		<div>hello</div>
+	<!-- TemplateEndEditable -->
 </div>
 	
 </body>
-<!-- InstanceEnd --></html>
+</html>

@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN"><!-- InstanceBegin template="/Templates/head.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/head.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
@@ -19,34 +19,7 @@
     <![endif]-->
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 
-</head>
-
-<body style="background:url(../images/back.PNG) repeat;">
-
-<div class="container" style="width:1000px;margin:0 auto;">
-  <div class="content">
-    <div id="head" style="width:100%;height:150px;border:1px solid #CCC;background:url(../images/china-style3.6.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
-      <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
-      	<div style="margin-right:25px;float:right;">
-          <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
-          <div class="row" style="float:right;margin-top:15px;">
-  					<div class="col-md-12">
-    					<div class="input-group">
-      					<input type="text" class="form-control">
-      					<span class="input-group-btn">
-        					<button class="btn btn-default" type="button">搜索</button>
-      					</span>
-    					</div><!-- /input-group -->
-  					</div><!-- /.col-lg-6 -->
-					</div><!-- /.row -->
-       	</div>
-      </div>
-    </div>
-    
-    <div style="width:100%;height:auto;margin-top:15px;overflow:hidden;" class="gray-border"><!-- main -->
-	<!-- InstanceBeginEditable name="EditRegion3" -->
 		<div id="left-nav" style="width:200px;height:565px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;">
      <div class="panel-group" id="accordion" style="height:455px;"><!--网站地图-->
   		<div class="panel panel-default">
@@ -221,19 +194,156 @@
       </div>
     </div> 
 	<!-- InstanceEndEditable -->
-    </div>
-    
-    <div id="bottom-info" style="width:100%;margin-top:15px;height:100px;background-color:#f5f5f5;align:center;" class="gray-border round-border">
-    	<div style="margin:20px auto;width:300px;align:center;">Copyright&copy;2013 Reserved By 浙江大学哲学系
+</head>
+
+<body  style="margin-top:0px;">
+	<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
+  <div id="head" style="background-image:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;margin-bottom:50px;" class="fontColor4">
+	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
+  	<font color="#fff">
+  	<a href="#">浙江大学</a>&nbsp;|
+    <a href="#">中文</a>&nbsp;|
+    <a href="#">English</a></font>
+   </div>
+	<div class="row fl" style="width:250px;margin-left:915px;">
+  		<div class="col-md-10">
+    		<div class="input-group input-group-sm">
+              	 <input type="text" class="form-control ">
+      					<span class="input-group-btn">
+        					<button class="btn btn-default " type="button">搜索</button>
+      					</span>
+                
+    					</div><!-- /input-group -->
+  		</div><!-- /.col-lg-6 -->
+		</div><!-- /.row -->
+	<div id="column" style="margin-top:100px;margin-left:58px;width:1065px;height:30px;float:left;padding-top:-10px;">
+    <div style="text-align:center;line-height:30px;height:30px;background:url(images/colomnBack2.gif);">
+      <div style="width:195px;height:30px;align:center;" class="fl">
+			<span class="menuOn" id="mod0">
+			<a href="#" class="white-font "> 主页</a></span>
       </div>
-      <div style="margin:-5px auto;width:400px;align:center;">
-      	浙江省杭州市天目山路148号浙江大学西溪校区 邮编:310028
+      <div style="width:96px;height:30px;align:center;background-color:#030303;" id="mod1" class="fl">
+			<span class="menuOn" onMouseOver="switchMod(1);" >
+			<a href="#" class="white-font "> 系情介绍</a></span>
       </div>
-    </div>
-    <!-- end .content --></div>
-  <!-- end .container --></div>
-   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../js/bootstrap.min.js"></script>
+      <div style="width:96px;height:30;align:center;" id="mod2" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(2);">
+			<a href="#" class="white-font ">新闻通告</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod3" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(3);">
+			<a href="#" class="white-font">教学培养</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod4" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(4);">
+			<a href="#" class="white-font">招生专栏</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod5"  class="fl">
+			<span class="menuNo" onMouseOver="switchMod(5);">
+			<a href="#" class="white-font">教研成果</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod6" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(6);">
+			<a href="#" class="white-font">学生园地</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod7" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(7);">
+			<a href="uselogin.jsp" class="white-font">哲学论坛</a></span>
+      </div>
+      <div style="width:96px;height:30;align:center;" id="mod8" class="fl">
+			<span class="menuNo" onMouseOver="switchMod(8);">
+			<a href="#" target="_blank" class="white-font">闻人轶事</a></span>
+      </div>
+      <div style="width:102px;height:30;align:center;" id="mod9" class="fl">
+      <span class="menuNo" onMouseOver="switchMod(9);">
+			<a href="#" target="_blank" class="white-font">资源链接</a></span>
+      </div>
+      </div>
+  </div><!-- column -->
+	<div class="slidingList" id="slidingList1" style="color:#fff;text-align:center;padding-top:5px;height:30px;float:left;margin-left:253px;display:;background:#0f0f0f;"><!-- 导航栏列表区 -->
+		>>
+<a href="#"> 学院概况</a>|
+<a href="jianjie/szll.html">师资力量</a>
+
+	</div>
+  <div class="slidingList" id="slidingList2" style="height:30px;float:left;margin-left:349px;display:none;background:#0f0f0f;padding-top:5px;">
+  	>>
+<a href="#"> 通知公告</a>|
+<a href="#">新闻报道</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList3" style="height:30px;float:left;margin-left:445px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 培养方案</a>|
+			<a href="#">本科课程</a>
+      |
+			<a href="#">硕博课程</a>
+      |
+			<a href="#">学期课表</a>
+      |
+			<a href="#">课程资料</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList4" style="height:30px;float:left;margin-left:541px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 招生信息</a>
+			|
+			<a href="#">历年真题</a>
+      |
+			<a href="#">招生咨询</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList5" style="height:30px;float:left;margin-left:637px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 科研成果</a>
+			|
+			<a href="#">教学成果</a>
+      |
+			<a href="#">科研项目</a>
+      |
+			<a href="#">获奖信息</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList6" style="height:30px;float:left;margin-left:733px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 学生名录</a>
+			|
+			<a href="#">学生活动</a>
+      |
+			<a href="#">学生作品</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList7" style="height:30px;float:left;margin-left:780px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 课程讨论</a>
+			|
+			<a href="#">读书会</a>
+      |
+			<a href="#">哲学沙龙</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList8" style="height:30px;float:left;margin-left:870px;display:none;background:#0f0f0f;padding-top:5px;">
+			>>
+			<a href="#"> 哲学趣闻</a>
+			|
+			<a href="#">校园故事</a>
+      |
+			<a href="#">校友风采</a>
+		
+	</div>
+  <div class="slidingList" id="slidingList9" style="height:30px;float:left;margin-left:921px;display:none;background:#0f0f0f;padding-top:5px;">
+  		>>
+			<a href="#"> 校内网站</a>
+			|
+			<a href="#">校外资源</a>
+      |
+			<a href="#">国外资源</a>
+		
+	</div><!-- 导航栏列表区 -->
+</div>
+	<!-- InstanceBeginEditable name="body" -->
+<!-- InstanceEndEditable -->
+</div>
+	
 </body>
 <!-- InstanceEnd --></html>

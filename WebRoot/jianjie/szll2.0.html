@@ -1,8 +1,11 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/head.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-<title>师资力量</title>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script src="../js/juery.js"></script>
 <style type="text/css">
@@ -26,26 +29,35 @@
 </style>
 <script>
 	function switchMod(modk){
-		var mod=document.getElementById("slidingList"+modk);
-		var col=document.getElementById("mod"+modk);
+		var mod=document.getElementById("mod"+modk);
+		var col=document.getElementById("slidingList"+modk);
 		for(var i=1;i<=9;i++){
 			var itemList=document.getElementById("slidingList"+i);
 			var colList=document.getElementById("mod"+i);
 			itemList.style.display="none";
 			colList.style.backgroundColor="";
 		}
-		col.style.backgroundColor="#030303";
-		mod.style.display="inline";
+		mod.style.backgroundColor="#030303";
+		col.style.display="inline";
 	}
+
 </script>
-<link rel="stylesheet" href="../css/flexslider.css" type="text/css">
-<link rel="stylesheet" href="../css/diy.css" type="text/css">
+<link rel="stylesheet" href="../css/flexslider.css" type="text/css" />
+<link rel="stylesheet" href="../css/diy.css" type="text/css" />
 <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen" />
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/jquery-1.10.2.js"></script>
 <script src="../js/jquery.flexslider.js"></script>
 <script type="text/javascript" src="../js/togglemenu.js"></script>
 <!-- Place in the <head>, after the three links -->
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+          animation: "slide",
+          controlsContainer: ".flex-container"
+    });
+  });
+</script>
 <style type="text/css" media="screen,print">
 	#wrap {
 		width:500px;
@@ -59,7 +71,42 @@
 	}
 
 /* Actual menu CSS starts here */
-	
+	.menu,
+	.menu ul {
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.menu {width:200px;}
+	.menu li {
+		display:block;
+		margin:0;
+		padding:0;
+		margin-bottom:1px;
+	}
+	.menu a {
+		display:block;
+		padding:2px 5px;
+		color:#fff;
+		background:#727174;
+		text-decoration:none;
+	}
+	.menu a:hover,
+	.menu a:focus,
+	.menu a:active {background:#727174;}
+	.menu li ul li a:hover,
+	.menu li ul li a:focus,
+	.menu li ul li a:active {background:#070708;}
+	.menu ul li {padding-left:15px;}
+	.menu ul a {background:#727174;}
+	.hidden {display:none;}
+	.slidingList a{
+		color:#fff;	
+	}
+	.slidingList{
+		color:#fff;	
+		padding-left:5px;padding-right:5px;
+	}
 	.fontColor0 a{
 		color:#000;	
 	}
@@ -90,16 +137,13 @@
 	a:active {
 		text-decoration: none;
 	}
-	.slidingList{
-		color:#fff;	
-		padding-left:5px;padding-right:5px;
-	}
 </style>
-
+<!-- InstanceEndEditable -->
 </head>
-<body style="margin-top:0px;">
-<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
-  <div id="head" style="background:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
+
+<body  style="margin-top:0px;">
+	<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
+  <div id="head" style="background-image:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;margin-bottom:50px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
   	<a href="#">浙江大学</a>&nbsp;|
@@ -118,10 +162,10 @@
   		</div><!-- /.col-lg-6 -->
 		</div><!-- /.row -->
 	<div id="column" style="margin-top:100px;margin-left:58px;width:1065px;height:30px;float:left;padding-top:-10px;">
-    <div style="text-align:center;line-height:30px;height:30px;background:url(../images/colomnBack2.gif);">
+    <div style="text-align:center;line-height:30px;height:30px;background:url(images/colomnBack2.gif);">
       <div style="width:195px;height:30px;align:center;" class="fl">
 			<span class="menuOn" id="mod0">
-			<a href="../index.jsp" class="white-font "> 主页</a></span>
+			<a href="#" class="white-font "> 主页</a></span>
       </div>
       <div style="width:96px;height:30px;align:center;background-color:#030303;" id="mod1" class="fl">
 			<span class="menuOn" onMouseOver="switchMod(1);" >
@@ -149,7 +193,7 @@
       </div>
       <div style="width:96px;height:30;align:center;" id="mod7" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(7);">
-			<a href="#" class="white-font">哲学论坛</a></span>
+			<a href="uselogin.jsp" class="white-font">哲学论坛</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod8" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(8);">
@@ -164,7 +208,7 @@
 	<div class="slidingList" id="slidingList1" style="color:#fff;text-align:center;padding-top:5px;height:30px;float:left;margin-left:253px;display:;background:#0f0f0f;"><!-- 导航栏列表区 -->
 		>>
 <a href="#"> 学院概况</a>|
-<a href="#">师资力量</a>
+<a href="jianjie/szll.html">师资力量</a>
 
 	</div>
   <div class="slidingList" id="slidingList2" style="height:30px;float:left;margin-left:349px;display:none;background:#0f0f0f;padding-top:5px;">
@@ -242,6 +286,7 @@
 		
 	</div><!-- 导航栏列表区 -->
 </div>
+	<!-- InstanceBeginEditable name="body" -->
 	<div class="gray-border" style="margin-top:50px;margin-left:15px;width:1000px;height:700px;background-color:#d3d7da;"><!--分页显示内容-->
 		<div class="round-border deep-blue" style="height:40px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
@@ -561,8 +606,8 @@
 			</table>
     </div>
   </div>
-  <div id="root" style="margin-top:15px;width:1181px;height:187px;z-index:-1;background:url(../images/root.gif);">
-  </div>
+	<!-- InstanceEndEditable -->
 </div>
+	
 </body>
-</html>
+<!-- InstanceEnd --></html>
