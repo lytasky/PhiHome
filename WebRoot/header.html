@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <title>header</title>
-<meta charset="utf-8">
+<meta charset="GBK">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="../js/juery.js"></script>
+<script src="js/juery.js"></script>
 <style type="text/css">
 	.td-width{
 		width:80px;	
@@ -26,26 +26,26 @@
 </style>
 <script>
 	function switchMod(modk){
-		var mod=document.getElementById("slidingList"+modk);
-		var col=document.getElementById("mod"+modk);
+		var mod=document.getElementById("mod"+modk);
+		var col=document.getElementById("slidingList"+modk);
 		for(var i=1;i<=9;i++){
 			var itemList=document.getElementById("slidingList"+i);
 			var colList=document.getElementById("mod"+i);
 			itemList.style.display="none";
 			colList.style.backgroundColor="";
 		}
-		col.style.backgroundColor="#030303";
-		mod.style.display="inline";
+		mod.style.backgroundColor="#030303";
+		col.style.display="inline";
 	}
 
 </script>
-<link rel="stylesheet" href="../css/flexslider.css" type="text/css">
-<link rel="stylesheet" href="../css/diy.css" type="text/css">
-<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen" />
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery-1.10.2.js"></script>
-<script src="../js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="../js/togglemenu.js"></script>
+<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+<link rel="stylesheet" href="css/diy.css" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/togglemenu.js"></script>
 <!-- Place in the <head>, after the three links -->
 <script type="text/javascript" charset="utf-8">
   $(window).load(function() {
@@ -68,7 +68,42 @@
 	}
 
 /* Actual menu CSS starts here */
-	
+	.menu,
+	.menu ul {
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.menu {width:200px;}
+	.menu li {
+		display:block;
+		margin:0;
+		padding:0;
+		margin-bottom:1px;
+	}
+	.menu a {
+		display:block;
+		padding:2px 5px;
+		color:#fff;
+		background:#727174;
+		text-decoration:none;
+	}
+	.menu a:hover,
+	.menu a:focus,
+	.menu a:active {background:#727174;}
+	.menu li ul li a:hover,
+	.menu li ul li a:focus,
+	.menu li ul li a:active {background:#070708;}
+	.menu ul li {padding-left:15px;}
+	.menu ul a {background:#727174;}
+	.hidden {display:none;}
+	.slidingList a{
+		color:#fff;	
+	}
+	.slidingList{
+		color:#fff;	
+		padding-left:5px;padding-right:5px;
+	}
 	.fontColor0 a{
 		color:#000;	
 	}
@@ -99,20 +134,16 @@
 	a:active {
 		text-decoration: none;
 	}
-	.slidingList{
-		color:#fff;	
-		padding-left:5px;padding-right:5px;
-	}
 </style>
 
 </head>
 <body style="margin-top:0px;">
 <div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
-  <div id="head" style="background:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
+  <div id="head" style="background:url(images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
-  	<a href="#">æµ™æ±Ÿå¤§å­¦</a>&nbsp;|
-    <a href="#">ä¸­æ–‡</a>&nbsp;|
+  	<a href="#">Õã½­´óÑ§</a>&nbsp;|
+    <a href="#">ÖĞÎÄ</a>&nbsp;|
     <a href="#">English</a></font>
    </div>
 	<div class="row fl" style="width:250px;margin-left:915px;">
@@ -120,183 +151,141 @@
     		<div class="input-group input-group-sm">
               	 <input type="text" class="form-control ">
       					<span class="input-group-btn">
-        					<button class="btn btn-default " type="button">æœç´¢</button>
+        					<button class="btn btn-default " type="button">ËÑË÷</button>
       					</span>
                 
     					</div><!-- /input-group -->
   		</div><!-- /.col-lg-6 -->
 		</div><!-- /.row -->
 	<div id="column" style="margin-top:100px;margin-left:58px;width:1065px;height:30px;float:left;padding-top:-10px;">
-    <div style="text-align:center;line-height:30px;height:30px;background:url(../images/colomnBack2.gif);">
+    <div style="text-align:center;line-height:30px;height:30px;background:url(images/colomnBack2.gif);">
       <div style="width:195px;height:30px;align:center;" class="fl">
 			<span class="menuOn" id="mod0">
-			<a href="#" class="white-font "> ä¸»é¡µ</a></span>
+			<a href="#" class="white-font "> Ö÷Ò³</a></span>
       </div>
       <div style="width:96px;height:30px;align:center;background-color:#030303;" id="mod1" class="fl">
 			<span class="menuOn" onMouseOver="switchMod(1);" >
-			<a href="#" class="white-font "> ç³»æƒ…ä»‹ç»</a></span>
+			<a href="#" class="white-font "> ÏµÇé½éÉÜ</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod2" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(2);">
-			<a href="#" class="white-font ">æ–°é—»é€šå‘Š</a></span>
+			<a href="#" class="white-font ">ĞÂÎÅÍ¨¸æ</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod3" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(3);">
-			<a href="#" class="white-font">æ•™å­¦åŸ¹å…»</a></span>
+			<a href="#" class="white-font">½ÌÑ§ÅàÑø</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod4" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(4);">
-			<a href="#" class="white-font">æ‹›ç”Ÿä¸“æ </a></span>
+			<a href="#" class="white-font">ÕĞÉú×¨À¸</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod5"  class="fl">
 			<span class="menuNo" onMouseOver="switchMod(5);">
-			<a href="#" class="white-font">æ•™ç ”æˆæœ</a></span>
+			<a href="#" class="white-font">½ÌÑĞ³É¹û</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod6" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(6);">
-			<a href="#" class="white-font">å­¦ç”Ÿå›­åœ°</a></span>
+			<a href="#" class="white-font">Ñ§ÉúÔ°µØ</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod7" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(7);">
-			<a href="#" class="white-font">å“²å­¦è®ºå›</a></span>
+			<a href="uselogin.jsp" class="white-font">ÕÜÑ§ÂÛÌ³</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod8" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(8);">
-			<a href="#" target="_blank" class="white-font">é—»äººè½¶äº‹</a></span>
+			<a href="#" target="_blank" class="white-font">ÎÅÈËéóÊÂ</a></span>
       </div>
       <div style="width:102px;height:30;align:center;" id="mod9" class="fl">
       <span class="menuNo" onMouseOver="switchMod(9);">
-			<a href="#" target="_blank" class="white-font">èµ„æºé“¾æ¥</a></span>
+			<a href="#" target="_blank" class="white-font">×ÊÔ´Á´½Ó</a></span>
       </div>
       </div>
   </div><!-- column -->
-	<div class="slidingList" id="slidingList1" style="color:#fff;text-align:center;padding-top:5px;height:30px;float:left;margin-left:253px;display:;background:#0f0f0f;"><!-- å¯¼èˆªæ åˆ—è¡¨åŒº -->
+	<div class="slidingList" id="slidingList1" style="color:#fff;text-align:center;padding-top:5px;height:30px;float:left;margin-left:253px;display:;background:#0f0f0f;"><!-- µ¼º½À¸ÁĞ±íÇø -->
 		>>
-<a href="#"> å­¦é™¢æ¦‚å†µ</a>|
-<a href="#">å¸ˆèµ„åŠ›é‡</a>
+<a href="#"> Ñ§Ôº¸Å¿ö</a>|
+<a href="jianjie/szll.html">Ê¦×ÊÁ¦Á¿</a>
 
 	</div>
   <div class="slidingList" id="slidingList2" style="height:30px;float:left;margin-left:349px;display:none;background:#0f0f0f;padding-top:5px;">
   	>>
-<a href="#"> é€šçŸ¥å…¬å‘Š</a>|
-<a href="#">æ–°é—»æŠ¥é“</a>
+<a href="#"> Í¨Öª¹«¸æ</a>|
+<a href="#">ĞÂÎÅ±¨µÀ</a>
 		
 	</div>
   <div class="slidingList" id="slidingList3" style="height:30px;float:left;margin-left:445px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> åŸ¹å…»æ–¹æ¡ˆ</a>|
-			<a href="#">æœ¬ç§‘è¯¾ç¨‹</a>
+			<a href="#"> ÅàÑø·½°¸</a>|
+			<a href="#">±¾¿Æ¿Î³Ì</a>
       |
-			<a href="#">ç¡•åšè¯¾ç¨‹</a>
+			<a href="#">Ë¶²©¿Î³Ì</a>
       |
-			<a href="#">å­¦æœŸè¯¾è¡¨</a>
+			<a href="#">Ñ§ÆÚ¿Î±í</a>
       |
-			<a href="#">è¯¾ç¨‹èµ„æ–™</a>
+			<a href="#">¿Î³Ì×ÊÁÏ</a>
 		
 	</div>
   <div class="slidingList" id="slidingList4" style="height:30px;float:left;margin-left:541px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> æ‹›ç”Ÿä¿¡æ¯</a>
+			<a href="#"> ÕĞÉúĞÅÏ¢</a>
 			|
-			<a href="#">å†å¹´çœŸé¢˜</a>
+			<a href="#">ÀúÄêÕæÌâ</a>
       |
-			<a href="#">æ‹›ç”Ÿå’¨è¯¢</a>
+			<a href="#">ÕĞÉú×ÉÑ¯</a>
 		
 	</div>
   <div class="slidingList" id="slidingList5" style="height:30px;float:left;margin-left:637px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> ç§‘ç ”æˆæœ</a>
+			<a href="#"> ¿ÆÑĞ³É¹û</a>
 			|
-			<a href="#">æ•™å­¦æˆæœ</a>
+			<a href="#">½ÌÑ§³É¹û</a>
       |
-			<a href="#">ç§‘ç ”é¡¹ç›®</a>
+			<a href="#">¿ÆÑĞÏîÄ¿</a>
       |
-			<a href="#">è·å¥–ä¿¡æ¯</a>
+			<a href="#">»ñ½±ĞÅÏ¢</a>
 		
 	</div>
   <div class="slidingList" id="slidingList6" style="height:30px;float:left;margin-left:733px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> å­¦ç”Ÿåå½•</a>
+			<a href="#"> Ñ§ÉúÃûÂ¼</a>
 			|
-			<a href="#">å­¦ç”Ÿæ´»åŠ¨</a>
+			<a href="#">Ñ§Éú»î¶¯</a>
       |
-			<a href="#">å­¦ç”Ÿä½œå“</a>
+			<a href="#">Ñ§Éú×÷Æ·</a>
 		
 	</div>
   <div class="slidingList" id="slidingList7" style="height:30px;float:left;margin-left:780px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> è¯¾ç¨‹è®¨è®º</a>
+			<a href="#"> ¿Î³ÌÌÖÂÛ</a>
 			|
-			<a href="#">è¯»ä¹¦ä¼š</a>
+			<a href="#">¶ÁÊé»á</a>
       |
-			<a href="#">å“²å­¦æ²™é¾™</a>
+			<a href="#">ÕÜÑ§É³Áú</a>
 		
 	</div>
   <div class="slidingList" id="slidingList8" style="height:30px;float:left;margin-left:870px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> å“²å­¦è¶£é—»</a>
+			<a href="#"> ÕÜÑ§È¤ÎÅ</a>
 			|
-			<a href="#">æ ¡å›­æ•…äº‹</a>
+			<a href="#">Ğ£Ô°¹ÊÊÂ</a>
       |
-			<a href="#">æ ¡å‹é£é‡‡</a>
+			<a href="#">Ğ£ÓÑ·ç²É</a>
 		
 	</div>
   <div class="slidingList" id="slidingList9" style="height:30px;float:left;margin-left:921px;display:none;background:#0f0f0f;padding-top:5px;">
   		>>
-			<a href="#"> æ ¡å†…ç½‘ç«™</a>
+			<a href="#"> Ğ£ÄÚÍøÕ¾</a>
 			|
-			<a href="#">æ ¡å¤–èµ„æº</a>
+			<a href="#">Ğ£Íâ×ÊÔ´</a>
       |
-			<a href="#">å›½å¤–èµ„æº</a>
+			<a href="#">¹úÍâ×ÊÔ´</a>
 		
-	</div><!-- å¯¼èˆªæ åˆ—è¡¨åŒº -->
+	</div><!-- µ¼º½À¸ÁĞ±íÇø -->
 </div>
-	<div style="height:500px;width:1180px;margin-top:50px;padding-left:50px;font-family:'å¾®è½¯é›…é»‘';" class="gray-border">
-  	<div style="margin-left:100px;">
-			<img src="./images/æ‹›ç”Ÿå’¨è¯¢head.gif">
-    </div>
-    <div id="jive-flatpage" style="margin:15px auto;width:1000px;padding-left:0px;">
-			<div id="jive-message-holder">
-				<div class="jive-message-list">									
 
-											<form action="" method="post">
-												<input type="hidden" name="action" value="post" />
-												<div class="col-md-10 " style="margin-top:10px;">
-													<div class="fl">æ ‡é¢˜ï¼š
-                        	</div>
-                        	<div class="fl" style="margin-top:-5px;"><input type="text" name="title" class="form-control" style="width:600px;">
-                          </div>
-												</div>
-												<div class="col-md-10" style="margin-top:10px;">
-													<div class="fl">å†…å®¹ï¼š
-                          </div>
-													<div class="fl"><textarea name="cont" rows="10" cols="80" class="form-control"></textarea>
-													</div>
-                        <br>
-												</div>
-                        <div class="col-md-10 " style="margin-top:10px;margin-left:-25px;">
-													<div class="fl">é‚®ä»¶åœ°å€ï¼š
-                        	</div>
-                        	<div class="fl">
-                          	<input type="text" name="title" class="form-control" style="width:440px;">
-                          </div>
-                          <div class="fl" style="margin-left:40px;">
-                            <button class="btn btn-primary" type="submit" style="width:120px;">å‘è¡¨</button>
-                          </div>
-                          
-												</div>
-                        
-											</form>
-								
-								</div>
-			</div>
-		</div>
-    <div class=" fl" style="width:800px;margin-left:120px;margin-top:15px;">
-      <font color="#4d4278" size="2px" >+è¯·ç¡®ä¿ä½ å¡«çš„é‚®ä»¶åœ°å€æ­£ç¡®æ— è¯¯ï¼Œå±Šæ—¶æˆ‘ä»¬å°†ä»¥é‚®ä»¶çš„å½¢å¼å›å¤ä½ </font>
-    </div>
-  </div>
-  <div id="root" style="margin-top:15px;width:1181px;height:187px;z-index:-1;background:url(../images/root.gif);">
-  </div>
+	
+  
+  
 </div>
 </body>
 </html>

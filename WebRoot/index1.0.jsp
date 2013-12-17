@@ -1,16 +1,41 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/head.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>校外资源</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>浙大哲学系</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<link href="css/diy.css" rel="stylesheet" media="screen" />
+  <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
+  <script src="js/jquery.js"></script>
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+<script src="js/jquery.flexslider.js"></script>
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<!-- Place in the <head>, after the three links -->
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>
+<style type="text/css">
+	.panel-body>a:hover{
+		color:#fff;
+		text-decoration:none;
+	}
+</style>
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen" />
-	<link href="../css/diy.css" rel="stylesheet" type="text/css" />
-  <script src="../js/jquery.js"></script>
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,7 +45,7 @@
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
 
-		<div id="left-nav" style="width:200px;height:565px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;">
+	<div id="left-nav" style="width:200px;height:565px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;">
      <div class="panel-group" id="accordion" style="height:455px;"><!--网站地图-->
   		<div class="panel panel-default">
     		<div class="panel-heading">
@@ -28,15 +53,15 @@
         		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list"></span> 简介</a>
       			</h4>
     		</div>
-    		<div id="collapseOne" class="panel-collapse collapse ">
+    		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="../jianjie/depart_info.jsp" style="color:#000;" class="panel-item">本系概况</a>
+        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">本系概况</a>
       			</div>
       			<div class="panel-body">
-        			<a href="../jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
+        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
       			</div>
             <div class="panel-body">
-        			<a href="../jianjie/xsml.jsp" style="color:#000;" class="panel-item">学生名录</a>
+        			<a href="jianjie/xsml.jsp" style="color:#000;" class="panel-item">学生名录</a>
       			</div>
     		</div>
   		</div>
@@ -48,13 +73,13 @@
     		</div>
     		<div id="collapseTwo" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="../xinxi/zytg.jsp" style="color:#000;" class="panel-item">重要通告</a>
+        			<a href="xinxi/zytg.jsp" style="color:#000;" class="panel-item">重要通告</a>
       			</div>
             <div class="panel-body">
-        			<a href="../xinxi/xszx.jsp" style="color:#000;" class="panel-item">学术资讯</a>
+        			<a href="xinxi/xszx.jsp" style="color:#000;" class="panel-item">学术资讯</a>
       			</div>
       			<div class="panel-body">
-        			<a href="../xinxi/hdbd.jsp" style="color:#000;" class="panel-item">活动报道</a>
+        			<a href="xinxi/hdbd.jsp" style="color:#000;" class="panel-item">活动报道</a>
       			</div>
     		</div>
   		</div>
@@ -66,10 +91,10 @@
     		</div>
     		<div id="collapseThree" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="../kecheng/kb.jsp" style="color:#000;" class="panel-item">课表</a>
+        			<a href="kecheng/kb.jsp" style="color:#000;" class="panel-item">课表</a>
       			</div>
             <div class="panel-body">
-        			<a href="../kecheng/kczl.jsp" style="color:#000;" class="panel-item">课程资料</a>
+        			<a href="kecheng/kczl.jsp" style="color:#000;" class="panel-item">课程资料</a>
       			</div>
     		</div>
   		</div>
@@ -81,13 +106,13 @@
     		</div>
     		<div id="collapseFour" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="../zhaosheng/pyfa.jsp" style="color:#000;" class="panel-item">培养方案</a>
+        			<a href="zhaosheng/pyfa.jsp" style="color:#000;" class="panel-item">培养方案</a>
       			</div>
       			<div class="panel-body">
-        			<a href="../zhaosheng/zsxx.jsp" style="color:#000;" class="panel-item">招生信息</a>
+        			<a href="zhaosheng/zsxx.jsp" style="color:#000;" class="panel-item">招生信息</a>
       			</div>
             <div class="panel-body">
-        			<a href="../zhaosheng/zszx.jsp" style="color:#000;" class="panel-item">招生咨询</a>
+        			<a href="zhaosheng/zszx.jsp" style="color:#000;" class="panel-item">招生咨询</a>
       			</div>
     		</div>
   		</div>
@@ -99,10 +124,10 @@
     		</div>
     		<div id="collapseFive" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="../chengguo/jxcg.jsp" style="color:#000;" class="panel-item">教学成果</a>
+        			<a href="chengguo/jxcg.jsp" style="color:#000;" class="panel-item">教学成果</a>
       			</div>
       			<div class="panel-body">
-        			<a href="../chengguo/xsyd.jsp" style="color:#000;" class="panel-item">学生园地</a>
+        			<a href="chengguo/xsyd.jsp" style="color:#000;" class="panel-item">学生园地</a>
       			</div>
     		</div>
   		</div>
@@ -114,7 +139,7 @@
     		</div>
     		<div id="collapseSix" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="../gushi/ywgs.jsp" style="color:#000;" class="panel-item">轶闻故事</a>
+        			<a href="gushi/ywgs.jsp" style="color:#000;" class="panel-item">轶闻故事</a>
       			</div>
     		</div>
   		</div>
@@ -126,7 +151,7 @@
     		</div>
     		<div id="collapseSeven" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="../uselogin.jsp" style="color:#000;" class="panel-item">论坛入口</a>
+        			<a href="uselogin.jsp" style="color:#000;" class="panel-item">论坛入口</a>
       			</div>
     		</div>
   		</div>
@@ -136,22 +161,22 @@
         		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseEight"><span class="glyphicon glyphicon-th-list"></span> 链接</a>
       			</h4>
     		</div>
-    		<div id="collapseEight" class="panel-collapse collapse in">
+    		<div id="collapseEight" class="panel-collapse collapse ">
       			<div class="panel-body">
-        			<a href="../lianjie/xnzy.jsp" style="color:#000;" class="panel-item">校内资源</a>
+        			<a href="lianjie/xnzy.jsp" style="color:#000;" class="panel-item">校内资源</a>
       			</div>
       			<div class="panel-body">
-        			<a href="../lianjie/xwzy.jsp" style="color:#000;" class="panel-item">校外资源</a>
+        			<a href="lianjie/xwzy.jsp" style="color:#000;" class="panel-item">校外资源</a>
       			</div>
             <div class="panel-body">
-        			<a href="../lianjie/gnzy.jsp" style="color:#000;" class="panel-item">国内资源</a>
+        			<a href="lianjie/gnzy.jsp" style="color:#000;" class="panel-item">国内资源</a>
       			</div>
     		</div>
   		</div>  
 	   </div><!-- panel-group -->
      <div class="gray-border round-border"  style="width:200px;height:105px;"><!--哲学-->
        <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="200" height="105">
-         <param name="movie" value="../flash/house-flash3.swf" />
+         <param name="movie" value="flash/house-flash3.swf" />
          <param name="quality" value="high" />
          <param name="wmode" value="opaque" />
          <param name="swfversion" value="8.0.35.0" />
@@ -159,7 +184,7 @@
          <param name="expressinstall" value="Scripts/expressInstall.swf" />
          <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
          <!--[if !IE]>-->
-         <object type="application/x-shockwave-flash" data="../flash/house-flash3.swf" width="200" height="105">
+         <object type="application/x-shockwave-flash" data="flash/house-flash3.swf" width="200" height="105">
            <!--<![endif]-->
            <param name="quality" value="high" />
            <param name="wmode" value="opaque" />
@@ -175,24 +200,176 @@
          <!--<![endif]-->
        </object>
      </div>
-	</div>
-    <div class="gray-border fl" style="margin-left:15px;width:753px;"><!--分页显示内容-->
-			<div class="round-border deep-blue" style="height:40px;padding-top:10px;padding-left:15px;"><!--当前位置-->
-         <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
-         <a style="color:#fff;" href="../index.jsp">首页</a>
-         <span style="color:#fff;">->校外资源</span>	
-			</div>
-      <div class="gray-border round-border white-back" style="width:753px;margin-top:15px;">
-      	<p>1<p>
-        
+	</div><!-- left-nav -->
+  <div id="news_and_publish" style="width:360px;height:565px;float:left;margin-left:20px;line-height:1.4;">
+  	<div id="publish" style="width:350px;height:278px;float:left;display:block;"><!--publish-->
+  	<div class="list-group">
+    	<div>
+        <a href="xinxi/zytg.jsp" class="list-group-item active" style="background-color:#3276b1;">
+          <span class="glyphicon glyphicon-list-alt"></span> 重要通告
+          <div style="width:60px;float:right;font-size:8px;margin-top:3px;"><span class="glyphicon glyphicon-hand-right"></span> MORE
+          </div>
+        </a>
       </div>
-    </div> 
+      <div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+  		<div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+		</div>
+  </div>
+  	<div id="news" style="width:350px;height:278px;margin-top:12px;float:left;"><!--news-->
+  	<div class="list-group">
+  		<div>
+        <a href="xinxi/xszx.jsp" class="list-group-item active">
+          <span class="glyphicon glyphicon-book"></span> 学术资讯
+          <div style="width:60px;float:right;font-size:8px;margin-top:3px;"><span class="glyphicon glyphicon-hand-right"></span> MORE
+          </div>
+        </a>
+      </div>
+  		<div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+  		<div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+      <div>
+        <a href="#" class="list-group-item news-font-size none-bottom">
+          "西溪哲学对话"第二十二次活动通知
+          <div style="width:70px;float:right;">2013-10-18
+          </div>
+        </a>
+      </div>
+		</div>
+  </div>
+  </div>
+  <div class="flexslider gray-border" style="width:380px;height:250px;float:right;margin-right:0px;"><!-- 轮播图片 -->
+    <ul class="slides">
+    	<li>
+      	<img src="images/pic1.1.jpg" />
+    	</li>
+    	<li>
+      	<img src="images/pic2.1.jpg" />
+    	</li>
+    	<li>
+      	<img src="images/pic3.1.jpg" />
+    	</li>
+  	</ul>
+  </div>
+  <div class="fr gray-border round-border" style="width:380px;height:270px;background-color:white;line-height:1;margin-top:-20px;"><!--link-->
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#"><span class="glyphicon glyphicon-share"></span> 友情链接</a></li>
+      </ul>
+    <div class="fl" style="margin-left:15px;margin-top:15px;width:170px;font-size:13px;">
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="http://zjuem.zju.edu.cn/">浙江大学邮件系统</a></li>
+        <li><a href="http://libweb.zju.edu.cn/libweb/">浙江大学图书馆</a></li>
+        <li><a href="http://www.ch.zju.edu.cn/">浙江大学人文学院</a></li>
+        <li><a href="http://grs.zju.edu.cn/index.jsf">浙江大学研究生院</a></li>
+        <li><a href="http://zupo.zju.edu.cn/">浙江大学办公网</a></li>
+        <li><a href="http://libweb.zju.edu.cn/libweb/">浙江大学信息中心</a></li>
+        </ul>
+      </div>
+    <div class="fr" style="margin-right:15px;margin-top:15px;width:170px;font-size:13px;">
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="http://www.phil.tsinghua.edu.cn/">清华大学哲学系</a></li>
+        <li><a href="http://ce.phil.pku.edu.cn/">北京大学哲学系</a></li>
+        <li><a href="http://philosophy.fudan.edu.cn/">复旦大学哲学学院</a></li>
+        <li><a href="http://phi.ruc.edu.cn/">中国人民大学哲学院</a></li>
+        <li><a href="http://phil.arts.cuhk.edu.hk/">香港中文大学哲学系</a></li>
+        <li><a href="http://philosophy.stanford.edu/">斯坦福大学哲学系</a></li>
+        </ul>
+      </div>
+  </div>
+	<script type="text/javascript">
+swfobject.registerObject("FlashID");
+  </script>
 	<!-- InstanceEndEditable -->
 </head>
 
 <body  style="margin-top:0px;">
 	<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
-  <div id="head" style="background-image:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;margin-bottom:50px;" class="fontColor4">
+  <div id="head" style="background-image:url(images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;margin-bottom:50px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
   	<a href="#">浙江大学</a>&nbsp;|

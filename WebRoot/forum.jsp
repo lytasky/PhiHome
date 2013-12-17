@@ -5,7 +5,12 @@
 <%@ page contentType="text/html; charset=gb2312" %>
 <jsp:directive.page import="dbmgr.UserMgr;"/>
 <% request.setCharacterEncoding("gb2312");
+<<<<<<< HEAD
 	AdminUser oneUser=new AdminUser();
+=======
+AdminUser oneUser=new AdminUser();
+
+>>>>>>> f66356481638fb21e41d457db4a6dc6574d8c45d
 %>
 
 <% 
