@@ -3,7 +3,8 @@
 
 <%
 //request.setCharacterEncoding("GB18030");
-
+String classify = (String)request.getParameter("classify");
+System.out.println("In searchResult"+classify);
 boolean logined = false;
 String adminLogined = (String)session.getAttribute("adminLogined");
 if(adminLogined != null && adminLogined.trim().equals("true")) {
@@ -34,7 +35,20 @@ List<Article> articles = new ArrayList<Article>();
 Connection conn = DB.getConn();
 
 Statement stmtCount = DB.createStmt(conn);
-String sqlCount = "select count(*) from article where title like '%" + keyword + "%'" ;
+String sqlCount = "select count(*) from course where title like '%" + keyword + "%'" ;
+if(classify.equals("0"))
+{
+	sqlCount = "select count(*) from course where title like '%" + keyword + "%'" ;
+}
+else if(classify.equals("1"))
+{	
+	sqlCount = "select count(*) from reading where title like '%" + keyword + "%'" ;
+}
+else if(classify.equals("2"))
+{	
+	sqlCount = "select count(*) from salon where title like '%" + keyword + "%'" ;
+}
+
 System.out.println(sqlCount);
 ResultSet rsCount = DB.executeQuery(stmtCount, sqlCount);
 rsCount.next();
@@ -48,7 +62,19 @@ if(pageNo <= 0) pageNo = 1;
 
 Statement stmt = DB.createStmt(conn);
 int startPos = (pageNo-1) * PAGE_SIZE; 
-String sql = "select * from article where title like '%" + keyword + "%' and pid = 0 order by pdate desc limit " + startPos + "," + PAGE_SIZE ;
+String sql = "select * from course where title like '%" + keyword + "%' and pid = 0 order by pdate desc limit " + startPos + "," + PAGE_SIZE ;
+if(classify.equals("0"))
+{
+	sql = "select * from course where title like '%" + keyword + "%' and pid = 0 order by pdate desc limit " + startPos + "," + PAGE_SIZE ;
+}
+else if(classify.equals("1"))
+{	
+	sql = "select * from reading where title like '%" + keyword + "%' and pid = 0 order by pdate desc limit " + startPos + "," + PAGE_SIZE ;
+}
+else if(classify.equals("2"))
+{	
+	sql = "select * from salon where title like '%" + keyword + "%' and pid = 0 order by pdate desc limit " + startPos + "," + PAGE_SIZE ;
+}
 System.out.println(sql);
 ResultSet rs = DB.executeQuery(stmt, sql);
 while(rs.next()) {
@@ -111,22 +137,22 @@ DB.close(conn);
           第<%=pageNo %>页,共<%=totalPages %>页 <span class="jive-paginator"> [</span></span>
           
           <span class="nobreak"><span class="jive-paginator">
-          <a href="searchResult.jsp?pageNo=1&keyword=<%=keyword %>">第一页</a></span></span>
+          <a href="searchResult.jsp?pageNo=1&keyword=<%=keyword %>&classify=<%=classify%>">第一页</a></span></span>
           
           
           
           <span class="nobreak"><span class="jive-paginator">|</span></span>
           <span class="nobreak"><span class="jive-paginator">
-          <a href="searchResult.jsp?pageNo=<%=pageNo - 1 %>&keyword=<%=keyword %>">上一页</a>
+          <a href="searchResult.jsp?pageNo=<%=pageNo - 1 %>&keyword=<%=keyword %>&classify=<%=classify%>">上一页</a>
           </span></span>
           
          <span class="nobreak"><span class="jive-paginator">| </span></span>
          <span class="nobreak"><span class="jive-paginator">
-         <a href="searchResult.jsp?pageNo=<%=pageNo + 1 %>&keyword=<%=keyword %>">下一页</a>
+         <a href="searchResult.jsp?pageNo=<%=pageNo + 1 %>&keyword=<%=keyword %>&classify=<%=classify%>">下一页</a>
           |&nbsp; 
-          <a href="searchResult.jsp?pageNo=<%=totalPages %>&keyword=<%=keyword %>">最末页</a> ] </span> </span> </td>
+          <a href="searchResult.jsp?pageNo=<%=totalPages %>&keyword=<%=keyword %>&classify=<%=classify%>">最末页</a> ] </span> </span> </td>
 
-          <td width="150" class="jive-icon-label"><img src="images/post-16x16.gif" alt="发表新主题" border="0" height="16" width="16"><a id="jive-post-thread" href="post.jsp">发表新主题</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;isBest=1"></a></td>
+          <td width="150" class="jive-icon-label"><img src="images/post-16x16.gif" alt="发表新主题" border="0" height="16" width="16"><a id="jive-post-thread" href="post.jsp?classify=<%=classify%>">发表新主题</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;isBest=1"></a></td>
       </tr>
     </tbody>
   </table>
@@ -174,11 +200,23 @@ DB.close(conn);
                     	 <%} %>
                     </td>
                     
-                    <td class="jive-thread-name" width="95%"><a id="jive-thread-1" href="articleDetailFlat.jsp?id=<%=a.getId() %>"><%=a.getTitle() %></a></td>
+                    <td class="jive-thread-name" width="95%"><a id="jive-thread-1" href="articleDetailFlat.jsp?id=<%=a.getId() %>&classify=<%=classify%>"><%=a.getTitle() %></a></td>
                     <td class="jive-author" nowrap="nowrap" width="1%"><span class=""> <%=a.getWriter1() %> </span></td>
                     <%Connection connw = DB.getConn();
 	                                              Statement stmt1 = connw.createStatement();
-	                                              String sq = "select pno from article where id = "+ a.getId();
+	                                              String sq = "select pno from course where id = "+ a.getId();
+	                                              if(classify.equals("0"))
+												  {
+													  sq = "select pno from course where id = "+ a.getId();
+												  }
+												  else if(classify.equals("1"))
+												  {	
+												      sq = "select pno from reading where id = "+ a.getId();
+												  }
+												  else if(classify.equals("2"))
+												  {	
+												 	  sq = "select pno from salon where id = "+ a.getId();
+												  }
 	                                              ResultSet rs1 = stmt1.executeQuery(sq);
 	                                              while(rs1.next()){
 	                                              %>

@@ -1,10 +1,13 @@
 <%@ page pageEncoding="GB18030"%>
 <%@ page import="java.sql.*, com.bjsxt.bbs.*, java.util.*"%>
 
-
+<%
+	String classify = request.getParameter("classify");
+	System.out.println("In delete "+classify);
+ %>
 
 <%!
-private void delete(Connection conn, int id, boolean isLeaf) {
+private void delete(Connection conn, int id, boolean isLeaf,String classify) {
 	//delete all the children
 	//delete(conn, chids's id)
 	
@@ -14,7 +17,7 @@ private void delete(Connection conn, int id, boolean isLeaf) {
 		ResultSet rs = DB.executeQuery(stmt, sql); 
 		try {
 			while(rs.next()) {
-				delete(conn, rs.getInt("id"), rs.getInt("isleaf") == 0);
+				delete(conn, rs.getInt("id"), rs.getInt("isleaf") == 0,classify);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -26,7 +29,20 @@ private void delete(Connection conn, int id, boolean isLeaf) {
 	
 	
 	//delete self
-	DB.executeUpdate(conn, "delete from article where id = " + id);
+	String sql3 = "delete from course where id = " + id;
+ 	if(classify.equals("0"))
+	{
+		sql3 = "delete from course where id = " + id;
+	}
+	else if(classify.equals("1"))
+	{	
+		sql3 = "delete from reading where id = " + id;
+	}
+	else if(classify.equals("2"))
+	{	
+		sql3 = "delete from salon where id = " + id;
+	}
+	DB.executeUpdate(conn, sql3);
 	
 	
 }
@@ -46,15 +62,41 @@ try {
 	autoCommit = conn.getAutoCommit();
 	conn.setAutoCommit(false);
 	
-	delete(conn, id, isLeaf);
+	delete(conn, id, isLeaf,classify);
 	
 	stmt = DB.createStmt(conn);
-	rs = DB.executeQuery(stmt, "select count(*) from article where pid = " + pid);
+	String sql = "select count(*) from course where pid = " + pid;
+ 	if(classify.equals("0"))
+	{
+		sql = "select count(*) from course where pid = " + pid;
+	}
+	else if(classify.equals("1"))
+	{	
+		sql = "select count(*) from reading where pid = " + pid;
+	}
+	else if(classify.equals("2"))
+	{	
+		sql = "select count(*) from salon where pid = " + pid;
+	}
+	rs = DB.executeQuery(stmt, sql);
 	rs.next();
 	int count = rs.getInt(1);
 	
 	if(count <= 0) {
-		DB.executeUpdate(conn, "update article set isleaf = 0 where id = " + pid);
+		String sql2 = "update article set isleaf = 0 where id = " + pid;
+	 	if(classify.equals("0"))
+		{
+			sql2 = "update article set isleaf = 0 where id = " + pid;
+		}
+		else if(classify.equals("1"))
+		{	
+			sql2 = "update article set isleaf = 0 where id = " + pid;
+		}
+		else if(classify.equals("2"))
+		{	
+			sql2 = "update article set isleaf = 0 where id = " + pid;
+		}
+		DB.executeUpdate(conn, sql2);
 	}
 	
 	conn.commit();
@@ -64,6 +106,6 @@ try {
 	DB.close(stmt);
 	DB.close(conn);
 }
-response.sendRedirect("articleFlat1.jsp");
+response.sendRedirect("articleFlat1.jsp?classify="+classify);
 %>
 

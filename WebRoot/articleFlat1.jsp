@@ -5,12 +5,14 @@
 <%@ page contentType="text/html; charset=gb2312" %>
 
 <% request.setCharacterEncoding("gb2312");
-AdminUser oneUser=new AdminUser();
+	AdminUser oneUser=new AdminUser();
 
 %>
 
 
 <%
+	String classify = request.getParameter("classify");
+	System.out.println("In articleFlat1 "+classify);
 	boolean logined = false; //判断管理员是否登陆
 	String adminLogined = (String) session.getAttribute("admLogined");
 	if (adminLogined != null && adminLogined.trim().equals("true")) {
@@ -41,8 +43,22 @@ AdminUser oneUser=new AdminUser();
 	Connection conn = DB.getConn();
 
 	Statement stmtCount = DB.createStmt(conn);
+	String sql2 = "select count(*) from course where pid = 0";
+	
+	if(classify.equals("0"))
+	{
+		sql2 = "select count(*) from course where pid = 0";
+	}
+	else if(classify.equals("1"))
+	{	
+		sql2 = "select count(*) from reading where pid = 0";
+	}
+	else if(classify.equals("2"))
+	{	
+		sql2 = "select count(*) from salon where pid = 0";
+	}
 	ResultSet rsCount = DB.executeQuery(stmtCount,
-			"select count(*) from article where pid = 0"); // 显示所有pid=0的帖子
+			sql2); // 显示所有pid=0的帖子
 	rsCount.next();
 	int totalRecords = rsCount.getInt(1);
 
@@ -53,9 +69,23 @@ AdminUser oneUser=new AdminUser();
 
 	Statement stmt = DB.createStmt(conn);
 	int startPos = (pageNo - 1) * PAGE_SIZE;
-	String sql = "select * from article where pid = 0 order by pdate desc limit "
+	String sql = "select * from course where pid = 0 order by pdate desc limit "
 			+ startPos + "," + PAGE_SIZE;
-	System.out.println(sql);
+	if(classify.equals("0"))
+	{
+		sql = "select * from course where pid = 0 order by pdate desc limit "
+			+ startPos + "," + PAGE_SIZE;
+	}
+	else if(classify.equals("1"))
+	{	
+		sql = "select * from reading where pid = 0 order by pdate desc limit "
+			+ startPos + "," + PAGE_SIZE;	
+	}
+	else if(classify.equals("2"))
+	{	
+		sql = "select * from salon where pid = 0 order by pdate desc limit "
+			+ startPos + "," + PAGE_SIZE;
+	}
 	ResultSet rs = DB.executeQuery(stmt, sql);
 	while (rs.next()) {
 		Article a = new Article();
@@ -109,7 +139,7 @@ AdminUser oneUser=new AdminUser();
 				</div> 
 				<%if (logined) {//判断是否登陆%>
 				<div align="center">
-					<form action="searchResult.jsp" method="post">
+					<form action="searchResult.jsp?classify=<%=classify%>" method="post">
 					<div class="row" style="margin:0 auto;width:250px;">
   					<div class="col-md-12">
     					<div class="input-group input-group-sm">
@@ -124,7 +154,7 @@ AdminUser oneUser=new AdminUser();
 				</div>
 			</div>
 			
-			<a href="post.jsp">发表新主题<img src="images/post-16x16.gif"
+			<a href="post.jsp?classify=<%=classify%>">发表新主题<img src="images/post-16x16.gif"
 										alt="发表新主题" border="0" height="16" width="16">
 								</a><br>
 				<%} %>
@@ -137,7 +167,7 @@ AdminUser oneUser=new AdminUser();
 							</span>
 
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="articleFlat1.jsp?pageNo=1">第一页</a>
+									<a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=1">第一页</a>
 							</span>
 							</span>
 
@@ -146,15 +176,15 @@ AdminUser oneUser=new AdminUser();
 							<span class="nobreak"><span class="jive-paginator">|</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="articleFlat1.jsp?pageNo=<%=pageNo - 1%>">上一页</a> </span>
+									<a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=<%=pageNo - 1%>">上一页</a> </span>
 							</span>
 
 							<span class="nobreak"><span class="jive-paginator">|
 							</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="articleFlat1.jsp?pageNo=<%=pageNo + 1%>">下一页</a>
-									|&nbsp; <a href="articleFlat1.jsp?pageNo=<%=totalPages%>">最末页</a>
+									<a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=<%=pageNo + 1%>">下一页</a>
+									|&nbsp; <a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=<%=totalPages%>">最末页</a>
 									] </span> </span>
 						</td>
 					</tr>
@@ -210,9 +240,9 @@ AdminUser oneUser=new AdminUser();
 													<%
 														if (logined) {//判断是否登陆
 													%>
-													<a href="modify.jsp?id=<%=a.getId()%>">修改</a>
+													<a href="modify.jsp?classify=<%=classify%>&id=<%=a.getId()%>">修改</a>
 													<a
-														href="delete.jsp?id=<%=a.getId()%>&isLeaf=<%=a.isLeaf()%>&pid=<%=a.getPid()%>">删除</a>
+														href="delete.jsp?classify=<%=classify%>&id=<%=a.getId()%>&isLeaf=<%=a.isLeaf()%>&pid=<%=a.getPid()%>">删除</a>
 													<%
 														}
 													%>
@@ -220,7 +250,7 @@ AdminUser oneUser=new AdminUser();
 
 												<td class="jive-thread-name" width="95%">
 													<a id="jive-thread-1"
-														href="articleDetailFlat.jsp?id=<%=a.getId()%>"><%=a.getTitle()%></a>
+														href="articleDetailFlat.jsp?classify=<%=classify%>&id=<%=a.getId()%>"><%=a.getTitle()%></a>
 												</td>
 												<td class="jive-author" nowrap="nowrap" width="1%">
 
@@ -228,8 +258,20 @@ AdminUser oneUser=new AdminUser();
 												</td>
 												<%Connection connw = DB.getConn();
 	                                              Statement stmt1 = connw.createStatement();
-	                                              String sq = "select pno from article where id = "+ a.getId();
-	                                              ResultSet rs1 = stmt1.executeQuery(sq);
+	                                              String sql3 = "select pno from course where id = "+ a.getId();
+	                                              if(classify.equals("0"))
+												  {
+													  sql3 = "select pno from course where id = "+ a.getId();
+												  }
+												  else if(classify.equals("1"))
+												  {	
+												   	  sql3 = "select pno from reading where id = "+ a.getId();
+												  }
+												  else if(classify.equals("2"))
+												  {	
+													  sql3 = "select pno from salon where id = "+ a.getId();
+												  }
+	                                              ResultSet rs1 = stmt1.executeQuery(sql3);
 	                                              while(rs1.next()){
 	                                              %>
 												<td class="jive-view-count" width="1%">

@@ -4,6 +4,8 @@
 <%
 	request.setCharacterEncoding("GBK");
 	String action = request.getParameter("action");
+	String classify = request.getParameter("classify");
+	System.out.println("In modify "+classify);
 	
 	int id = Integer.parseInt(request.getParameter("id"));
 	if (action != null && action.trim().equals("modify")) {
@@ -12,8 +14,20 @@
 		System.out.println(title);
 		String cont = request.getParameter("cont");
 		System.out.println(cont);
-		
-		PreparedStatement pstmt = DB.prepareStmt(conn, "update article set title = ? , cont = ? where id = ?");		
+		String sql = "update course set title = ? , cont = ? where id = ?";
+	 	if(classify.equals("0"))
+		{
+			sql = "update course set title = ? , cont = ? where id = ?";
+		}
+		else if(classify.equals("1"))
+		{	
+			sql = "update reading set title = ? , cont = ? where id = ?";
+		}
+		else if(classify.equals("2"))
+		{	
+			sql = "update salon set title = ? , cont = ? where id = ?";
+		}
+		PreparedStatement pstmt = DB.prepareStmt(conn, sql);		
 		pstmt.setString(1, title);
 		pstmt.setString(2, cont);
 		pstmt.setInt(3, id);
@@ -22,7 +36,7 @@
 		DB.close(pstmt);
 		DB.close(conn);
 		
-		response.sendRedirect("articleFlat.jsp");
+		response.sendRedirect("articleFlat.jsp?classify="+classify);
 		return;
 
 	}
@@ -33,7 +47,20 @@
 
 Connection conn = DB.getConn();
 Statement stmt = DB.createStmt(conn);
-ResultSet rs = DB.executeQuery(stmt, "select * from article where id = " + id);
+String sql2 = "select * from course where id = " + id;
+if(classify.equals("0"))
+{
+	sql2 = "select * from course where id = " + id;
+}
+else if(classify.equals("1"))
+{	
+	sql2 = "select * from reading where id = " + id;
+}
+else if(classify.equals("2"))	
+{	
+	sql2 = "select * from salon where id = " + id;
+}
+ResultSet rs = DB.executeQuery(stmt, sql2);
 if(!rs.next()) return;
 Article a = new Article();
 a.initFromRs(rs);
@@ -97,7 +124,7 @@ DB.close(conn);
 									<div class="jive-table">
 										<div class="jive-messagebox">
 
-											<form action="modify.jsp" method="post">
+											<form action="modify.jsp?classify=<%=classify%>" method="post" >
 												<input type="hidden" name="action" value="modify" />
 												<input type="hidden" name="id" value="<%=id %>"/>
 												

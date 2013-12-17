@@ -2,6 +2,8 @@
 <%@ page import="java.sql.*, com.bjsxt.bbs.*" %>
 
 <%
+String classify = request.getParameter("classify");
+System.out.println("In reply" + classify);
 int id = Integer.parseInt(request.getParameter("id"));
 int rootId = Integer.parseInt(request.getParameter("rootId"));
 int pno = Integer.parseInt(request.getParameter("pno"));
@@ -79,7 +81,7 @@ window.onload = function()
       <tbody>
         <tr>
           <td class="jive-icon"><a href="http://bbs.chinajavaworld.com/post%21reply.jspa?threadID=744236"><img src="images/reply-16x16.gif" alt="回复本主题" border="0" height="16" width="16"></a></td>
-          <td class="jive-icon-label"><a id="jive-reply-thread" href="reply.jsp">回复本主题</a> </td>
+          <td class="jive-icon-label"><a id="jive-reply-thread" href="reply.jsp?classify=<%=classify%>">回复本主题</a> </td>
         </tr>
       </tbody>
     </table>
@@ -93,7 +95,7 @@ window.onload = function()
               <div class="jive-table">
                 <div class="jive-messagebox">
                 	
-                	<form action="replyDeal.jsp" method="post">
+                	<form action="replyDeal.jsp?classify=<%=classify%>" method="post">
                 		<input type="hidden" name="pid" value="<%=id %>"/>
                 		<input type="hidden" name="rootId" value="<%=rootId %>"/>
                 		<input type="hidden" name="pno" value="<%=pno %>"/>

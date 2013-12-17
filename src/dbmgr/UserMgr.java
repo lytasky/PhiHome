@@ -21,7 +21,6 @@ public class UserMgr {
 					+ studentID + "'";
 			//中文乱码问题
 			//sql = new String(sql.getBytes("ISO8859-1"), "GB2312");
-			System.out.println(sql);
 			rs = db_conn.sm.executeQuery(sql);        // 执行sql语句
 			Student student = null;
 			if (rs.next()) {
