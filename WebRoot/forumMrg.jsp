@@ -9,7 +9,7 @@
 %>
 
 <% 
-	String name = (String)session.getAttribute("name");
+	String adminName = (String)session.getAttribute("admName");
     boolean ulogined = false; //判断用户是否注册后自动登陆
 	String userLogined = (String)session.getAttribute("userLogined");
 	if (userLogined != null && userLogined.trim().equals("true")) {
@@ -121,7 +121,7 @@
       </div>
     </div>
    	<div style="width:1000px;margin:10px auto;background-color:#fff;padding-left:10px;" class=" round-border">
-		<div style="width:700px;height:50px;padding-top:10px;" class="fl "><font color="#3276b1" size=4><%=name%></font> 你好<marquee style="width:500px;margin-left:15px;" class="">欢迎光临本论坛，大家一起交流共同提高！</marquee></div>
+		<div style="width:700px;height:50px;padding-top:10px;" class="fl "><font color="#3276b1" size=4><%=adminName%></font> 你好<marquee style="width:500px;margin-left:15px;" class="">欢迎光临本论坛，大家一起交流共同提高！</marquee></div>
     	<div align="center" style="width:250px;padding-top:-10px;" class=" fr" >
 					<form action="" method="post">
 					<div class="row" style="margin:5px auto;width:250px;">
@@ -155,7 +155,7 @@
           </div>
           <div class="fl gray-border" style="margin-left:10px;">
           	<font style="font-family:微软雅黑;">
-        	<a href="articleFlat.jsp?classify=0">课程讨论</a><br>
+        	<a href="articleFlat1.jsp?classify=0">课程讨论</a><br>
         	主题：主题数，贴数：贴数<br>
         	最后发表：最后发表时间
         	</font>
@@ -167,7 +167,7 @@
           </div>
           <div class="fl gray-border" style="margin-left:10px;">
         	<font style="font-family:微软雅黑;">
-        	<a href="articleFlat.jsp?classify=1">读书会</a><br>
+        	<a href="articleFlat1.jsp?classify=1">读书会</a><br>
         	主题：主题数，贴数：贴数<br>
         	最后发表：最后发表时间
         	</font>
@@ -179,7 +179,7 @@
           </div>
           <div class="fl gray-border" style="margin-left:10px;">
         	<font style="font-family:微软雅黑;">
-        	<a href="articleFlat.jsp?classify=2">哲学沙龙</a><br>
+        	<a href="articleFlat1.jsp?classify=2">哲学沙龙</a><br>
         	主题：主题数，贴数：贴数<br>
         	最后发表：最后发表时间
         	</font>

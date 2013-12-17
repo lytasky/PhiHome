@@ -1,17 +1,19 @@
-<%@ page pageEncoding="GB18030"%>
+<%@ page pageEncoding="GBK"%>
 <%@ page import="java.sql.*,com.bjsxt.bbs.*"%>
 
 <%
 	request.setCharacterEncoding("GBK");
+	String classify = request.getParameter("classify");
+	System.out.println("In post "+classify);
 	String action = request.getParameter("action");
 	if (action != null && action.trim().equals("post")) {
-		String title = request.getParameter("title");
+		String title = (String)request.getParameter("title");
 		System.out.println(title);
 	    String writer = (String)session.getAttribute("name");
 	    System.out.println(writer);
-		String cont = request.getParameter("cont");
+		String cont = (String)request.getParameter("cont");
 		System.out.println(cont);
-		String pno = request.getParameter("pno");
+		String pno = (String)request.getParameter("pno");
 		System.out.println(pno);
 		Connection conn = DB.getConn();
 
@@ -19,8 +21,19 @@
 		conn.setAutoCommit(false);
 		
 		int rootId = -1;
-		
-		String sql = "insert into article values (null, ?, ?, ?, ?, ?, now(),? ,?)";
+		String sql = "insert into course values (null, ?, ?, ?, ?, ?, now(),? ,?)";
+		if(classify.equals("0"))
+		{
+			sql = "insert into course values (null, ?, ?, ?, ?, ?, now(),? ,?)";
+		}
+		else if(classify.equals("1"))
+		{	
+			sql = "insert into reading values (null, ?, ?, ?, ?, ?, now(),? ,?)";
+		}
+		else if(classify.equals("2"))
+		{	
+			sql = "insert into salon values (null, ?, ?, ?, ?, ?, now(),? ,?)";
+		}
 		PreparedStatement pstmt = DB.prepareStmt(conn, sql, Statement.RETURN_GENERATED_KEYS);
 		pstmt.setInt(1, 0);
 		pstmt.setInt(2, rootId);
@@ -35,15 +48,27 @@
 		rootId = rsKey.getInt(1);
 	
 		Statement stmt = DB.createStmt(conn);
-		stmt.executeUpdate("update article set rootid = " + rootId + " where id = "	+ rootId);
+		String sql2 = "update course set rootid = " + rootId + " where id = "	+ rootId;
+		if(classify.equals("0"))
+		{
+			sql2 = "update course set rootid = " + rootId + " where id = "	+ rootId;
+		}
+		else if(classify.equals("1"))
+		{	
+			sql2 = "update reading set rootid = " + rootId + " where id = "	+ rootId;
+		}
+		else if(classify.equals("2"))
+		{	
+			sql2 = "update salon set rootid = " + rootId + " where id = "	+ rootId;
+		}
+		stmt.executeUpdate(sql2);
 
 		conn.commit();
 		conn.setAutoCommit(autoCommit);
 		DB.close(pstmt);
 		DB.close(stmt);
 		DB.close(conn);
-		
-		response.sendRedirect("articleFlat.jsp");
+		response.sendRedirect("articleFlat.jsp?classify="+classify);
 
 	}
 %>
@@ -104,7 +129,7 @@
 							<div id="jive-message-holder">
 								<div class="jive-message-list">									
 
-											<form action="post.jsp" method="post">
+											<form action="post.jsp?classify=<%=classify%>" method="post">
 												<input type="hidden" name="action" value="post" />
 												<div class="col-md-10" style="margin-top:10px;">
 												БъЬтЃК

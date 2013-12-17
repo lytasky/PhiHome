@@ -2,7 +2,7 @@
 
 <%
 request.setCharacterEncoding("GBK");
-
+String classify = request.getParameter("classify");
 int pid = Integer.parseInt(request.getParameter("pid"));
 int pno = Integer.parseInt(request.getParameter("pno"));
 int rootId = Integer.parseInt(request.getParameter("rootId"));
@@ -17,7 +17,19 @@ Connection conn = DB.getConn();
 boolean autoCommit = conn.getAutoCommit();
 conn.setAutoCommit(false);
 
-String sql = "insert into article values (null, ?, ?, ?, ?, ?, now(), ?, ?)";
+String sql = "insert into course values (null, ?, ?, ?, ?, ?, now(), ?, ?)";
+if(classify.equals("0"))
+{	
+	sql = "insert into course values (null, ?, ?, ?, ?, ?, now(), ?, ?)";
+}
+else if(classify.equals("1"))
+{	
+	sql = "insert into reading values (null, ?, ?, ?, ?, ?, now(), ?, ?)";	
+}
+else if(classify.equals("2"))
+{	
+	sql = "insert into salon values (null, ?, ?, ?, ?, ?, now(), ?, ?)";
+}
 PreparedStatement pstmt = DB.prepareStmt(conn, sql);
 pstmt.setInt(1, pid);
 pstmt.setInt(2, rootId);
@@ -29,7 +41,20 @@ pstmt.setInt(7,pno);
 pstmt.executeUpdate();
 
 Statement stmt = DB.createStmt(conn);
-stmt.executeUpdate("update article set isleaf = 1 where id = " + pid);
+String sql2 = "update course set isleaf = 1 where id = " + pid;
+if(classify.equals("0"))
+{	
+	sql2 = "update course set isleaf = 1 where id = " + pid;
+}
+else if(classify.equals("1"))
+{	
+	sql2 = "update reading set isleaf = 1 where id = " + pid;	
+}
+else if(classify.equals("2"))
+{	
+	sql2 = "update salon set isleaf = 1 where id = " + pid;
+}
+stmt.executeUpdate(sql2);
 
 conn.commit();
 conn.setAutoCommit(autoCommit);
@@ -63,7 +88,7 @@ function delayURL(url) {
 </script>
 
 
-<a href="articleFlat.jsp">主题列表</a>
+<a href="articleFlat.jsp?classify=<%=classify%>">主题列表</a>
 <script type="text/javascript">
-	delayURL("articleFlat.jsp");
+	delayURL("articleFlat.jsp?classify=<%=classify%>");
 </script>

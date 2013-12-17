@@ -41,7 +41,8 @@
 	    					//转发至注册成功页面 
 	    					session.setAttribute("uLogined", "true");
 					        session.setAttribute("name", student.getName());
-	    					response.sendRedirect("articleFlat.jsp");
+					        session.setAttribute("identity", "0");
+	    					response.sendRedirect("forum.jsp");
 	    				}catch (Throwable t) {
 	    					//写异常日志
 	    					getServletContext().log(t.getMessage());
@@ -70,7 +71,8 @@
 	    					//转发至注册成功页面 
 	    					session.setAttribute("uLogined", "true");
 					        session.setAttribute("name", teacher.getName());
-	    					response.sendRedirect("articleFlat.jsp");
+					     	session.setAttribute("identity", "1");
+	    					response.sendRedirect("forum.jsp.jsp");
 	    				} 
 	    				catch (Throwable t) {
 	    					//写异常日志

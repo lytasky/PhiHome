@@ -20,6 +20,7 @@
  %>
 
 <%
+	String classify = (String)request.getParameter("classify");
 	String strId = request.getParameter("id");
 	if (strId == null || strId.trim().equals("")) {
 		out.println("Error ID!");
@@ -36,10 +37,37 @@
 	List<Article> articles = new ArrayList<Article>();
 	Connection conn = DB.getConn();
 	Statement stmt1 = conn.createStatement();
-	String sq = "update  article set pno = pno+1 where id = " + id;
+	String sq = "update  course set pno = pno+1 where id = " + id;
+	if(classify.equals("0"))
+	{
+		sq = "update  course set pno = pno+1 where id = " + id;
+	}
+	else if(classify.equals("1"))
+	{	
+		sq = "update  reading set pno = pno+1 where id = " + id;
+	}
+	else if(classify.equals("2"))
+	{	
+		sq = "update  salon set pno = pno+1 where id = " + id;
+	}
 	stmt1.executeUpdate(sq);
-	String sql = "select * from article where rootId = " + id
+	String sql = "select * from course where rootId = " + id
 			+ " order by pdate asc";
+	if(classify.equals("0"))
+	{
+		sql = "select * from course where rootId = " + id
+			+ " order by pdate asc";
+	}
+	else if(classify.equals("1"))
+	{	
+		sql = "select * from reading where rootId = " + id
+			+ " order by pdate asc";
+	}
+	else if(classify.equals("2"))
+	{	
+		sql = "select * from salon where rootId = " + id
+			+ " order by pdate asc";
+	}	
 	Statement stmt = DB.createStmt(conn);
 	ResultSet rs = DB.executeQuery(stmt, sql);
 	while (rs.next()) {
@@ -99,7 +127,7 @@
 				<tbody>
 					<tr valign="top">
 						<td width="100%">
-							<a href="articleFlat.jsp">论坛首页</a>
+							<a href="articleFlat.jsp?classify=<%=classify%>">论坛首页</a>
 						</td>
 						<!--<td width="1%">
 							<div class="jive-accountbox"></div>
@@ -189,7 +217,7 @@
 																							</td>
 																							<%if(ulogined || ulog){ %> 
 																							<td class="jive-icon-label">
-																								<a href="reply.jsp?id=<%=a.getId()%>&rootId=<%=a.getRootId()%>&writer=<%=a.getWriter1()%>&pno=<%=a.getPno() %>"
+																								<a href="reply.jsp?classify=<%=classify%>&classify=<%=classify%>&id=<%=a.getId()%>&rootId=<%=a.getRootId()%>&writer=<%=a.getWriter1()%>&pno=<%=a.getPno() %>"
 																									title="回复本主题">回复</a>
 																							</td>
 																							<%} %>
@@ -244,12 +272,12 @@
 														<tbody>
 															<tr>
 																<td>
-																	<a href="articleFlat.jsp"><img
+																	<a href="articleFlat.jsp?classify=<%=classify%>"><img
 																			src="images/arrow-left-16x16.gif" alt="返回到主题列表"
 																			border="0" height="16" hspace="6" width="16"> </a>
 																</td>
 																<td>
-																	<a href="articleFlat.jsp">返回到主题列表</a>
+																	<a href="articleFlat.jsp?classify=<%=classify%>">返回到主题列表</a>
 																</td>
 															</tr>
 														</tbody>
