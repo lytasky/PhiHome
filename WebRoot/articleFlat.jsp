@@ -194,8 +194,6 @@
 							</span>
 							</span>
 
-
-
 							<span class="nobreak"><span class="jive-paginator">|</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">

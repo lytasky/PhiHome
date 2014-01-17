@@ -143,7 +143,7 @@
 					<div class="row" style="margin:0 auto;width:250px;">
   					<div class="col-md-12">
     					<div class="input-group input-group-sm">
-      					<input type="text" class="form-control">
+      					<input type="text" class="form-control" name="keyword">
       					<span class="input-group-btn">
         					<button class="btn btn-primary" type="button">ËÑË÷</button>
       					</span>
