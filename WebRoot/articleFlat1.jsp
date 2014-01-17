@@ -140,16 +140,16 @@
 				<%if (logined) {//ÅÐ¶ÏÊÇ·ñµÇÂ½%>
 				<div align="center">
 					<form action="searchResult.jsp?classify=<%=classify%>" method="post">
-					<div class="row" style="margin:0 auto;width:250px;">
+					<div class="row" style="margin:5px auto;width:250px;">
   					<div class="col-md-12">
     					<div class="input-group input-group-sm">
       					<input type="text" class="form-control" name="keyword">
       					<span class="input-group-btn">
-        					<button class="btn btn-primary" type="button">ËÑË÷</button>
+        					<button class="btn btn-primary" type="submit">ËÑË÷</button>
       					</span>
     					</div><!-- /input-group -->
   					</div><!-- /.col-lg-6 -->
-			</div><!-- /.row -->
+					</div><!-- /.row -->
 					</form>
 				</div>
 			</div>
