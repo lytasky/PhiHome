@@ -4,16 +4,18 @@
 <title>header</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <script src="js/juery.js"></script>
 
 
-<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen">
 <link rel="stylesheet" href="css/diy.css" type="text/css">
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
 <script src="js/diy.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-1.10.2.js"></script>
-<script src="js/jquery.flexslider.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="js/togglemenu.js"></script>
 <!-- Place in the <head>, after the three links -->
 <script type="text/javascript" charset="utf-8">
@@ -269,25 +271,29 @@
 </div>
 
 	<div id="indexContent" style="width:1180px;height:1200px;margin:auto;margin-top:50px;" class=" fontColor0">
-  	<div class="flexslider fl" style="height:350px;width:800px;margin-left:58px;">
-    	<ul class="slides">
-      <li>
-        <img src="images/pic1.gif" />
-      </li>
-      <li>
-        <img src="images/pic2.gif" />
-      </li>
-      <li>
-        <img src="images/pic3.gif" />
-      </li>
-      <li>
-        <img src="images/pic3.gif" />
-      </li>
-      <li>
-        <img src="images/pic3.gif" />
-      </li>
-    </ul>
-  	</div>
+	<div id="container" style="height:350px;width:800px;margin-left:58px;float:left;">
+		<div class="flexslider">
+	    <ul class="slides">
+	    	<li>
+	    		<img src="images/pic1.gif" />
+	    		<p class="flex-caption">第一幅标题.</p>
+	    	</li>
+	    	<li>
+	    		<img src="images/pic2.gif" />
+	    		<p class="flex-caption">第二幅标题</p>
+	    	</li>
+	    	<li>
+	    		<img src="images/pic3.gif" />
+				<p class="flex-caption">第三幅的标题</p>
+	    	</li>
+	    	<li>
+	    		<img src="images/pic3.gif" />
+				<p class="flex-caption">第四幅的标题</p>
+	    	</li>
+	    </ul>
+	  </div>
+	</div>
+
   	<div id="rightContent" style="width:280px;height:1170px;border-left:1px solid #bdbdbe;" class="left-border fr">
       <div class=" fl fontColor3" style="width:280px;height:250px;">
       	<div style="margin-left:0px;"><img src="images/yjshead.gif"></div>
@@ -399,7 +405,7 @@
 				</div>
       </div>
     </div>
-    <div class="right-border fl fontColor1" style="width:220px;height:750px;margin-left:58px;border-right:1px solid #bdbdbe;">
+    <div class="right-border fl fontColor1" style="width:220px;height:750px;margin-left:58px;border-right:1px solid #bdbdbe;margin-top:30px;">
     	<div class="fl" style="width:220px;height:250px;padding-left:15px;line-height:1.8;">
       	<div style="margin-left:-15px;"><img src="images/zxdhhead.gif" border="0" usemap="#Map">
           <map name="Map">
@@ -445,7 +451,7 @@
         </div>
       </div>
     </div>
-    <div class=" fl" style="width:600px;height:750px;margin-left:15px;">
+    <div class=" fl" style="width:600px;height:750px;margin-left:15px;margin-top:30px;">
     	<div class=" fl fontColor2" style="width:260px;height:350px;">
       	<div style="margin-left:0px;"><img src="images/tzgg.gif" border="0" usemap="#Map10">
           <map name="Map10">
