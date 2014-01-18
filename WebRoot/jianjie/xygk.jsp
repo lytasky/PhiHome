@@ -234,11 +234,11 @@
 	</div>
   <div class="slidingList" id="slidingList9" style="height:30px;float:left;margin-left:921px;display:none;background:#0f0f0f;padding-top:5px;">
   		>>
-			<a href="#"> 校内网站</a>
+			<a href="../index.jsp#link"> 校内网站</a>
 			|
-			<a href="#">校外资源</a>
+			<a href="../index.jsp#link">校外资源</a>
       |
-			<a href="#">国外资源</a>
+			<a href="../index.jsp#link">国外资源</a>
 		
 	</div><!-- 导航栏列表区 -->
 </div>

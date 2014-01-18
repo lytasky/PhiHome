@@ -146,7 +146,7 @@
     <div style="text-align:center;line-height:30px;height:30px;background:url(images/colomnBack2.gif);">
       <div style="width:195px;height:30px;align:center;" class="fl">
 			<span class="menuOn" id="mod0">
-			<a href="#" class="white-font "> 主页</a></span>
+			<a href="index.jsp" class="white-font "> 主页</a></span>
       </div>
       <div style="width:96px;height:30px;align:center;background-color:#030303;" id="mod1" class="fl">
 			<span class="menuOn" onMouseOver="switchMod(1);" >
@@ -194,76 +194,76 @@
 	</div>
   <div class="slidingList" id="slidingList2" style="height:30px;float:left;margin-left:349px;display:none;background:#0f0f0f;padding-top:5px;">
   	>>
-<a href="#"> 通知公告</a>|
-<a href="#">新闻报道</a>
+<a href="xinxi/tzgg.jsp"> 通知公告</a>|
+<a href="xinxi/xwbd.jsp">新闻报道</a>
 		
 	</div>
   <div class="slidingList" id="slidingList3" style="height:30px;float:left;margin-left:445px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 培养方案</a>|
-			<a href="#">本科课程</a>
+			<a href="kecheng/pyfa.jsp"> 培养方案</a>|
+			<a href="kecheng/bkkc.jsp">本科课程</a>
       |
-			<a href="#">硕博课程</a>
+			<a href="kecheng/sbkc.jsp">硕博课程</a>
       |
-			<a href="#">学期课表</a>
+			<a href="kecheng/xqkb.jsp">学期课表</a>
       |
-			<a href="#">课程资料</a>
+			<a href="kecheng/kczl.jsp">课程资料</a>
 		
 	</div>
   <div class="slidingList" id="slidingList4" style="height:30px;float:left;margin-left:541px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 招生信息</a>
+			<a href="zhaosheng/zsxx.jsp"> 招生信息</a>
 			|
-			<a href="#">历年真题</a>
+			<a href="zhaosheng/nlzt.jsp">历年真题</a>
       |
-			<a href="#">招生咨询</a>
+			<a href="zhaosheng/zszx.jsp">招生咨询</a>
 		
 	</div>
   <div class="slidingList" id="slidingList5" style="height:30px;float:left;margin-left:637px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 科研成果</a>
+			<a href="chengguo/kycg.jsp"> 科研成果</a>
 			|
-			<a href="#">教学成果</a>
+			<a href="chengguo/jxcg.jsp">教学成果</a>
       |
-			<a href="#">科研项目</a>
+			<a href="chengguo/kyxm.jsp">科研项目</a>
       |
-			<a href="#">获奖信息</a>
+			<a href="chengguo/hjxx.jsp">获奖信息</a>
 		
 	</div>
   <div class="slidingList" id="slidingList6" style="height:30px;float:left;margin-left:733px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 学生名录</a>
+			<a href="xuesheng/xsml.jsp"> 学生名录</a>
 			|
-			<a href="#">学生活动</a>
+			<a href="xuesheng/xshd.jsp">学生活动</a>
       |
-			<a href="#">学生作品</a>
+			<a href="xuesheng/xszp.jsp">学生作品</a>
 		
 	</div>
   <div class="slidingList" id="slidingList7" style="height:30px;float:left;margin-left:780px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 课程讨论</a>
+			<a href="uselogin.jsp"> 课程讨论</a>
 			|
-			<a href="#">读书会</a>
+			<a href="uselogin.jsp">读书会</a>
       |
-			<a href="#">哲学沙龙</a>
+			<a href="uselogin.jsp">哲学沙龙</a>
 		
 	</div>
   <div class="slidingList" id="slidingList8" style="height:30px;float:left;margin-left:870px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 哲学趣闻</a>
+			<a href="gushi/zxqw.jsp"> 哲学趣闻</a>
 			|
-			<a href="#">校园故事</a>
+			<a href="gushi/xygs.jsp">校园故事</a>
       |
-			<a href="#">校友风采</a>
+			<a href="gushi/xyfc.jsp">校友风采</a>
 		
 	</div>
   <div class="slidingList" id="slidingList9" style="height:30px;float:left;margin-left:921px;display:none;background:#0f0f0f;padding-top:5px;">
   		>>
-			<a href="#"> 校内网站</a>
+			<a href="#link"> 校内网站</a>
 			|
-			<a href="#">校外资源</a>
+			<a href="#link">校外资源</a>
       |
-			<a href="#">国外资源</a>
+			<a href="#link">国外资源</a>
 		
 	</div><!-- 导航栏列表区 -->
 </div>
@@ -293,12 +293,12 @@
       	<div style="margin-left:0px;"><img src="images/yjshead.gif"></div>
         <div style="margin-left:15px;line-height:1.8;text-align:center;width:180px;" class="">
         	<div style="margin-left:-5px;"><img src="images/yjs.gif"></div>
-          <a href="#">外国哲学研究所</a><br>
-					<a href="#">中国思想文化研究所</a><br>
-					<a href="#">宗教学研究所</a><br>
-					<a href="#">科技与社会发展研究所</a><br>
-					<a href="#">逻辑与认知研究所</a><br>
-          <a href="#">亚太休闲教育研究中心</a>
+          <a href="http://www.ch.zju.edu.cn/external/news.php?id=28">外国哲学研究所</a><br>
+					<a href="http://www.ch.zju.edu.cn/external/news.php?id=27">中国思想文化研究所</a><br>
+					<a href="http://iccs.zju.edu.cn/">宗教学研究所</a><br>
+					<a href="http://zjusts.zju.edu.cn/zjsts/">科技与社会发展研究所</a><br>
+					<a href="http://lc.zju.edu.cn/zjulc/">逻辑与认知研究所</a><br>
+          <a href="http://www.apcl.zju.edu.cn/">亚太休闲教育研究中心</a>
         </div>
       </div>
       <div class=" fl fontColor1" style="width:280px;height:200px;">
@@ -327,11 +327,11 @@
             省级：
           </div>
           <div style="width:130px;" class="fl ">
-          	<a href="#">当代科技哲学</a><br>
-            <a href="#">王阳明心学</a><br>
-            <a href="#">自然辩证法 </a>&nbsp;&nbsp;
-            <a href="#"> 逻辑学</a><br>
-            <a href="#">外国哲学</a>
+          	<a href="http://course.jingpinke.com/details?uuid=4050bb3b-1290-1000-0832-b7b5f3b2d8d7&objectId=oid:4050bb3b-1290-1000-0831-b7b5f3b2d8d7&courseID=K100048">当代科技哲学</a><br>
+            <a href="http://ocw.zju.edu.cn/cn/wym.jsp">王阳明心学</a><br>
+            <a href="http://sts.zju.edu.cn/nature/">自然辩证法 </a>&nbsp;&nbsp;
+            <a href="http://course.zju.edu.cn/403/"> 逻辑学</a><br>
+            <a href="http://course.jingpinke.com/details?uuid=8a833999-221c4794-0122-1c479504-02cd&objectId=oid:8a833999-221c4794-0122-1c479504-02cc&courseID=S0601044">外国哲学</a>
           </div>
           
           <div style="margin-left:-10px;"><img src="images/spgkk.gif"></div>
@@ -348,7 +348,7 @@
           <map name="Map8">
             <area shape="rect" coords="2,3,111,158" href="#">
           </map>
-<div style="width:20px;margin-right:65px;" class="fr"><a href="#">普罗提诺读书会</a></div>
+<div style="width:20px;margin-right:65px;" class="fr"><a href="#" name="link" id="link">普罗提诺读书会</a></div>
           <div style="width:18px;margin-right:10px;" class="fr"><a href="#">组织人 .. 章雪富 教授</a></div><br>
           <img src="images/jdyd2.gif" border="0" usemap="#Map9">
           <map name="Map9">
@@ -361,27 +361,35 @@
       <div class=" fl fontColor4" style="width:280px;height:160px;">
         <div id="wrap" style="padding-left:15px;">
 					<ul class="menu">
-						<li><a href="." style="line-height:1.8;">&nbsp;&nbsp;浙江大学网站</a>
+						<li><a href="." style="line-height:1.8;letter-spacing:2px;">&nbsp;&nbsp;浙江大学网站</a>
+            	<div style="margin-top:-16px;margin-left:150px;width:0px;height:0px;border:10px solid transparent;border-top-color:#d3d7da;border-left-color:transparent;border-right-color:transparent;border-bottom-color:transparent;">
+              </div>
 							<ul>
-								<li><a href="/">Sub category 1a</a></li>
-								<li><a href="/">Sub category 1b</a></li>
-								<li><a href="/">Sub category 1c</a></li>
-								<li><a href="/">Sub category 1d</a></li>
+								<li><a href="http://zjuem.zju.edu.cn/">浙江大学邮件系统</a></li>
+        				<li><a href="http://libweb.zju.edu.cn/libweb/">浙江大学图书馆</a></li>
+        				<li><a href="http://www.ch.zju.edu.cn/">浙江大学人文学院</a></li>
+        				<li><a href="http://grs.zju.edu.cn/index.jsf">浙江大学研究生院</a></li>
+        				<li><a href="http://zupo.zju.edu.cn/">浙江大学办公网</a></li>
+        				<li><a href="http://libweb.zju.edu.cn/libweb/">浙江大学信息中心</a></li>
 							</ul>
 						</li><br>
-						<li><a href="." style="line-height:1.8;">&nbsp;&nbsp;国内相关网站</a>
+						<li><a href="." style="line-height:1.8;letter-spacing:2px;">&nbsp;&nbsp;国内相关网站</a>
+            <div style="margin-top:-16px;margin-left:150px;width:0px;height:0px;border:10px solid transparent;border-top-color:#d3d7da;border-left-color:transparent;border-right-color:transparent;border-bottom-color:transparent;">
+            </div>
 					<ul>
 
-					<li><a href="/">Sub category 2a</a></li>
-					<li><a href="/">Sub category 2b</a></li>
-					<li><a href="/">Sub category 2c</a></li>
-					<li><a href="/">Sub category 2d</a></li>
+					<li><a href="http://www.phil.tsinghua.edu.cn/">清华大学哲学系</a></li>
+        	<li><a href="http://ce.phil.pku.edu.cn/">北京大学哲学系</a></li>
+        	<li><a href="http://philosophy.fudan.edu.cn/">复旦大学哲学学院</a></li>
+        	<li><a href="http://phi.ruc.edu.cn/">中国人民大学哲学院</a></li>
+        	<li><a href="http://phil.arts.cuhk.edu.hk/">香港中文大学哲学系</a></li>
 				</ul>
 			</li><br>
-			<li><a href="." style="line-height:1.8;">&nbsp;&nbsp;国外相关网站</a>
-
+			<li><a href="." style="line-height:1.8;letter-spacing:2px;">&nbsp;&nbsp;国外相关网站</a>
+				<div style="margin-top:-16px;margin-left:150px;width:0px;height:0px;border:10px solid transparent;border-top-color:#d3d7da;border-left-color:transparent;border-right-color:transparent;border-bottom-color:transparent;">
+        </div>
 				<ul>
-					<li><a href="/">Sub category 3a</a></li>
+					<li><a href="http://philosophy.stanford.edu/">斯坦福大学哲学系</a></li>
 					<li><a href="/">Sub category 3b</a></li>
 					<li><a href="/">Sub category 3c</a></li>
 					<li><a href="/">Sub category 3d</a></li>

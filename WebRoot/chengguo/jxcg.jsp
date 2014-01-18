@@ -133,6 +133,8 @@
       </div>
       <div style="width:96px;height:30;align:center;" id="mod3" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(3);">
+
+
 			<a href="#" class="white-font">教学培养</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod4" class="fl">
@@ -240,6 +242,7 @@
       |
 			<a href="#">国外资源</a>
 		
+
 	</div><!-- 导航栏列表区 -->
 </div>
 
@@ -249,32 +252,65 @@
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 系情介绍</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 教研成果</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">学院概况</a>
+        			<a href="../chengguo/kycg.jsp" style="color:#000;" class="panel-item">科研成果</a>
       			</div>
       			<div class="panel-body">
-        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
+        			<a href="../chengguo/jxcg.jsp" style="color:#000;" class="panel-item">教学成果</a>
       			</div>
+            <div class="panel-body">
+        			<a href="../chengguo/kyxm.jsp" style="color:#000;" class="panel-item">科研项目</a>
+      			</div>
+            <div class="panel-body">
+        			<a href="../chengguo/hjxx.jsp" style="color:#000;" class="panel-item">获奖信息</a>
+      			</div>
+          
     		</div>
   		</div> 
 	   </div><!-- panel-group -->
      
 	</div>
 
-		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;"><!--分页显示内容-->
+		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;font-size:14px;"><!--分页显示内容-->
 		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
-         <span style="color:#fff;">->系情介绍</span>	
-      <span style="color:#fff;">->学院概况</span>	
+         <span style="color:#fff;">->教研成果</span>	
+      <span style="color:#fff;">->教学成果</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;">
-  	学院概况
+    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
+  		<div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="jxcg/成果展示——著作.doc" style="color:#000;">成果展示——著作</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>     
+      <div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="http://course.jingpinke.com/details?uuid=4050bb3b-1290-1000-0832-b7b5f3b2d8d7&objectId=oid:4050bb3b-1290-1000-0831-b7b5f3b2d8d7&courseID=K100048" style="color:#000;">当代科技哲学；盛晓明；2010年国家级精品课程</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>  
+      <div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="http://course.jingpinke.com/details?uuid=8a833999-221c4794-0122-1c479504-02cd&objectId=oid:8a833999-221c4794-0122-1c479504-02cc&courseID=S0601044" style="color:#000;">外国哲学；庞学铨；2006年省级精品课程</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>
+      <div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="http://ocw.zju.edu.cn/cn/wym.jsp" style="color:#000;">王阳明心学；董平</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>
+      <div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="http://ocw.zju.edu.cn/portal/site/27ebea6b-c57c-4847-974f-e41973e3b8a7/page/35bd558f-e7b7-4663-9392-459618dbe335?xgbsort=homepage" style="color:#000;">孔子与《论语》；董平</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>
+      <div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="http://video.chaoxing.com/serie_400051747.shtml" style="color:#000;">我们如何存在；王俊</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>
+      <div class="" style="line-height:1.5;width:300px;margin:auto;margin-top:15px;">
+      	<a href="#">首页 </a><a href="#"> 上一页 </a><a href="#"> 下一页 </a><a href="#"> 尾页 </a><a href="#"> 当前第i页 </a><a href="#"> 共n页 </a>
+      </div>
   	</div>
   </div>
 	</div>

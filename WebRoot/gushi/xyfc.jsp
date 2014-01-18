@@ -133,6 +133,8 @@
       </div>
       <div style="width:96px;height:30;align:center;" id="mod3" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(3);">
+
+
 			<a href="#" class="white-font">教学培养</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod4" class="fl">
@@ -240,6 +242,7 @@
       |
 			<a href="#">国外资源</a>
 		
+
 	</div><!-- 导航栏列表区 -->
 </div>
 
@@ -249,15 +252,18 @@
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 系情介绍</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 闻人轶事</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">学院概况</a>
+        			<a href="../gushi/zxqw.jsp" style="color:#000;" class="panel-item">哲学趣闻</a>
       			</div>
       			<div class="panel-body">
-        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
+        			<a href="../gushi/xygs.jsp" style="color:#000;" class="panel-item">校园故事</a>
+      			</div>
+            <div class="panel-body">
+        			<a href="../gushi/xyfc.jsp" style="color:#000;" class="panel-item">校友风采</a>
       			</div>
     		</div>
   		</div> 
@@ -265,16 +271,24 @@
      
 	</div>
 
-		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;"><!--分页显示内容-->
+		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;font-size:14px;"><!--分页显示内容-->
 		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
-         <span style="color:#fff;">->系情介绍</span>	
-      <span style="color:#fff;">->学院概况</span>	
+         <span style="color:#fff;">->闻人轶事</span>	
+      <span style="color:#fff;">->校友风采</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;">
-  	学院概况
+    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
+  		<div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="xyfc/Fw_哲学系同学的出国照片.rar" style="color:#000;">哲学系同学出国照片</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>
+      
+      
+      <div class="" style="line-height:1.5;width:300px;margin:auto;margin-top:15px;">
+      	<a href="#">首页 </a><a href="#"> 上一页 </a><a href="#"> 下一页 </a><a href="#"> 尾页 </a><a href="#"> 当前第i页 </a><a href="#"> 共n页 </a>
+      </div>
   	</div>
   </div>
 	</div>

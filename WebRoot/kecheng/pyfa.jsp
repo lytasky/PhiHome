@@ -274,7 +274,7 @@
      
 	</div>
 
-		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;"><!--分页显示内容-->
+		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;font-size:14px;"><!--分页显示内容-->
 		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
@@ -283,19 +283,19 @@
 		</div>
     
     <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
-  		<div class="" style="height:25px;line-height:1.5;margin-top:15px;">
+  		<div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
       	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="pyfa/2013级哲学专业培养方案.pdf" style="color:#000;">2013级哲学专业培养方案</a></div>
         <div class="" style="width:200px;float:right;">2013-11-27</div>
       </div>
-      <div class="" style="height:25px;line-height:1.5;">
+      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
       	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="pyfa/2012级哲学专业培养方案.pdf" style="color:#000;">2012级哲学专业培养方案</a></div>
         <div class="" style="width:200px;float:right;">2013-11-27</div>
       </div>
-      <div class="" style="height:25px;line-height:1.5;">
+      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
       	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="pyfa/2011级哲学专业培养方案.pdf" style="color:#000;">2011级哲学专业培养方案</a></div>
         <div class="" style="width:200px;float:right;">2013-11-27</div>
       </div>
-      <div class="" style="height:25px;line-height:1.5;">
+      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
       	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="pyfa/2010级哲学专业培养方案.pdf" style="color:#000;">2010级哲学专业培养方案</a></div>
         <div class="" style="width:200px;float:right;">2013-11-27</div>
       </div>

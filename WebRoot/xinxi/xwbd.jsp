@@ -274,23 +274,23 @@
 		</div>
     
     <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
-  		<div class="" style="height:25px;line-height:1.5;margin-top:15px;">
+  		<div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
       	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../xinxi/jtxx.jsp" style="color:#000;">“西溪哲学对话”第二十四次活动通知</a></div>
         <div class="" style="width:200px;float:right;">2013-11-27</div>
       </div>
-      <div class="" style="height:25px;line-height:1.5;">
+      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
       	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
         <div class="" style="width:200px;float:right;">2013-11-27</div>
       </div>
-      <div class="" style="height:25px;line-height:1.5;">
+      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
       	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
         <div class="" style="width:200px;float:right;">2013-11-27</div>
       </div>
-      <div class="" style="height:25px;line-height:1.5;">
+      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
       	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
         <div class="" style="width:200px;float:right;">2013-11-27</div>
       </div>
-      <div class="" style="height:25px;line-height:1.5;">
+      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
       	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
         <div class="" style="width:200px;float:right;">2013-11-27</div>
       </div>
