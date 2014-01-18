@@ -242,15 +242,39 @@
 		
 	</div><!-- 导航栏列表区 -->
 </div>
-	<div class="gray-border" style="margin-top:50px;margin-left:15px;width:1000px;height:700px;background-color:#d3d7da;"><!--分页显示内容-->
-		<div class="round-border deep-blue" style="height:40px;padding-top:10px;padding-left:15px;"><!--当前位置-->
+
+	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;height:700px;">
+		<div id="left-nav" style="margin-top:15px;width:200px;height:565px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;float:left;">
+     <div class="panel-group" id="accordion" style="height:455px;"><!--网站地图-->
+  		<div class="panel panel-default">
+    		<div class="panel-heading">
+      			<h4 class="panel-title">
+        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list"></span> 系情介绍</a>
+      			</h4>
+    		</div>
+    		<div id="collapseOne" class="panel-collapse collapse in">
+      			<div class="panel-body" style="display:block;">
+        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">学院概况</a>
+      			</div>
+      			<div class="panel-body">
+        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
+      			</div>
+    		</div>
+  		</div> 
+	   </div><!-- panel-group -->
+     
+	</div>
+
+		<div class="gray-border" style="margin-top:15px;margin-left:15px;width:840px;height:700px;background-color:#d3d7da;float:right;"><!--分页显示内容-->
+		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
          <span style="color:#fff;">->系情介绍</span>	
       <span style="color:#fff;">->师资力量</span>	
 		</div>
-    <div class="gray-border round-border white-back" style="width:1000px;margin-top:15px;">
-      <table border="1" cellpadding="5" cellspacing="0" style="width: 1000px" width="687">
+    
+    <div class="gray-border round-border white-back" style="width:840px;margin-top:15px;">
+      <table border="1" cellpadding="5" cellspacing="0" style="width: 840px" width="687">
 				<tbody>
 					<tr>
 			<td colspan="2" style="width: 144px; height: 40px">
@@ -561,6 +585,8 @@
 			</table>
     </div>
   </div>
+	</div>
+
   <div id="root" style="margin-top:15px;width:1181px;height:187px;z-index:-1;background:url(../images/root.gif);">
   </div>
 </div>
