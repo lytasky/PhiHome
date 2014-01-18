@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>学院概况</title>
+<title>新闻报道</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script src="../js/juery.js"></script>
@@ -249,15 +249,15 @@
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 系情介绍</a>
+        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">学院概况</a>
+        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">通知公告</a>
       			</div>
       			<div class="panel-body">
-        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
+        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">新闻报道</a>
       			</div>
     		</div>
   		</div> 
@@ -266,15 +266,38 @@
 	</div>
 
 		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;"><!--分页显示内容-->
-		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
+		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;font-size:14px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
-         <span style="color:#fff;">->系情介绍</span>	
-      <span style="color:#fff;">->学院概况</span>	
+         <span style="color:#fff;">->新闻通告</span>	
+      <span style="color:#fff;">->新闻报道</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;">
-  	学院概况
+    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
+  		<div class="" style="height:25px;line-height:1.5;margin-top:15px;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../xinxi/jtxx.jsp" style="color:#000;">“西溪哲学对话”第二十四次活动通知</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>
+      <div class="" style="height:25px;line-height:1.5;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>
+      <div class="" style="height:25px;line-height:1.5;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>
+      <div class="" style="height:25px;line-height:1.5;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>
+      <div class="" style="height:25px;line-height:1.5;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
+        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      </div>
+      
+      <div class="" style="line-height:1.5;width:300px;margin:auto;margin-top:15px;">
+      	<a href="#">首页 </a><a href="#"> 上一页 </a><a href="#"> 下一页 </a><a href="#"> 尾页 </a><a href="#"> 当前第i页 </a><a href="#"> 共n页 </a>
+      </div>
   	</div>
   </div>
 	</div>

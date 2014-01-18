@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>学院概况</title>
+<title>新闻通告</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script src="../js/juery.js"></script>
@@ -249,15 +249,15 @@
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 系情介绍</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">学院概况</a>
+        			<a href="jianjie/tzgg.jsp" style="color:#000;" class="panel-item">通知公告</a>
       			</div>
       			<div class="panel-body">
-        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
+        			<a href="jianjie/xwbd.jsp" style="color:#000;" class="panel-item">新闻报道</a>
       			</div>
     		</div>
   		</div> 
@@ -265,16 +265,45 @@
      
 	</div>
 
-		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;"><!--分页显示内容-->
+		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;font-size:14px;"><!--分页显示内容-->
 		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
-         <span style="color:#fff;">->系情介绍</span>	
-      <span style="color:#fff;">->学院概况</span>	
+         <span style="color:#fff;">->新闻通告</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;">
-  	学院概况
+    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;padding-top:15px;">
+  		<div align="center" style="line-height:1.5;">"西溪哲学对话"第二十四次活动通知</div>
+      <div style="border-bottom:1px dashed #999;line-height:1.5;" align="center">发布时间： 2013-11-27  15:03:06 | 来源： 本站</div>
+      <div style="padding-left:15px;">
+      	<p align="center">
+	&nbsp;</p>
+<p>
+	主&nbsp; 题：认知科学与佛学</p>
+<p>
+	报告人：索达吉堪布</p>
+<p>
+	主持人：李恒威教授</p>
+<p align="left">
+	时&nbsp; 间：2013年12月4日（周三）18:30</p>
+<p align="left">
+	地&nbsp; 点：人文学院咖啡馆</p>
+<p>
+	&nbsp;</p>
+<p>
+	索达吉堪布简介：</p>
+<p>
+	&nbsp; &nbsp;索达吉堪布生于1962年。1985年，舍俗出家，前往色达喇荣五明佛学院，依止法王如意宝晋美彭措为根本上师。</p>
+<p>
+	&nbsp;&nbsp; 早在上世纪90年代，随法王前往美国、英国、德国等十几个国家后返，因感汉地佛子因语言障碍而无缘接触藏传佛教，堪布将大量藏文经论译成汉语，并以通俗易懂的方式传讲。20多年来，废寝忘食，不遗余力，不但培养了无数佛教人才，而且著作等传法教材、出版书籍等累计超过上千万册。</p>
+<p>
+	从2010年起至今，受邀至清华、北大、浙大、人大、复旦、港大以及哈佛大学、华盛顿大学、哥伦比亚大学等众多著名学府演讲，发起并参与主办多届世界青年佛学研讨会，与知识分子们进行交流，将佛教真理与当今科学结合起来，引导大家正确面对学业、情感、工作、人生。</p>
+<p>
+	&nbsp;&nbsp; 近年来，堪布经常与众多海内外学者，对于环保、和平、道德、跨宗教等问题进行深入探索，希望提升一切生命的福祉，同时，堪布发动了启动爱心的倡议，号召大家在学佛之余，不要漠视身边的弱势群体。先后建立小学，中学，养老院，居士林，小沙弥学院，资助濒临失学的大学生，救济无钱治病的重症患者等。</p>
+<p>
+	索达吉堪布常说：我不知道自己能活多长时间，但只要有一口气，哪怕只有一个人听法，我也会尽心尽力用佛法饶益他。<br />
+	&nbsp;</p>
+      </div>
   	</div>
   </div>
 	</div>

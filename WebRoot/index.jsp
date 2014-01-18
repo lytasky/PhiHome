@@ -188,7 +188,7 @@
   </div><!-- column -->
 	<div class="slidingList" id="slidingList1" style="color:#fff;text-align:center;padding-top:5px;height:30px;float:left;margin-left:253px;display:;background:#0f0f0f;"><!-- 导航栏列表区 -->
 		>>
-<a href="#"> 学院概况</a>|
+<a href="jianjie/xygk.jsp"> 学院概况</a>|
 <a href="jianjie/szll.jsp">师资力量</a>
 
 	</div>

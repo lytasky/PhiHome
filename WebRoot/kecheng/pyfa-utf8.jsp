@@ -249,15 +249,24 @@
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 系情介绍</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 教学培养</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">学院概况</a>
+        			<a href="../kecheng/pyfa.jsp" style="color:#000;" class="panel-item">培养方案</a>
       			</div>
       			<div class="panel-body">
-        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
+        			<a href="../kecheng/bkkc.jsp" style="color:#000;" class="panel-item">本科课程</a>
+      			</div>
+            <div class="panel-body">
+        			<a href="../kecheng/sbkc.jsp" style="color:#000;" class="panel-item">硕博课程</a>
+      			</div>
+            <div class="panel-body">
+        			<a href="../kecheng/xqkb.jsp" style="color:#000;" class="panel-item">学期课表</a>
+      			</div>
+            <div class="panel-body">
+        			<a href="../kecheng/kczl.jsp" style="color:#000;" class="panel-item">课程资料</a>
       			</div>
     		</div>
   		</div> 
@@ -269,12 +278,12 @@
 		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
-         <span style="color:#fff;">->系情介绍</span>	
-      <span style="color:#fff;">->学院概况</span>	
+         <span style="color:#fff;">->教学培养</span>	
+      <span style="color:#fff;">->培养方案</span>	
 		</div>
     
     <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;">
-  	学院概况
+  		<a href="pyfa/2013级.pdf">2013级哲学专业培养方案</a>
   	</div>
   </div>
 	</div>

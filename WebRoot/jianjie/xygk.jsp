@@ -102,8 +102,8 @@
   <div id="head" style="background:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
-  	<a href="#">浙江大学</a>&nbsp;|
-    <a href="#">中文</a>&nbsp;|
+  	<a href="http://www.zju.edu.cn">浙江大学</a>&nbsp;|
+    <a href="../index.jsp">中文</a>&nbsp;|
     <a href="#">English</a></font>
    </div>
 	<div class="row fl" style="width:250px;margin-left:915px;">
@@ -163,73 +163,73 @@
   </div><!-- column -->
 	<div class="slidingList" id="slidingList1" style="color:#fff;text-align:center;padding-top:5px;height:30px;float:left;margin-left:253px;display:;background:#0f0f0f;"><!-- 导航栏列表区 -->
 		>>
-<a href="#"> 学院概况</a>|
-<a href="#">师资力量</a>
+<a href="../jianjie/xygk.jsp"> 学院概况</a>|
+<a href="../jianjie/szll.jsp">师资力量</a>
 
 	</div>
   <div class="slidingList" id="slidingList2" style="height:30px;float:left;margin-left:349px;display:none;background:#0f0f0f;padding-top:5px;">
   	>>
-<a href="#"> 通知公告</a>|
-<a href="#">新闻报道</a>
+<a href="../xinxi/tzgg.jsp"> 通知公告</a>|
+<a href="../xinxi/xwbd.jsp">新闻报道</a>
 		
 	</div>
   <div class="slidingList" id="slidingList3" style="height:30px;float:left;margin-left:445px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 培养方案</a>|
-			<a href="#">本科课程</a>
+			<a href="../kecheng/pyfa.jsp"> 培养方案</a>|
+			<a href="../kecheng/bkkc.jsp">本科课程</a>
       |
-			<a href="#">硕博课程</a>
+			<a href="../kecheng/sbkc.jsp">硕博课程</a>
       |
-			<a href="#">学期课表</a>
+			<a href="../kecheng/xqkb.jsp">学期课表</a>
       |
-			<a href="#">课程资料</a>
+			<a href="../kecheng/kczl.jsp">课程资料</a>
 		
 	</div>
   <div class="slidingList" id="slidingList4" style="height:30px;float:left;margin-left:541px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 招生信息</a>
+			<a href="../zhaosheng/zsxx.jsp"> 招生信息</a>
 			|
-			<a href="#">历年真题</a>
+			<a href="../zhaosheng/lnzt.jsp">历年真题</a>
       |
-			<a href="#">招生咨询</a>
+			<a href="../zhaosheng/zszx.jsp">招生咨询</a>
 		
 	</div>
   <div class="slidingList" id="slidingList5" style="height:30px;float:left;margin-left:637px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 科研成果</a>
+			<a href="../chengguo/kycg.jsp"> 科研成果</a>
 			|
-			<a href="#">教学成果</a>
+			<a href="../chengguo/jxcg.jsp">教学成果</a>
       |
-			<a href="#">科研项目</a>
+			<a href="../chengguo/kyxm.jsp">科研项目</a>
       |
-			<a href="#">获奖信息</a>
+			<a href="../chengguo/hjxx.jsp">获奖信息</a>
 		
 	</div>
   <div class="slidingList" id="slidingList6" style="height:30px;float:left;margin-left:733px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 学生名录</a>
+			<a href="../xuesheng/xsml.jsp"> 学生名录</a>
 			|
-			<a href="#">学生活动</a>
+			<a href="../xuesheng/xshd.jsp">学生活动</a>
       |
-			<a href="#">学生作品</a>
+			<a href="../xuesheng/xszp.jsp">学生作品</a>
 		
 	</div>
   <div class="slidingList" id="slidingList7" style="height:30px;float:left;margin-left:780px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 课程讨论</a>
+			<a href="../uselogin.jsp"> 课程讨论</a>
 			|
-			<a href="#">读书会</a>
+			<a href="../uselogin.jsp">读书会</a>
       |
-			<a href="#">哲学沙龙</a>
+			<a href="../uselogin.jsp">哲学沙龙</a>
 		
 	</div>
   <div class="slidingList" id="slidingList8" style="height:30px;float:left;margin-left:870px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="#"> 哲学趣闻</a>
+			<a href="../gushi/zxqw.jsp"> 哲学趣闻</a>
 			|
-			<a href="#">校园故事</a>
+			<a href="../gushi/xygs.jsp">校园故事</a>
       |
-			<a href="#">校友风采</a>
+			<a href="../gushi/xyfc.jsp">校友风采</a>
 		
 	</div>
   <div class="slidingList" id="slidingList9" style="height:30px;float:left;margin-left:921px;display:none;background:#0f0f0f;padding-top:5px;">
@@ -244,12 +244,12 @@
 </div>
 
 	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;height:700px;">
-		<div id="left-nav" style="margin-top:15px;width:200px;height:565px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;float:left;">
-     <div class="panel-group" id="accordion" style="height:455px;"><!--网站地图-->
+		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;float:left;">
+     <div class="panel-group" id="accordion" style=""><!--网站地图-->
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list"></span> 系情介绍</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 系情介绍</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
@@ -265,7 +265,7 @@
      
 	</div>
 
-		<div class="gray-border" style="margin-top:15px;margin-left:15px;width:840px;height:700px;background-color:#d3d7da;float:right;"><!--分页显示内容-->
+		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;"><!--分页显示内容-->
 		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
@@ -279,7 +279,7 @@
   </div>
 	</div>
   
-  <div id="root" style="margin-top:15px;width:1181px;height:187px;z-index:-1;background:url(../images/root.gif);">
+  <div id="root" style="width:1181px;height:187px;z-index:-1;background:url(../images/root.gif);float:left;">
   </div>
 </div>
 </body>
