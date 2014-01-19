@@ -45,6 +45,7 @@ function check_form(theform)
 <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
   <!--DWLayoutTable-->
   <tr>
+  	<td>
 	<table width="700" height="283" border="0" cellpadding="0" cellspacing="0">
         <tr>
           </td>
