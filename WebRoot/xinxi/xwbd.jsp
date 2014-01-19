@@ -254,10 +254,10 @@
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">通知公告</a>
+        			<a href="../xinxi/tzgg.jsp" style="color:#000;" class="panel-item">通知公告</a>
       			</div>
       			<div class="panel-body">
-        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">新闻报道</a>
+        			<a href="../xinxi/szll.jsp" style="color:#000;" class="panel-item">新闻报道</a>
       			</div>
     		</div>
   		</div> 

@@ -254,10 +254,10 @@
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="jianjie/tzgg.jsp" style="color:#000;" class="panel-item">通知公告</a>
+        			<a href="../xinxi/tzgg.jsp" style="color:#000;" class="panel-item">通知公告</a>
       			</div>
       			<div class="panel-body">
-        			<a href="jianjie/xwbd.jsp" style="color:#000;" class="panel-item">新闻报道</a>
+        			<a href="../xinxi/xwbd.jsp" style="color:#000;" class="panel-item">新闻报道</a>
       			</div>
     		</div>
   		</div> 
@@ -276,8 +276,8 @@
   		<div align="center" style="line-height:1.5;">"西溪哲学对话"第二十四次活动通知</div>
       <div style="border-bottom:1px dashed #999;line-height:1.5;" align="center">发布时间： 2013-11-27  15:03:06 | 来源： 本站</div>
       <div style="padding-left:15px;">
-      	<p align="center">
-	&nbsp;</p>
+      	<p align="center">&nbsp;
+	</p>
 <p>
 	主&nbsp; 题：认知科学与佛学</p>
 <p>
@@ -288,8 +288,8 @@
 	时&nbsp; 间：2013年12月4日（周三）18:30</p>
 <p align="left">
 	地&nbsp; 点：人文学院咖啡馆</p>
-<p>
-	&nbsp;</p>
+<p>&nbsp;
+	</p>
 <p>
 	索达吉堪布简介：</p>
 <p>

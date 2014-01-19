@@ -48,7 +48,7 @@
 <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
   <!--DWLayoutTable-->
   <tr>
- 
+ 	<td>
  <table width="700" height="283" border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="540" align="center" valign="top"><hr>
@@ -86,6 +86,7 @@
         <td width="409" height="28" align="left">
 		<%
 		String re = result.getString("re");
+		System.out.println(re);
 		%>
           <hr></td>
       </tr>
@@ -138,7 +139,7 @@
         </tr>
       </table>
 	  <%@ include file="end.jsp" %>
-    </td>
+   </td>
   </tr>
 </table>
 </body>
