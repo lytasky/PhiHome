@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-<script src="js/juery.js"></script>
+<!--<script src="js/juery.js"></script>-->
 
 
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen">
@@ -19,12 +19,15 @@
 <script type="text/javascript" src="js/togglemenu.js"></script>
 <!-- Place in the <head>, after the three links -->
 <script type="text/javascript" charset="utf-8">
-  $(window).load(function() {
-    $('.flexslider').flexslider({
+	$(window).load(function() {
+		$('.flexslider').flexslider({
           animation: "slide",
-          controlsContainer: ".flex-container"
-    });
-  });
+          //controlsContainer: "container"
+		});
+	});
+	/*$(window).load(function() {
+		$('.flexslider').flexslider();
+	});*/
 </script>
 <style type="text/css" media="screen,print">
 	.td-width{
@@ -121,6 +124,13 @@
 	a:active {
 		text-decoration: none;
 	}
+	.byte{
+		font-size: 9pt;
+    vertical-align: middle;
+    color: #000;
+		opacity:0.3; 
+		filter:alpha(opacity=50);	
+	}
 </style>
 
 </head>
@@ -129,16 +139,16 @@
   <div id="head" style="background:url(images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
-  	<a href="#">浙江大学</a>&nbsp;|
-    <a href="#">中文</a>&nbsp;|
+  	<a href="http://www.zju.edu.cn/">浙江大学</a>&nbsp;|
+    <a href="http://phil.zju.edu.cn/">中文</a>&nbsp;|
     <a href="#">English</a></font>
    </div>
 	<div class="row fl" style="width:250px;margin-left:915px;">
   		<div class="col-md-10">
     		<div class="input-group input-group-sm">
-              	 <input type="text" class="form-control ">
+              	 <input type="text" class="form-control byte" ></input>
       					<span class="input-group-btn">
-        					<button class="btn btn-default " type="button">搜索</button>
+        					<button class="btn btn-default byte" type="button">搜索</button>
       					</span>
                 
     					</div><!-- /input-group -->
