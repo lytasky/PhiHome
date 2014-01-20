@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html;charset=gb2312" %>
+<%@  page language="java" contentType="text/html;charset=gb2312" %>
 <%@ page import="java.sql.*" %>
 <%@ include file="conn.jspf" %>
 <%   
@@ -16,7 +16,7 @@
 	int j;
 	int i;
 	//设置一页显示的记录数
-	intPageSize = 10;
+	intPageSize = 3;
 	
 	//取得待显示页码
 	strPage = request.getParameter("page");
@@ -318,7 +318,7 @@
       <span style="color:#fff;">->招生咨询</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
+    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;padding-top:15px;">
   		      
     	<div>
     	<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
@@ -327,12 +327,12 @@
  	<td>
  <table width="700" height="283" border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td width="700" align="center" valign="top"><hr>
+          <td width="700" align="center" valign="top">
             
             <table width="700" border="0" cellpadding="0" cellspacing="0">
 			<tr><td width="700" align="center" valign="top"><table width="700" border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td height="30" align="left" valign="middle"><button type="button" value="添加留言" onClick="window.location.href('addly.jsp')" class="btn btn-primary" style="width:170px;margin-left:25px;margin-bottom:15px;">添加留言</button></td>
+                <td height="30" align="left" valign="middle"><button type="button" value="添加留言" onClick="javascript:window.location.href='addly.jsp'" class="btn btn-primary" style="width:170px;margin-left:25px;margin-bottom:15px;">添加留言</button></td>
               </tr>
             </table>
 
@@ -344,7 +344,7 @@
 %>
 <table width="530" height="100%" border="0" cellpadding="0" cellspacing="0" bordercolor="#ff0">
 <tr>
-<td width="384" height="100%" align="center" valign="top" bgcolor="#FFFFFF"><table width="530" height="174" border="0" cellpadding="0" cellspacing="0" style="border-bottom:1px solid #ccc;">
+<td width="384" height="100%" align="center" valign="top" bgcolor="#FFFFFF"><table width="530" height="170" border="0" cellpadding="0" cellspacing="0" style="border-bottom:1px solid #ccc;">
   <tr>
     <td width="150" height="142" align="center" valign="top">
 	  <table width="225" border="0" cellpadding="3" cellspacing="0">

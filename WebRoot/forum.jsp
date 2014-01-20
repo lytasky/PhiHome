@@ -144,7 +144,7 @@
   	<div id="publish" style="width:1000px;height:278px;display:block;margin:50px auto;"><!--publish-->
   	<div class="list-group">
     	<div class="gray-border">
-        <a href="xinxi/zytg.jsp" class="list-group-item active" style="background-color:#3276b1;">
+        <a href="xinxi/zytg.jsp" class="list-group-item active" style="background-color:#3276b1;font-size:14px;">
           <span class="glyphicon glyphicon-list-alt"></span> 论坛分区
         </a>
       </div>
@@ -153,8 +153,8 @@
           <div class="fl">	
         	<img src="images/forum_new.gif">
           </div>
-          <div class="fl gray-border" style="margin-left:10px;">
-          	<font style="font-family:微软雅黑;">
+          <div class="fl gray-border" style="margin-left:10px;line-height:1.5;">
+          	<font style="font-family:微软雅黑;" size="2">
         	<a href="articleFlat.jsp?classify=0">课程讨论</a><br>
         	主题：主题数，贴数：贴数<br>
         	最后发表：最后发表时间
@@ -165,8 +165,8 @@
         	<div class="fl">	
         	<img src="images/forum_new.gif">
           </div>
-          <div class="fl gray-border" style="margin-left:10px;">
-        	<font style="font-family:微软雅黑;">
+          <div class="fl gray-border" style="margin-left:10px;line-height:1.5;">
+        	<font style="font-family:微软雅黑;" size="2">
         	<a href="articleFlat.jsp?classify=1">读书会</a><br>
         	主题：主题数，贴数：贴数<br>
         	最后发表：最后发表时间
@@ -177,8 +177,8 @@
         	<div class="fl">	
         	<img src="images/forum_new.gif">
           </div>
-          <div class="fl gray-border" style="margin-left:10px;">
-        	<font style="font-family:微软雅黑;">
+          <div class="fl gray-border" style="margin-left:10px;line-height:1.5;">
+        	<font style="font-family:微软雅黑;" size="2">
         	<a href="articleFlat.jsp?classify=2">哲学沙龙</a><br>
         	主题：主题数，贴数：贴数<br>
         	最后发表：最后发表时间
