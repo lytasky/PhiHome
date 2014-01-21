@@ -18,6 +18,7 @@
 		identity = request.getParameter("identity");
 		try {
                 //创建一个用户表数据库读写类  
+                //System.out.println("userdb");
     			UserMgr userdb=new UserMgr(); 
     			if(identity.equals("0"))              //学生登录
     			{
@@ -25,7 +26,7 @@
 	             	if (student == null) 
 	             	{
     				// 如果记录集为空，表明没有相匹配的用户名，注册失败：
-    				//out.println("用户名不存在");
+    				System.out.println("用户名不存在");
 	    				try {
 	    					//转发至登录错误页面 
 	    					response.sendRedirect("log_failure.jsp");
@@ -72,7 +73,7 @@
 	    					session.setAttribute("uLogined", "true");
 					        session.setAttribute("name", teacher.getName());
 					     	session.setAttribute("identity", "1");
-	    					response.sendRedirect("forum.jsp.jsp");
+	    					response.sendRedirect("forum.jsp");
 	    				} 
 	    				catch (Throwable t) {
 	    					//写异常日志
