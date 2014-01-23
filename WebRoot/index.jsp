@@ -470,8 +470,8 @@
       	</div>
         <div class="right-border fl" style="line-height:1.7;padding-left:5px;">
         <font size="2px">
-      	<a href="#">· "西溪哲学对话"第二十三次活动通知</a><br>
-				<a href="#">· 西塞罗的政治哲学——《论共和国》中</a><br>
+      	<a href="news/20131127.jsp">· "西溪哲学对话"第二十四次活动通知</a><br>
+				<a href="announcement/20131029.jsp">· 西塞罗的政治哲学——《论共和国》中</a><br>
 				<a href="#">· 柏林自由大学博士奖学金项目--浙大校</a><br>
 				<a href="#">· 普林斯顿大学菲利普?佩蒂特教授学术</a><br>
 				<a href="#">· "西溪哲学对话"第二十二次活动通知</a><br>
@@ -486,15 +486,18 @@
         </font>
         </div>
       </div>
-      <div class=" fl fontColor2" style="width:325px;height:350px;margin-top:-2px;">
+      <div class=" fl fontColor2" style="width:330px;height:350px;margin-top:-2px;">
       	<div style="margin-left:0px;"><img src="images/xwbd.gif" border="0" usemap="#Map11">
           <map name="Map11">
             <area shape="rect" coords="288,12,327,32" href="#">
           </map>
       	</div>
-        <div class=" fl" style="margin-top:-5px;line-height:1.7;padding-left:4px;">
+        <div class=" fl " style="margin-top:-5px;line-height:1.7;padding-left:4px;overflow:hidden;width:240px;">
         <font size="2px">
-      	<a href="#">· "西溪哲学对话"第二十四次活动通知  </a><br>
+        <a href="news/20140120.jsp">·哲学，逻辑，理性，成长——记"汇思</a><br>
+        <a href="news/20131226.jsp">·"道教与民间信仰学科导航"建成开放</a><br>
+        <a href="news/20131224.jsp">"哲学与大学"专题第一讲   </a><br>
+      	<a href="news/20131127.jsp">· "西溪哲学对话"第二十四次活动通知  </a><br>
 				<a href="#">· "西溪哲学对话"第二十三次活动通知  </a><br>
 				<a href="#">· 西塞罗的政治哲学——《论共和政治…  </a><br>
 				<a href="#">· 柏林自由大学博士奖学金项目--浙江…  </a><br>
@@ -504,16 +507,15 @@
 				<a href="#">· "西溪哲学对话"第二十一次活动通知  </a><br>
 				<a href="#">· 关于申请牛津大学等英国高校哲学研… </a><br>
 				<a href="#">· "西溪哲学对话"第二十次活动通知    </a><br>
-				<a href="#">· 关于2012年度贝因美本科生奖学金…   </a><br>
-				<a href="#">· "西溪哲学对话"第二十一次活动通知  </a><br>
-				<a href="#">· 关于申请牛津大学等英国高校哲学…   </a><br>
+				
 			</font>
 			</div>
-      <div class=" fr" style="line-height:1.7;margin-top:-5px;">
+      <div class=" fr" style="line-height:1.7;margin-top:-5px;width:90px;">
         <font size="2px">
-      	<a>2013-11-27</a><br>
-				<a>2013-11-04</a><br>
-				<a>2013-10-29</a><br>
+      	<a>2014-01-20</a><br>
+				<a>2013-12-26</a><br>
+        <a>2013-12-24</a><br>
+				<a>2013-11-27</a><br>
 				<a>2013-10-29</a><br>
 				<a>2013-10-29</a><br>
 				<a>2013-10-18</a><br>
@@ -523,7 +525,6 @@
 				<a>2013-09-04</a><br>
 				<a>2013-06-19</a><br>
 				<a>2013-09-23</a><br>
-				<a>2013-09-09</a><br>
 			</font>
 			</div>
       </div>

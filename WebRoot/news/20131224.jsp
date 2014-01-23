@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>通知报道</title>
+<title>新闻通告</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="../js/juery.js"></script>
+<script src="../js/jquery.js"></script>
 <style type="text/css">
 	.td-width{
 		width:80px;	
@@ -98,7 +98,7 @@
 
 </head>
 <body style="margin-top:0px;">
-<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
+<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;height:auto;">
   <div id="head" style="background:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
@@ -243,13 +243,13 @@
 	</div><!-- 导航栏列表区 -->
 </div>
 
-	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;height:700px;">
-		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;float:left;">
+	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;padding-bottom:15px;height:auto;">
+		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;">
      <div class="panel-group" id="accordion" style=""><!--网站地图-->
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
@@ -263,36 +263,43 @@
   		</div> 
 	   </div><!-- panel-group -->
      
-	</div>
+		</div>
 
-		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;"><!--分页显示内容-->
-		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;font-size:14px;"><!--当前位置-->
+		<div class="gray-border" style="margin-left:15px;width:840px;height:auto;float:right;font-size:14px;"><!--分页显示内容-->
+			<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
          <span style="color:#fff;">->新闻通告</span>	
-      <span style="color:#fff;">->通知公告</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
-  		<div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../xinxi/jtxx.jsp" style="color:#000;">“西溪哲学对话”第二十四次活动通知</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
-      </div>
-      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../announcement/20131029.jsp" style="color:#000;">西塞罗的政治哲学——《论共和国》中的人民主权思想</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
-      </div>
-      
-      
-      <div class="" style="line-height:1.5;width:300px;margin:auto;margin-top:15px;">
-      	<a href="#">首页 </a><a href="#"> 上一页 </a><a href="#"> 下一页 </a><a href="#"> 尾页 </a><a href="#"> 当前第i页 </a><a href="#"> 共n页 </a>
+    	<div class="gray-border round-border" style="width:840px;height:auto;background-color:#FFF;margin-top:15px;padding-top:15px;">
+  		<div align="center" style="line-height:1.5;">"哲学与大学"专题第一讲</div>
+      <div style="border-bottom:1px dashed #999;line-height:1.5;" align="center">发布时间：2013-12-24 14:42:51  | 来源：本站</div>
+      <div style="padding-left:15px;">
+      	<p>
+	探寻当代大学之哲学关怀</p>
+<p>
+	&mdash;&mdash;&ldquo;汇思坛&rdquo;系列讲座之&ldquo;哲学与大学&rdquo;专题第一讲</p>
+<p>
+	&nbsp;</p>
+<p>
+	12月13日晚7点，&ldquo;汇思坛&rdquo;系列讲座之&ldquo;哲学与大学&rdquo;专题第一讲在基础图书馆三楼文化空间正式开讲。本次讲座有幸邀请到浙江大学哲学系教授何善蒙老师，讲解关于哲学与大学的相关问题。</p>
+<p>
+	作为浙江大学哲学系教授，何老师首先对浙江大学哲学系做了简单的介绍，包括其历史渊源与现今基本状况。随后他指出本次讲座旨在增进广大同学学习哲学的兴趣，从而促进对哲学的了解，并欢迎同学对&ldquo;哲学与大学&rdquo;专题讲座提出要求。</p>
+<p>
+	紧接着，讲座正式开始。大学的本质是什么，何为大学精神，与哲学又有什么关系？哲学在大学应是何地位？哲学之于现代有何意义？针对这些问题，何老师深入浅出地为大家讲解了自己的观点。首先，他认为大学不同于一般人才培养学院的根本因素在于：大学追求的，不仅仅是培养一群能服务社会生产的专业人才，更是形成一种内涵式、灵魂式的精神价值，即所谓的大学精神。而在大学追求更高价值的过程中，离不开哲学等人文传统的注入，成为大学灵魂的支持力量。对于现下哲学乃至人文学科在大学中的尴尬地位，何老师也提出了不同的思考角度：每个人都有追求更高思想的冲动，没有思考的生活是不值得过的，而有思考就有哲学，哲学自古以来就在大学中处于基础地位，显然在当代大学中，少不了哲学的存在。哲学为现代大学提供的，是一种自由精神，尤其体现在思想自由方面，这是造就独立精神必不可少的要素，而思想的包容多样，又有利于学生形成善解人意、宽和通达的品格。这便是哲学带给现代大学的深刻意义，也是大学成其为大学的根本原因。</p>
+<p>
+	除了宏观上探讨哲学与大学发展的关系，何善蒙老师还从大学生个人角度，分享了自己的看法并对同学的大学生活提供了一些建议。就现在许多人对于哲学以及人文等传统学科的偏见，他认为同学们不应采取消极抱怨的态度，而应转向积极的改变自身，他指出：当你放弃自己时，你没有资格指责社会对于你的不公。改变你能改变的，恰是你掌握自己的方式。而对于当下同学们忙得失去自我的现象，何老师认为，大学给予我们最大的东西就是自由。如果在大学生活的四年中，总执着于结果、用处、得失等世俗追求，那么大学生将沦为一台丧失自我判断与自由思想的&ldquo;机器&rdquo;。用自由的时间，存储属于自己的思想，发现自己真正感兴趣的事，才是大学生活意义所在。</p>
+<p>
+	最后的交流提问环节，现场同学提出了各种各样的思考与疑惑，何老师分别阐释了自己的看法与见解，整场讲座在热烈的气氛中顺利结束。本次讲座为同学们提供了关于大学、人生的许多思路，让人受益良多。&nbsp;</p>
+  		
       </div>
   	</div>
+  	</div>
   </div>
-	</div>
-  
   <div id="root" style="width:1181px;height:187px;z-index:-1;background:url(../images/root.gif);float:left;">
   </div>
+  <div style="clear:both;"></div>
 </div>
 </body>
 </html>

@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>通知报道</title>
+<title>新闻通告</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="../js/juery.js"></script>
+<script src="../js/jquery.js"></script>
 <style type="text/css">
 	.td-width{
 		width:80px;	
@@ -98,7 +98,7 @@
 
 </head>
 <body style="margin-top:0px;">
-<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
+<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;height:auto;">
   <div id="head" style="background:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
@@ -243,13 +243,13 @@
 	</div><!-- 导航栏列表区 -->
 </div>
 
-	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;height:700px;">
-		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;float:left;">
+	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;padding-bottom:15px;height:auto;">
+		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;">
      <div class="panel-group" id="accordion" style=""><!--网站地图-->
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
@@ -263,36 +263,35 @@
   		</div> 
 	   </div><!-- panel-group -->
      
-	</div>
+		</div>
 
-		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;"><!--分页显示内容-->
-		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;font-size:14px;"><!--当前位置-->
+		<div class="gray-border" style="margin-left:15px;width:840px;height:auto;float:right;font-size:14px;"><!--分页显示内容-->
+			<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
          <span style="color:#fff;">->新闻通告</span>	
-      <span style="color:#fff;">->通知公告</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
-  		<div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../xinxi/jtxx.jsp" style="color:#000;">“西溪哲学对话”第二十四次活动通知</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
-      </div>
-      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../announcement/20131029.jsp" style="color:#000;">西塞罗的政治哲学——《论共和国》中的人民主权思想</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
-      </div>
-      
-      
-      <div class="" style="line-height:1.5;width:300px;margin:auto;margin-top:15px;">
-      	<a href="#">首页 </a><a href="#"> 上一页 </a><a href="#"> 下一页 </a><a href="#"> 尾页 </a><a href="#"> 当前第i页 </a><a href="#"> 共n页 </a>
+    	<div class="gray-border round-border" style="width:840px;height:auto;background-color:#FFF;margin-top:15px;padding-top:15px;">
+  		<div align="center" style="line-height:1.5;">"道教与民间信仰学科导航"建成开放</div>
+      <div style="border-bottom:1px dashed #999;line-height:1.5;" align="center">发布时间：2013-12-26 14:42:51  | 来源：本站</div>
+      <div style="padding-left:15px;">
+      	<p align="left">
+	学科导航是按学科门类将学科信息、学术资源等集中在一起，以实现资源<strong>的</strong>规范搜集、分类、组织和序化整理，并能对导航信息进行多途径内容揭示，方便用户按学科查找相关学科信息和学术资源<strong>的</strong>系统工具。</p>
+<p align="left">
+	浙江大学道教文化研究中心在浙江大学图书馆的帮助下，安排专业人员选择、鉴别、搜集网络资源，依照一定的规则把它们重新加工、组织成为一个有机的整体，并提供完善、灵活、强大的检索功能，以方便读者检索、获取有关网络资源，真正起到网络目录的作用。</p>
+<p align="left">
+	&ldquo;道教与民间信仰学科导航&rdquo;的网站为：校内外均可访问，<u><a href="http://zju.libguides.com/content.php?pid=525033&amp;sid=4319003" target="_blank">http://zju.libguides.com/content.php?pid=525033&amp;sid=4319003</a></u>，分基础知识、经典文献、研究概况、研究参考、学术机构、道教与民间信仰团体、论文写作与投稿等栏目，并将定期更新。</p>
+<p align="left">
+	此导航的建成，对于促进浙江大学和整个道教研究学界的道教研究将起到一定的推进作用。&nbsp;</p>
+  		
       </div>
   	</div>
+  	</div>
   </div>
-	</div>
-  
   <div id="root" style="width:1181px;height:187px;z-index:-1;background:url(../images/root.gif);float:left;">
   </div>
+  <div style="clear:both;"></div>
 </div>
 </body>
 </html>

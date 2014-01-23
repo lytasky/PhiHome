@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>通知报道</title>
+<title>新闻通告</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="../js/juery.js"></script>
+<script src="../js/jquery.js"></script>
 <style type="text/css">
 	.td-width{
 		width:80px;	
@@ -98,7 +98,7 @@
 
 </head>
 <body style="margin-top:0px;">
-<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
+<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;height:auto;">
   <div id="head" style="background:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
@@ -243,13 +243,13 @@
 	</div><!-- 导航栏列表区 -->
 </div>
 
-	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;height:700px;">
-		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;float:left;">
+	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;padding-bottom:15px;height:auto;">
+		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;">
      <div class="panel-group" id="accordion" style=""><!--网站地图-->
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
@@ -263,36 +263,44 @@
   		</div> 
 	   </div><!-- panel-group -->
      
-	</div>
+		</div>
 
-		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;"><!--分页显示内容-->
-		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;font-size:14px;"><!--当前位置-->
+		<div class="gray-border" style="margin-left:15px;width:840px;height:auto;float:right;font-size:14px;"><!--分页显示内容-->
+			<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
          <span style="color:#fff;">->新闻通告</span>	
-      <span style="color:#fff;">->通知公告</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
-  		<div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../xinxi/jtxx.jsp" style="color:#000;">“西溪哲学对话”第二十四次活动通知</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
-      </div>
-      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../announcement/20131029.jsp" style="color:#000;">西塞罗的政治哲学——《论共和国》中的人民主权思想</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
-      </div>
-      
-      
-      <div class="" style="line-height:1.5;width:300px;margin:auto;margin-top:15px;">
-      	<a href="#">首页 </a><a href="#"> 上一页 </a><a href="#"> 下一页 </a><a href="#"> 尾页 </a><a href="#"> 当前第i页 </a><a href="#"> 共n页 </a>
+    	<div class="gray-border round-border" style="width:840px;height:auto;background-color:#FFF;margin-top:15px;padding-top:15px;">
+  		<div align="center" style="line-height:1.5;font-size:20px;font-weight:bold;">哲学，逻辑，理性，成长——记"汇思坛"系列讲座之"哲学与大学"专题讲座</div>
+      <div style="border-bottom:1px dashed #999;line-height:1.5;" align="center">发布时间： 2014-01-20  15:03:06 | 来源： 本站</div>
+      <div style="padding-left:15px;">
+      	<p align="center">
+	<strong>哲学，逻辑，理性，成长</strong></p>
+<p align="center">
+	<strong>&mdash;&mdash;</strong><strong>记&ldquo;汇思坛&rdquo;系列讲座之&ldquo;哲学与大学&rdquo;专题讲座</strong></p>
+<p>
+	&nbsp;2013年12月27日晚上7点，&ldquo;汇思坛&rdquo;系列讲座之&ldquo;哲学与大学&rdquo;专题讲座第二讲于浙江大学紫金港校区基础图书馆三楼文化空间开讲。本次讲座我们邀请到了浙江大学哲学系副主任金立教授，为大家带来一场以&ldquo;哲学，逻辑，理性，成长&rdquo;为主题精彩纷呈的哲学讲座。</p>
+<p>
+	充满古朴气息的空间里，前来参与的同学围桌而坐，静静聆听金教授风趣幽默饱含哲思的话语。金教授先以&ldquo;是什么&rdquo;、&ldquo;为什么&rdquo;、&ldquo;怎么做&rdquo;的逻辑思维方式深入浅出地阐释生活中的种种现象。&ldquo;幸福&rdquo;、&ldquo;人本&rdquo;、&ldquo;创新&rdquo;，何以鉴定，为何需要，何以执行，金教授利用生活中浅显易见的例子引导同学们思考人生、认识人生。让同学们意识到要以一种淡然的心态面对生活，但并非平淡与庸碌，我们需要的是怒放的生命，精彩纷呈的人生。</p>
+<p>
+	接着，金教授以历史与现实的结合为横轴，以正反结合的辩证为横轴结合自己在美国斯坦福大学的学习经历分析了中西方哲学的差异，提出哲学思维在社会问题的产生中具有不可忽视的作用这一观点，进一步提出对同学们重视内涵远离现代社会功利喧嚣的希望。&nbsp;</p>
+<p>
+	&nbsp;针对同学们在大学里的困惑，金教授从&ldquo;本位和他位&rdquo;的角度提出四句话作为我们应该&ldquo;怎样做&rdquo;的建议。1.把自己当成别人。站在更公正的位置审视自我，平衡自我。2.把别人当成自己。宽容、开放、快乐。3.把别人当成别人。求同存异。4.把自己当成自己。拥有独立的人格，做自己。&ldquo;随波而流，自由掌舵，欣赏自我的风景。&rdquo;&nbsp;</p>
+<p>
+	在讲座的最后，金教授对同学们提出了自己的期望与谆谆教诲。在现代的物质生活中，不要让灵魂落在我们前行的步伐之后，让哲学成为生活的养料，感受生活中的正能量。在这里，金教授提出了心灵再造的概念：1. 理性不盲从，感性不刻板。要求同学们有准确的判断力，系统的思考力，坚持的执行力。重塑对知识，对真理的敬畏。用理性思考，用感性生活。2.爱智慧：智慧的痛苦带来的心灵的愉悦。思想的疾病需要哲学的帮助。真正的哲学能让生活更为愉悦。3.还乡式的回归。人类精神不仅需要外张，更要回归。人类的认识旅程是理性的探险。认识世界到最终总是要回归到对自我的认识上来，更好的认识自我才能更好的生活。</p>
+<p>
+	讲座在同学们热烈的掌声中落下了帷幕。&ldquo;理性思考，感性生活&rdquo;，既是金立教授对本次讲座的总结，也是她送给参与讲座的所有同学的一句话。本次讲座虽然结束了，但是它带给每一位听众的思考不会结束。</p>
+<p>
+	&nbsp;&nbsp;</p>
       </div>
   	</div>
+  	</div>
   </div>
-	</div>
-  
   <div id="root" style="width:1181px;height:187px;z-index:-1;background:url(../images/root.gif);float:left;">
   </div>
+  <div style="clear:both;"></div>
 </div>
 </body>
 </html>

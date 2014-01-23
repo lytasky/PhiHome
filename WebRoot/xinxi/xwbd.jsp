@@ -275,25 +275,22 @@
     
     <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
   		<div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../xinxi/jtxx.jsp" style="color:#000;">“西溪哲学对话”第二十四次活动通知</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../news/20140120.jsp">·哲学，逻辑，理性，成长——记"汇思</a></div>
+        <div class="" style="width:200px;float:right;">2014-01-20</div>
       </div>
       <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../news/20131226.jsp">·"道教与民间信仰学科导航"建成开放</a></div>
+        <div class="" style="width:200px;float:right;">2013-12-26</div>
       </div>
       <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../news/20131224.jsp">"哲学与大学"专题第一讲   </a></div>
+        <div class="" style="width:200px;float:right;">2013-12-24</div>
       </div>
       <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../news/20131127.jsp">· "西溪哲学对话"第二十四次活动通知  </a></div>
         <div class="" style="width:200px;float:right;">2013-11-27</div>
       </div>
-      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="#" style="color:#000;">"西溪哲学对话"第二十四次活动通知</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
-      </div>
+      
       
       <div class="" style="line-height:1.5;width:300px;margin:auto;margin-top:15px;">
       	<a href="#">首页 </a><a href="#"> 上一页 </a><a href="#"> 下一页 </a><a href="#"> 尾页 </a><a href="#"> 当前第i页 </a><a href="#"> 共n页 </a>

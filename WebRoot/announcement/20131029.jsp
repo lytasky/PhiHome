@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>通知报道</title>
+<title>新闻通告</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="../js/juery.js"></script>
+<script src="../js/jquery.js"></script>
 <style type="text/css">
 	.td-width{
 		width:80px;	
@@ -98,7 +98,7 @@
 
 </head>
 <body style="margin-top:0px;">
-<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
+<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;height:auto;">
   <div id="head" style="background:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
@@ -243,13 +243,13 @@
 	</div><!-- 导航栏列表区 -->
 </div>
 
-	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;height:700px;">
-		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;float:left;">
+	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;padding-bottom:15px;height:auto;">
+		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;">
      <div class="panel-group" id="accordion" style=""><!--网站地图-->
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
@@ -263,36 +263,63 @@
   		</div> 
 	   </div><!-- panel-group -->
      
-	</div>
+		</div>
 
-		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;"><!--分页显示内容-->
-		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;font-size:14px;"><!--当前位置-->
+		<div class="gray-border" style="margin-left:15px;width:840px;height:auto;float:right;font-size:14px;"><!--分页显示内容-->
+			<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
          <span style="color:#fff;">->新闻通告</span>	
-      <span style="color:#fff;">->通知公告</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
-  		<div class="" style="height:25px;line-height:1.5;margin-top:15px;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../xinxi/jtxx.jsp" style="color:#000;">“西溪哲学对话”第二十四次活动通知</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
-      </div>
-      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="../announcement/20131029.jsp" style="color:#000;">西塞罗的政治哲学——《论共和国》中的人民主权思想</a></div>
-        <div class="" style="width:200px;float:right;">2013-11-27</div>
-      </div>
-      
-      
-      <div class="" style="line-height:1.5;width:300px;margin:auto;margin-top:15px;">
-      	<a href="#">首页 </a><a href="#"> 上一页 </a><a href="#"> 下一页 </a><a href="#"> 尾页 </a><a href="#"> 当前第i页 </a><a href="#"> 共n页 </a>
+    	<div class="gray-border round-border" style="width:840px;height:auto;background-color:#FFF;margin-top:15px;padding-top:15px;">
+  		<div align="center" style="line-height:1.5;">西塞罗的政治哲学——《论共和国》中的人民主权思想</div>
+      <div style="border-bottom:1px dashed #999;line-height:1.5;" align="center">发布时间：2013-10-29 14:42:51  | 来源：本站</div>
+      <div style="padding-left:15px;">
+      	
+<p>
+	<br />
+	&nbsp;</p>
+<p>
+	&nbsp;对于人类而言，什么是最好的、最值得追求的生活？是哲学沉思的生活？还是投身政治的生活？这是古代西方哲学家们无法回避的问题。柏拉图和亚里士多德将沉思的生活作为最高的善，而西塞罗则选择了政治的生活。然而，在西塞罗的政治理念和修辞技巧背后，存在着一种深刻而坚实的哲学思想，构成了其政治主张、生活实践以及人生选择的深层基础。他在代表作品《论共和国》中对于&ldquo;人民主权&rdquo;（popular sovereignty）的论述充分表明了这一点。</p>
+<p>
+	<br />
+	<strong>主讲人：</strong>马尔科姆&middot;斯科菲尔德（Malcolm Schofield），英国剑桥大学古代哲学荣休教授。研究领域涉及古代西方知识论、伦理学及政治理论，著作有《拯救城邦》（<em>Saving the City</em>, 1999）、《柏拉图：政治哲学》（<em>Plato: Political Philosophy</em>, 2006）等，并合作编辑了《剑桥希腊和罗马政治思想史》（<em>The Cambridge History of Greek and Roman Political Thought</em>, 2000）。目前研究焦点集中于西塞罗的哲学思想。<br />
+	&nbsp;</p>
+<p>
+	<br />
+	<strong>主持人：</strong>陈玮 博士</p>
+<p>
+	<br />
+	&nbsp;</p>
+<p>
+	<strong>时间：</strong>10月27日晚6点至8点</p>
+<p>
+	<br />
+	&nbsp;</p>
+<p>
+	<strong>地点：</strong>浙江大学西溪校区教学主楼12楼会议室1206</p>
+<p>
+	<br />
+	&nbsp;</p>
+<p>
+	<strong>主办单位：</strong>浙江大学哲学系</p>
+<p>
+	<br />
+	&nbsp;</p>
+<p>
+	<strong>协办单位：</strong>浙江大学基督教与跨文化研究中心</p>
+<p>
+	<br />
+	&nbsp;</p>
+  		
       </div>
   	</div>
+  	</div>
   </div>
-	</div>
-  
   <div id="root" style="width:1181px;height:187px;z-index:-1;background:url(../images/root.gif);float:left;">
   </div>
+  <div style="clear:both;"></div>
 </div>
 </body>
 </html>
