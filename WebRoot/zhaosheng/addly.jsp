@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
 <title>header</title>
-<meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 <link href="css/main.css" rel="stylesheet" type="text/css" media="all"> 
 <title>¡Ù—‘∞Â</title>

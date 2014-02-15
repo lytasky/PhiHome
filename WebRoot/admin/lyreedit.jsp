@@ -20,9 +20,7 @@
 </head>
 
 <body>
-<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
-  <!--DWLayoutTable-->
-  <tr>
+
       <table width="700" height="283" border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="540" align="center" valign="top"><table width="540" border="0" cellspacing="0" cellpadding="0">
@@ -82,9 +80,7 @@
         </tr>
       </table>
 	  <%@ include file="end.jsp" %>
-    </td>
-  </tr>
-</table>
+   
 
 </body>
 </html>

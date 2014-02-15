@@ -52,14 +52,11 @@
 </head>
 
 <body>
-<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
-  <!--DWLayoutTable-->
-  <tr>
-    <table width="700" height="283" border="0" cellpadding="0" cellspacing="0">
+
+    <table width="699" height="283" border="0" cellpadding="0" cellspacing="0">
         <tr>
           
-          </td>
-          <td width="540" align="center" valign="top"><hr>
+          <td width="699" align="center" valign="top"><hr>
             <table width="540" border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td><a href="lyb.jsp">Ê×Ò³</a> - <a href="leave.jsp">×¢Ïú</a>
@@ -146,8 +143,6 @@
         </tr>
       </table>
 	  <%@ include file="end.jsp" %>
-    </td>
-  </tr>
-</table>
+    
 </body>
 </html>
