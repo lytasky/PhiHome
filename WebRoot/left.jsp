@@ -22,7 +22,7 @@
 			<li><a href=".">首页内容管理</a>
 				<ul>
         	<li><a href="#">图片集</a></li>
-					<li><a href="#">西溪哲学对话</a></li>
+					<li><a href="admin/xxzxdh/display.jsp">西溪哲学对话</a></li>
 					<li><a href="#">哲学与大学</a></li>
 					<li><a href="#">通知公告</a></li>
 					<li><a href="#">新闻报道</a></li>
@@ -77,13 +77,6 @@
 					<li><a href="/">学生名录</a></li>
 					<li><a href="/">学生活动</a></li>
 					<li><a href="/">学生作品</a></li>
-				</ul>
-			</li>
-      <li><a href=".">闻人轶事</a>
-				<ul>
-					<li><a href="/">哲学趣闻</a></li>
-					<li><a href="/">校园故事</a></li>
-					<li><a href="/">校友风采</a></li>
 				</ul>
 			</li>
       <li><a href=".">闻人轶事</a>

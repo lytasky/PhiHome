@@ -115,22 +115,22 @@
 		<base href="<%=basePath%>">
 		<title></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf8">
-		<link rel="stylesheet" type="text/css" href="css/style.css"
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"
 			title="Integrated Styles">
 		<script language="JavaScript" type="text/javascript"
-			src="js/global.js"></script>
+			src="../../js/global.js"></script>
 		<link rel="alternate" type="application/rss+xml" title="RSS"
 			href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?forumID=20">
 		<script language="JavaScript" type="text/javascript"
-			src="js/common.js"></script>
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
-	<link href="css/diy.css" rel="stylesheet" media="screen" />
+			src="../../js/common.js"></script>
+		<link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<link href="../../css/diy.css" rel="stylesheet" media="screen" />
   <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
-  <script src="js/jquery.js"></script>
-  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-<script src="js/jquery.flexslider.js"></script>
-<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js"></script>
+  <script src="../../js/jquery.js"></script>
+  <link rel="stylesheet" href="../../css/flexslider.css" type="text/css">
+<script src="../../js/jquery.flexslider.js"></script>
+<script src="../../Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="../../js/bootstrap.min.js"></script>
 	</head>
 	<body><br><div id="jive-forumpage"><div class="jive-buttons"><br><div align="right">
 
@@ -162,7 +162,7 @@
 				<tbody>
 					<tr valign="top">
 						<td>
-							<span class="nobreak"> 第<%=pageNo%>页,共<%=totalPages %>页  <span
+							<span class="nobreak"> 第m页,共n页  <span
 								class="jive-paginator"> [</span>
 							</span>
 
@@ -176,15 +176,15 @@
 							<span class="nobreak"><span class="jive-paginator">|</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=<%=pageNo - 1%>">上一页</a> </span>
+									<a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=">上一页</a> </span>
 							</span>
 
 							<span class="nobreak"><span class="jive-paginator">|
 							</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=<%=pageNo + 1%>">下一页</a>
-									|&nbsp; <a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=<%=totalPages%>">最末页</a>
+									<a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=">下一页</a>
+									|&nbsp; <a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=">最末页</a>
 									] </span> </span>
 						</td>
 					</tr>
