@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html;charset=gb2312" %>
+<%@ page import="java.sql.*" %>
+<%  
+  try{
+  	  Class.forName("com.mysql.jdbc.Driver");    //
+  }catch(java.lang.ClassNotFoundException ex){
+      out.print("Connext to DataBase error : " + ex.getMessage());
+  }
+  
+  Connection conn = null;
+  Statement sta = null; 
+  try{
+	  String host = "localhost";                   //
+	  String user = "root";
+	  String pw = "root";
+	  String db = "liuyanban";
+	  String url = "jdbc:mysql://" + host + "/" + db;    
+	  conn = DriverManager.getConnection(url,user,pw);  
+  }catch(SQLException ex){
+      out.print(ex.toString());
+  }
+%>

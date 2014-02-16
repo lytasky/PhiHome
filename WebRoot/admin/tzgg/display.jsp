@@ -115,22 +115,22 @@
 		<base href="<%=basePath%>">
 		<title></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf8">
-		<link rel="stylesheet" type="text/css" href="css/style.css"
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"
 			title="Integrated Styles">
 		<script language="JavaScript" type="text/javascript"
-			src="js/global.js"></script>
+			src="../../js/global.js"></script>
 		<link rel="alternate" type="application/rss+xml" title="RSS"
 			href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?forumID=20">
 		<script language="JavaScript" type="text/javascript"
-			src="js/common.js"></script>
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
-	<link href="css/diy.css" rel="stylesheet" media="screen" />
+			src="../../js/common.js"></script>
+		<link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<link href="../../css/diy.css" rel="stylesheet" media="screen" />
   <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
-  <script src="js/jquery.js"></script>
-  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-<script src="js/jquery.flexslider.js"></script>
-<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js"></script>
+  <script src="../../js/jquery.js"></script>
+  <link rel="stylesheet" href="../../css/flexslider.css" type="text/css">
+<script src="../../js/jquery.flexslider.js"></script>
+<script src="../../Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="../../js/bootstrap.min.js"></script>
 	</head>
 	<body><br><div id="jive-forumpage"><div class="jive-buttons"><br><div align="right">
 
@@ -139,7 +139,7 @@
 				</div> 
 				<%if (logined) {//判断是否登陆%>
 				<div align="center">
-					<form action="searchResult.jsp?classify=<%=classify%>" method="post">
+					<form action="../xxzxdh - 拷贝/searchResult.jsp?classify=<%=classify%>" method="post">
 					<div class="row" style="margin:5px auto;width:250px;">
   					<div class="col-md-12">
     					<div class="input-group input-group-sm">
@@ -154,7 +154,7 @@
 				</div>
 			</div>
 			
-			<a href="post.jsp?classify=<%=classify%>">发表新主题<img src="images/post-16x16.gif"
+			<a href="../xxzxdh - 拷贝/post.jsp?classify=<%=classify%>">发表新主题<img src="../xxzxdh - 拷贝/images/post-16x16.gif"
 										alt="发表新主题" border="0" height="16" width="16">
 								</a><br>
 				<%} %>
@@ -162,12 +162,12 @@
 				<tbody>
 					<tr valign="top">
 						<td>
-							<span class="nobreak"> 第<%=pageNo%>页,共<%=totalPages %>页  <span
+							<span class="nobreak"> 第m页,共n页  <span
 								class="jive-paginator"> [</span>
 							</span>
 
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=1">第一页</a>
+									<a href="../xxzxdh - 拷贝/articleFlat1.jsp?classify=<%=classify%>&pageNo=1">第一页</a>
 							</span>
 							</span>
 
@@ -176,15 +176,15 @@
 							<span class="nobreak"><span class="jive-paginator">|</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=<%=pageNo - 1%>">上一页</a> </span>
+									<a href="../xxzxdh - 拷贝/articleFlat1.jsp?classify=<%=classify%>&pageNo=">上一页</a> </span>
 							</span>
 
 							<span class="nobreak"><span class="jive-paginator">|
 							</span>
 							</span>
 							<span class="nobreak"><span class="jive-paginator">
-									<a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=<%=pageNo + 1%>">下一页</a>
-									|&nbsp; <a href="articleFlat1.jsp?classify=<%=classify%>&pageNo=<%=totalPages%>">最末页</a>
+									<a href="../xxzxdh - 拷贝/articleFlat1.jsp?classify=<%=classify%>&pageNo=">下一页</a>
+									|&nbsp; <a href="../xxzxdh - 拷贝/articleFlat1.jsp?classify=<%=classify%>&pageNo=">最末页</a>
 									] </span> </span>
 						</td>
 					</tr>
@@ -229,7 +229,7 @@
 											<tr class="<%=classStr%>">
 												<td class="jive-first" nowrap="nowrap" width="1%">
 													<div class="jive-bullet">
-														<img src="images/read-16x16.gif" alt="已读" border="0"
+														<img src="../xxzxdh - 拷贝/images/read-16x16.gif" alt="已读" border="0"
 															height="16" width="16">
 														<!-- div-->
 													</div>
@@ -240,9 +240,9 @@
 													<%
 														if (logined) {//判断是否登陆
 													%>
-													<a href="modify.jsp?classify=<%=classify%>&id=<%=a.getId()%>">修改</a>
+													<a href="../xxzxdh - 拷贝/modify.jsp?classify=<%=classify%>&id=<%=a.getId()%>">修改</a>
 													<a
-														href="delete.jsp?classify=<%=classify%>&id=<%=a.getId()%>&isLeaf=<%=a.isLeaf()%>&pid=<%=a.getPid()%>">删除</a>
+														href="../xxzxdh - 拷贝/delete.jsp?classify=<%=classify%>&id=<%=a.getId()%>&isLeaf=<%=a.isLeaf()%>&pid=<%=a.getPid()%>">删除</a>
 													<%
 														}
 													%>
@@ -250,7 +250,7 @@
 
 												<td class="jive-thread-name" width="95%">
 													<a id="jive-thread-1"
-														href="articleDetailFlat.jsp?classify=<%=classify%>&id=<%=a.getId()%>"><%=a.getTitle()%></a>
+														href="../xxzxdh - 拷贝/articleDetailFlat.jsp?classify=<%=classify%>&id=<%=a.getId()%>"><%=a.getTitle()%></a>
 												</td>
 												<td class="jive-author" nowrap="nowrap" width="1%">
 

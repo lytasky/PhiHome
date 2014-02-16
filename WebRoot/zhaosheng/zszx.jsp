@@ -43,8 +43,8 @@
 <title>学院概况</title>
 <meta charset="gb2312">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="css/main.css" rel="stylesheet" type="text/css" media="all"> 
-<script src="../js/juery.js"></script>
+
+<script src="../js/jquery.js"></script>
 <style type="text/css">
 	.td-width{
 		width:80px;	
@@ -349,7 +349,8 @@
     <td width="150" height="142" align="center" valign="top">
 	  <table width="225" border="0" cellpadding="3" cellspacing="0">
 	  <tr><td align="left" valign="bottom" >
-    邮箱：*********<%=result.getString("mail").substring(result.getString("mail").indexOf('@'))%></td>
+    邮箱：*********<%= result.getString("mail").substring(result.getString("mail").indexOf('@'))%> 
+		</td>
 	  </tr></table>
 	</td>
     <td width="363" align="left" valign="top"><table width="425" border="0" cellpadding="5" cellspacing="1" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
