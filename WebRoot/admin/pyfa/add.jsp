@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html;charset=gb2312" %>
-<% String s=request.getParameter("content");System.out.println(s); %>
 <!doctype html>
 <html lang="en">
 <head>
