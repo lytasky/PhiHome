@@ -13,7 +13,7 @@ cont text,
 pdate datetime,
 isleaf int ,
 pno  int
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 create table reading 
 (
@@ -26,7 +26,7 @@ cont text,
 pdate datetime,
 isleaf int ,
 pno  int
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 create table salon 
 (
@@ -39,7 +39,7 @@ cont text,
 pdate datetime,
 isleaf int ,
 pno  int
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 create table article 
 (
@@ -52,7 +52,7 @@ cont text,
 pdate datetime,
 isleaf int ,
 pno  int
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 insert into course values (null, 0, 1, 'Java语言*初级版 ','张三', 'Java语言*初级版 Java语言*初级版 Java语言*初级版 ', now(), 1,0);
 insert into course values (null, 0, 2, '请教高手','张三', '请教高手请教高手请教高手请教高手',now(), 1,0);
@@ -62,11 +62,12 @@ insert into reading values (null, 0, 2, '请教高手','张三', '请教高手请教高手请教
 
 insert into salon values(null, 0, 1, 'Java语言*初级版 ','张三', 'Java语言*初级版 Java语言*初级版 Java语言*初级版 ', now(), 1,0);
 insert into salon values (null, 0, 2, '请教高手','张三', '请教高手请教高手请教高手请教高手',now(), 1,0);
+
 create table adminUse(
 id int primary key auto_increment,
 name varchar(32),
 password varchar(14)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 insert into adminUse values(null,'admin','admin');
 
@@ -81,7 +82,7 @@ email varchar(32),
 discipline varchar(80),
 entryTime varchar(32),
 degree tinyint
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 create table teacher(
 id int primary key auto_increment,
@@ -93,7 +94,7 @@ email varchar(32),
 discipline varchar(80),
 entryTime varchar(32),
 degree tinyint
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 create table News(
 id int primary key auto_increment,
@@ -105,4 +106,4 @@ picurl varchar(255),
 newsfrom varchar(255),
 publishtime datetime,
 extraFile varchar(255)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

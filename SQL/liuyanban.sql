@@ -16,7 +16,7 @@ CREATE TABLE vlyb(
   pb char(2) NOT NULL default 'no',
   re varchar(100) default NULL,
   PRIMARY KEY(id)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE user(
   id int(11) NOT NULL auto_increment,
@@ -24,6 +24,6 @@ CREATE TABLE user(
   pwd varchar(20) default NULL,
   class varchar(2) default NULL,
   PRIMARY KEY (id)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO user(name,pwd) VALUES('admin','admin');
