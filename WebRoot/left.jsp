@@ -50,7 +50,7 @@
 
 			<li><a href=".">教学培养</a>
 				<ul>
-					<li><a href="/">培养方案</a></li>
+					<li><a href="admin/file/display.jsp?classify='pyfa'" target="main">培养方案</a></li>
 					<li><a href="/">本科课程</a></li>
 					<li><a href="/">硕博课程</a></li>
 					<li><a href="/">学期课表</a></li>
