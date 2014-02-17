@@ -1,3 +1,14 @@
+<%@ page pageEncoding="utf-8"%>
+<%@ page import="java.sql.*,com.bjsxt.bbs.*,java.util.*"%>
+<%@ page import="dbmgr.NewsMgr"  %>
+<%@ page contentType="text/html; charset=utf-8" %>
+<jsp:directive.page import="dbmgr.NewsMgr;"/>
+<%
+	List<News> xinxiduihua = new ArrayList<News>();
+	NewsMgr newsMgr = new NewsMgr();
+	xinxiduihua = newsMgr.get("xinxiduihua", 5);
+	System.out.println("2121"+xinxiduihua);
+%>
 <!doctype html>
 <html>
 <head>
