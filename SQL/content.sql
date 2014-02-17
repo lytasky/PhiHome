@@ -13,6 +13,7 @@ CREATE TABLE file(
   title varchar(50) NOT NULL default 'NONE',
   content varchar(2000) default NULL,
   classify varchar(20) default NULL,
+  publishtime DATE ,
   PRIMARY KEY(id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
