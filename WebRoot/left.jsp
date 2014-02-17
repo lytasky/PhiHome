@@ -51,16 +51,16 @@
 			<li><a href=".">教学培养</a>
 				<ul>
 					<li><a href="admin/file/display.jsp?classify='pyfa'" target="main">培养方案</a></li>
-					<li><a href="/">本科课程</a></li>
-					<li><a href="/">硕博课程</a></li>
-					<li><a href="/">学期课表</a></li>
-					<li><a href="/">课程资料</a></li>
+					<li><a href="admin/file/display.jsp?classify='bkkc'" target="main">本科课程</a></li>
+					<li><a href="admin/file/display.jsp?classify='sbkc'" target="main">硕博课程</a></li>
+					<li><a href="admin/file/display.jsp?classify='xqkb'" target="main">学期课表</a></li>
+					<li><a href="admin/file/display.jsp?classify='kczl'" target="main">课程资料</a></li>
 				</ul>
 			</li>
 			<li><a href=".">招生专栏</a>
 				<ul>
-					<li><a href="/">招生信息</a></li>
-					<li><a href="/">历练真题</a></li>
+					<li><a href="admin/file/display.jsp?classify='zsxx'" target="main">招生信息</a></li>
+					<li><a href="admin/file/display.jsp?classify='lnzt'" target="main">历练真题</a></li>
 					<li><a href="/">招生咨询</a></li>
 				</ul>
 			</li>
@@ -83,7 +83,7 @@
 				<ul>
 					<li><a href="/">哲学趣闻</a></li>
 					<li><a href="/">校园故事</a></li>
-					<li><a href="/">校友风采</a></li>
+					<li><a href="admin/file/display.jsp?classify='pyfa'" target="xyfc">校友风采</a></li>
 				</ul>
 			</li>
       <li><a href=".">论坛管理</a>
