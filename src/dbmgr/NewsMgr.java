@@ -10,29 +10,36 @@ import com.bjsxt.bbs.News;
 public class NewsMgr {
 	DBConMgr db_conn=new DBConMgr(); 
 	
-	public List<News> get(int localkind,int number)
+	public List<News> get(String tableType ,int number)
 	{
 		List<News> listNews = new ArrayList<News>();
-		
+		String sql = "select * from XixiDuihua";
 		db_conn.ConnectDB();
 		ResultSet rs = null;
 		int i = 0;
 		try{
-			String sql = "select * from News where kind = localkind";
+			if(tableType.equalsIgnoreCase("XixiDuihua")){
+				
+				sql = "select * from XixiDuihua";			
+			}else if (tableType.equalsIgnoreCase("ZhexueAndDaxue")){
+				sql = "select * from ZhexueAndDaxue";
+			}else if(tableType.equalsIgnoreCase("ZhexueQushi")){
+				sql = "select * from ZhexueQushi";
+			}else if(tableType.equalsIgnoreCase("TongzhiGonggao")){
+				sql = "select * from TongzhiGonggao";
+			}else if(tableType.equalsIgnoreCase("XinwenBaodao")){
+				sql = "select * from XinwenBaodao";
+			}
 			rs = db_conn.sm.executeQuery(sql);   
 			while(i >= number || rs.next())
 			{
 				News news = new News();
 				
 				news.setId(rs.getInt("id"));
-				news.setKeyword(rs.getString("keyword"));
-				news.setKind(localkind);
 				news.setContent(rs.getString("content"));
 				news.setNewsfrom(rs.getString("newsfrom"));
-				news.setPicurl(rs.getString("picurl"));
 				news.setTitle(rs.getString("title"));
 				news.setPublishtime(rs.getString("publishtime"));
-				news.setExtraFile(rs.getString("extraFile"));
 				listNews.add(news);
 			}
 			return listNews;
