@@ -95,15 +95,3 @@ discipline varchar(80),
 entryTime varchar(32),
 degree tinyint
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-create table News(
-id int primary key auto_increment,
-kind tinyint, 
-title varchar(255),
-keyword varchar(255),
-content text,
-picurl varchar(255),
-newsfrom varchar(255),
-publishtime datetime,
-extraFile varchar(255)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
