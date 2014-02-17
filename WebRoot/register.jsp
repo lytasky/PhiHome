@@ -57,7 +57,7 @@
 	    					//转发至登录成功页面 
 	    					session.setAttribute("userLogined","true");
 	    					session.setAttribute("name",student.getName());
-	    					response.sendRedirect("articleFlat.jsp");
+	    					response.sendRedirect("uselogin.jsp");
 	    				}catch (Throwable t) {
 	    					//写异常日志
 	    					getServletContext().log(t.getMessage());
@@ -100,7 +100,7 @@
 	    					 //转发至登录成功页面 
 	    					session.setAttribute("userLogined","true");
 	    					session.setAttribute("name",teacher.getName());
-	    					response.sendRedirect("articleFlat.jsp");
+	    					response.sendRedirect("uselogin.jsp");
 	    				} 
 	    				catch (Throwable t) {
 	    					//写异常日志
