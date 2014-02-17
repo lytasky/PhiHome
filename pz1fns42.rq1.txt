@@ -1,0 +1,28 @@
+﻿后台文件管理模块样式已经完成，查看、删除和上传功能已实现。
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   SQL/content.sql
+#	new file:   WebRoot/admin/file/add.jsp
+#	new file:   WebRoot/admin/file/conn.jspf
+#	new file:   WebRoot/admin/file/delete.jsp
+#	new file:   WebRoot/admin/file/display.jsp
+#	new file:   WebRoot/admin/file/display1.jsp
+#	new file:   WebRoot/admin/file/doaddly.jsp
+#	new file:   WebRoot/admin/file/modify.jsp
+#	new file:   WebRoot/admin/file/searchResult.jsp
+#	modified:   WebRoot/left.jsp
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    WebRoot/admin/top.html
+#	deleted:    WebRoot/images/common.js
+#	deleted:    WebRoot/images/global.js
+#	deleted:    WebRoot/images/style.css
+#
+
