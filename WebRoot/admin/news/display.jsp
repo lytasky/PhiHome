@@ -30,8 +30,8 @@
 	}
   
   String classify = request.getParameter("classify");
-  //System.out.println(classify);
-  String sql = "select * from file where classify="+classify+" order by id desc";    //执行SQL语句
+  System.out.println(classify);
+  String sql = "select * from "+classify+" order by id desc";    //执行SQL语句
   ResultSet result = sta.executeQuery(sql);
       
 	result.last();   //获取记录总数
@@ -74,7 +74,7 @@
 				</div>
             <table width="540" border="0" cellspacing="0" cellpadding="0">
             <tr>
-              <td><input type="button" onclick="javascript:window.location.href='add.jsp'" value="上传文件"></input>
+              <td><input type="button" onclick="javascript:window.location.href='add.jsp?classify=<%= classify%>'" value="发布文章"></input>
                 </td>
             </tr>
           </table>
@@ -94,10 +94,11 @@
       <tr>
         <td align="left" valign="top">
 		<strong>标题：</strong><%=result.getString("title")%><br>
-		<strong>发布时间：</strong>
-          <%=result.getString("publishtime").substring(0,10)%>
-		  <br><br>
-		<a href="delete.jsp?id=<%=result.getString("id")%>&classify=<%=classify%>">删除  </a>
+		<strong>时间：</strong>
+          <%=result.getString("publishtime").substring(0,19)%>
+		  <br>
+		<a href="edit.jsp?classify=<%=classify %>&id=<%=result.getString("id")%>">编辑  </a>
+		<a href="delete.jsp?classify=<%=classify %>&id=<%=result.getString("id")%>">删除  </a>
 		</td>
       </tr>
     </table></td>

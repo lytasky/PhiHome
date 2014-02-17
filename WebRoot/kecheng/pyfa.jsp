@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html;charset=gb2312" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="java.util.*" %>
-<%@ page import="java.lang.*" %>
-<%@ page import="java.io.*" %>
-<%@ page import="java.text.SimpleDateFormat"%>
 <%@ include file="../admin/file/conn.jspf" %>
 <%   
   sta = conn.createStatement();  //创建Statement对象      
@@ -334,16 +330,13 @@
    result.absolute((intPage-1) * intPageSize + 1);
    i = 0;
    while(i<intPageSize && !result.isAfterLast()){ 
-	   String publishtime = new String();
-	   //SimpleDateFormat dformat=new SimpleDateFormat("yyyyMMdd");
-	   //publishtime=dformat.format(result.getString("publishtime"));
-	   //publishtime.substring(0, 10);
-	   //publishtime=result.getString("publishtime").substring(0,10);
-	   //String hello=new String("hello");
+	   String content= result.getString("content");
+	   String[] name=content.split("\""); 	
+	   String path=name[3];
 %>
       <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="pyfa/2012级哲学专业培养方案.pdf" style="color:#000;"><%=result.getString("title")%></a></div>
-        <div class="" style="width:200px;float:right;"><%= result.getString("publishtime") %></div>
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="<%=path%>" style="color:#000;"><%=result.getString("title")%></a></div>
+        <div class="" style="width:200px;float:right;"><span><%=result.getString("publishtime").substring(0,10)%></span></div>
       </div>
       <%
   result.next();

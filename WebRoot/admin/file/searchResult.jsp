@@ -1,247 +1,140 @@
-<%@ page pageEncoding="GB18030"%>
-<%@ page import="java.sql.*, com.bjsxt.bbs.*, java.util.*"%>
-
-<%
-//request.setCharacterEncoding("GB18030");
-String classify = (String)request.getParameter("classify");
-System.out.println("In searchResult"+classify);
-boolean logined = false;
-String adminLogined = (String)session.getAttribute("adminLogined");
-if(adminLogined != null && adminLogined.trim().equals("true")) {
-	logined = true;
-} 
- %>
-
-<%
-String keyword = new String(request.getParameter("keyword").getBytes("8859_1"), "GBK");
-if(keyword == null) keyword = "";
-
-final int PAGE_SIZE = 10;
-int pageNo = 1;
-String strPageNo = request.getParameter("pageNo");
-if(strPageNo != null && !strPageNo.trim().equals("")) {
-	try {
-		pageNo = Integer.parseInt(strPageNo);
-	} catch (NumberFormatException e) {
-		pageNo = 1;
-	} 
-}
-
-
-
-int totalPages = 0;
-
-List<Article> articles = new ArrayList<Article>();
-Connection conn = DB.getConn();
-
-Statement stmtCount = DB.createStmt(conn);
-String sqlCount = "select count(*) from course where title like '%" + keyword + "%'" ;
-if(classify.equals("0"))
-{
-	sqlCount = "select count(*) from course where title like '%" + keyword + "%'" ;
-}
-else if(classify.equals("1"))
-{	
-	sqlCount = "select count(*) from reading where title like '%" + keyword + "%'" ;
-}
-else if(classify.equals("2"))
-{	
-	sqlCount = "select count(*) from salon where title like '%" + keyword + "%'" ;
-}
-
-System.out.println(sqlCount);
-ResultSet rsCount = DB.executeQuery(stmtCount, sqlCount);
-rsCount.next();
-int totalRecords = rsCount.getInt(1);
-
-totalPages = (totalRecords + PAGE_SIZE - 1)/PAGE_SIZE;
-
-if(pageNo > totalPages) pageNo = totalPages;
-
-if(pageNo <= 0) pageNo = 1;
-
-Statement stmt = DB.createStmt(conn);
-int startPos = (pageNo-1) * PAGE_SIZE; 
-String sql = "select * from course where title like '%" + keyword + "%' and pid = 0 order by pdate desc limit " + startPos + "," + PAGE_SIZE ;
-if(classify.equals("0"))
-{
-	sql = "select * from course where title like '%" + keyword + "%' and pid = 0 order by pdate desc limit " + startPos + "," + PAGE_SIZE ;
-}
-else if(classify.equals("1"))
-{	
-	sql = "select * from reading where title like '%" + keyword + "%' and pid = 0 order by pdate desc limit " + startPos + "," + PAGE_SIZE ;
-}
-else if(classify.equals("2"))
-{	
-	sql = "select * from salon where title like '%" + keyword + "%' and pid = 0 order by pdate desc limit " + startPos + "," + PAGE_SIZE ;
-}
-System.out.println(sql);
-ResultSet rs = DB.executeQuery(stmt, sql);
-while(rs.next()) {
-	Article a = new Article();
-	a.initFromRs(rs);
-	articles.add(a);
-}
-DB.close(rsCount);
-DB.close(stmtCount);
-
-DB.close(rs);
-DB.close(stmt);
-DB.close(conn);
+<%@ page language="java" contentType="text/html;charset=gb2312" %>
+<%@ page import="java.sql.*" %>
+<%@ include file="conn.jspf" %>
+<%   
+  sta = conn.createStatement();  //创建Statement对象      
+  
+  	int intPageSize; //一页显示的记录数
+	int intRowCount; //记录总数
+	int intPageCount; //总页数
+	int intPage; //待显示页码
+	int layer;
+	int idlayer;
+	idlayer=1;
+	String outtext;
+	outtext="";
+	String strPage;
+	int j;
+	int i;
+	//设置一页显示的记录数
+	intPageSize = 5;
+	
+	//取得待显示页码
+	strPage = request.getParameter("page");
+	if(strPage==null){//表明在QueryString中没有page这一个参数，此时显示第一页数据
+	  intPage = 1;
+	}
+	else{//将字符串转换成整型
+	  intPage = java.lang.Integer.parseInt(strPage);
+	  if(intPage<1) intPage = 1;
+	}
+  
+  String classify = request.getParameter("classify");
+  System.out.println(classify);
+  String keyword = request.getParameter("keyword");
+  String sql = "select * from file where classify="+classify+" and title like '%" + keyword + "%' order by id desc";    //执行SQL语句
+  ResultSet result = sta.executeQuery(sql);
+      
+	result.last();   //获取记录总数
+	intRowCount = result.getRow();
+    intPageCount = (intRowCount+intPageSize-1) / intPageSize;   //记算总页数
+	if(intPage>intPageCount){intPage = intPageCount;}	//调整待显示的页码
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title></title>
-<meta http-equiv="content-type" content="text/html; charset=utf8">
-<link rel="stylesheet" type="text/css" href="../../css/style.css" title="Integrated Styles">
-<script language="JavaScript" type="text/javascript" src="../../js/global.js"></script>
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?forumID=20">
-<script language="JavaScript" type="text/javascript" src="../../js/common.js"></script>
-
-<link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen" />
-		<link href="../../css/diy.css" rel="stylesheet" media="screen" />
-  		<script src="https://code.jquery.com/jquery.js"></script>
-  		<link rel="stylesheet" href="../../css/flexslider.css" type="text/css">
-		<script src="../../js/jquery.flexslider.js"></script>
-		<script src="../../js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="../../css/main.css" rel="stylesheet" type="text/css" media="all"> 
+<title>留言板</title>
+<style type="text/css">
+<!--
+.STYLE8 {color: #CCCCCC}
+-->
+</style>
 </head>
+
 <body>
-<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(../xxzxdh%20-%20%E6%8B%B7%E8%B4%9D/images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
-      <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
-      	<div style="margin-right:25px;float:right;">
-          <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
-          <div class="row" style="float:right;margin-top:15px;">
+
+    <table width="699" height="283" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          
+          <td width="699" align="center" valign="top">
+          <div align="center">
+					<form action="searchResult.jsp?classify=<%=classify%>" method="post">
+					<div class="row" style="margin:5px auto;width:250px;">
   					<div class="col-md-12">
-    					<div class="input-group">
-      					<input type="text" class="form-control">
+    					<div class="input-group input-group-sm">
+      					<input type="text" class="form-control" name="keyword">
       					<span class="input-group-btn">
-        					<button class="btn btn-default" type="button">搜索</button>
+        					<button class="btn btn-primary" type="submit">搜索</button>
       					</span>
     					</div><!-- /input-group -->
   					</div><!-- /.col-lg-6 -->
-			</div><!-- /.row -->
-       	</div>
-      </div>
-    </div><!-- head -->
-<div id="jive-forumpage" style="width:1000px;margin:0 auto;"><br><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr valign="top"><td width="98%"><br></td>
+					</div><!-- /.row -->
+					</form>
+				</div>
+            <table width="540" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><input type="button" onclick="javascript:window.location.href='add.jsp'" value="上传文件"></input>
+                </td>
+            </tr>
+          </table>
+            <table width="540" border="0" cellpadding="0" cellspacing="0">
+			<tr><td width="540" align="center" valign="top"><% 
+   if(intPageCount>0){
+   result.absolute((intPage-1) * intPageSize + 1);
+   i = 0;
+   while(i<intPageSize && !result.isAfterLast()){ 
+%>
+<table width="530" height="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFCC">
+<tr>
+<td width="384" height="100%" align="center" valign="top" bgcolor="#FFFFFF"><table width="530" height="80" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="363" align="left" valign="top"><table width="425" border="1" cellpadding="5" cellspacing="1" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+      
+      <tr>
+        <td align="left" valign="top">
+		<strong>标题：</strong><%=result.getString("title")%><br>
+		<strong>发布时间：</strong>
+          <%=result.getString("publishtime").substring(0,10)%>
+		  
+		<a href="delete.jsp?id=<%=result.getString("id")%>&classify=<%=classify%>">删除  </a>
+		</td>
       </tr>
-    </tbody>
-  </table>
-  
-  <table border="0" cellpadding="3" cellspacing="0" width="100%">
-    <tbody>
-      <tr valign="top">
-        <td><span class="nobreak">  
-          第<%=pageNo %>页,共<%=totalPages %>页 <span class="jive-paginator"> [</span></span>
-          
-          <span class="nobreak"><span class="jive-paginator">
-          <a href="../xxzxdh - 拷贝/searchResult.jsp?pageNo=1&keyword=<%=keyword %>&classify=<%=classify%>">第一页</a></span></span>
-          
-          
-          
-          <span class="nobreak"><span class="jive-paginator">|</span></span>
-          <span class="nobreak"><span class="jive-paginator">
-          <a href="../xxzxdh - 拷贝/searchResult.jsp?pageNo=<%=pageNo - 1 %>&keyword=<%=keyword %>&classify=<%=classify%>">上一页</a>
-          </span></span>
-          
-         <span class="nobreak"><span class="jive-paginator">| </span></span>
-         <span class="nobreak"><span class="jive-paginator">
-         <a href="../xxzxdh - 拷贝/searchResult.jsp?pageNo=<%=pageNo + 1 %>&keyword=<%=keyword %>&classify=<%=classify%>">下一页</a>
-          |&nbsp; 
-          <a href="../xxzxdh - 拷贝/searchResult.jsp?pageNo=<%=totalPages %>&keyword=<%=keyword %>&classify=<%=classify%>">最末页</a> ] </span> </span> </td>
-
-          <td width="150" class="jive-icon-label"><img src="../xxzxdh - 拷贝/images/post-16x16.gif" alt="发表新主题" border="0" height="16" width="16"><a id="jive-post-thread" href="../xxzxdh - 拷贝/post.jsp?classify=<%=classify%>">发表新主题</a> <a href="http://bbs.chinajavaworld.com/forum.jspa?forumID=20&amp;isBest=1"></a></td>
-      </tr>
-    </tbody>
-  </table>
-  <table border="1" cellpadding="0" cellspacing="3" width="100%" bg-color="red">
-    <tbody>
-      <tr valign="top">
-        <td width="99%"><div class="jive-thread-list">
-            <div class="jive-table">
-              <table summary="List of threads" border="1" cellpadding="10" cellspacing="0" width="100%" >
-                <thead>
-                  <tr>
-                    <th class="jive-first" colspan="3"> 主题 </th>
-                    <th class="jive-author"> <nobr> 作者
-                      &nbsp; </nobr> </th>
-                    <th class="jive-view-count"> <nobr> 浏览
-                      &nbsp; </nobr> </th>
-                    <th class="jive-last" nowrap="nowrap"> 最新帖子 </th>
-                  </tr>
-                </thead>
-                <tbody>
-                <%
-                int lineNo = 0;
-                for(Iterator<Article> it = articles.iterator(); it.hasNext(); ) {           
-                	Article a = it.next();
-  					String classStr = lineNo%2 == 0 ? "jive-even" : "jive-odd";
-                %>
-                  <tr class="<%=classStr %>" >
-                    <td class="jive-first" nowrap="nowrap" width="1%"><div class="jive-bullet"> <img src="../xxzxdh - 拷贝/images/read-16x16.gif" alt="已读" border="0" height="16" width="16">
-                        <!-- div-->
-                      </div></td>
-                      
-                    <td nowrap="nowrap" width="1%" height="35px">
-                    	<%
-                    	String url = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort();
-                    	url += request.getContextPath();
-                    	url += request.getServletPath();
-                    	url += request.getQueryString() == null ? "" : ("?" + request.getQueryString());
-                    	//System.out.println(url);
-                    	//System.out.println(request.getRequestURI());
-                    	//System.out.println(request.getRequestURL());
-                    	 %>
-                    	 <%if (logined) {%>
-                    	 	<a href="../xxzxdh - 拷贝/modify.jsp?id=<%=a.getId()%>">MOD</a>
-                    		<a href="../xxzxdh - 拷贝/delete.jsp?id=<%=a.getId()%>&isLeaf=<%=a.isLeaf()%>&pid=<%=a.getPid() %>&from=<%=url %>">DEL</a>
-                    	 <%} %>
-                    </td>
-                    
-                    <td class="jive-thread-name" width="95%"><a id="jive-thread-1" href="../xxzxdh - 拷贝/articleDetailFlat.jsp?id=<%=a.getId() %>&classify=<%=classify%>"><%=a.getTitle() %></a></td>
-                    <td class="jive-author" nowrap="nowrap" width="1%"><span class=""> <%=a.getWriter1() %> </span></td>
-                    <%Connection connw = DB.getConn();
-	                                              Statement stmt1 = connw.createStatement();
-	                                              String sq = "select pno from course where id = "+ a.getId();
-	                                              if(classify.equals("0"))
-												  {
-													  sq = "select pno from course where id = "+ a.getId();
-												  }
-												  else if(classify.equals("1"))
-												  {	
-												      sq = "select pno from reading where id = "+ a.getId();
-												  }
-												  else if(classify.equals("2"))
-												  {	
-												 	  sq = "select pno from salon where id = "+ a.getId();
-												  }
-	                                              ResultSet rs1 = stmt1.executeQuery(sq);
-	                                              while(rs1.next()){
-	                                              %>
-												<td class="jive-view-count" width="1%">
-													<%=rs1.getInt("pno") %>
-												</td>
-												<%} %>
-                    <td class="jive-last" nowrap="nowrap" width="1%"><div class="jive-last-post"> <%=new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(a.getPdate()) %> <br>
-                     </div></td>
-                  </tr>
-                 
-                  <%
-                  	lineNo++;
-                  }
-                  %>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="jive-legend"></div></td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
-  <br>
-</div>
+    </table></td>
+  </tr>
+</table>
+  </td>
+</tr>
+</table>
+<%
+  result.next();
+  i++;
+  }
+  }
+%></td>
+			</tr>
+</table>
+<table width="480" height="28" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="535" align="right"><a href="display.jsp?classify=<%=classify%>&page=1">首页</a>
+<%if(intPage>1){
+%>
+<a href="display.jsp?classify=<%=classify%>&page=<%=intPage-1%>">上一页</a>
+<%}%>
+<%if(intPage<intPageCount)
+{%>
+<a href="display.jsp?classify=<%=classify%>&page=<%=intPage+1%>">下一页</a>
+<%}%>
+<a href="display.jsp?classify=<%=classify%>&page=<%=intPageCount%>">尾 页</a>
+页次：<%=intPage%>/<%=intPageCount%>页 <%=intPageSize%>条/页  
+</td>
+</tr>
+</table>
+          </td>
+        </tr>
+      </table>
+	 
+    
 </body>
 </html>

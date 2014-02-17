@@ -1,7 +1,20 @@
+<%@ page language="java" contentType="text/html;charset=gb2312" %>
+<%@ page import="java.sql.*" %>
+<%@ include file="../admin/news/conn.jspf" %>
+<% 
+	String classify=request.getParameter("classify");
+	String id=request.getParameter("id");
+	sta = conn.createStatement();  //����Statement����     
+	String sql = "select * from "+classify+" where id ="+id+" order by id desc";    //ִ��SQL���
+  	System.out.println(sql);
+	ResultSet result = sta.executeQuery(sql);
+      
+	result.absolute(1);   //��ȡ��¼����
+%>
 <!doctype html>
 <html lang="en">
 <head>
-<title>新闻通告</title>
+<title>����ͨ��</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script src="../js/jquery.js"></script>
@@ -102,8 +115,8 @@
   <div id="head" style="background:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
-  	<a href="http://www.zju.edu.cn">浙江大学</a>&nbsp;|
-    <a href="../index.jsp">中文</a>&nbsp;|
+  	<a href="http://www.zju.edu.cn">�㽭��ѧ</a>&nbsp;|
+    <a href="../index.jsp">����</a>&nbsp;|
     <a href="#">English</a></font>
    </div>
 	<div class="row fl" style="width:250px;margin-left:915px;">
@@ -111,7 +124,7 @@
     		<div class="input-group input-group-sm">
               	 <input type="text" class="form-control ">
       					<span class="input-group-btn">
-        					<button class="btn btn-default " type="button">搜索</button>
+        					<button class="btn btn-default " type="button">����</button>
       					</span>
                 
     					</div><!-- /input-group -->
@@ -121,143 +134,143 @@
     <div style="text-align:center;line-height:30px;height:30px;background:url(../images/colomnBack2.gif);">
       <div style="width:195px;height:30px;align:center;" class="fl">
 			<span class="menuOn" id="mod0">
-			<a href="../index.jsp" class="white-font "> 主页</a></span>
+			<a href="../index.jsp" class="white-font "> ��ҳ</a></span>
       </div>
       <div style="width:96px;height:30px;align:center;background-color:#030303;" id="mod1" class="fl">
 			<span class="menuOn" onMouseOver="switchMod(1);" >
-			<a href="#" class="white-font "> 系情介绍</a></span>
+			<a href="#" class="white-font "> ϵ�����</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod2" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(2);">
-			<a href="#" class="white-font ">新闻通告</a></span>
+			<a href="#" class="white-font ">����ͨ��</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod3" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(3);">
-			<a href="#" class="white-font">教学培养</a></span>
+			<a href="#" class="white-font">��ѧ����</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod4" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(4);">
-			<a href="#" class="white-font">招生专栏</a></span>
+			<a href="#" class="white-font">����ר��</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod5"  class="fl">
 			<span class="menuNo" onMouseOver="switchMod(5);">
-			<a href="#" class="white-font">教研成果</a></span>
+			<a href="#" class="white-font">���гɹ�</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod6" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(6);">
-			<a href="#" class="white-font">学生园地</a></span>
+			<a href="#" class="white-font">ѧ��԰��</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod7" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(7);">
-			<a href="#" class="white-font">哲学论坛</a></span>
+			<a href="#" class="white-font">��ѧ��̳</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod8" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(8);">
-			<a href="#" target="_blank" class="white-font">闻人轶事</a></span>
+			<a href="#" target="_blank" class="white-font">��������</a></span>
       </div>
       <div style="width:102px;height:30;align:center;" id="mod9" class="fl">
       <span class="menuNo" onMouseOver="switchMod(9);">
-			<a href="#" target="_blank" class="white-font">资源链接</a></span>
+			<a href="#" target="_blank" class="white-font">��Դ����</a></span>
       </div>
       </div>
   </div><!-- column -->
-	<div class="slidingList" id="slidingList1" style="color:#fff;text-align:center;padding-top:5px;height:30px;float:left;margin-left:253px;display:;background:#0f0f0f;"><!-- 导航栏列表区 -->
+	<div class="slidingList" id="slidingList1" style="color:#fff;text-align:center;padding-top:5px;height:30px;float:left;margin-left:253px;display:;background:#0f0f0f;"><!-- �������б��� -->
 		>>
-<a href="../jianjie/xygk.jsp"> 学院概况</a>|
-<a href="../jianjie/szll.jsp">师资力量</a>
+<a href="../jianjie/xygk.jsp"> ѧԺ�ſ�</a>|
+<a href="../jianjie/szll.jsp">ʦ������</a>
 
 	</div>
   <div class="slidingList" id="slidingList2" style="height:30px;float:left;margin-left:349px;display:none;background:#0f0f0f;padding-top:5px;">
   	>>
-<a href="../xinxi/tzgg.jsp"> 通知公告</a>|
-<a href="../xinxi/xwbd.jsp">新闻报道</a>
+<a href="../xinxi/tzgg.jsp"> ֪ͨ����</a>|
+<a href="../xinxi/xwbd.jsp">���ű���</a>
 		
 	</div>
   <div class="slidingList" id="slidingList3" style="height:30px;float:left;margin-left:445px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../kecheng/pyfa.jsp"> 培养方案</a>|
-			<a href="../kecheng/bkkc.jsp">本科课程</a>
+			<a href="../kecheng/pyfa.jsp"> ��������</a>|
+			<a href="../kecheng/bkkc.jsp">���ƿγ�</a>
       |
-			<a href="../kecheng/sbkc.jsp">硕博课程</a>
+			<a href="../kecheng/sbkc.jsp">˶���γ�</a>
       |
-			<a href="../kecheng/xqkb.jsp">学期课表</a>
+			<a href="../kecheng/xqkb.jsp">ѧ�ڿα�</a>
       |
-			<a href="../kecheng/kczl.jsp">课程资料</a>
+			<a href="../kecheng/kczl.jsp">�γ�����</a>
 		
 	</div>
   <div class="slidingList" id="slidingList4" style="height:30px;float:left;margin-left:541px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../zhaosheng/zsxx.jsp"> 招生信息</a>
+			<a href="../zhaosheng/zsxx.jsp"> ������Ϣ</a>
 			|
-			<a href="../zhaosheng/lnzt.jsp">历年真题</a>
+			<a href="../zhaosheng/lnzt.jsp">��������</a>
       |
-			<a href="../zhaosheng/zszx.jsp">招生咨询</a>
+			<a href="../zhaosheng/zszx.jsp">������ѯ</a>
 		
 	</div>
   <div class="slidingList" id="slidingList5" style="height:30px;float:left;margin-left:637px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../chengguo/kycg.jsp"> 科研成果</a>
+			<a href="../chengguo/kycg.jsp"> ���гɹ�</a>
 			|
-			<a href="../chengguo/jxcg.jsp">教学成果</a>
+			<a href="../chengguo/jxcg.jsp">��ѧ�ɹ�</a>
       |
-			<a href="../chengguo/kyxm.jsp">科研项目</a>
+			<a href="../chengguo/kyxm.jsp">������Ŀ</a>
       |
-			<a href="../chengguo/hjxx.jsp">获奖信息</a>
+			<a href="../chengguo/hjxx.jsp">����Ϣ</a>
 		
 	</div>
   <div class="slidingList" id="slidingList6" style="height:30px;float:left;margin-left:733px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../xuesheng/xsml.jsp"> 学生名录</a>
+			<a href="../xuesheng/xsml.jsp"> ѧ����¼</a>
 			|
-			<a href="../xuesheng/xshd.jsp">学生活动</a>
+			<a href="../xuesheng/xshd.jsp">ѧ���</a>
       |
-			<a href="../xuesheng/xszp.jsp">学生作品</a>
+			<a href="../xuesheng/xszp.jsp">ѧ����Ʒ</a>
 		
 	</div>
   <div class="slidingList" id="slidingList7" style="height:30px;float:left;margin-left:780px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../uselogin.jsp"> 课程讨论</a>
+			<a href="../uselogin.jsp"> �γ�����</a>
 			|
-			<a href="../uselogin.jsp">读书会</a>
+			<a href="../uselogin.jsp">�����</a>
       |
-			<a href="../uselogin.jsp">哲学沙龙</a>
+			<a href="../uselogin.jsp">��ѧɳ��</a>
 		
 	</div>
   <div class="slidingList" id="slidingList8" style="height:30px;float:left;margin-left:870px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../gushi/zxqw.jsp"> 哲学趣闻</a>
+			<a href="../gushi/zxqw.jsp"> ��ѧȤ��</a>
 			|
-			<a href="../gushi/xygs.jsp">校园故事</a>
+			<a href="../gushi/xygs.jsp">У԰����</a>
       |
-			<a href="../gushi/xyfc.jsp">校友风采</a>
+			<a href="../gushi/xyfc.jsp">У�ѷ��</a>
 		
 	</div>
   <div class="slidingList" id="slidingList9" style="height:30px;float:left;margin-left:921px;display:none;background:#0f0f0f;padding-top:5px;">
   		>>
-			<a href="#"> 校内网站</a>
+			<a href="#"> У����վ</a>
 			|
-			<a href="#">校外资源</a>
+			<a href="#">У����Դ</a>
       |
-			<a href="#">国外资源</a>
+			<a href="#">������Դ</a>
 		
-	</div><!-- 导航栏列表区 -->
+	</div><!-- �������б��� -->
 </div>
 
 	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;padding-bottom:15px;height:auto;">
 		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;">
-     <div class="panel-group" id="accordion" style=""><!--网站地图-->
+     <div class="panel-group" id="accordion" style=""><!--��վ��ͼ-->
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> ����ͨ��</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="../xinxi/tzgg.jsp" style="color:#000;" class="panel-item">通知公告</a>
+        			<a href="../xinxi/tzgg.jsp" style="color:#000;" class="panel-item">֪ͨ����</a>
       			</div>
       			<div class="panel-body">
-        			<a href="../xinxi/xwbd.jsp" style="color:#000;" class="panel-item">新闻报道</a>
+        			<a href="../xinxi/xwbd.jsp" style="color:#000;" class="panel-item">���ű���</a>
       			</div>
     		</div>
   		</div> 
@@ -265,44 +278,18 @@
      
 		</div>
 
-		<div class="gray-border" style="margin-left:15px;width:840px;height:auto;float:right;font-size:14px;"><!--分页显示内容-->
-			<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
-         <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
-         <a style="color:#fff;" href="../index.jsp">主页</a>
-         <span style="color:#fff;">->新闻通告</span>	
+		<div class="gray-border" style="margin-left:15px;width:840px;height:auto;float:right;font-size:14px;"><!--��ҳ��ʾ����-->
+			<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--��ǰλ��-->
+         <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> ��ǰλ�ã�</span>
+         <a style="color:#fff;" href="../index.jsp">��ҳ</a>
+         <span style="color:#fff;">->����ͨ��</span>	
 		</div>
     
     	<div class="gray-border round-border" style="width:840px;height:auto;background-color:#FFF;margin-top:15px;padding-top:15px;">
-  		<div align="center" style="line-height:1.5;">"西溪哲学对话"第二十四次活动通知</div>
-      <div style="border-bottom:1px dashed #999;line-height:1.5;" align="center">发布时间： 2013-11-27  15:03:06 | 来源： 本站</div>
-      <div style="padding-left:15px;">
-      	<p align="center">&nbsp;
-	</p>
-<p>
-	主&nbsp; 题：认知科学与佛学</p>
-<p>
-	报告人：索达吉堪布</p>
-<p>
-	主持人：李恒威教授</p>
-<p align="left">
-	时&nbsp; 间：2013年12月4日（周三）18:30</p>
-<p align="left">
-	地&nbsp; 点：人文学院咖啡馆</p>
-<p>&nbsp;
-	</p>
-<p>
-	索达吉堪布简介：</p>
-<p>
-	&nbsp; &nbsp;索达吉堪布生于1962年。1985年，舍俗出家，前往色达喇荣五明佛学院，依止法王如意宝晋美彭措为根本上师。</p>
-<p>
-	&nbsp;&nbsp; 早在上世纪90年代，随法王前往美国、英国、德国等十几个国家后返，因感汉地佛子因语言障碍而无缘接触藏传佛教，堪布将大量藏文经论译成汉语，并以通俗易懂的方式传讲。20多年来，废寝忘食，不遗余力，不但培养了无数佛教人才，而且著作等传法教材、出版书籍等累计超过上千万册。</p>
-<p>
-	从2010年起至今，受邀至清华、北大、浙大、人大、复旦、港大以及哈佛大学、华盛顿大学、哥伦比亚大学等众多著名学府演讲，发起并参与主办多届世界青年佛学研讨会，与知识分子们进行交流，将佛教真理与当今科学结合起来，引导大家正确面对学业、情感、工作、人生。</p>
-<p>
-	&nbsp;&nbsp; 近年来，堪布经常与众多海内外学者，对于环保、和平、道德、跨宗教等问题进行深入探索，希望提升一切生命的福祉，同时，堪布发动了启动爱心的倡议，号召大家在学佛之余，不要漠视身边的弱势群体。先后建立小学，中学，养老院，居士林，小沙弥学院，资助濒临失学的大学生，救济无钱治病的重症患者等。</p>
-<p>
-	索达吉堪布常说：我不知道自己能活多长时间，但只要有一口气，哪怕只有一个人听法，我也会尽心尽力用佛法饶益他。<br />
-	&nbsp;</p>
+  		<div align="center" style="line-height:1.5;"><%=result.getString("title") %></div>
+      <div style="border-bottom:1px dashed #999;line-height:1.5;" align="center">����ʱ�䣺 <%=result.getString("publishtime") %> | ��Դ��<%=result.getString("newsfrom") %> </div>
+      <div style="padding-left:15px;padding-top:15px;">
+      	<%=result.getString("content") %>
   		
       </div>
   	</div>

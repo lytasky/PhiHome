@@ -30,8 +30,9 @@
 	}
   
   String classify = request.getParameter("classify");
-  //System.out.println(classify);
-  String sql = "select * from file where classify="+classify+" order by id desc";    //执行SQL语句
+  String id=request.getParameter("id");
+  System.out.println(classify);
+  String sql = "select * from "+classify+" where id="+id+"order by id desc";    //执行SQL语句
   ResultSet result = sta.executeQuery(sql);
       
 	result.last();   //获取记录总数
@@ -58,20 +59,6 @@
         <tr>
           
           <td width="699" align="center" valign="top">
-          <div align="center">
-					<form action="searchResult.jsp?classify=<%=classify%>" method="post">
-					<div class="row" style="margin:5px auto;width:250px;">
-  					<div class="col-md-12">
-    					<div class="input-group input-group-sm">
-      					<input type="text" class="form-control" name="keyword">
-      					<span class="input-group-btn">
-        					<button class="btn btn-primary" type="submit">搜索</button>
-      					</span>
-    					</div><!-- /input-group -->
-  					</div><!-- /.col-lg-6 -->
-					</div><!-- /.row -->
-					</form>
-				</div>
             <table width="540" border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td><input type="button" onclick="javascript:window.location.href='add.jsp'" value="上传文件"></input>
@@ -94,10 +81,10 @@
       <tr>
         <td align="left" valign="top">
 		<strong>标题：</strong><%=result.getString("title")%><br>
-		<strong>发布时间：</strong>
-          <%=result.getString("publishtime").substring(0,10)%>
-		  <br><br>
-		<a href="delete.jsp?id=<%=result.getString("id")%>&classify=<%=classify%>">删除  </a>
+		<strong>内容：</strong>
+          <%=result.getString("content")%>
+		  
+		<a href="delete.jsp?id=<%=result.getString("id")%> ">删除  </a>
 		</td>
       </tr>
     </table></td>
@@ -116,7 +103,7 @@
 </table>
 <table width="480" height="28" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td width="535" align="right"><a href="display.jsp?classify=<%=classify%>&page=1">首页</a>
+<td width="535" align="right"><a href="lyb.jsp?page=1">首页</a>
 <%if(intPage>1){
 %>
 <a href="display.jsp?classify=<%=classify%>&page=<%=intPage-1%>">上一页</a>

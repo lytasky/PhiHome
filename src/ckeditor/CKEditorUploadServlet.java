@@ -64,6 +64,7 @@ public class CKEditorUploadServlet extends HttpServlet {
 			throws ServletException, IOException {
 		if (debug)
 			System.out.println("--- BEGIN DOPOST ---");
+		System.out.println("准备上传");
 		response.setContentType("text/html; charset=UTF-8");
 		response.setHeader("Cache-Control", "no-cache");
 		PrintWriter out = response.getWriter();
@@ -132,6 +133,7 @@ public class CKEditorUploadServlet extends HttpServlet {
 						counter++;
 					}
 					uplFile.write(pathToSave);
+					System.out.println("上传成功");
 				} else {
 					if (debug)
 						System.out.println("无效的文件类型： " + ext);
@@ -152,6 +154,7 @@ public class CKEditorUploadServlet extends HttpServlet {
 		out.println("</script>");
 		out.flush();
 		out.close();
+		System.out.println("上传成功");
 		if (debug)
 			System.out.println("--- END DOPOST ---");
 	}

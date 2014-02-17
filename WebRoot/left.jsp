@@ -43,7 +43,7 @@
 			<li><a href=".">新闻通告</a>
 
 				<ul>
-					<li><a href="/">通知报告</a></li>
+					<li><a href="admin/news/display.jsp?classify=tzgg" target="main">通知公告</a></li>
 					<li><a href="/">新闻报道</a></li>
 				</ul>
 			</li>
