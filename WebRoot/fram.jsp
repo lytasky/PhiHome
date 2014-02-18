@@ -2,6 +2,7 @@
 <%
 	String adminLogined = (String) session.getAttribute("admLogined");
 	if (adminLogined != null && adminLogined.trim().equals("true")) {
+		session.setMaxInactiveInterval(60); 
 	}
 	else{
 		out.println("Äã»¹Ã»ÓÐµÇÂ½£¬ÇëµÇÂ½") ;
