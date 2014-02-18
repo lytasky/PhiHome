@@ -61,7 +61,7 @@
 				<ul>
 					<li><a href="admin/file/display.jsp?classify='zsxx'" target="main">招生信息</a></li>
 					<li><a href="admin/file/display.jsp?classify='lnzt'" target="main">历年真题</a></li>
-					<li><a href="/">招生咨询</a></li>
+					<li><a href="admin/lyb.jsp" target="main">招生咨询</a></li>
 				</ul>
 			</li>
       <li><a href=".">教研成果</a>

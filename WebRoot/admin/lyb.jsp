@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html;charset=gb2312" %>
 <%@ page import="java.sql.*" %>
-<%@ include file="sessoncheck.jspf" %>
 <%@ include file="conn.jspf" %>
 <%   
   sta = conn.createStatement();  //创建Statement对象      

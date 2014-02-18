@@ -70,7 +70,7 @@
 	}	
 	Statement stmt = DB.createStmt(conn);
 	ResultSet rs = DB.executeQuery(stmt, sql);
-	while (rs.next()) {
+	while (rs!= null && rs.next()) {
 		Article a = new Article();
 		a.initFromRs(rs);
 		articles.add(a);
@@ -86,8 +86,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 	<head>
-		<title>Java|Java世界_中文论坛|ChinaJavaWorld技术论坛 :
-			初学java遇一难题！！望大家能帮忙一下 ...</title>
+		<title>哲学论坛</title>
 		<meta http-equiv="content-type" content="text/html; charset=GBK">
 		<link rel="stylesheet" type="text/css" href="images/style.css"
 			title="Integrated Styles">

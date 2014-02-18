@@ -68,7 +68,7 @@
 	String sql = "select * from course where pid = 0 order by pdate desc limit "
 			+ startPos + "," + PAGE_SIZE;
 	ResultSet rs = DB.executeQuery(stmt, sql);
-	while (rs.next()) {
+	while (rs!= null && rs.next()) {
 		Article a = new Article();
 		a.initFromRs(rs);
 		articles.add(a);

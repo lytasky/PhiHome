@@ -55,7 +55,7 @@
 			+ startPos + "," + PAGE_SIZE;
 	System.out.println(sql);
 	ResultSet rs = DB.executeQuery(stmt, sql);
-	while (rs.next()) {
+	while (rs!= null && rs.next()) {
 		Teacher oneUser=new Teacher();
 		oneUser.initFromR(rs);
 		users.add(oneUser);

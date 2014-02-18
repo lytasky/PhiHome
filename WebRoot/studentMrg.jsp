@@ -55,7 +55,7 @@
 	String sql = "select * from student limit "
 			+ startPos + "," + PAGE_SIZE;
 	ResultSet rs = DB.executeQuery(stmt, sql);
-	while (rs.next()) {
+	while (rs!= null && rs.next()) {
 		Student oneUser=new Student();
 		oneUser.initFromR(rs);
 		users.add(oneUser);

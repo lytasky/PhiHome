@@ -1,4 +1,15 @@
 <%@ page pageEncoding="GB18030"%>
+<%
+	String adminLogined = (String) session.getAttribute("adminLogined");
+	if (adminLogined != null && adminLogined.trim().equals("true")) {
+		session.invalidate(); 
+	}
+	else{
+		out.println("你还没有登陆，请登陆") ;
+		out.println("<br>经过三秒之后，网页会自动返回登陆界面");
+		response.setHeader("Refresh","3;URL=adminLogin.jsp"); 
+	}
+%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
