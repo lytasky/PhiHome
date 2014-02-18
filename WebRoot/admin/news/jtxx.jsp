@@ -1,52 +1,23 @@
 <%@ page language="java" contentType="text/html;charset=gb2312" %>
 <%@ page import="java.sql.*" %>
-<%@ include file="../admin/file/conn.jspf" %>
-<%   
-  sta = conn.createStatement();  //创建Statement对象      
-  
-  	int intPageSize; //一页显示的记录数
-	int intRowCount; //记录总数
-	int intPageCount; //总页数
-	int intPage; //待显示页码
-	int layer;
-	int idlayer;
-	idlayer=1;
-	String outtext;
-	outtext="";
-	String strPage;
-	int j;
-	int i;
-	//设置一页显示的记录数
-	intPageSize = 5;
-	
-	//取得待显示页码
-	strPage = request.getParameter("page");
-	if(strPage==null){//表明在QueryString中没有page这一个参数，此时显示第一页数据
-	  intPage = 1;
-	}
-	else{//将字符串转换成整型
-	  intPage = java.lang.Integer.parseInt(strPage);
-	  if(intPage<1) intPage = 1;
-	}
-  
-  //String classify = request.getParameter("classify");
-  //System.out.println(classify);
-  //String classify="pyfa";
-  String sql = "select * from file where classify='xqkb' order by id desc";    //执行SQL语句
-  ResultSet result = sta.executeQuery(sql);
+<%@ include file="conn.jspf" %>
+<% 
+	String classify=request.getParameter("classify");
+	String id=request.getParameter("id");
+	sta = conn.createStatement();  //创建Statement对象     
+	String sql = "select * from "+classify+" where id ="+id+" order by id desc";    //执行SQL语句
+  	System.out.println(sql);
+	ResultSet result = sta.executeQuery(sql);
       
-	result.last();   //获取记录总数
-	intRowCount = result.getRow();
-    intPageCount = (intRowCount+intPageSize-1) / intPageSize;   //记算总页数
-	if(intPage>intPageCount){intPage = intPageCount;}	//调整待显示的页码
+	result.absolute(1);   //获取记录总数
 %>
 <!doctype html>
 <html lang="en">
 <head>
-<title>学院概况</title>
+<title>新闻通告</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="../js/juery.js"></script>
+<script src="../js/jquery.js"></script>
 <style type="text/css">
 	.td-width{
 		width:80px;	
@@ -140,7 +111,7 @@
 
 </head>
 <body style="margin-top:0px;">
-<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
+<div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;height:auto;">
   <div id="head" style="background:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
@@ -175,7 +146,6 @@
       </div>
       <div style="width:96px;height:30;align:center;" id="mod3" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(3);">
-
 			<a href="#" class="white-font">教学培养</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod4" class="fl">
@@ -283,90 +253,51 @@
       |
 			<a href="#">国外资源</a>
 		
-
 	</div><!-- 导航栏列表区 -->
 </div>
 
-	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;height:700px;">
-		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;float:left;">
+	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;padding-bottom:15px;height:auto;">
+		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;">
      <div class="panel-group" id="accordion" style=""><!--网站地图-->
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 教学培养</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> 新闻通告</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="../kecheng/pyfa.jsp" style="color:#000;" class="panel-item">培养方案</a>
+        			<a href="../xinxi/tzgg.jsp" style="color:#000;" class="panel-item">通知公告</a>
       			</div>
       			<div class="panel-body">
-        			<a href="../kecheng/bkkc.jsp" style="color:#000;" class="panel-item">本科课程</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="../kecheng/sbkc.jsp" style="color:#000;" class="panel-item">硕博课程</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="../kecheng/xqkb.jsp" style="color:#000;" class="panel-item">学期课表</a>
-      			</div>
-            <div class="panel-body">
-        			<a href="../kecheng/kczl.jsp" style="color:#000;" class="panel-item">课程资料</a>
+        			<a href="../xinxi/xwbd.jsp" style="color:#000;" class="panel-item">新闻报道</a>
       			</div>
     		</div>
   		</div> 
 	   </div><!-- panel-group -->
      
-	</div>
+		</div>
 
-		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;font-size:14px;"><!--分页显示内容-->
-		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
+		<div class="gray-border" style="margin-left:15px;width:840px;height:auto;float:right;font-size:14px;"><!--分页显示内容-->
+			<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
-         <span style="color:#fff;">->教学培养</span>	
-      <span style="color:#fff;">->学期课表</span>	
+         <span style="color:#fff;">->新闻通告</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;padding-top:15px;">  
-      <% 
-   if(intPageCount>0){
-   result.absolute((intPage-1) * intPageSize + 1);
-   i = 0;
-   while(i<intPageSize && !result.isAfterLast()){ 
-	   String content= result.getString("content");
-	   String[] name=content.split("\""); 	
-	   String path=name[3];
-%>
-      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="<%=path%>" style="color:#000;"><%=result.getString("title")%></a></div>
-        <div class="" style="width:200px;float:right;"><span><%=result.getString("publishtime").substring(0,10)%></span></div>
-      </div>
-      <%
-  result.next();
-  i++;
-  }
-  }
-%>
-      
-      
-      <div class="" style="line-height:1.5;width:300px;margin:auto;margin-top:15px;">
-      	<a href="pyfa.jsp?classify='pyfa'&page=1">首页</a>
-<%if(intPage>1){
-%>
-<a href="pyfa.jsp?classify='pyfa'&page=<%=intPage-1%>">上一页</a>
-<%}%>
-<%if(intPage<intPageCount)
-{%>
-<a href="pyfa.jsp?classify='pyfa'&page=<%=intPage+1%>">下一页</a>
-<%}%>
-<a href="pyfa.jsp?classify='pyfa'&page=<%=intPageCount%>">尾 页</a>
-页次：<%=intPage%>/<%=intPageCount%>页 <%=intPageSize%>条/页  
+    	<div class="gray-border round-border" style="width:840px;height:auto;background-color:#FFF;margin-top:15px;padding-top:15px;">
+  		<div align="center" style="line-height:1.5;"><%=result.getString("title") %></div>
+      <div style="border-bottom:1px dashed #999;line-height:1.5;" align="center">发布时间： <%=result.getString("publishtime") %> | 来源：<%=result.getString("newsfrom") %> </div>
+      <div style="padding-left:15px;padding-top:15px;">
+      	<%=result.getString("content") %>
+  		
       </div>
   	</div>
+  	</div>
   </div>
-	</div>
-  
   <div id="root" style="width:1181px;height:187px;z-index:-1;background:url(../images/root.gif);float:left;">
   </div>
+  <div style="clear:both;"></div>
 </div>
 </body>
 </html>

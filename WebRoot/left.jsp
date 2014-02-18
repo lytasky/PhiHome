@@ -23,9 +23,9 @@
 				<ul>
         	<li><a href="#">图片集</a></li>
 					<li><a href="admin/xxzxdh/display.jsp">西溪哲学对话</a></li>
-					<li><a href="#">哲学与大学</a></li>
-					<li><a href="#">通知公告</a></li>
-					<li><a href="#">新闻报道</a></li>
+					<li><a href="admin/news/display.jsp?classify=zxydx" target="main">哲学与大学</a></li>
+					<li><a href="admin/news/display.jsp?classify=tzgg" target="main">通知公告</a></li>
+					<li><a href="admin/news/display.jsp?classify=xwbd" target="main">新闻报道</a></li>
           <li><a href="#">热点关注</a></li>
           <li><a href="#">成果展示</a></li>
           <li><a href="#">学生园地</a></li>
@@ -44,7 +44,7 @@
 
 				<ul>
 					<li><a href="admin/news/display.jsp?classify=tzgg" target="main">通知公告</a></li>
-					<li><a href="/">新闻报道</a></li>
+					<li><a href="admin/news/display.jsp?classify=xwbd" target="main">新闻报道</a></li>
 				</ul>
 			</li>
 
@@ -60,7 +60,7 @@
 			<li><a href=".">招生专栏</a>
 				<ul>
 					<li><a href="admin/file/display.jsp?classify='zsxx'" target="main">招生信息</a></li>
-					<li><a href="admin/file/display.jsp?classify='lnzt'" target="main">历练真题</a></li>
+					<li><a href="admin/file/display.jsp?classify='lnzt'" target="main">历年真题</a></li>
 					<li><a href="/">招生咨询</a></li>
 				</ul>
 			</li>
@@ -83,7 +83,7 @@
 				<ul>
 					<li><a href="/">哲学趣闻</a></li>
 					<li><a href="/">校园故事</a></li>
-					<li><a href="admin/file/display.jsp?classify='pyfa'" target="xyfc">校友风采</a></li>
+					<li><a href="admin/file/display.jsp?classify='xyfc'" target="main">校友风采</a></li>
 				</ul>
 			</li>
       <li><a href=".">论坛管理</a>
