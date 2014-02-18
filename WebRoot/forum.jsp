@@ -144,7 +144,7 @@
   	<div id="publish" style="width:1000px;height:278px;display:block;margin:50px auto;"><!--publish-->
   	<div class="list-group">
     	<div class="gray-border">
-        <a href="xinxi/zytg.jsp" class="list-group-item active" style="background-color:#3276b1;font-size:14px;">
+        <a href="forum.jsp" class="list-group-item active" style="background-color:#3276b1;font-size:14px;">
           <span class="glyphicon glyphicon-list-alt"></span> ÂÛÌ³·ÖÇø
         </a>
       </div>

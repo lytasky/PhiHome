@@ -329,7 +329,7 @@
 %>
       <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
 
-      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="jtxx.jsp?classify=xwbd&id=<%=result.getString("id")%>" style="color:#000;"><%=result.getString("title")%></a></div>
+      	<div class="" style="width:600px;float:left;margin-left:25px;letter-spacing:2px;"><a href="jtxx.jsp?classify=xwbd&id=<%=result.getString("id")%>" style="color:#000;"><%=result.getString("title")%></a></div>
 
         <div class="" style="width:200px;float:right;"><span><%=result.getString("publishtime").substring(0,10)%></span></div>
       </div>
