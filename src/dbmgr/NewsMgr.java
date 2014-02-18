@@ -13,25 +13,25 @@ public class NewsMgr {
 	public List<News> get(String tableType ,int number)
 	{
 		List<News> listNews = new ArrayList<News>();
-		String sql = "select * from xxzxdh";
+		String sql = "select * from xxzxdh order by id desc";
 		db_conn.ConnectDB("news");
 		ResultSet rs = null;
 		int i = 0;
 		try{
 			if(tableType.equalsIgnoreCase("XixiDuihua")){
 				
-				sql = "select * from xxzxdh";			
+				sql = "select * from xxzxdh order by id desc";			
 			}else if (tableType.equalsIgnoreCase("ZhexueAndDaxue")){
-				sql = "select * from zxydx";
+				sql = "select * from zxydx order by id desc";
 			}else if(tableType.equalsIgnoreCase("ZhexueQushi")){
-				sql = "select * from zxqw";
+				sql = "select * from zxqw order by id desc";
 			}else if(tableType.equalsIgnoreCase("TongzhiGonggao")){
-				sql = "select * from tzgg";
+				sql = "select * from tzgg order by id desc";
 			}else if(tableType.equalsIgnoreCase("XinwenBaodao")){
-				sql = "select * from xwbd";
+				sql = "select * from xwbd order by id desc";
 			}
 			rs = db_conn.sm.executeQuery(sql);   
-			while(i >= number || rs.next())
+			while(i++ < number && rs.next())
 			{
 				News news = new News();
 				
