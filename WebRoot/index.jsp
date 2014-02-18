@@ -460,7 +460,7 @@
       			String title = duihua.getTitle();
       			int id = duihua.getId();
       	%>
-        <a href="admin/news/jtxx.jsp?classify=xxzxdh?id=<%=id %>">>><%=title%></a><br>
+        <a href="admin/news/jtxx.jsp?classify=xxzxdh&id=<%=id %>">>><%=title%></a><br>
         <%
       		}
         %>
@@ -478,7 +478,7 @@
       			String title = zhexue.getTitle();
       			int id = zhexue.getId();
       	%>
-        <a href="admin/news/jtxx.jsp?classify=zxydx?id=<%=id %>">>><%=title %></a><br>
+        <a href="admin/news/jtxx.jsp?classify=zxydx&id=<%=id %>">>><%=title %></a><br>
 		<%
       		}
 		%>
@@ -495,7 +495,7 @@
       			String title = qushi.getTitle();
       			int id = qushi.getId();
       	%>
-        <a href="admin/news/jtxx.jsp?classify=zxqw?id=<%=id %>">>><%=title %></a><br>
+        <a href="admin/news/jtxx.jsp?classify=zxqw&id=<%=id %>">>><%=title %></a><br>
 		<%
       		}
 		%>
@@ -578,8 +578,7 @@
           </map>
       	</div>
         <div style="padding-left:10px;line-height:1.8;">
-        	<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究<
-			/a><br>
+        	<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
 					<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
 					<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
 					<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>

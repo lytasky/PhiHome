@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html;charset=gb2312" %>
 <%@ page import="java.sql.*" %>
-<%@ include file="sessoncheck.jspf" %>
+
 <% 
   request.setCharacterEncoding("gb2312");
   String id = request.getParameter("id");  
