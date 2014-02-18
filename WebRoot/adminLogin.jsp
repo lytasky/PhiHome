@@ -23,7 +23,7 @@
   
     				try {
     					//转发至注册错误页面 
-    					response.sendRedirect("log_failure.jsp");
+    					response.sendRedirect("adminLogin.jsp");
     				} 
     				catch (Throwable t) {
                         //写异常日志
@@ -95,7 +95,7 @@ body {
     <br>
     <span class="STYLE1">浙江大学哲学系网站管理员登陆</span></p>
   <p>&nbsp;  </p>
-  <form action="login.jsp" method="post" name="adminlog">
+  <form action="adminLogin.jsp" method="post" name="adminlog">
   <table cellpadding="5">
   
     <input type="hidden" name="action" value="log"/>

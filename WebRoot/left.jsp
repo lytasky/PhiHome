@@ -95,7 +95,7 @@
 			</li>
 		</ul>
 
-<a href="login.jsp" target="_top">×¢ÏúµÇÂ½</a><br>
+<a href="adminLogin.jsp" target="_top">×¢ÏúµÇÂ½</a><br>
 
 
 
