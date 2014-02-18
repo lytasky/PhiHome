@@ -31,7 +31,7 @@
   
   //String classify = request.getParameter("classify");
   //System.out.println(classify);
-  //String classify="tzgg";
+
   String sql = "select * from xwbd order by id desc";    //执行SQL语句
   ResultSet result = sta.executeQuery(sql);
       
@@ -211,7 +211,9 @@
 	</div>
   <div class="slidingList" id="slidingList2" style="height:30px;float:left;margin-left:349px;display:none;background:#0f0f0f;padding-top:5px;">
   	>>
+
 <a href="../xinxi/tzgg.jsp"> 通知公告</a>|
+
 <a href="../xinxi/xwbd.jsp">新闻报道</a>
 		
 	</div>
@@ -299,7 +301,9 @@
         			<a href="../xinxi/tzgg.jsp" style="color:#000;" class="panel-item">通知公告</a>
       			</div>
       			<div class="panel-body">
-        			<a href="../xinxi/szll.jsp" style="color:#000;" class="panel-item">新闻报道</a>
+
+        			<a href="../xinxi/xwbd.jsp" style="color:#000;" class="panel-item">新闻报道</a>
+
       			</div>
     		</div>
   		</div> 
@@ -316,6 +320,7 @@
 		</div>
     
     <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;padding-top:15px;">  
+
       <% 
    if(intPageCount>0){
    result.absolute((intPage-1) * intPageSize + 1);
@@ -323,7 +328,9 @@
    while(i<intPageSize && !result.isAfterLast()){ 
 %>
       <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:600px;float:left;margin-left:25px;letter-spacing:2px;"><a href="jtxx.jsp?classify=xwbd&id=<%=result.getString("id")%>" style="color:#000;"><%=result.getString("title")%></a></div>
+
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="jtxx.jsp?classify=xwbd&id=<%=result.getString("id")%>" style="color:#000;"><%=result.getString("title")%></a></div>
+
         <div class="" style="width:200px;float:right;"><span><%=result.getString("publishtime").substring(0,10)%></span></div>
       </div>
       <%
@@ -335,16 +342,18 @@
       
       
       <div class="" style="line-height:1.5;width:300px;margin:auto;margin-top:15px;">
-      	<a href="tzgg.jsp?classify='tzgg'&page=1">首页</a>
+
+      	<a href="xwbd.jsp?classify='xwbd'&page=1">首页</a>
 <%if(intPage>1){
 %>
-<a href="tzgg.jsp?classify='tzgg'&page=<%=intPage-1%>">上一页</a>
+<a href="xwbd.jsp?classify='xwbd'&page=<%=intPage-1%>">上一页</a>
 <%}%>
 <%if(intPage<intPageCount)
 {%>
-<a href="tzgg.jsp?classify='tzgg'&page=<%=intPage+1%>">下一页</a>
+<a href="xwbd.jsp?classify='xwbd'&page=<%=intPage+1%>">下一页</a>
 <%}%>
-<a href="tzgg.jsp?classify='tzgg'&page=<%=intPageCount%>">尾 页</a>
+<a href="xwbd.jsp?classify='xwbd'&page=<%=intPageCount%>">尾 页</a>
+
 页次：<%=intPage%>/<%=intPageCount%>页 <%=intPageSize%>条/页  
       </div>
   	</div>
