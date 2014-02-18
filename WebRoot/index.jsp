@@ -543,7 +543,6 @@
       			String title = xinwen.getTitle();
       			String time = xinwen.getPublishtime().substring(0, 10);
       			int id =  xinwen.getId();
-      			
       	%>
         <div class=" fl" style="width:240px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;"><a href="xinxi/jtxx.jsp?classify=xwbd&id=<%=id%>">¡¤ <%=title %> </a></div>
 		<div class=" fl" style="width:100px;margin-left:5px;"><%= time %></div>
