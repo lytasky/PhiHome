@@ -172,7 +172,7 @@
   	<font color="#fff">
   	<a href="http://www.zju.edu.cn/">浙江大学</a>&nbsp;|
     <a href="http://phil.zju.edu.cn/">中文</a>&nbsp;|
-    <a href="#">English</a></font>
+    <a href="error.html">English</a></font>
    </div>
 	<div class="row fl" style="width:250px;margin-left:915px;">
   		<div class="col-md-10">
@@ -458,9 +458,9 @@
       		for(Iterator<News> it = xinxiduihua.iterator();it.hasNext();){
       			News duihua = it.next();
       			String title = duihua.getTitle();
-      			
+      			int id = duihua.getId();
       	%>
-        <a href="#">>><%=title%></a><br>
+        <a href="admin/news/jtxx.jsp?classify=xxzxdh?id=<%=id %>">>><%=title%></a><br>
         <%
       		}
         %>
@@ -476,9 +476,9 @@
       		for(Iterator<News> it = zhexueAnddaxue.iterator();it.hasNext();){
       			News zhexue = it.next();
       			String title = zhexue.getTitle();
-      			
+      			int id = zhexue.getId();
       	%>
-        <a href="#">>><%=title %>></a><br>
+        <a href="admin/news/jtxx.jsp?classify=zxydx?id=<%=id %>">>><%=title %></a><br>
 		<%
       		}
 		%>
@@ -493,9 +493,9 @@
       		for(Iterator<News> it = zhexuequshi.iterator();it.hasNext();){
       			News qushi = it.next();
       			String title = qushi.getTitle();
-      			
+      			int id = qushi.getId();
       	%>
-        <a href="#">>><%=title %>></a><br>
+        <a href="admin/news/jtxx.jsp?classify=zxqw?id=<%=id %>">>><%=title %></a><br>
 		<%
       		}
 		%>
