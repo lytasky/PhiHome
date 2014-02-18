@@ -4,10 +4,29 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <jsp:directive.page import="dbmgr.NewsMgr;"/>
 <%
-	List<News> xinxiduihua = new ArrayList<News>();
 	NewsMgr newsMgr = new NewsMgr();
+	List<News> xinxiduihua = new ArrayList<News>();
 	xinxiduihua = newsMgr.get("xinxiduihua", 5);
-	System.out.println("2121"+xinxiduihua);
+%>
+
+<%
+	List<News> zhexueAnddaxue = new ArrayList<News>();
+	zhexueAnddaxue = newsMgr.get("ZhexueAndDaxue", 5);
+%>
+
+<%
+	List<News> zhexuequshi = new ArrayList<News>();
+	zhexuequshi = newsMgr.get("zhexuequshi",6);
+%>
+
+<%
+	List<News> tongzhigonggao = new ArrayList<News>();
+	tongzhigonggao = newsMgr.get("tongzhigonggao",13);
+%>
+
+<%
+	List<News> xinwenbaodao = new ArrayList<News>();
+	xinwenbaodao = newsMgr.get("XinwenBaodao",13);
 %>
 <!doctype html>
 <html>
@@ -434,11 +453,16 @@
           </map>
       	</div>
       	<img src="images/zxdh1.gif"/>
-        <a href="#">>>"西溪哲学对话"第23期对话</a><br>
-        <a href="#">>>"西溪哲学对话"第22期对话</a><br>
-        <a href="#">>>"西溪哲学对话"第21期对话</a><br>
-        <a href="#">>>"西溪哲学对话"第20期对话</a><br>
-        <a href="#">>>"西溪哲学对话"第19期对话</a><br>
+      	<% 
+      		for(Iterator<News> it = xinxiduihua.iterator();it.hasNext();){
+      			News duihua = it.next();
+      			String title = duihua.getTitle();
+      			
+      	%>
+        <a href="#">>><%=title%></a><br>
+        <%
+      		}
+        %>
       </div>
       <div class="g fl" style="width:220px;height:250px;line-height:1.8;padding-left:15px;">
       	<div style="margin-left:-15px;"><img src="images/zxydxhead.gif" border="0" usemap="#Map2">
@@ -447,11 +471,16 @@
           </map>
       	</div>
       	<img src="images/zxydx.gif"/><br>
-        <a href="#">>>"哲学与大学"第23期报道</a><br>
-        <a href="#">>>"哲学与大学"第22期报道</a><br>
-        <a href="#">>>"哲学与大学"第21期报道</a><br>
-        <a href="#">>>"哲学与大学"第20期报道</a><br>
-        <a href="#">>>"哲学与大学"第19期报道</a>
+      	<% 
+      		for(Iterator<News> it = zhexueAnddaxue.iterator();it.hasNext();){
+      			News zhexue = it.next();
+      			String title = zhexue.getTitle();
+      			
+      	%>
+        <a href="#">>><%=title %>></a><br>
+		<%
+      		}
+		%>
       </div>
       <div class=" fl" style="width:220px;height:250px;line-height:1.8;padding-left:15px;">
       	<div style="margin-left:-15px;"><img src="images/zxqwhead.gif" border="0" usemap="#Map3">
@@ -459,12 +488,16 @@
             <area shape="rect" coords="171,8,211,30" href="#">
           </map>
       	</div>
-        <a href="#">>>海德格尔的故事</a><br>
-        <a href="#">>>苏格拉底与柏拉图的故事</a><br>
-        <a href="#">>>有名的女哲学家</a><br>
-        <a href="#">>>阿奎那的故事</a><br>
-        <a href="#">>>阿基琉斯追不上乌龟</a><br>
-        <a href="#">>>薛定谔的猫</a><br>
+        <% 
+      		for(Iterator<News> it = zhexuequshi.iterator();it.hasNext();){
+      			News qushi = it.next();
+      			String title = qushi.getTitle();
+      			
+      	%>
+        <a href="#">>><%=title %>></a><br>
+		<%
+      		}
+		%>
         <div style="margin-left:-15px;"><img src="images/zxmh.gif" border="0" usemap="#Map4"/>
           <map name="Map4">
             <area shape="rect" coords="8,6,209,61" href="#">
@@ -481,19 +514,17 @@
       	</div>
         <div class="right-border fl" style="line-height:1.7;padding-left:5px;">
         <font size="2px">
-      	<a href="news/20131127.jsp">· "西溪哲学对话"第二十四次活动通知</a><br>
-				<a href="announcement/20131029.jsp">· 西塞罗的政治哲学——《论共和国》中</a><br>
-				<a href="#">· 柏林自由大学博士奖学金项目--浙大校</a><br>
-				<a href="#">· 普林斯顿大学菲利普?佩蒂特教授学术</a><br>
-				<a href="#">· "西溪哲学对话"第二十二次活动通知</a><br>
-				<a href="#">· 华东地区现象学青年论坛（2013年秋季）</a><br>
-				<a href="#">· "西溪哲学对话"第二十一次活动通知</a><br>
-				<a href="#">· 关于申请牛津大学等英国高校哲学研究生</a><br>
-				<a href="#">· "西溪哲学对话"第二十次活动通知</a><br>
-				<a href="#">· 关于2012年度贝因美本科生奖学金的公</a><br>
-        <a href="#">· "西溪哲学对话"第十九次活动通知  </a><br>
-				<a href="#">· 关于申请牛津大学等英国高校哲学…   </a><br>
-        <a href="#">· "西溪哲学对话"第十八次活动通知  </a><br>
+        <% 
+      		for(Iterator<News> it = tongzhigonggao.iterator();it.hasNext();){
+      			News tongzhi = it.next();
+      			String title = tongzhi.getTitle();
+      			int id =  tongzhi.getId();
+      			
+      	%>
+        <a href="announcement/tongzhigonggao.jsp?id=<%=id%>">· <%=title %></a><br>
+		<%
+      		}
+		%>
         </font>
         </div>
       </div>
@@ -503,41 +534,23 @@
             <area shape="rect" coords="288,12,327,32" href="#">
           </map>
       	</div>
-        <div class=" fl " style="margin-top:-5px;line-height:1.7;padding-left:4px;overflow:hidden;width:240px;">
+        <div class=" fl " style="margin-top:-5px;line-height:1.7;padding-left:4px;overflow:hidden;width:360px;">
         <font size="2px">
-        <a href="news/20140120.jsp">·哲学，逻辑，理性，成长——记"汇思</a><br>
-        <a href="news/20131226.jsp">·"道教与民间信仰学科导航"建成开放</a><br>
-        <a href="news/20131224.jsp">"哲学与大学"专题第一讲   </a><br>
-      	<a href="news/20131127.jsp">· "西溪哲学对话"第二十四次活动通知  </a><br>
-				<a href="#">· "西溪哲学对话"第二十三次活动通知  </a><br>
-				<a href="#">· 西塞罗的政治哲学——《论共和政治…  </a><br>
-				<a href="#">· 柏林自由大学博士奖学金项目--浙江…  </a><br>
-				<a href="#">· 普林斯顿大学菲利普?佩蒂特教授学…   </a><br>
-				<a href="#">· "西溪哲学对话"第二十二次活动通知  </a><br>
-				<a href="#">· 华东地区现象学青年论坛（2013年…  </a><br>
-				<a href="#">· "西溪哲学对话"第二十一次活动通知  </a><br>
-				<a href="#">· 关于申请牛津大学等英国高校哲学研… </a><br>
-				<a href="#">· "西溪哲学对话"第二十次活动通知    </a><br>
-				
-			</font>
-			</div>
-      <div class=" fr" style="line-height:1.7;margin-top:-5px;width:90px;">
-        <font size="2px">
-      	<a>2014-01-20</a><br>
-				<a>2013-12-26</a><br>
-        <a>2013-12-24</a><br>
-				<a>2013-11-27</a><br>
-				<a>2013-10-29</a><br>
-				<a>2013-10-29</a><br>
-				<a>2013-10-18</a><br>
-				<a>2013-10-16</a><br>
-				<a>2013-09-23</a><br>
-				<a>2013-09-09</a><br>
-				<a>2013-09-04</a><br>
-				<a>2013-06-19</a><br>
-				<a>2013-09-23</a><br>
-			</font>
-			</div>
+        <% 
+      		for(Iterator<News> it = xinwenbaodao.iterator();it.hasNext();){
+      			News xinwen = it.next();
+      			String title = xinwen.getTitle();
+      			String time = xinwen.getPublishtime().substring(0, 10);
+      			int id =  xinwen.getId();
+      			
+      	%>
+        <a href="news/xinwenbaodao.jsp?id=<%=id%>">· <%=title %> <%= time %></a><br>
+
+		<%
+      		}
+		%>	
+		</font>
+		</div>
       </div>
       <div class=" fl fontColor1" style="width:630px;height:180px;">
       	<div style="margin-left:0px;"><img src="images/rdgz.gif" border="0" usemap="#Map12">

@@ -14,7 +14,7 @@ public class UserMgr {
 	//通过学号获取学生信息
 	public Student getByStudentId(String studentID)
 	{
-		db_conn.ConnectDB();
+		db_conn.ConnectDB("bbs");
 		ResultSet rs = null;
 		try {
 			String sql = "select * from student where studentID ='"
@@ -54,7 +54,7 @@ public class UserMgr {
 	
 	public Teacher getByTeacherId(String teacherID)
 	{
-		db_conn.ConnectDB();
+		db_conn.ConnectDB("bbs");
 		ResultSet rs = null;
 		try {
 			String sql = "select * from teacher where teacherID ='"
@@ -92,7 +92,7 @@ public class UserMgr {
 	
     //添加注册学生用户
 	public int addStudent(Student student) {
-		db_conn.ConnectDB();	
+		db_conn.ConnectDB("bbs");	
 		try {
 			
 			String sql = "insert into student(id,name,password,email,sex,studentID,discipline,entryTime,degree) values(null,'" + student.getName()
@@ -118,7 +118,7 @@ public class UserMgr {
 	
 	 //添加注册教师用户
 		public int addTeacher(Teacher teacher) {
-			db_conn.ConnectDB();	
+			db_conn.ConnectDB("bbs");	
 			System.out.println(teacher.getName()+"111");
 			try {
 				
@@ -145,7 +145,7 @@ public class UserMgr {
 	
 	//获得管理员用户信息
 	public AdminUser getByName(String username) {//admin
-		db_conn.ConnectDB();
+		db_conn.ConnectDB("bbs");
 		ResultSet rs = null;
 		try {
 			String sql = "select * from adminUse where name ='"
