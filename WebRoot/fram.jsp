@@ -1,8 +1,7 @@
 <%@ page pageEncoding="GB18030"%>
 <%
-	String adminLogined = (String) session.getAttribute("adminLogined");
+	String adminLogined = (String) session.getAttribute("admLogined");
 	if (adminLogined != null && adminLogined.trim().equals("true")) {
-		session.invalidate(); 
 	}
 	else{
 		out.println("Äã»¹Ã»ÓÐµÇÂ½£¬ÇëµÇÂ½") ;
