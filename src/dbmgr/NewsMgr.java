@@ -31,7 +31,11 @@ public class NewsMgr {
 				sql = "select * from xwbd order by id desc";
 			}
 			rs = db_conn.sm.executeQuery(sql);   
+<<<<<<< HEAD
 			while(i++ < number && rs.next())
+=======
+			while(i++ <= number && rs.next())
+>>>>>>> ab1c88217c0ff7f0fa1a48467153213d64a82b89
 			{
 				News news = new News();
 				
