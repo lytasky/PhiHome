@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html;charset=gb2312" %>
 <%@ page import="java.sql.*" %>
-<<<<<<< HEAD
-=======
 
->>>>>>> 4a3d6a56f4ec35fd9be283334d594ae00938fc66
 <% 
   request.setCharacterEncoding("gb2312");
   String id = request.getParameter("id");   
