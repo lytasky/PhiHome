@@ -27,6 +27,7 @@
 <%
 	List<News> xinwenbaodao = new ArrayList<News>();
 	xinwenbaodao = newsMgr.get("XinwenBaodao",13);
+	
 %>
 <!doctype html>
 <html>
@@ -35,7 +36,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-<!--<script src="js/juery.js"></script>-->
+<!--<script src="js/jquery.js"></script>-->
 
 
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen">
@@ -506,13 +507,13 @@
       </div>
     </div>
     <div class=" fl" style="width:600px;height:750px;margin-left:15px;margin-top:30px;">
-    	<div class=" fl fontColor2" style="width:260px;height:350px;">
+    	<div class=" fl fontColor2 right-border" style="width:260px;height:350px;">
       	<div style="margin-left:0px;"><img src="images/tzgg.gif" border="0" usemap="#Map10">
           <map name="Map10">
             <area shape="rect" coords="206,11,249,28" href="#">
           </map>
       	</div>
-        <div class="right-border fl" style="line-height:1.7;padding-left:5px;">
+        <div class=" fl " style="line-height:1.7;padding-left:5px;width:260px;overflow:hidden;">
         <font size="2px">
         <% 
       		for(Iterator<News> it = tongzhigonggao.iterator();it.hasNext();){
@@ -521,7 +522,7 @@
       			int id =  tongzhi.getId();
       			
       	%>
-        <a href="xinxi/jtxx.jsp?id=<%=id%>&classify=tzgg">· <%=title %></a><br>
+        <div class="" style="width:240px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;"><a href="xinxi/jtxx.jsp?id=<%=id%>&classify=tzgg">· <%=title %></a></div>
 		<%
       		}
 		%>
@@ -544,8 +545,8 @@
       			int id =  xinwen.getId();
       			
       	%>
-        <a href="xinxi/jtxx.jsp?classify=xwbd&id=<%=id%>">· <%=title %> <%= time %></a><br>
-
+        <div class=" fl" style="width:240px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;"><a href="xinxi/jtxx.jsp?classify=xwbd&id=<%=id%>">· <%=title %> </a></div>
+		<div class=" fl" style="width:100px;margin-left:5px;"><%= time %></div>
 		<%
       		}
 		%>	
@@ -578,7 +579,8 @@
           </map>
       	</div>
         <div style="padding-left:10px;line-height:1.8;">
-        	<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
+        	<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究<
+			/a><br>
 					<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
 					<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
 					<a href="#">>>现象学在二十世纪法国哲学中的主导地位研究</a><br>
