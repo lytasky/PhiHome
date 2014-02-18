@@ -521,7 +521,7 @@
       			int id =  tongzhi.getId();
       			
       	%>
-        <a href="announcement/tongzhigonggao.jsp?id=<%=id%>">· <%=title %></a><br>
+        <a href="xinxi/jtxx.jsp?id=<%=id%>&classify=tzgg">· <%=title %></a><br>
 		<%
       		}
 		%>
@@ -544,7 +544,7 @@
       			int id =  xinwen.getId();
       			
       	%>
-        <a href="news/xinwenbaodao.jsp?id=<%=id%>">· <%=title %> <%= time %></a><br>
+        <a href="xinxi/jtxx.jsp?classify=xwbd&id=<%=id%>">· <%=title %> <%= time %></a><br>
 
 		<%
       		}
