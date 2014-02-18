@@ -66,17 +66,17 @@
 			</li>
       <li><a href=".">教研成果</a>
 				<ul>
-					<li><a href="/">科研成果</a></li>
-					<li><a href="/">教学成果</a></li>
-					<li><a href="/">科研项目</a></li>
-          <li><a href="/">获奖信息</a></li>
+					<li><a href="admin/file/display.jsp?classify='kycg'" target="main">科研成果</a></li>
+					<li><a href="admin/file/display.jsp?classify='jxcg'" target="main">教学成果</a></li>
+					<li><a href="admin/file/display.jsp?classify='jxcg'" target="main">科研项目</a></li>
+          <li><a href="admin/file/display.jsp?classify='hjxx'" target="main">获奖信息</a></li>
 				</ul>
 			</li>
       <li><a href=".">学生园地</a>
 				<ul>
-					<li><a href="/">学生名录</a></li>
-					<li><a href="/">学生活动</a></li>
-					<li><a href="/">学生作品</a></li>
+					<li><a href="admin/file/display.jsp?classify='xsml'" target="main">学生名录</a></li>
+					<li><a href="admin/file/display.jsp?classify='xshd'" target="main">学生活动</a></li>
+					<li><a href="admin/file/display.jsp?classify='xszp'" target="main">学生作品</a></li>
 				</ul>
 			</li>
       <li><a href=".">闻人轶事</a>

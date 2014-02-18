@@ -1,8 +1,50 @@
+<%@ page language="java" contentType="text/html;charset=gb2312" %>
+<%@ page import="java.sql.*" %>
+<%@ include file="../admin/file/conn.jspf" %>
+<%   
+  sta = conn.createStatement();  //´´½¨Statement¶ÔÏó      
+  
+  	int intPageSize; //Ò»Ò³ÏÔÊ¾µÄ¼ÇÂ¼Êý
+	int intRowCount; //¼ÇÂ¼×ÜÊý
+	int intPageCount; //×ÜÒ³Êý
+	int intPage; //´ýÏÔÊ¾Ò³Âë
+	int layer;
+	int idlayer;
+	idlayer=1;
+	String outtext;
+	outtext="";
+	String strPage;
+	int j;
+	int i;
+	//ÉèÖÃÒ»Ò³ÏÔÊ¾µÄ¼ÇÂ¼Êý
+	intPageSize = 5;
+	
+	//È¡µÃ´ýÏÔÊ¾Ò³Âë
+	strPage = request.getParameter("page");
+	if(strPage==null){//±íÃ÷ÔÚQueryStringÖÐÃ»ÓÐpageÕâÒ»¸ö²ÎÊý£¬´ËÊ±ÏÔÊ¾µÚÒ»Ò³Êý¾Ý
+	  intPage = 1;
+	}
+	else{//½«×Ö·û´®×ª»»³ÉÕûÐÍ
+	  intPage = java.lang.Integer.parseInt(strPage);
+	  if(intPage<1) intPage = 1;
+	}
+  
+  //String classify = request.getParameter("classify");
+  //System.out.println(classify);
+  //String classify="xsml";
+  String sql = "select * from file where classify='xsml' order by id desc";    //Ö´ÐÐSQLÓï¾ä
+  ResultSet result = sta.executeQuery(sql);
+      
+	result.last();   //»ñÈ¡¼ÇÂ¼×ÜÊý
+	intRowCount = result.getRow();
+    intPageCount = (intRowCount+intPageSize-1) / intPageSize;   //¼ÇËã×ÜÒ³Êý
+	if(intPage>intPageCount){intPage = intPageCount;}	//µ÷Õû´ýÏÔÊ¾µÄÒ³Âë
+%>
 <!doctype html>
 <html lang="en">
 <head>
-<title>å­¦é™¢æ¦‚å†µ</title>
-<meta charset="utf-8">
+<title>Ñ§Ôº¸Å¿ö</title>
+<meta charset="gb2312">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script src="../js/juery.js"></script>
 <style type="text/css">
@@ -102,8 +144,8 @@
   <div id="head" style="background:url(../images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
   	<font color="#fff">
-  	<a href="http://www.zju.edu.cn">æµ™æ±Ÿå¤§å­¦</a>&nbsp;|
-    <a href="../index.jsp">ä¸­æ–‡</a>&nbsp;|
+  	<a href="http://www.zju.edu.cn">Õã½­´óÑ§</a>&nbsp;|
+    <a href="../index.jsp">ÖÐÎÄ</a>&nbsp;|
     <a href="#">English</a></font>
    </div>
 	<div class="row fl" style="width:250px;margin-left:915px;">
@@ -111,7 +153,7 @@
     		<div class="input-group input-group-sm">
               	 <input type="text" class="form-control ">
       					<span class="input-group-btn">
-        					<button class="btn btn-default " type="button">æœç´¢</button>
+        					<button class="btn btn-default " type="button">ËÑË÷</button>
       					</span>
                 
     					</div><!-- /input-group -->
@@ -121,151 +163,151 @@
     <div style="text-align:center;line-height:30px;height:30px;background:url(../images/colomnBack2.gif);">
       <div style="width:195px;height:30px;align:center;" class="fl">
 			<span class="menuOn" id="mod0">
-			<a href="../index.jsp" class="white-font "> ä¸»é¡µ</a></span>
+			<a href="../index.jsp" class="white-font "> Ö÷Ò³</a></span>
       </div>
       <div style="width:96px;height:30px;align:center;background-color:#030303;" id="mod1" class="fl">
 			<span class="menuOn" onMouseOver="switchMod(1);" >
-			<a href="#" class="white-font "> ç³»æƒ…ä»‹ç»</a></span>
+			<a href="#" class="white-font "> ÏµÇé½éÉÜ</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod2" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(2);">
-			<a href="#" class="white-font ">æ–°é—»é€šå‘Š</a></span>
+			<a href="#" class="white-font ">ÐÂÎÅÍ¨¸æ</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod3" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(3);">
 
 
 
-			<a href="#" class="white-font">æ•™å­¦åŸ¹å…»</a></span>
+			<a href="#" class="white-font">½ÌÑ§ÅàÑø</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod4" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(4);">
-			<a href="#" class="white-font">æ‹›ç”Ÿä¸“æ </a></span>
+			<a href="#" class="white-font">ÕÐÉú×¨À¸</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod5"  class="fl">
 			<span class="menuNo" onMouseOver="switchMod(5);">
-			<a href="#" class="white-font">æ•™ç ”æˆæžœ</a></span>
+			<a href="#" class="white-font">½ÌÑÐ³É¹û</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod6" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(6);">
-			<a href="#" class="white-font">å­¦ç”Ÿå›­åœ°</a></span>
+			<a href="#" class="white-font">Ñ§ÉúÔ°µØ</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod7" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(7);">
-			<a href="#" class="white-font">å“²å­¦è®ºå›</a></span>
+			<a href="#" class="white-font">ÕÜÑ§ÂÛÌ³</a></span>
       </div>
       <div style="width:96px;height:30;align:center;" id="mod8" class="fl">
 			<span class="menuNo" onMouseOver="switchMod(8);">
-			<a href="#" target="_blank" class="white-font">é—»äººè½¶äº‹</a></span>
+			<a href="#" target="_blank" class="white-font">ÎÅÈËéóÊÂ</a></span>
       </div>
       <div style="width:102px;height:30;align:center;" id="mod9" class="fl">
       <span class="menuNo" onMouseOver="switchMod(9);">
-			<a href="#" target="_blank" class="white-font">èµ„æºé“¾æŽ¥</a></span>
+			<a href="#" target="_blank" class="white-font">×ÊÔ´Á´½Ó</a></span>
       </div>
       </div>
   </div><!-- column -->
-	<div class="slidingList" id="slidingList1" style="color:#fff;text-align:center;padding-top:5px;height:30px;float:left;margin-left:253px;display:;background:#0f0f0f;"><!-- å¯¼èˆªæ åˆ—è¡¨åŒº -->
+	<div class="slidingList" id="slidingList1" style="color:#fff;text-align:center;padding-top:5px;height:30px;float:left;margin-left:253px;display:;background:#0f0f0f;"><!-- µ¼º½À¸ÁÐ±íÇø -->
 		>>
-<a href="../jianjie/xygk.jsp"> å­¦é™¢æ¦‚å†µ</a>|
-<a href="../jianjie/szll.jsp">å¸ˆèµ„åŠ›é‡</a>
+<a href="../jianjie/xygk.jsp"> Ñ§Ôº¸Å¿ö</a>|
+<a href="../jianjie/szll.jsp">Ê¦×ÊÁ¦Á¿</a>
 
 	</div>
   <div class="slidingList" id="slidingList2" style="height:30px;float:left;margin-left:349px;display:none;background:#0f0f0f;padding-top:5px;">
   	>>
-<a href="../xinxi/tzgg.jsp"> é€šçŸ¥å…¬å‘Š</a>|
-<a href="../xinxi/xwbd.jsp">æ–°é—»æŠ¥é“</a>
+<a href="../xinxi/tzgg.jsp"> Í¨Öª¹«¸æ</a>|
+<a href="../xinxi/xwbd.jsp">ÐÂÎÅ±¨µÀ</a>
 		
 	</div>
   <div class="slidingList" id="slidingList3" style="height:30px;float:left;margin-left:445px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../kecheng/pyfa.jsp"> åŸ¹å…»æ–¹æ¡ˆ</a>|
-			<a href="../kecheng/bkkc.jsp">æœ¬ç§‘è¯¾ç¨‹</a>
+			<a href="../kecheng/pyfa.jsp"> ÅàÑø·½°¸</a>|
+			<a href="../kecheng/bkkc.jsp">±¾¿Æ¿Î³Ì</a>
       |
-			<a href="../kecheng/sbkc.jsp">ç¡•åšè¯¾ç¨‹</a>
+			<a href="../kecheng/sbkc.jsp">Ë¶²©¿Î³Ì</a>
       |
-			<a href="../kecheng/xqkb.jsp">å­¦æœŸè¯¾è¡¨</a>
+			<a href="../kecheng/xqkb.jsp">Ñ§ÆÚ¿Î±í</a>
       |
-			<a href="../kecheng/kczl.jsp">è¯¾ç¨‹èµ„æ–™</a>
+			<a href="../kecheng/kczl.jsp">¿Î³Ì×ÊÁÏ</a>
 		
 	</div>
   <div class="slidingList" id="slidingList4" style="height:30px;float:left;margin-left:541px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../zhaosheng/zsxx.jsp"> æ‹›ç”Ÿä¿¡æ¯</a>
+			<a href="../zhaosheng/zsxx.jsp"> ÕÐÉúÐÅÏ¢</a>
 			|
-			<a href="../zhaosheng/lnzt.jsp">åŽ†å¹´çœŸé¢˜</a>
+			<a href="../zhaosheng/lnzt.jsp">ÀúÄêÕæÌâ</a>
       |
-			<a href="../zhaosheng/zszx.jsp">æ‹›ç”Ÿå’¨è¯¢</a>
+			<a href="../zhaosheng/zszx.jsp">ÕÐÉú×ÉÑ¯</a>
 		
 	</div>
   <div class="slidingList" id="slidingList5" style="height:30px;float:left;margin-left:637px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../chengguo/kycg.jsp"> ç§‘ç ”æˆæžœ</a>
+			<a href="../chengguo/kycg.jsp"> ¿ÆÑÐ³É¹û</a>
 			|
-			<a href="../chengguo/jxcg.jsp">æ•™å­¦æˆæžœ</a>
+			<a href="../chengguo/jxcg.jsp">½ÌÑ§³É¹û</a>
       |
-			<a href="../chengguo/kyxm.jsp">ç§‘ç ”é¡¹ç›®</a>
+			<a href="../chengguo/kyxm.jsp">¿ÆÑÐÏîÄ¿</a>
       |
-			<a href="../chengguo/hjxx.jsp">èŽ·å¥–ä¿¡æ¯</a>
+			<a href="../chengguo/hjxx.jsp">»ñ½±ÐÅÏ¢</a>
 		
 	</div>
   <div class="slidingList" id="slidingList6" style="height:30px;float:left;margin-left:733px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../xuesheng/xsml.jsp"> å­¦ç”Ÿåå½•</a>
+			<a href="../xuesheng/xsml.jsp"> Ñ§ÉúÃûÂ¼</a>
 			|
-			<a href="../xuesheng/xshd.jsp">å­¦ç”Ÿæ´»åŠ¨</a>
+			<a href="../xuesheng/xshd.jsp">Ñ§Éú»î¶¯</a>
       |
-			<a href="../xuesheng/xszp.jsp">å­¦ç”Ÿä½œå“</a>
+			<a href="../xuesheng/xszp.jsp">Ñ§Éú×÷Æ·</a>
 		
 	</div>
   <div class="slidingList" id="slidingList7" style="height:30px;float:left;margin-left:780px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../uselogin.jsp"> è¯¾ç¨‹è®¨è®º</a>
+			<a href="../uselogin.jsp"> ¿Î³ÌÌÖÂÛ</a>
 			|
-			<a href="../uselogin.jsp">è¯»ä¹¦ä¼š</a>
+			<a href="../uselogin.jsp">¶ÁÊé»á</a>
       |
-			<a href="../uselogin.jsp">å“²å­¦æ²™é¾™</a>
+			<a href="../uselogin.jsp">ÕÜÑ§É³Áú</a>
 		
 	</div>
   <div class="slidingList" id="slidingList8" style="height:30px;float:left;margin-left:870px;display:none;background:#0f0f0f;padding-top:5px;">
 			>>
-			<a href="../gushi/zxqw.jsp"> å“²å­¦è¶£é—»</a>
+			<a href="../gushi/zxqw.jsp"> ÕÜÑ§È¤ÎÅ</a>
 			|
-			<a href="../gushi/xygs.jsp">æ ¡å›­æ•…äº‹</a>
+			<a href="../gushi/xygs.jsp">Ð£Ô°¹ÊÊÂ</a>
       |
-			<a href="../gushi/xyfc.jsp">æ ¡å‹é£Žé‡‡</a>
+			<a href="../gushi/xyfc.jsp">Ð£ÓÑ·ç²É</a>
 		
 	</div>
   <div class="slidingList" id="slidingList9" style="height:30px;float:left;margin-left:921px;display:none;background:#0f0f0f;padding-top:5px;">
   		>>
-			<a href="#"> æ ¡å†…ç½‘ç«™</a>
+			<a href="#"> Ð£ÄÚÍøÕ¾</a>
 			|
-			<a href="#">æ ¡å¤–èµ„æº</a>
+			<a href="#">Ð£Íâ×ÊÔ´</a>
       |
-			<a href="#">å›½å¤–èµ„æº</a>
+			<a href="#">¹úÍâ×ÊÔ´</a>
 
 		
 
-	</div><!-- å¯¼èˆªæ åˆ—è¡¨åŒº -->
+	</div><!-- µ¼º½À¸ÁÐ±íÇø -->
 </div>
 
 	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;height:700px;">
 		<div id="left-nav" style="width:200px;align:center;padding:0 auto;float:left;font-size:14px;line-height:0.49;float:left;">
-     <div class="panel-group" id="accordion" style=""><!--ç½‘ç«™åœ°å›¾-->
+     <div class="panel-group" id="accordion" style=""><!--ÍøÕ¾µØÍ¼-->
   		<div class="panel panel-default">
     		<div class="panel-heading">
       			<h4 class="panel-title">
-        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> å­¦ç”Ÿå›­åœ°</a>
+        		<a href="#"><span class="glyphicon glyphicon-th-list"></span> Ñ§ÉúÔ°µØ</a>
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="../xuesheng/xsml.jsp" style="color:#000;" class="panel-item">å­¦ç”Ÿåå½•</a>
+        			<a href="../xuesheng/xsml.jsp" style="color:#000;" class="panel-item">Ñ§ÉúÃûÂ¼</a>
       			</div>
       			<div class="panel-body">
-        			<a href="../xuesheng/xshd.jsp" style="color:#000;" class="panel-item">å­¦ç”Ÿæ´»åŠ¨</a>
+        			<a href="../xuesheng/xshd.jsp" style="color:#000;" class="panel-item">Ñ§Éú»î¶¯</a>
       			</div>
             <div class="panel-body">
-        			<a href="../xuesheng/xszp.jsp" style="color:#000;" class="panel-item">å­¦ç”Ÿä½œå“</a>
+        			<a href="../xuesheng/xszp.jsp" style="color:#000;" class="panel-item">Ñ§Éú×÷Æ·</a>
       			</div>
           
     		</div>
@@ -274,19 +316,48 @@
      
 	</div>
 
-		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;font-size:14px;"><!--åˆ†é¡µæ˜¾ç¤ºå†…å®¹-->
-		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--å½“å‰ä½ç½®-->
-         <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> å½“å‰ä½ç½®ï¼š</span>
-         <a style="color:#fff;" href="../index.jsp">ä¸»é¡µ</a>
-         <span style="color:#fff;">->å­¦ç”Ÿå›­åœ°</span>	
-      <span style="color:#fff;">->å­¦ç”Ÿåå½•</span>	
+		<div class="gray-border" style="margin-left:15px;width:840px;height:650px;float:right;font-size:14px;"><!--·ÖÒ³ÏÔÊ¾ÄÚÈÝ-->
+		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--µ±Ç°Î»ÖÃ-->
+         <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> µ±Ç°Î»ÖÃ£º</span>
+         <a style="color:#fff;" href="../index.jsp">Ö÷Ò³</a>
+         <span style="color:#fff;">->Ñ§ÉúÔ°µØ</span>	
+      <span style="color:#fff;">->Ñ§ÉúÃûÂ¼</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;">
-  		   
+    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;padding-top:15px;">  
+      <% 
+   if(intPageCount>0){
+   result.absolute((intPage-1) * intPageSize + 1);
+   i = 0;
+   while(i<intPageSize && !result.isAfterLast()){ 
+	   String content= result.getString("content");
+	   String[] name=content.split("\""); 	
+	   String path=name[3];
+%>
+      <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="<%=path%>" style="color:#000;"><%=result.getString("title")%></a></div>
+        <div class="" style="width:200px;float:right;"><span><%=result.getString("publishtime").substring(0,10)%></span></div>
+      </div>
+      <%
+  result.next();
+  i++;
+  }
+  }
+%>
+      
       
       <div class="" style="line-height:1.5;width:300px;margin:auto;margin-top:15px;">
-      	<a href="#">é¦–é¡µ </a><a href="#"> ä¸Šä¸€é¡µ </a><a href="#"> ä¸‹ä¸€é¡µ </a><a href="#"> å°¾é¡µ </a><a href="#"> å½“å‰ç¬¬ié¡µ </a><a href="#"> å…±né¡µ </a>
+      	<a href="xsml.jsp?classify='xsml'&page=1">Ê×Ò³</a>
+<%if(intPage>1){
+%>
+<a href="xsml.jsp?classify='xsml'&page=<%=intPage-1%>">ÉÏÒ»Ò³</a>
+<%}%>
+<%if(intPage<intPageCount)
+{%>
+<a href="xsml.jsp?classify='xsml'&page=<%=intPage+1%>">ÏÂÒ»Ò³</a>
+<%}%>
+<a href="xsml.jsp?classify='xsml'&page=<%=intPageCount%>">Î² Ò³</a>
+Ò³´Î£º<%=intPage%>/<%=intPageCount%>Ò³ <%=intPageSize%>Ìõ/Ò³  
       </div>
   	</div>
   </div>

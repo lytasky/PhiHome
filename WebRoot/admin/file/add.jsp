@@ -174,6 +174,13 @@ function check_form(theform)
   <option value="zsxx">招生信息</option>
   <option value="lnzt">历年真题</option>
   <option value="zxqw">哲学趣闻</option>
+  <option value="kycg">科研成果</option>
+  <option value="jxcg">教学成果</option>
+  <option value="kyxm">科研项目</option>
+  <option value="hjxx">获奖信息</option>
+  <option value="xsml">学生名录</option>
+  <option value="xshd">学生活动</option>
+  <option value="xszp">学生作品</option>
   <option value="xygs">校园故事</option>
   <option value="xyfc">校友风采</option>
                             </select>

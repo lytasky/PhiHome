@@ -351,7 +351,7 @@
       <div class=" fl fontColor1" style="width:280px;height:200px;">
       	<div style="margin-left:0px;"><img src="images/zszlhead.gif" border="0" usemap="#Map5">
           <map name="Map5">
-            <area shape="rect" coords="165,10,206,29" href="#">
+            <area shape="rect" coords="165,10,206,29" href="zhaosheng/zsxx.jsp">
           </map>
       	</div>
         <div style="padding-left:20px;line-height:1.8;">
@@ -365,7 +365,7 @@
       <div class=" fl fontColor3" style="width:280px;height:200px;">
       	<div style="margin-left:0px;"><img src="images/jpkchead.gif" border="0" usemap="#Map6">
           <map name="Map6">
-            <area shape="rect" coords="164,7,207,29" href="#">
+            <area shape="rect" coords="164,7,207,29" href="">
           </map>
       	</div>
         <div style="padding-left:20px;line-height:1.8;">
@@ -450,7 +450,7 @@
     	<div class="fl" style="width:220px;height:250px;padding-left:15px;line-height:1.8;">
       	<div style="margin-left:-15px;"><img src="images/zxdhhead.gif" border="0" usemap="#Map">
           <map name="Map">
-            <area shape="rect" coords="169,9,207,25" href="#">
+            <area shape="rect" coords="169,9,207,25" href="admin/news/itemlist.jsp?classify=xxzxdh">
           </map>
       	</div>
       	<img src="images/zxdh1.gif"/>
@@ -468,7 +468,7 @@
       <div class="g fl" style="width:220px;height:250px;line-height:1.8;padding-left:15px;">
       	<div style="margin-left:-15px;"><img src="images/zxydxhead.gif" border="0" usemap="#Map2">
           <map name="Map2">
-            <area shape="rect" coords="168,11,207,31" href="#">
+            <area shape="rect" coords="168,11,207,31" href="admin/news/itemlist.jsp?classify=zxydx">
           </map>
       	</div>
       	<img src="images/zxydx.gif"/><br>
@@ -486,7 +486,7 @@
       <div class=" fl" style="width:220px;height:250px;line-height:1.8;padding-left:15px;">
       	<div style="margin-left:-15px;"><img src="images/zxqwhead.gif" border="0" usemap="#Map3">
           <map name="Map3">
-            <area shape="rect" coords="171,8,211,30" href="#">
+            <area shape="rect" coords="171,8,211,30" href="admin/news/itemlist.jsp?classify=zxqw">
           </map>
       	</div>
         <% 
@@ -501,7 +501,7 @@
 		%>
         <div style="margin-left:-15px;"><img src="images/zxmh.gif" border="0" usemap="#Map4"/>
           <map name="Map4">
-            <area shape="rect" coords="8,6,209,61" href="#">
+            <area shape="rect" coords="8,6,209,61" href="error.html">
           </map>
         </div>
       </div>
@@ -510,7 +510,7 @@
     	<div class=" fl fontColor2 right-border" style="width:260px;height:350px;">
       	<div style="margin-left:0px;"><img src="images/tzgg.gif" border="0" usemap="#Map10">
           <map name="Map10">
-            <area shape="rect" coords="206,11,249,28" href="#">
+            <area shape="rect" coords="206,11,249,28" href="xinxi/tzgg.jsp">
           </map>
       	</div>
         <div class=" fl " style="line-height:1.7;padding-left:5px;width:260px;overflow:hidden;">
@@ -532,7 +532,7 @@
       <div class=" fl fontColor2" style="width:330px;height:350px;margin-top:-2px;">
       	<div style="margin-left:0px;"><img src="images/xwbd.gif" border="0" usemap="#Map11">
           <map name="Map11">
-            <area shape="rect" coords="288,12,327,32" href="#">
+            <area shape="rect" coords="288,12,327,32" href="xinxi/xwbd.jsp">
           </map>
       	</div>
         <div class=" fl " style="margin-top:-5px;line-height:1.7;padding-left:4px;overflow:hidden;width:360px;">
@@ -555,7 +555,7 @@
       <div class=" fl fontColor1" style="width:630px;height:180px;">
       	<div style="margin-left:0px;"><img src="images/rdgz.gif" border="0" usemap="#Map12">
           <map name="Map12">
-            <area shape="rect" coords="538,11,580,30" href="#">
+            <area shape="rect" coords="538,11,580,30" href="error.html">
           </map>
       	</div>
       	<div class="fl" style="width:160px;padding-left:15px;text-align:center;">
@@ -574,7 +574,7 @@
       <div class=" fl fontColor1" style="width:370px;height:180px;">
       	<div style="margin-left:0px;"><img src="images/cgzs.gif" border="0" usemap="#Map13">
           <map name="Map13">
-            <area shape="rect" coords="316,8,360,29" href="#">
+            <area shape="rect" coords="316,8,360,29" href="chengguo/kycg.jsp">
           </map>
       	</div>
         <div style="padding-left:10px;line-height:1.8;">
@@ -588,7 +588,7 @@
       <div class=" fl fontColor1" style="width:220px;height:180px;">
       	<div style="margin-left:0px;"><img src="images/xsyd.gif" border="0" usemap="#Map14">
           <map name="Map14">
-            <area shape="rect" coords="158,10,202,31" href="#">
+            <area shape="rect" coords="158,10,202,31" href="xuesheng/xsml.jsp">
           </map>
       	</div>
         <div style="padding-left:10px;line-height:1.8;">

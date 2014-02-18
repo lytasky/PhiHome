@@ -31,9 +31,8 @@
   
   String classify = request.getParameter("classify");
   //System.out.println(classify);
-  //String classify="tzgg";
-  String sql = "select * from " +classify+" order by id desc";    //执行SQL语句
-  System.out.println(sql);
+  //String classify="pyfa";
+  String sql = "select * from file where classify="+classify+" order by id desc";    //执行SQL语句
   ResultSet result = sta.executeQuery(sql);
       
 	result.last();   //获取记录总数
@@ -44,10 +43,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>通知报道</title>
-<meta charset="utf-8">
+<title>学院概况</title>
+<meta charset="gb2312">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="../../js/juery.js"></script>
+<script src="../../js/jquery.js"></script>
 <style type="text/css">
 	.td-width{
 		width:80px;	
@@ -288,22 +287,25 @@
 
 	<div id="main-content" class="gray-border" style="margin-top:50px;margin-left:58px;width:1065px;height:700px;">
 
-		<div class="gray-border" style="margin:0 auto;width:840px;height:650px;"><!--分页显示内容-->
-		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;font-size:14px;"><!--当前位置-->
+		<div class="gray-border" style="margin:0 auto;width:840px;height:650px;font-size:14px;"><!--分页显示内容-->
+		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../../index.jsp">主页</a>
-         <span style="color:#fff;">->文章列表</span>	
+         <span style="color:#fff;">->文件列表</span>		
 		</div>
     
-   <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;padding-top:15px;">  
+    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;font-size:14px;padding-top:15px;">  
       <% 
    if(intPageCount>0){
    result.absolute((intPage-1) * intPageSize + 1);
    i = 0;
    while(i<intPageSize && !result.isAfterLast()){ 
+	   String content= result.getString("content");
+	   String[] name=content.split("\""); 	
+	   String path=name[3];
 %>
       <div class="" style="height:25px;line-height:1.5;border-bottom:1px dashed #d3d7da;">
-      	<div class="" style="width:600px;float:left;margin-left:25px;letter-spacing:2px;"><a href="jtxx.jsp?classify=<%=classify %>&id=<%=result.getString("id")%>" style="color:#000;"><%=result.getString("title")%></a></div>
+      	<div class="" style="width:500px;float:left;margin-left:25px;letter-spacing:2px;"><a href="<%=path%>" style="color:#000;"><%=result.getString("title")%></a></div>
         <div class="" style="width:200px;float:right;"><span><%=result.getString("publishtime").substring(0,10)%></span></div>
       </div>
       <%

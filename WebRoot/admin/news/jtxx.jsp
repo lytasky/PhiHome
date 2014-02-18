@@ -268,7 +268,7 @@
     	<div class="gray-border round-border" style="width:840px;height:auto;background-color:#FFF;margin-top:15px;padding-top:15px;">
   		<div align="center" style="line-height:1.5;"><%=result.getString("title") %></div>
       <div style="border-bottom:1px dashed #999;line-height:1.5;" align="center">发布时间： <%=result.getString("publishtime") %> | 来源：<%=result.getString("newsfrom") %> </div>
-      <div style="padding-left:15px;padding-top:15px;">
+      <div style="padding-left:15px;padding-top:15px;padding-right:15px;padding-bottom:50px;">
       	<%=result.getString("content") %>
   		
       </div>
