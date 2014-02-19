@@ -31,52 +31,63 @@
 		logined = true;
 	}
 %>
+<%
+// 主题数目
+	int num1 = 0;
+	int num2 = 0;
+	int num3 = 0;
+// 帖子总数
+	int totalNum1 = 0;
+	int totalNum2 = 0;
+	int totalNum3 = 0;
+// 最后回复时间
+	String lastReplyTime1 = "none";
+	String lastReplyTime2 = "none";
+	String lastReplyTime3 = "none";	
+%>
 
 <%
-	final int PAGE_SIZE = 10; // 分页
-	int pageNo = 1;
-	String strPageNo = request.getParameter("pageNo");
-	if (strPageNo != null && !strPageNo.trim().equals("")) {
-		try {
-			pageNo = Integer.parseInt(strPageNo);
-		} catch (NumberFormatException e) {
-			pageNo = 1;
-		}
-	}
-
-	if (pageNo <= 0)
-		pageNo = 1;
-
-	int totalPages = 0;
-
-	List<Article> articles = new ArrayList<Article>();
 	Connection conn = DB.getConn();
-
-	Statement stmtCount = DB.createStmt(conn);
-	ResultSet rsCount = DB.executeQuery(stmtCount,
-			"select count(*) from course where pid = 0"); // 显示所有pid=0的帖子
-	rsCount.next();
-	int totalRecords = rsCount.getInt(1);
-
-	totalPages = (totalRecords + PAGE_SIZE - 1) / PAGE_SIZE;
-
-	if (pageNo > totalPages)
-		pageNo = totalPages;
-
 	Statement stmt = DB.createStmt(conn);
-	int startPos = (pageNo - 1) * PAGE_SIZE;
-	String sql = "select * from course where pid = 0 order by pdate desc limit "
-			+ startPos + "," + PAGE_SIZE;
-	ResultSet rs = DB.executeQuery(stmt, sql);
-	while (rs.next()) {
+	
+	String sql1 = "select * from course  order by pdate desc";
+	ResultSet rs1 = DB.executeQuery(stmt, sql1);
+	while (rs1!= null && rs1.next()) {
 		Article a = new Article();
-		a.initFromRs(rs);
-		articles.add(a);
+		a.initFromRs(rs1);
+		if(lastReplyTime1.equalsIgnoreCase("none"))
+			lastReplyTime1 = a.getPdate().toLocaleString();
+		if(a.getPid() == 0)
+			num1++;
+		totalNum1++;
 	}
-	DB.close(rsCount);
-	DB.close(stmtCount);
-
-	DB.close(rs);
+	
+	String sql2 = "select * from reading  order by pdate desc";
+	ResultSet rs2 = DB.executeQuery(stmt, sql2);
+	while (rs2!= null && rs2.next()) {
+		Article a = new Article();
+		a.initFromRs(rs2);
+		if(lastReplyTime2.equalsIgnoreCase("none"))
+			lastReplyTime2 = a.getPdate().toLocaleString();
+		if(a.getPid() == 0)
+			num2++;
+		totalNum2++;
+	}
+	
+	String sql3 = "select * from salon  order by pdate desc";
+	ResultSet rs3 = DB.executeQuery(stmt, sql3);
+	while (rs3!= null && rs3.next()) {
+		Article a = new Article();
+		a.initFromRs(rs3);
+		if(lastReplyTime3.equalsIgnoreCase("none"))
+			lastReplyTime3 = a.getPdate().toLocaleString();
+		if(a.getPid() == 0)
+			num3++;
+		totalNum3++;
+	}
+	DB.close(rs1);
+	DB.close(rs2);
+	DB.close(rs3);
 	DB.close(stmt);
 	DB.close(conn);
 %>
@@ -156,8 +167,8 @@
           <div class="fl gray-border" style="margin-left:10px;line-height:1.5;">
           	<font style="font-family:微软雅黑;" size="2">
         	<a href="articleFlat.jsp?classify=0">课程讨论</a><br>
-        	主题：主题数，贴数：贴数<br>
-        	最后发表：最后发表时间
+        	主题：<%=num1 %>，贴数：<%=totalNum1%><br>
+        	最后发表：<%= lastReplyTime1%>
         	</font>
           </div>
         </div>
@@ -168,8 +179,8 @@
           <div class="fl gray-border" style="margin-left:10px;line-height:1.5;">
         	<font style="font-family:微软雅黑;" size="2">
         	<a href="articleFlat.jsp?classify=1">读书会</a><br>
-        	主题：主题数，贴数：贴数<br>
-        	最后发表：最后发表时间
+        	主题：<%=num2 %>，贴数：<%=totalNum2%><br>
+        	最后发表：<%= lastReplyTime2%>
         	</font>
           </div>
         </div>
@@ -180,8 +191,8 @@
           <div class="fl gray-border" style="margin-left:10px;line-height:1.5;">
         	<font style="font-family:微软雅黑;" size="2">
         	<a href="articleFlat.jsp?classify=2">哲学沙龙</a><br>
-        	主题：主题数，贴数：贴数<br>
-        	最后发表：最后发表时间
+        	主题：<%=num3 %>，贴数：<%=totalNum3%><br>
+        	最后发表：<%= lastReplyTime3%>
         	</font>
           </div>
         </div>
