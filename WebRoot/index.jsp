@@ -1,7 +1,8 @@
 <%@ page pageEncoding="gb2312"%>
 <%@ page import="java.sql.*,com.bjsxt.bbs.*,java.util.*"%>
 <%@ page import="dbmgr.NewsMgr"  %>
-<%@ page contentType="text/html; charset=gb2312" %>
+
+<%@ include file="admin/file/conn.jspf"%>
 <jsp:directive.page import="dbmgr.NewsMgr;"/>
 <%
 	NewsMgr newsMgr = new NewsMgr();
@@ -38,11 +39,16 @@
 	List<News> zhexuejingdianyuedu = new ArrayList<News>();
 	zhexuejingdianyuedu = newsMgr.get("ZhexueJingdianYuedu",2);
 %>
+<% 
+	sta=conn.createStatement();
+	String sql="select * from file where classify='pic' order by id desc";
+	ResultSet result=sta.executeQuery(sql);
+	
+%>
 <!doctype html>
 <html>
 <head>
 <title>header</title>
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <!--<script src="js/jquery.js"></script>-->
@@ -174,7 +180,7 @@
 </style>
 
 </head>
-<body style="margin-top:0px;">
+<body style="margin-top:0px;overflow:hidden;">
 <div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
   <div id="head" style="background:url(images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
@@ -324,22 +330,26 @@
 	<div id="container" style="height:350px;width:800px;margin-left:58px;float:left;">
 		<div class="flexslider">
 	    <ul class="slides">
+	    	<% 
+	    		int i=0;
+	    		result.absolute(1);
+	    		while(i<4 && !result.isAfterLast()){
+	    			String path=result.getString("content");
+	    			//String name=path.substring(29,73);
+	    			//System.out.println(name);
+	    			String[] src=path.split("\"");
+	    			String name=src[3].substring(9);
+	    			//System.out.println(name);
+	    	%>
 	    	<li>
-	    		<img src="images/pic1.gif" />
-	    		<p class="flex-caption">第一幅标题.</p>
+	    		<img src="<%=name %>" />
+	    		<p class="flex-caption"><%=result.getString("title") %></p>
 	    	</li>
-	    	<li>
-	    		<img src="images/pic2.gif" />
-	    		<p class="flex-caption">第二幅标题</p>
-	    	</li>
-	    	<li>
-	    		<img src="images/pic3.gif" />
-				<p class="flex-caption">第三幅的标题</p>
-	    	</li>
-	    	<li>
-	    		<img src="images/pic3.gif" />
-				<p class="flex-caption">第四幅的标题</p>
-	    	</li>
+	    	<% 
+	    		i++;
+	    		result.next();
+	    		}
+	    	%>
 	    </ul>
 	  </div>
 	</div>
