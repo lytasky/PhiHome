@@ -26,8 +26,17 @@
 
 <%
 	List<News> xinwenbaodao = new ArrayList<News>();
-	xinwenbaodao = newsMgr.get("XinwenBaodao",13);
-	
+	xinwenbaodao = newsMgr.get("XinwenBaodao",13);	
+%>
+
+<%
+	List<News> redianguanzhu = new ArrayList<News>();
+	redianguanzhu = newsMgr.get("RedianGuanzhu",3);	
+%>
+
+<%
+	List<News> zhexuejingdianyuedu = new ArrayList<News>();
+	zhexuejingdianyuedu = newsMgr.get("ZhexueJingdianYuedu",2);
 %>
 <!doctype html>
 <html>
@@ -395,14 +404,20 @@
           <map name="Map8">
             <area shape="rect" coords="2,3,111,158" href="#">
           </map>
-<div style="width:20px;margin-right:65px;" class="fr"><a href="#" name="link" id="link">普罗提诺读书会</a></div>
-          <div style="width:18px;margin-right:10px;" class="fr"><a href="#">组织人 .. 章雪富 教授</a></div><br>
+          <%
+        		String title00 = zhexuejingdianyuedu.get(0).getTitle();
+        		int id00 = zhexuejingdianyuedu.get(0).getId();
+        	%>
+<div style="width:20px;margin-right:100px;" class="fr"><a href="admin/news/jtxx.jsp?classify=zxjdyd&id=<%=id00 %>"><%=title00 %></a></div><br>
           <img src="images/jdyd2.gif" border="0" usemap="#Map9">
           <map name="Map9">
             <area shape="rect" coords="2,1,111,158" href="#">
           </map>
-<div style="width:20px;margin-right:65px;" class="fr"><a href="#">亚里士多德读书会</a></div>
-          <div style="width:18px;margin-right:10px;" class="fr"><a href="#">组织人 .. 陈玮 博士</a></div><br>
+          <%
+        		String title11 = zhexuejingdianyuedu.get(0).getTitle();
+        		int id11 = zhexuejingdianyuedu.get(0).getId();
+        	%>
+<div style="width:20px;margin-right:100px;" class="fr"><a href="admin/news/jtxx.jsp?classify=zxjdyd&id=<%=id11 %>" ><%=title11 %></a></div><br>
         </div>
       </div>
       <div class=" fl fontColor4" style="width:280px;height:160px;">
@@ -560,15 +575,27 @@
       	</div>
       	<div class="fl" style="width:160px;padding-left:15px;text-align:center;">
         	<img src="images/rdgz1.gif"/><br>
-          <a href="#">康德哲学专题研究</a>
+        	<%
+        		String title0 = redianguanzhu.get(0).getTitle();
+        		int id0 = redianguanzhu.get(0).getId();
+        	%>
+          <a href="admin/news/jtxx.jsp?classify=rdgz&id=<%=id0 %>">>><%=title0 %></a>
         </div>
         <div class="fl" style="width:170px;margin-left:30px;text-align:center;">
           <img src="images/rdgz2.gif"/><br>
-          <a href="#">儒家与道家在社会思想中的差异</a>
+          <%
+        		String title1 = redianguanzhu.get(1).getTitle();
+          		int id1 = redianguanzhu.get(1).getId();
+        	%>
+          <a href="admin/news/jtxx.jsp?classify=rdgz&id=<%=id1 %>">>><%=title1 %></a>
         </div>
         <div class="fl" style="padding-top:5px;margin-left:30px;text-align:center;">
           <img src="images/rdgz3.gif"/><br>
-         	<a href="#">佛教哲学专题研究</a>
+          <%
+        		String title2 = redianguanzhu.get(2).getTitle();
+          		int id2 = redianguanzhu.get(2).getId();
+        	%>
+         	<a href="admin/news/jtxx.jsp?classify=rdgz&id=<%=id2 %>">>><%=title2 %></a>
         </div>
       </div>
       <div class=" fl fontColor1" style="width:370px;height:180px;">
