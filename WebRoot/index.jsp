@@ -40,10 +40,7 @@
 <html>
 <head>
 <title>header</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-<!--<script src="js/jquery.js"></script>-->
-
 
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen">
 <link rel="stylesheet" href="css/diy.css" type="text/css">
@@ -171,7 +168,7 @@
 </style>
 
 </head>
-<body style="margin-top:0px;overflow:hidden;">
+<body style="margin-top:0px;overflow-x:hidden;">
 <div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
   <div id="head" style="background:url(images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
@@ -318,7 +315,7 @@
 </div>
 
 	<div id="indexContent" style="width:1180px;height:1200px;margin:auto;margin-top:50px;" class=" fontColor0">
-	<div id="container" style="height:350px;width:800px;margin-left:58px;float:left;">
+	<div id="container" style="height:350px;width:800px;margin-left:58px;float:left;overflow:hidden;">
 		<div class="flexslider">
 	    <ul class="slides">
 	    	<% 
