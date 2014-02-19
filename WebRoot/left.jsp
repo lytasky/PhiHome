@@ -21,7 +21,7 @@
 <ul class="menu">
 			<li><a href=".">首页内容管理</a>
 				<ul>
-        	<li><a href="#">图片集</a></li>
+        	<li><a href="admin/file/display.jsp?classify='pic'" target="main">图片集</a></li>
 					<li><a href="admin/news/display.jsp?classify=xxzxdh" target="main">西溪哲学对话</a></li>
 					<li><a href="admin/news/display.jsp?classify=zxydx" target="main">哲学与大学</a></li>
 					<li><a href="admin/news/display.jsp?classify=tzgg" target="main">通知公告</a></li>
