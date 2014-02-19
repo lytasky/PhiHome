@@ -40,7 +40,6 @@
 <html>
 <head>
 <title>header</title>
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <!--<script src="js/jquery.js"></script>-->
@@ -172,7 +171,7 @@
 </style>
 
 </head>
-<body style="margin-top:0px;">
+<body style="margin-top:0px;overflow:hidden;">
 <div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
   <div id="head" style="background:url(images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
