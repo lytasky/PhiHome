@@ -178,7 +178,8 @@
 
 </head>
 
-<body style="margin-top:0px;overflow-x:hidden;">
+<body style="margin-top:0px;overflow-y:visible;overflow-x:hidden;">
+
 <div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
   <div id="head" style="background:url(images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
@@ -422,8 +423,8 @@
             <area shape="rect" coords="2,1,111,158" href="#">
           </map>
           <%
-        		String title11 = zhexuejingdianyuedu.get(0).getTitle();
-        		int id11 = zhexuejingdianyuedu.get(0).getId();
+        		String title11 = zhexuejingdianyuedu.get(1).getTitle();
+        		int id11 = zhexuejingdianyuedu.get(1).getId();
         	%>
 <div style="width:20px;margin-right:100px;" class="fr"><a href="admin/news/jtxx.jsp?classify=zxjdyd&id=<%=id11 %>" ><%=title11 %></a></div><br>
         </div>
