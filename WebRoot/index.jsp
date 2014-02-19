@@ -180,7 +180,7 @@
 </style>
 
 </head>
-<body style="margin-top:0px;">
+<body style="margin-top:0px;overflow-y:visible;overflow-x:hidden;">
 <div id="indexMain" style="background-color:#d3d7da;width:1180px;margin:0 auto;">
   <div id="head" style="background:url(images/headBack.gif);height:230px;width:1180px;margin:0 auto;margin-top:0px;" class="fontColor4">
 	<div style="height:30px;width:200px;float:right;margin-right:50px;margin-top:40px;" class="fr">
