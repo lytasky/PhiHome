@@ -42,3 +42,27 @@ newsfrom varchar(255),
 publishtime datetime,
 content text
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table rdgz(
+id int primary key auto_increment,
+title varchar(255),
+newsfrom varchar(255),
+publishtime datetime,
+content text
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table xygs(
+id int primary key auto_increment,
+title varchar(255),
+newsfrom varchar(255),
+publishtime datetime,
+content text
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table zxjdyd(
+id int primary key auto_increment,
+title varchar(255),
+newsfrom varchar(255),
+publishtime datetime,
+content text
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

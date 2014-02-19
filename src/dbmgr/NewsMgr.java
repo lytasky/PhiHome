@@ -29,6 +29,12 @@ public class NewsMgr {
 				sql = "select * from tzgg order by id desc";
 			}else if(tableType.equalsIgnoreCase("XinwenBaodao")){
 				sql = "select * from xwbd order by id desc";
+			}else if(tableType.equalsIgnoreCase("RedianGuanzhu")){
+				sql = "select * from rdgz order by id desc";
+			}else if(tableType.equalsIgnoreCase("XiaoyuanGushi")){
+				sql = "select * from xygs order by id desc";
+			}else if(tableType.equalsIgnoreCase("ZhexueJingdianYuedu")){
+				sql = "select * from zxjdyd order by id desc";
 			}
 			rs = db_conn.sm.executeQuery(sql);   
 			while(i++ < number && rs.next())
@@ -74,6 +80,12 @@ public class NewsMgr {
 				sql = "select * from tzgg where id =" + Id;
 			}else if(tableType.equalsIgnoreCase("XinwenBaodao")){
 				sql = "select * from xwbd where id =" + Id;
+			}else if(tableType.equalsIgnoreCase("RedianGuanzhu")){
+				sql = "select * from rdgz order by id desc";
+			}else if(tableType.equalsIgnoreCase("XiaoyuanGushi")){
+				sql = "select * from xygs order by id desc";
+			}else if(tableType.equalsIgnoreCase("ZhexueJingdianYuedu")){
+				sql = "select * from zxjdyd order by id desc";
 			}
 			rs = db_conn.sm.executeQuery(sql);   
 			if(rs.next() != false)
