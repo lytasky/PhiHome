@@ -424,8 +424,8 @@
             <area shape="rect" coords="2,1,111,158" href="#">
           </map>
           <%
-        		String title11 = zhexuejingdianyuedu.get(0).getTitle();
-        		int id11 = zhexuejingdianyuedu.get(0).getId();
+        		String title11 = zhexuejingdianyuedu.get(1).getTitle();
+        		int id11 = zhexuejingdianyuedu.get(1).getId();
         	%>
 <div style="width:20px;margin-right:100px;" class="fr"><a href="admin/news/jtxx.jsp?classify=zxjdyd&id=<%=id11 %>" ><%=title11 %></a></div><br>
         </div>
