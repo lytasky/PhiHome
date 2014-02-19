@@ -82,14 +82,14 @@
 		<base href="<%=basePath%>">
 		<title></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf8">
-		<link rel="stylesheet" type="text/css" href="images/style.css"
+		<link rel="stylesheet" type="text/css" href="css/style.css"
 			title="Integrated Styles">
 		<script language="JavaScript" type="text/javascript"
-			src="images/global.js"></script>
+			src="css/global.js"></script>
 		<link rel="alternate" type="application/rss+xml" title="RSS"
 			href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?forumID=20">
 		<script language="JavaScript" type="text/javascript"
-			src="images/common.js"></script>
+			src="css/common.js"></script>
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
 	<link href="css/diy.css" rel="stylesheet" media="screen" />
   <!-- <script src="https://code.jquery.com/jquery.js"></script>-->

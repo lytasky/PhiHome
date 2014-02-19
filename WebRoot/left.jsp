@@ -24,13 +24,14 @@
         	<li><a href="admin/file/display.jsp?classify='pic'" target="main">图片集</a></li>
 					<li><a href="admin/news/display.jsp?classify=xxzxdh" target="main">西溪哲学对话</a></li>
 					<li><a href="admin/news/display.jsp?classify=zxydx" target="main">哲学与大学</a></li>
+					<li><a href="admin/news/display.jsp?classify=zxqw" target="main">哲学趣闻</a></li>
 					<li><a href="admin/news/display.jsp?classify=tzgg" target="main">通知公告</a></li>
 					<li><a href="admin/news/display.jsp?classify=xwbd" target="main">新闻报道</a></li>
-          <li><a href="#">热点关注</a></li>
+          <li><a href="admin/news/display.jsp?classify=rdgz" target="main">热点关注</a></li>
           <li><a href="#">成果展示</a></li>
           <li><a href="#">学生园地</a></li>
           <li><a href="#">招生专栏</a></li>
-          <li><a href="#">哲学经典阅读</a></li>
+          <li><a href="admin/news/display.jsp?classify=zxjdyd" target="main">哲学经典阅读</a></li>
 				</ul>
 			</li>
 			<li><a href=".">系情介绍</a>

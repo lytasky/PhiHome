@@ -11,7 +11,7 @@
 		System.out.println(title);
 	    String writer = (String)session.getAttribute("name");
 	    System.out.println(writer);
-		String cont = (String)request.getParameter("cont");
+		String cont = (String)request.getParameter("content");
 		System.out.println(cont);
 		String pno = (String)request.getParameter("pno");
 		System.out.println(pno);
@@ -97,6 +97,7 @@
   		<link rel="stylesheet" href="css/flexslider.css" type="text/css">
 		<script src="js/jquery.flexslider.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 	</head>
 	<body style="background:url(images/back.PNG) repeat;">
 		<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
@@ -117,7 +118,7 @@
       </div>
     </div><!-- head -->
 		<div id="jive-flatpage" style="margin:15px auto;width:1000px;padding-left:0px;">
-			<div class="round-border deep-blue" style="width:650px;height:40px;padding-top:10px;padding-left:15px;"><!--当前位置-->
+			<div class="round-border deep-blue" style="width:800px;height:40px;padding-top:10px;padding-left:15px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> <font size=3>发表新主题</font></span>	
 			</div>
 			
@@ -131,7 +132,7 @@
 
 											<form action="post.jsp?classify=<%=classify%>" method="post">
 												<input type="hidden" name="action" value="post" />
-												<div class="col-md-10" style="margin-top:10px;">
+												<div class="col-md-10" style="margin-top:10px;width:800px;">
 												标题：
 												<input type="text" name="title" class="form-control">
 												<br>
@@ -140,9 +141,15 @@
 												作者：<input type="text" name="writer" class="form-control"/> 
 												<br>
 												</div>-->
-												<div class="col-md-10">
+												<div class="col-md-10" style="width:800px;">
 												内容：
-												<textarea name="cont" rows="10" cols="80" class="form-control"></textarea>
+												<textarea cols="80" id="content" name="content">
+      </textarea> <script type="text/javascript">
+      	CKEDITOR.replace('content',{filebrowserUploadUrl : 'ckeditor/uploader?Type=File',
+filebrowserImageUploadUrl : 'ckeditor/uploader?Type=Image',
+filebrowserFlashUploadUrl : 'ckeditor/uploader?Type=Flash'
+      	});
+</script>
 												<br>
 												</div>
 												<div class="col-md-10">

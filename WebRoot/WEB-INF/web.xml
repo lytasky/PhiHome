@@ -48,7 +48,7 @@
     </init-param>
     <init-param>
       <param-name>AllowedExtensionsImage</param-name>
-      <param-value>jpg|gif|jpeg|png|bmp|pdf|doc|xls</param-value>
+      <param-value>jpg|gif|jpeg|png|bmp|pdf|doc|xls|zip|tar|rar|docx</param-value>
     </init-param>
     <init-param>
       <param-name>DeniedExtensionsImage</param-name>

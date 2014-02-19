@@ -405,7 +405,7 @@
       <div class=" fl fontColor3" style="width:280px;height:380px;">
       	<div style="margin-left:0px;"><img src="images/jdydhead.gif" border="0" usemap="#Map7">
           <map name="Map7">
-            <area shape="rect" coords="168,12,208,32" href="#">
+            <area shape="rect" coords="168,12,208,32" href="error.html">
           </map>
       	</div>
         <div style="padding-left:15px;">
@@ -588,7 +588,7 @@
         		String title0 = redianguanzhu.get(0).getTitle();
         		int id0 = redianguanzhu.get(0).getId();
         	%>
-          <a href="admin/news/jtxx.jsp?classify=rdgz&id=<%=id0 %>">>><%=title0 %></a>
+          <a href="admin/news/jtxx.jsp?classify=rdgz&id=<%=id0 %>"><%=title0 %></a>
         </div>
         <div class="fl" style="width:170px;margin-left:30px;text-align:center;">
           <img src="images/rdgz2.gif"/><br>
@@ -596,7 +596,7 @@
         		String title1 = redianguanzhu.get(1).getTitle();
           		int id1 = redianguanzhu.get(1).getId();
         	%>
-          <a href="admin/news/jtxx.jsp?classify=rdgz&id=<%=id1 %>">>><%=title1 %></a>
+          <a href="admin/news/jtxx.jsp?classify=rdgz&id=<%=id1 %>"><%=title1 %></a>
         </div>
         <div class="fl" style="padding-top:5px;margin-left:30px;text-align:center;">
           <img src="images/rdgz3.gif"/><br>
@@ -604,7 +604,7 @@
         		String title2 = redianguanzhu.get(2).getTitle();
           		int id2 = redianguanzhu.get(2).getId();
         	%>
-         	<a href="admin/news/jtxx.jsp?classify=rdgz&id=<%=id2 %>">>><%=title2 %></a>
+         	<a href="admin/news/jtxx.jsp?classify=rdgz&id=<%=id2 %>"><%=title2 %></a>
         </div>
       </div>
       <div class=" fl fontColor1" style="width:370px;height:180px;">

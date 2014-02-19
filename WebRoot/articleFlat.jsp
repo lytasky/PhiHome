@@ -130,14 +130,14 @@
 		<base href="<%=basePath%>">
 		<title>论坛</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf8">
-		<link rel="stylesheet" type="text/css" href="images/style.css"
+		<link rel="stylesheet" type="text/css" href="css/style.css"
 			title="Integrated Styles">
 		<script language="JavaScript" type="text/javascript"
-			src="images/global.js"></script>
+			src="css/global.js"></script>
 		<link rel="alternate" type="application/rss+xml" title="RSS"
 			href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?forumID=20">
 		<script language="JavaScript" type="text/javascript"
-			src="images/common.js"></script>
+			src="css/common.js"></script>
 			
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
 		<link href="css/diy.css" rel="stylesheet" media="screen" />
@@ -150,7 +150,7 @@
 	<div id="head" style="margin:0 auto;width:1000px;height:150px;border:1px solid #CCC;background:url(images/china-style3.8.jpg);">	<!--这是模版真正要使用的顶部，也就是每个页面都需要用到的-->
       <div id="head-right" style="float:right;width:25%;align:center;margin-top:28px;">
       	<div style="margin-right:25px;float:right;">
-          <p><div class="fl" style="width:40px;"><a class="head-text" href="#">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
+          <p><div class="fl" style="width:40px;"><a class="head-text" href="forum.jsp">中文</a></div><div class="fl" style="width:60px;"><a class="head-text" href="#">English</a></div></p>
           <div class="row" style="float:right;margin-top:15px;">
   					<div class="col-md-12">
     					<div class="input-group">

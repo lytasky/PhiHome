@@ -88,10 +88,10 @@
 	<head>
 		<title>哲学论坛</title>
 		<meta http-equiv="content-type" content="text/html; charset=GBK">
-		<link rel="stylesheet" type="text/css" href="images/style.css"
+		<link rel="stylesheet" type="text/css" href="css/style.css"
 			title="Integrated Styles">
 		<script language="JavaScript" type="text/javascript"
-			src="images/global.js"></script>
+			src="css/global.js"></script>
 		<link rel="alternate" type="application/rss+xml" title="RSS"
 			href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?threadID=744236">
 			
@@ -126,7 +126,7 @@
 				<tbody>
 					<tr valign="top">
 						<td width="100%">
-							<a href="articleFlat.jsp?classify=<%=classify%>">论坛首页</a>
+							<a href="forum.jsp">论坛首页</a>
 						</td>
 						<!--<td width="1%">
 							<div class="jive-accountbox"></div>

@@ -12,7 +12,7 @@
 		Connection conn = DB.getConn();
 		String title = request.getParameter("title");
 		System.out.println(title);
-		String cont = request.getParameter("cont");
+		String cont = request.getParameter("content");
 		System.out.println(cont);
 		String sql = "update course set title = ? , cont = ? where id = ?";
 	 	if(classify.equals("0"))
@@ -74,34 +74,21 @@ DB.close(conn);
 	<head>
 		<title>发表新主题</title>
 		<meta http-equiv="content-type" content="text/html; charset=GBK">
-		<link rel="stylesheet" type="text/css" href="images/style.css"
+		<link rel="stylesheet" type="text/css" href="css/style.css"
 			title="Integrated Styles">
+		<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 		<script language="JavaScript" type="text/javascript"
-			src="images/global.js"></script>
+			src="css/global.js"></script>
 		<!-- fckeditor -->
 		<!-- 为了速度而没有使用fckeditor -->
 		<!-- end of fckeditor -->
 
-		<link rel="alternate" type="application/rss+xml" title="RSS"
-			href="http://bbs.chinajavaworld.com/rss/rssmessages.jspa?threadID=744236">
+		
 	</head>
-	<body>
-		<table border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tbody>
-				<tr>
-					<td width="40%">
-						<img src="images/huang1.jpg" alt="" border="0" height="57"
-							width="100%">
-					</td>
-		
-				</tr>
-			</tbody>
-		</table>
-		
-						
+	<body>				
 							<p class="jive-page-title">
 								修改
-								<br>
+
 							</p>
 						</td>
 						<td width="1%"><br>
@@ -132,7 +119,13 @@ DB.close(conn);
 												<input type="text" name="title" value="<%=a.getTitle() %>">
 												<br>
 												内容：
-												<textarea name="cont" rows="15" cols="80"><%=a.getCont() %></textarea>
+												<textarea name="content" rows="15" cols="80"><%=a.getCont() %></textarea>
+												<script type="text/javascript">
+      	CKEDITOR.replace('content',{filebrowserUploadUrl : 'ckeditor/uploader?Type=File',
+filebrowserImageUploadUrl : 'ckeditor/uploader?Type=Image',
+filebrowserFlashUploadUrl : 'ckeditor/uploader?Type=Flash'
+      	});
+</script>
 												<br>
 												<input type="submit" value="submit" />
 											</form>
