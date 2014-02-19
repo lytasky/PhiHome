@@ -7,6 +7,7 @@
   request.setCharacterEncoding("gb2312");
   String title = request.getParameter("title"); 
   String content = request.getParameter("content");
+  System.out.println(content);
   String classify=request.getParameter("classify");
   String id=request.getParameter("id");
   //String classify="tzgg";
@@ -19,9 +20,11 @@
 <%@ include file="conn.jspf" %>
 <%
   sta = conn.createStatement();  //创建Statement对象    
-  String sql0 = "delete from "+classify+" where id="+id;
+  /*String sql0 = "delete from "+classify+" where id="+id;
   sta.executeUpdate(sql0);
   String sql="insert into "+classify+"(title,content,newsfrom,publishtime) values('"+title+"','"+content+"','"+newsfrom+"','"+publishtime+"')";
+  */
+  String sql="update "+classify+" set title='"+title+"',content='"+content+"',newsfrom='"+newsfrom+"',publishtime='"+publishtime+"' where id="+id;
   sta.executeUpdate(sql);
   sta.close();
   conn.close();

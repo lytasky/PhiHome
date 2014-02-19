@@ -16,7 +16,7 @@
 
 <frameset rows="70px,*"  framespacing="2" bordercolor="blue">
 	<frame src="top.html" name ="top" noresize scrolling="NO">
-	<frameset cols="14%,*">
+	<frameset cols="15%,*">
 		<frame src="left.jsp" name="left" noresize scrolling="no">
 		<frame src="main.jsp" name="main">
 	</frameset>

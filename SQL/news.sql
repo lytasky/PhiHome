@@ -66,3 +66,27 @@ newsfrom varchar(255),
 publishtime datetime,
 content text
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table spgkk(
+id int primary key auto_increment,
+title varchar(255),
+newsfrom varchar(255),
+publishtime datetime,
+content text
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table xygk(
+id int primary key auto_increment,
+title varchar(255),
+newsfrom varchar(255),
+publishtime datetime,
+content text
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table szll(
+id int primary key auto_increment,
+title varchar(255),
+newsfrom varchar(255),
+publishtime datetime,
+content text
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

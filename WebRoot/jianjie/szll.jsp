@@ -254,10 +254,10 @@
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in">
       			<div class="panel-body" style="display:block;">
-        			<a href="jianjie/depart_info.jsp" style="color:#000;" class="panel-item">学院概况</a>
+        			<a href="xygk.jsp" style="color:#000;" class="panel-item">学院概况</a>
       			</div>
       			<div class="panel-body">
-        			<a href="jianjie/szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
+        			<a href="szll.jsp" style="color:#000;" class="panel-item">师资力量</a>
       			</div>
     		</div>
   		</div> 
@@ -266,7 +266,7 @@
 	</div>
 
 		<div class="gray-border" style="margin-left:15px;width:840px;height:700px;background-color:#d3d7da;float:right;"><!--分页显示内容-->
-		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;"><!--当前位置-->
+		<div class="round-border deep-blue" style="height:37px;padding-top:10px;padding-left:15px;font-size:14px;"><!--当前位置-->
          <span style="color:#fff;"><span class="glyphicon glyphicon-hand-right"></span> 当前位置：</span>
          <a style="color:#fff;" href="../index.jsp">主页</a>
          <span style="color:#fff;">->系情介绍</span>	

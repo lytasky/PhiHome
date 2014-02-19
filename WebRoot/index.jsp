@@ -44,6 +44,17 @@
 	String sql="select * from file where classify='pic' order by id desc";
 	ResultSet result=sta.executeQuery(sql);
 	
+	sta=conn.createStatement();
+	String sql2="select * from file where classify='piczxjdyd' order by id desc";
+	ResultSet result2=sta.executeQuery(sql2);
+	
+	sta=conn.createStatement();
+	String sql3="select * from file where classify='picrdgz' order by id desc";
+	ResultSet result3=sta.executeQuery(sql3);
+	
+	sta=conn.createStatement();
+	String sql4="select * from file where classify='zsxx' order by id desc";
+	ResultSet zszlrs=sta.executeQuery(sql4);
 %>
 <!doctype html>
 <html>
@@ -373,11 +384,25 @@
           </map>
       	</div>
         <div style="padding-left:20px;line-height:1.8;">
-          <a href="#">>> 浙大哲学系2013硕士招生简章</a><br>
+        	<% 
+	    		i=0;
+	    		zszlrs.absolute(1);
+	    		while(i<4 && !zszlrs.isAfterLast()){
+	    			String path=zszlrs.getString("content");
+	    			String[] src=path.split("\"");
+	    			String name=src[3].substring(9);
+	    			String zszltitle=zszlrs.getString("title");
+	    	%>
+          <a href="<%=name %>">>> <%=zszltitle %></a><br>
+          <% 
+          			i++;
+  					zszlrs.next();
+  				}
+          %>
 					<a href="#">>> 浙大哲学系2012年硕士录取名单</a><br>
 					<a href="#">>> 浙大哲学系2012年招生简章</a><br>
 					<a href="#">>> 浙大哲学系2011年招生简章</a><br>
-          <div style="margin-left:-10px;margin-top:7px;"><img src="images/zszx.gif"></div>
+          <div style="margin-left:-10px;margin-top:7px;"><a href="zhaosheng/zszx.jsp" ><img src="images/zszx.gif"></a></div>
         </div>
       </div>
       <div class=" fl fontColor3" style="width:280px;height:200px;">
@@ -399,34 +424,46 @@
             <a href="http://course.jingpinke.com/details?uuid=8a833999-221c4794-0122-1c479504-02cd&objectId=oid:8a833999-221c4794-0122-1c479504-02cc&courseID=S0601044">外国哲学</a>
           </div>
           
-          <div style="margin-left:-10px;"><img src="images/spgkk.gif"></div>
+          <div style="margin-left:-10px;"><a href="admin/news/itemlist.jsp?classify=spgkk"><img src="images/spgkk.gif"></div>
         </div>
       </div>
       <div class=" fl fontColor3" style="width:280px;height:380px;">
       	<div style="margin-left:0px;"><img src="images/jdydhead.gif" border="0" usemap="#Map7">
           <map name="Map7">
-            <area shape="rect" coords="168,12,208,32" href="error.html">
+            <area shape="rect" coords="168,12,208,32" href="admin/news/itemlist.jsp?classify=zxjdyd">
           </map>
       	</div>
         <div style="padding-left:15px;">
-        	<img src="images/jdyd1.gif" border="0" usemap="#Map8">
+        <% 
+	    		result2.absolute(1);   		
+	    			String path2=result2.getString("content");   			
+	    			String[] src2=path2.split("\"");
+	    			String name2=src2[3].substring(9);
+	    	%>
+        	<img src="<%=name2 %>" border="0" usemap="#Map8">
           <map name="Map8">
-            <area shape="rect" coords="2,3,111,158" href="#">
+            <area shape="rect" coords="2,3,111,158" href="admin/news/itemlist.jsp?classify=zxjdyd">
           </map>
           <%
-        		String title00 = zhexuejingdianyuedu.get(0).getTitle();
-        		int id00 = zhexuejingdianyuedu.get(0).getId();
+        		/*String title00 = zhexuejingdianyuedu.get(0).getTitle();
+        		int id00 = zhexuejingdianyuedu.get(0).getId();*/
         	%>
-<div style="width:20px;margin-right:100px;" class="fr"><a href="admin/news/jtxx.jsp?classify=zxjdyd&id=<%=id00 %>"><%=title00 %></a></div><br>
-          <img src="images/jdyd2.gif" border="0" usemap="#Map9">
+<div style="width:20px;margin-right:100px;" class="fr"><a href="admin/news/itemlist.jsp?classify=zxjdyd"><%=result2.getString("title") %></a></div><br>
+          <% 
+	    		result2.absolute(2);   		
+	    			path2=result2.getString("content");   			
+	    			src2=path2.split("\"");
+	    			name2=src2[3].substring(9);
+	    	%>
+          <img src="<%=name2 %>" border="0" usemap="#Map9">
           <map name="Map9">
-            <area shape="rect" coords="2,1,111,158" href="#">
+            <area shape="rect" coords="2,1,111,158" href="admin/news/itemlist.jsp?classify=zxjdyd">
           </map>
           <%
-        		String title11 = zhexuejingdianyuedu.get(1).getTitle();
-        		int id11 = zhexuejingdianyuedu.get(1).getId();
+        		/*String title11 = zhexuejingdianyuedu.get(1).getTitle();
+        		int id11 = zhexuejingdianyuedu.get(1).getId();*/
         	%>
-<div style="width:20px;margin-right:100px;" class="fr"><a href="admin/news/jtxx.jsp?classify=zxjdyd&id=<%=id11 %>" ><%=title11 %></a></div><br>
+<div style="width:15px;margin-right:100px;Writing-mode:tb-rl;" class="fr"><a href="admin/news/itemlist.jsp?classify=zxjdyd" ><%=result2.getString("title") %></a></div><br>
         </div>
       </div>
       <div class=" fl fontColor4" style="width:280px;height:160px;">
@@ -461,9 +498,8 @@
         </div>
 				<ul>
 					<li><a href="http://philosophy.stanford.edu/">斯坦福大学哲学系</a></li>
-					<li><a href="/">Sub category 3b</a></li>
-					<li><a href="/">Sub category 3c</a></li>
-					<li><a href="/">Sub category 3d</a></li>
+					<li><a href="http://plato.stanford.edu/">斯坦福哲学词典</a></li>
+					<li><a href="www.philosophy.ox.ac.uk">牛津大学哲学系</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -579,11 +615,17 @@
       <div class=" fl fontColor1" style="width:630px;height:180px;">
       	<div style="margin-left:0px;"><img src="images/rdgz.gif" border="0" usemap="#Map12">
           <map name="Map12">
-            <area shape="rect" coords="538,11,580,30" href="error.html">
+            <area shape="rect" coords="538,11,580,30" href="admin/news/itemlist.jsp?classify=rdgz">
           </map>
       	</div>
       	<div class="fl" style="width:160px;padding-left:15px;text-align:center;">
-        	<img src="images/rdgz1.gif"/><br>
+      		<% 
+	    		result3.absolute(1);   		
+	    			String path3=result3.getString("content");   			
+	    			String[] src3=path3.split("\"");
+	    			String name3=src3[3].substring(9);
+	    	%>
+        	<img src="<%=name3 %>"/><br>
         	<%
         		String title0 = redianguanzhu.get(0).getTitle();
         		int id0 = redianguanzhu.get(0).getId();
@@ -591,15 +633,27 @@
           <a href="admin/news/jtxx.jsp?classify=rdgz&id=<%=id0 %>"><%=title0 %></a>
         </div>
         <div class="fl" style="width:170px;margin-left:30px;text-align:center;">
-          <img src="images/rdgz2.gif"/><br>
+        <% 
+	    		result3.absolute(2);   		
+	    			path3=result3.getString("content");   			
+	    			src3=path3.split("\"");
+	    			name3=src3[3].substring(9);
+	    	%>
+          <img src="<%=name3 %>"/><br>
           <%
         		String title1 = redianguanzhu.get(1).getTitle();
           		int id1 = redianguanzhu.get(1).getId();
         	%>
           <a href="admin/news/jtxx.jsp?classify=rdgz&id=<%=id1 %>"><%=title1 %></a>
         </div>
-        <div class="fl" style="padding-top:5px;margin-left:30px;text-align:center;">
-          <img src="images/rdgz3.gif"/><br>
+        <div class="fl" style="margin-left:30px;text-align:center;">
+          <% 
+	    		result3.absolute(3);   		
+	    			path3=result3.getString("content");   			
+	    			src3=path3.split("\"");
+	    			name3=src3[3].substring(9);
+	    	%>
+          <img src="<%=name3 %>"/><br>
           <%
         		String title2 = redianguanzhu.get(2).getTitle();
           		int id2 = redianguanzhu.get(2).getId();

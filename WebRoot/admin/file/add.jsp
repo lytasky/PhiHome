@@ -167,6 +167,8 @@ function check_form(theform)
                         	<div class="fl" style="margin-top:-5px;">
                           	<select class="selectpicker" name="classify" id="classify">
                           		<option value ="pic">图片集</option>
+                          		<option value ="piczxjdyd">哲学经典阅读</option>
+                          		<option value ="picrdgz">热点关注</option>
                             	<option value ="pyfa">培养方案</option>
   <option value ="bkkc">本科课程</option>
   <option value="sbkc">硕博课程</option>
