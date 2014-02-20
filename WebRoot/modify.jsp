@@ -36,7 +36,7 @@
 		DB.close(pstmt);
 		DB.close(conn);
 		
-		response.sendRedirect("articleFlat.jsp?classify="+classify);
+		response.sendRedirect("articleFlat1.jsp?classify="+classify);
 		return;
 
 	}

@@ -56,12 +56,7 @@
         <tr>
           
           <td width="699" align="center" valign="top"><hr>
-            <table width="540" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td><a href="lyb.jsp">Ê×Ò³</a> - <a href="leave.jsp">×¢Ïú</a>
-                <hr></td>
-            </tr>
-          </table>
+            
             <table width="540" border="0" cellpadding="0" cellspacing="0">
 			<tr><td width="540" align="center" valign="top"><% 
    if(intPageCount>0){
@@ -141,7 +136,6 @@
           </td>
         </tr>
       </table>
-	  <%@ include file="end.jsp" %>
     
 </body>
 </html>

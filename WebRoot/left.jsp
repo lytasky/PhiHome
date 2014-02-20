@@ -40,7 +40,7 @@
 			<li><a href=".">系情介绍</a>
 				<ul>
 					<li><a href="admin/news/display.jsp?classify=xygk" target="main">学院概况</a></li>
-					<li><a href="/">师资力量</a></li>
+					<li><a href="#">师资力量</a></li>
 				</ul>
 			</li>
 			<li><a href=".">新闻通告</a>
@@ -84,8 +84,8 @@
 			</li>
       <li><a href=".">闻人轶事</a>
 				<ul>
-					<li><a href="/">哲学趣闻</a></li>
-					<li><a href="/">校园故事</a></li>
+					<li><a href="admin/news/display.jsp?classify=zxqw" target="main">哲学趣闻</a></li>
+					<li><a href="admin/news/display.jsp?classify=xygs" target="main">校园故事</a></li>
 					<li><a href="admin/file/display.jsp?classify='xyfc'" target="main">校友风采</a></li>
 				</ul>
 			</li>

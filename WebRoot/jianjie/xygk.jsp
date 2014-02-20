@@ -285,7 +285,7 @@
       <span style="color:#fff;">->Ñ§Ôº¸Å¿ö</span>	
 		</div>
     
-    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;">
+    <div class="gray-border round-border" style="width:840px;height:600px;background-color:#FFF;margin-top:15px;padding-top:15px;padding-left:25px;padding-right:25px;">
   	<%=result.getString("content") %>
   	</div>
   </div>

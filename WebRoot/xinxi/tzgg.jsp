@@ -17,7 +17,7 @@
 	int j;
 	int i;
 	//设置一页显示的记录数
-	intPageSize = 5;
+	intPageSize = 10;
 	
 	//取得待显示页码
 	strPage = request.getParameter("page");

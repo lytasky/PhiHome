@@ -250,7 +250,7 @@
       </div>
       <div style="width:102px;height:30;align:center;" id="mod9" class="fl">
       <span class="menuNo" onMouseOver="switchMod(9);">
-			<a href="test-header.jsp" target="_blank" class="white-font">资源链接</a></span>
+			<a href="#wrap" class="white-font">资源链接</a></span>
       </div>
       </div>
   </div><!-- column -->
@@ -327,11 +327,11 @@
 	</div>
   <div class="slidingList" id="slidingList9" style="height:30px;float:left;margin-left:921px;display:none;background:#0f0f0f;padding-top:5px;">
   		>>
-			<a href="#link"> 校内网站</a>
+			<a href="#wrap"> 校内网站</a>
 			|
-			<a href="#link">校外资源</a>
+			<a href="#wrap">校外资源</a>
       |
-			<a href="#link">国外资源</a>
+			<a href="#wrap">国外资源</a>
 		
 	</div><!-- 导航栏列表区 -->
 </div>
