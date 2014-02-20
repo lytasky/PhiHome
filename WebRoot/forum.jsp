@@ -21,7 +21,10 @@
     boolean ulog = false; //ÅÐ¶ÏÓÃ»§ÊÇ·ñµÇÂ½
 	String u = (String)session.getAttribute("uLogined");
 	if (u != null && u.trim().equals("true")) {
-		ulog = true;
+		ulog = true;	
+		session.setMaxInactiveInterval(60); 
+	}else {
+		response.sendRedirect("uselogin.jsp"); 
 	}
  %>
 <%
